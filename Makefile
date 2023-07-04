@@ -17,7 +17,7 @@ LIBFT = libft/libft.a
 
 CC = gcc
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror 
 
 RM = rm -f
 
@@ -30,7 +30,7 @@ $(LIBFT):
 	$(MAKE) -C ./libft
 
 $(NAME): $(LIBFT) $(OBJT)
-	${CC} $(CFLAGS) $(SRC) $(LIBFT) -o ${NAME}
+	$(CC) $(CFLAGS) $(SRC) $(LIBFT) -o ${NAME} -lreadline
 
 clean:
 	$(RM) $(OBJT)
