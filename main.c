@@ -29,7 +29,7 @@ int	main(void)
 	while (1)
 	{
 		input = get_imput(">> ");
-		if (strcmp(input, "exit") == 0)
+		if (ft_strncmp(input, "exit", 4) == 0)
 			break;
 		// controlariamos los comandos recibidos
 	}
