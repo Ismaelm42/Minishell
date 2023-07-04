@@ -33,6 +33,7 @@ int	main(void)
 			break;
 		// controlariamos los comandos recibidos
 	}
+	write_history("./history.txt");
 	free(input);
 	return (0);
 }

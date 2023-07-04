@@ -2,6 +2,9 @@
 
 		char *readline(const char *prompt);
 
+//añadido por javi;
+Esta función muestra el prompt proporcionado al usuario y espera a que este ingrese una línea de texto. Devuelve un puntero a la cadena de texto ingresada por el usuario. El usuario puede editar la línea de texto utilizando las teclas de edición disponibles.
+
 - rl_clear_history: Borra todo el historial de líneas ingresadas por el usuario.
 
 		void rl_clear_history(void);
@@ -21,7 +24,8 @@
 - add_history: Agrega una línea al historial de comandos ingresados.
 
 		void add_history(const char *line);
-
+//added by javi:
+ Esta función agrega la línea de texto especificada al historial de comandos, lo que permite que el usuario acceda a comandos anteriores utilizando las teclas de flecha arriba y abajo.
 - printf: Imprime datos formateados en la salida estándar.
 
 		int printf(const char *format, ...);
