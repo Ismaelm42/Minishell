@@ -1,4 +1,4 @@
-- readline: Lee una línea de entrada desde el usuario, incluyendo la funcionalidad de edición básica.
+- readline: Lee una línea de entrada desde el usuario, incluyendo la funcionalidad de edición básica. Esta función muestra el prompt proporcionado al usuario y espera a que este ingrese una línea de texto. Devuelve un puntero a la cadena de texto ingresada por el usuario. El usuario puede editar la línea de texto utilizando las teclas de edición disponibles.
 
 		char *readline(const char *prompt);
 
@@ -18,7 +18,7 @@
 
 		void rl_redisplay(void);
 
-- add_history: Agrega una línea al historial de comandos ingresados.
+- add_history: Agrega una línea al historial de comandos ingresados. Esta función agrega la línea de texto especificada al historial de comandos, lo que permite que el usuario acceda a comandos anteriores utilizando las teclas de flecha arriba y abajo.
 
 		void add_history(const char *line);
 
