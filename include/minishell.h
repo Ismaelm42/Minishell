@@ -23,4 +23,14 @@ char			*get_input(char *prompt);
 //Manejador de señales para probar control+c exit (duda si hay que silenciarlo para que no muestre "C")
 void			handler_signal(int signal);
 
+
+//parser
+void	quoted_token_counter(int *counter, char **s);
+void	redirection_token_counter(int *counter, char **s);
+void	words_counter(int *counter, char **s);
+int		token_counter(char *s);
+
+
+
+
 #endif

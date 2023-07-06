@@ -1,17 +1,17 @@
 NAME = minishell
 
-SRC =	src/main.c				\
-		src/parser/parsing.c	\
-								\
-								\
-								\
-								\
-								\
-								\
-								\
-								\
-								\
-								\
+SRC =	src/main.c					\
+		src/parser/token_counter.c	\
+		src/parser/token_maker.c	\
+									\
+									\
+									\
+									\
+									\
+									\
+									\
+									\
+									\
 
 OBJT_DIR = objt
 

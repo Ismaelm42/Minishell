@@ -1,12 +1,12 @@
 Recibimos input.
 
-Split para separar espacio, tabulaciones, comillas y comillas dobles.
-Si se ecuentra con > o < o >> o << y hay un espacio, quizás sea buena idea hacer que el espacio desaparezca para luego no tener ese problema
-
 $:
 Realizar función para que reemplace la variable por su valor.
 O la busca en el historial o la coge de una variable global que es el retorno
 de la ejecución del último programa.
+
+Split para separar espacio, tabulaciones, comillas y comillas dobles.
+Si se ecuentra con > o < o >> o << y hay un espacio, quizás sea buena idea hacer que el espacio desaparezca para luego no tener ese problema
 
 Detectar caracteres especiales:
 
