@@ -1,6 +1,6 @@
 #ifndef MINISHELL_H
 # define MINISHELL_H
-# include "./libft/libft.h"
+# include "../libft/libft.h"
 # include <curses.h>
 # include <dirent.h>
 # include <fcntl.h>
@@ -18,9 +18,9 @@
 
 int	main(void);
 
-//funcion para leer de la terminal
+//Funcion para leer de la terminal
 char			*get_input(char *prompt);
-//Manejador de señales para probar control+c exit (duda si hay q silenciarlo para q no muestre "C")
+//Manejador de señales para probar control+c exit (duda si hay que silenciarlo para que no muestre "C")
 void			handler_signal(int signal);
 
 #endif

@@ -1,40 +1,44 @@
-NAME =	minishell
+NAME = minishell
 
-SRC =	main.c	\
-				\
-				\
-				\
-				\
-				\
-				\
-				\
-				\
-				\
+OBJT_DIR = objt
 
-OBJT = $(SRC:.c=.o)
+SRC =	src/main.c				\
+		src/parser/parsing.c	\
+								\
+								\
+								\
+								\
+								\
+								\
+								\
+								\
+								\
+								\
+
+OBJT = $(addprefix $(OBJT_DIR)/, $(patsubst %.c, %.o, $(SRC)))
 
 LIBFT = libft/libft.a
 
 CC = gcc
 
-CFLAGS = -Wall -Wextra -Werror 
+CFLAGS = -Wall -Wextra -Werror
 
 RM = rm -f
 
-MAKEFLAGS += --quiet
-
 all: $(LIBFT) $(NAME)
-	$(MAKE) clean
-#eliminar para la corrección
 
 $(LIBFT):
 	$(MAKE) -C ./libft
 
-$(NAME): $(LIBFT) $(OBJT)
-	$(CC) $(CFLAGS) $(SRC) $(LIBFT) -o ${NAME} -lreadline
+$(NAME): $(OBJT)
+	$(CC) $(CFLAGS) $(OBJT) $(LIBFT) -o $(NAME) -lreadline
+
+$(OBJT_DIR)/%.o: %.c
+	@mkdir -p $(@D)
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	$(RM) $(OBJT)
+	$(RM) -r $(OBJT_DIR)
 	$(MAKE) clean -C ./libft
 
 fclean: clean
@@ -43,4 +47,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY : all clean fclean re
+.PHONY: all clean fclean re
