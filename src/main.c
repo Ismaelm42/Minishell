@@ -31,7 +31,6 @@ int	main(void)
 		//Sino saldría con exit123 cuando no debe.
 		//Si aparece exit 123 sale.
 		free(input);
-		hola(1);
 	}
 	return (0);
 }

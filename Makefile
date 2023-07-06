@@ -1,7 +1,5 @@
 NAME = minishell
 
-OBJT_DIR = objt
-
 SRC =	src/main.c				\
 		src/parser/parsing.c	\
 								\
@@ -15,6 +13,8 @@ SRC =	src/main.c				\
 								\
 								\
 
+OBJT_DIR = objt
+
 OBJT = $(addprefix $(OBJT_DIR)/, $(patsubst %.c, %.o, $(SRC)))
 
 LIBFT = libft/libft.a
@@ -24,6 +24,8 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
 RM = rm -f
+
+MAKEFLAGS += --quiet
 
 all: $(LIBFT) $(NAME)
 
