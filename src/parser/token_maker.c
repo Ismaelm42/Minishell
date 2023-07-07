@@ -60,18 +60,14 @@ void	words_splitter(int *n, char **s, char ***tokens)
 
 }
 
-void	token_splitter(int *n, char **s, char ***tokens)
+char	**free_tokens(int n, char **tokens)
 {
-	if (**s == '\'' || **s == '"')
-		quoted_token_splitter(n, s, tokens);
-	else if (**s == '<' || **s == '>' || **s == '|')
-		redirection_token_splitter(n, s, tokens);
-	else
-		words_splitter(n, s, tokens);
-	//puedo proteger substrings de tokens aqui, ya que en cada bucle se reservara memoria
-	//y ninguno debe ser null que devuelva -1 si hay una reserva de memoria fallida.
-	//y usar el exit o lo que sea en tal caso.
+	while (n > 0)
+		free (tokens[--n]);
+	free (tokens);
+	return (NULL);
 }
+
 
 char	**token_maker(char *s)
 {
@@ -85,30 +81,40 @@ char	**token_maker(char *s)
 	if (!tokens)
 		return (NULL);
 	while (n < size)
-		token_splitter(&n, &s, &tokens);
+	{
+		if (*s == '\'' || *s == '"')
+			quoted_token_splitter(&n, &s, &tokens);
+		else if (*s == '<' || *s == '>' || *s == '|')
+			redirection_token_splitter(&n, &s, &tokens);
+		else
+			words_splitter(&n, &s, &tokens);
+		if (!tokens[n - 1])
+			return (free_tokens(n - 1, tokens));
+		//-1 porque se le está sumando la n una vez se hace la reserva.
+	}
 	tokens[n] = 0;
 	return (tokens);
 }
 
-int	main(void)
-{
-	char	**str;
-	char	*phrase = "   cat | ls -a awk\"blib|\" hola amigo \"lablu\"";
-	int		i;
+// int	main(void)
+// {
+// 	char	**str;
+// 	char	*phrase = "buenos dias";
+// 	int		i;
 
-	printf("counter = %d\n", token_counter(phrase));
+// 	printf("counter = %d\n", token_counter(phrase));
 
-	str = token_maker(phrase);
-	i = 0;
-	while (str[i] != NULL)
-	{
-		printf("str[%d] = %s\n", i, str[i]);
-		i++;
-	}
-	printf("str[%d] = %s\n", i, str[i]);
+// 	str = token_maker(phrase);
+// 	i = 0;
+// 	while (str[i] != NULL)
+// 	{
+// 		printf("str[%d] = %s\n", i, str[i]);
+// 		i++;
+// 	}
+// 	printf("str[%d] = %s\n", i, str[i]);
 
 
-}
+// }
 
 
 
