@@ -1,21 +1,47 @@
-Recibimos input.
+=:
+Función para detectar este símbolo y guardar/cambiar la variable de entorno/local?
+
+"ARG='123'" y 'ARG="123"'
+No se registran para luego expandirse.
+
+variable1='hola'
+variable2="adios"
+
+variable3='$variable1'
+variable4="$variable1"
+
+echo $variable3
+	-'$variable1'
+echo $variable4
+	- 'valor'
 
 $:
-Realizar función para que reemplace la variable por su valor.
+Función para que reemplace la variable por su valor.
 O la busca en el historial o la coge de una variable global que es el retorno
 de la ejecución del último programa.
 
-Split para separar espacio, tabulaciones, comillas y comillas dobles.
-Si se ecuentra con > o < o >> o << y hay un espacio, quizás sea buena idea hacer que el espacio desaparezca para luego no tener ese problema
+"$ARG" sí se expande.
+'$ARG' no se expande.
 
-Detectar caracteres especiales:
+*:
+Función para que reemplace la variable por todos los valores con los caracteres detrás de *.
 
->:
-Redigir el output.
-<:
-Redirigir el input.
-|:
-Primero realizar todo lo que está antes de | y redirigir la salida.
-Realizar función para que realice el pipe correctamente.
+?:
+Función para controlar el punto de interrogación. Algo similar al *.
 
-Ejecutar primera palabra siempre como comando y el resto como argumentos si está separado como espacio.
+
+
+
+
+
+
+
+
+
+
+
+
+Ejecutar primera palabra siempre como comando y el resto pasarlo como argumento.
+
+
+

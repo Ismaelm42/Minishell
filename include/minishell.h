@@ -18,10 +18,11 @@
 
 int	main(void);
 
-//Funcion para leer de la terminal
-char		*get_input(char *prompt);
-//Manejador de señales para probar control+c exit (duda si hay que silenciarlo para que no muestre "C")
-void		handler_signal(int signal);
+/*Función momentánea para liberar memoria y salir del programa. Se tendrá que ir modificando
+dependiendo de la memoria alojada en el heap.
+*/
+void		clean_up_and_exit(int status, char *ptr);
+int			add_and_store_history(char *input);
 
 
 //parser/token_counter

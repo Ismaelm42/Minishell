@@ -57,7 +57,6 @@ void	words_splitter(int *n, char **s, char ***tokens)
 		while (length -- > 0)
 		(*s)++;
 	}
-
 }
 
 char	**free_tokens(int n, char **tokens)
@@ -89,7 +88,6 @@ char	**token_maker(char *s)
 			words_splitter(&n, &s, &tokens);
 		if (!tokens[n - 1])
 			return (free_tokens(n - 1, tokens));
-		//-1 porque se le está sumando la n una vez se hace la reserva.
 	}
 	tokens[n] = 0;
 	return (tokens);
@@ -98,10 +96,8 @@ char	**token_maker(char *s)
 // int	main(void)
 // {
 // 	char	**str;
-// 	char	*phrase = "buenos dias";
+// 	char	*phrase = "cat|ls<infile|   >>outfile";
 // 	int		i;
-
-// 	printf("counter = %d\n", token_counter(phrase));
 
 // 	str = token_maker(phrase);
 // 	i = 0;
@@ -111,10 +107,4 @@ char	**token_maker(char *s)
 // 		i++;
 // 	}
 // 	printf("str[%d] = %s\n", i, str[i]);
-
-
 // }
-
-
-
-//awk'wc -ls'

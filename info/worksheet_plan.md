@@ -12,3 +12,6 @@
 • Implementar pipes (carácter |). El output de cada comando en la pipeline se conecta a través de un pipe al input del siguiente comando.
 • Gestionar las variables de entorno ($ seguidos de caracteres) que deberán expandirse a sus valores.
 • Gestionar $?, que deberá expandirse al estado de salida del comando más reciente ejecutado en la pipeline.
+
+
+Se debe usar la función unlink para eliminar el archivo .history
