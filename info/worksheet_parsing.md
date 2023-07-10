@@ -17,8 +17,10 @@ echo $variable4
 
 $:
 Función para que reemplace la variable por su valor.
-O la busca en el historial o la coge de una variable global que es el retorno
-de la ejecución del último programa.
+O la busca en el historial o la coge de una variable de entorno.
+Si se hace antes, se ahorra tener que retocar el split luego.
+Quizás ocurra lo mismo con el wildcard.
+Solo habría que modificar char *input que es más fácil.
 
 "$ARG" sí se expande.
 '$ARG' no se expande.

@@ -36,7 +36,7 @@ $(NAME): $(OBJT)
 	$(CC) $(CFLAGS) $(OBJT) $(LIBFT) -o $(NAME) -lreadline
 
 $(OBJT_DIR)/%.o: %.c
-	@mkdir -p $(@D)
+	mkdir -p $(@D)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:

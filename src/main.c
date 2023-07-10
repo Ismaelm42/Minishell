@@ -4,6 +4,7 @@ void	clean_up_and_exit(int status, char *ptr)
 {
 	free(ptr);
 	rl_clear_history();
+	unlink(".cmd_history_file");
 	exit(status);
 }
 

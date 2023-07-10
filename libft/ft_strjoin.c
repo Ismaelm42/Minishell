@@ -12,13 +12,13 @@
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char *s1, char *s2)
 {
 	char	*str;
 	size_t	i;
 	size_t	j;
 
-	str = malloc(sizeof (char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	str = ft_calloc(ft_strlen(s1) + ft_strlen(s2) + 1, sizeof(char));
 	if (str == NULL)
 		return (NULL);
 	i = 0;
@@ -34,5 +34,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		j++;
 	}
 	str[i + j] = '\0';
+	free(s1);
 	return ((char *)str);
 }

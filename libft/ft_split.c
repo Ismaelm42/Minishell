@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static int	ft_string_counter(char const *s, char c)
+static int	ft_string_counter(char *s, char c)
 {
 	int	i;
 	int	count;
@@ -32,14 +32,14 @@ static int	ft_string_counter(char const *s, char c)
 	return (count);
 }
 
-static unsigned int	ft_string_start(char const *s, char c, unsigned int start)
+static unsigned int	ft_string_start(char *s, char c, unsigned int start)
 {
 	while (s[start] != '\0' && s[start] == c)
 		start++;
 	return (start);
 }
 
-static size_t	ft_string_len(char const *s, char c, unsigned int start)
+static size_t	ft_string_len(char *s, char c, unsigned int start)
 {
 	size_t	i;
 
@@ -62,7 +62,7 @@ void	ft_free(char **str, int n)
 	free (str);
 }
 
-char	**ft_split(char const *s, char c)
+char	**ft_split(char *s, char c)
 {
 	unsigned int	start;
 	int				n;

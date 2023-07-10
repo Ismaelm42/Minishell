@@ -16,14 +16,9 @@
 # include <termios.h>
 # include <unistd.h>
 
-int	main(void);
-
-/*Función momentánea para liberar memoria y salir del programa. Se tendrá que ir modificando
-dependiendo de la memoria alojada en el heap.
-*/
+//src
 void		clean_up_and_exit(int status, char *ptr);
 int			add_and_store_history(char *input);
-
 
 //parser/token_counter
 void		quoted_token_counter(int *counter, char **s);
@@ -38,5 +33,10 @@ void		words_splitter(int *n, char **s, char ***tokens);
 char		**free_tokens(int n, char **tokens);
 char		**token_maker(char *s);
 
+//parser/gnl
+char	*gnl(int fd);
+char	*read_fd(int fd, char *static_buffer);
+char	*return_line(char *static_buffer);
+char	*return_static(char *static_buffer);
 
 #endif
