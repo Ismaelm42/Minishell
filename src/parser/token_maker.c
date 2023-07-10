@@ -96,7 +96,7 @@ char	**token_maker(char *s)
 // int	main(void)
 // {
 // 	char	**str;
-// 	char	*phrase = "cat|ls<infile|   >>outfile";
+// 	char	*phrase = "ls '-l        jidjeidjie ";
 // 	int		i;
 
 // 	str = token_maker(phrase);

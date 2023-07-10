@@ -34,9 +34,9 @@ char		**free_tokens(int n, char **tokens);
 char		**token_maker(char *s);
 
 //parser/gnl
-char	*gnl(int fd);
-char	*read_fd(int fd, char *static_buffer);
-char	*return_line(char *static_buffer);
-char	*return_static(char *static_buffer);
+char		*gnl(int fd);
+char		*read_fd(int fd, char *static_buffer);
+char		*return_line(char *static_buffer);
+char		*return_static(char *static_buffer);
 
 #endif

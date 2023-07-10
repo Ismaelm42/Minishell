@@ -32,18 +32,9 @@ Función para que reemplace la variable por todos los valores con los caracteres
 Función para controlar el punto de interrogación. Algo similar al *.
 
 
-
-
-
-
-
-
-
-
-
-
-
 Ejecutar primera palabra siempre como comando y el resto pasarlo como argumento.
 
+Contemplar * == ******
 
+Control de tokens:
 
