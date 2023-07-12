@@ -16,6 +16,16 @@
 # include <termios.h>
 # include <unistd.h>
 
+/*
+Estructura específica para guardar los tokens $ y poder
+vincularlos luego con su variable de una forma más simple.
+*/
+typedef struct s_tokens
+{
+	char	*variable;
+	char	*expanded;
+}			t_tokens;
+
 //src
 void		clean_up_and_exit(int status, char *ptr);
 int			add_and_store_history(char *input);
@@ -36,8 +46,13 @@ char		**token_maker(char *s);
 //parser/get_variables_expansion
 int			variable_expansion_counter(char *input);
 void		skip_quotes(char **s);
-void		tokens_filler(int *n, char **s, char ***tokens);
-char		**variable_expansion_tokens(char *input);
+
+
+// void		tokens_filler(int *n, char **s, char ***tokens);
+// char		**variable_expansion_tokens(char *input);
+
+void		tokens_filler(int *n, char **s, t_tokens *tokens);
+t_tokens	*variable_expansion_tokens(char *input);
 
 //parser/gnl
 char		*gnl(int fd);

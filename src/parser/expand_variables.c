@@ -53,10 +53,10 @@
 // 	return (0);
 // }
 
-//expandir la variable primero por el path
-//luego por historial
-//realizar el cambio en el input para mandarlo al token_maker
-//estructura para no tener que hacer un split de nuevo mejor, que ya está bien con los que llevo
+// expandir la variable primero por el path
+// luego por historial
+// realizar el cambio en el input para mandarlo al token_maker
+// estructura para no tener que hacer un split de nuevo mejor, que ya está bien con los que llevo
 
 
 

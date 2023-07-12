@@ -1,11 +1,5 @@
 #include "../../include/minishell.h"
 
-typedef struct s_tokens
-{
-	char	*token;
-	char	*expanded_token;
-}			t_tokens;
-
 /*
 Función para contar el número de símbolos $ que hay que tener en cuenta.
 Contempla todos los casos problemáticos por ahora.
@@ -50,15 +44,16 @@ void	skip_quotes(char **s)
 Permite guardar como token todos los símbolos $ teniendo en cuenta
 los casos particulares como $, $123, $$, $?, $$$ARG, etc...
 */
-void	tokens_filler(int *n, char **s, char ***tokens)
+void	tokens_filler(int *n, char **s, t_tokens *tokens)
 {
 	int	length;
 
 	length = 1;
-	if ((*s)[length] >= '0' && (*s)[length] <= '9')
+	if (((*s)[length] >= '0' && (*s)[length] <= '9')
+		|| (*s)[length] == '?' || (*s)[length] == '$')
 	{
 		length++;
-		(*tokens)[*n] = ft_substr(*s, 0, length);
+		tokens[*n].variable = ft_substr(*s, 0, length);
 	}
 	else
 	{
@@ -71,11 +66,28 @@ void	tokens_filler(int *n, char **s, char ***tokens)
 				break ;
 			length++;
 		}
-		(*tokens)[*n] = ft_substr(*s, 0, length);
+		tokens[*n].variable = ft_substr(*s, 0, length);
 	}
 	*n += 1;
 	while (length -- > 0)
 		(*s)++;
+}
+/*
+Función para liberar la memoria. Se resta primero para bajar un nivel más
+ya que en n es donde ha fallado la memoria.
+*/
+
+t_tokens	*free_expansion_tokens(int n, t_tokens *tokens, int flag)
+{
+	while (n > 0)
+	{
+		n--;
+		free (tokens[n].variable);
+		if (flag != 0)
+			free (tokens[n].variable);
+	}
+	free (tokens);
+	return (NULL);
 }
 
 /*
@@ -83,15 +95,17 @@ Guarda en un struct todos los posibles símbolos $ para sustituirlos en
 el char *input antes de pasar por el token_counter/token_maker, de forma
 que si esa variable tiene a su vez metacaracteres, éstos puedan ser
 interpretados.
+Casos tenidos en cuenta: $$, $?, $$$ARG, $012345, $ARG, $ARG|<<<>>>...
+En principio cubre todos los casos existentes.
 */
-char	**variable_expansion_tokens(char *input)
+t_tokens	*variable_expansion_tokens(char *input)
 {
-	char	**tokens;
-	int		size;
-	int		n;
+	t_tokens	*tokens;
+	int			size;
+	int			n;
 
 	size = variable_expansion_counter(input);
-	tokens = (char **)malloc(sizeof(char *) * size + 1);
+	tokens = (t_tokens *)ft_calloc(sizeof(t_tokens), size + 1);
 	if (!tokens)
 		return (NULL);
 	n = 0;
@@ -101,42 +115,32 @@ char	**variable_expansion_tokens(char *input)
 			skip_quotes(&input);
 		else if (*input == '$')
 		{
-			tokens_filler(&n, &input, &tokens);
-			if (!tokens[n - 1])
-				return (free_tokens(n - 1, tokens));
+			tokens_filler(&n, &input, tokens);
+			if (!tokens[n - 1].variable)
+				return (free_expansion_tokens(n - 1, tokens, 0));
 		}
 		else
 			input++;
 	}
-	tokens[n] = 0;
+	tokens[n].variable = 0;
 	return (tokens);
 }
 
-int	main(void)
-{
-	char	**prueba;
-	char	*str = "898e9we";
+// int	main(void)
+// {
+// 	t_tokens	*prueba;
+// 	char	*str = "$?kaka$$jujujujuju$$$ARG";
 
-	printf("%d\n", variable_expansion_counter(str));
-	prueba = variable_expansion_tokens(str);
+// 	printf("%d\n", variable_expansion_counter(str));
+// 	prueba = variable_expansion_tokens(str);
 
-	int i = 0;
-	while (prueba[i] != NULL)
-	{
-		printf("prueba[%d] = %s\n", i, prueba[i]);
-		i++;
-	}
-	printf("prueba[%d] = %s\n", i, prueba[i]);
-	return (0);
-}
+// 	int i = 0;
+// 	while (prueba[i].variable != NULL)
+// 	{
+// 		printf("prueba[%d] = %s\n", i, prueba[i].variable);
+// 		i++;
+// 	}
+// 	printf("prueba[%d] = %s\n", i, prueba[i].variable);
 
-//El parseo aquí está hecho de tal modo que si encuentra $$$ARG
-//Lo va a guardar en dos char* $$ y $ARG
-//Pero si se encuentra con argumentos como $$234
-//Lo va a guardar como una cadena entera y lo guardará en un char*
-//Tal y como hace BASH
-
-
-//gnl tiene que leer hasta el final para comprobar que la variable no se haya machacado.
-//tener en cuenta varias variables $
-//si encuentra una comilla lo avanza a full sino lo pilla del tirón
+// 	return (0);
+// }
