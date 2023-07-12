@@ -76,7 +76,6 @@ void	tokens_filler(int *n, char **s, t_tokens *tokens)
 Función para liberar la memoria. Se resta primero para bajar un nivel más
 ya que en n es donde ha fallado la memoria.
 */
-
 t_tokens	*free_expansion_tokens(int n, t_tokens *tokens, int flag)
 {
 	while (n > 0)
