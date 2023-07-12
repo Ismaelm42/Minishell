@@ -35,5 +35,6 @@ char	*ft_strjoin(char *s1, char *s2)
 	}
 	str[i + j] = '\0';
 	free(s1);
+	//liberando s1. Cuidado con posibles double free.
 	return ((char *)str);
 }

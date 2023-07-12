@@ -33,6 +33,12 @@ void		words_splitter(int *n, char **s, char ***tokens);
 char		**free_tokens(int n, char **tokens);
 char		**token_maker(char *s);
 
+//parser/get_variables_expansion
+int			variable_expansion_counter(char *input);
+void		skip_quotes(char **s);
+void		tokens_filler(int *n, char **s, char ***tokens);
+char		**variable_expansion_tokens(char *input);
+
 //parser/gnl
 char		*gnl(int fd);
 char		*read_fd(int fd, char *static_buffer);

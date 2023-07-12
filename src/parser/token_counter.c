@@ -1,5 +1,10 @@
 #include "../../include/minishell.h"
 
+/*
+Cuando el argumento esté entre comillas (simples o dobles), esta
+función lo contará como un string y avanzará el puntero hasta
+salir de las comillas.
+*/
 void	quoted_token_counter(int *counter, char **s)
 {
 	char	c;
@@ -13,6 +18,10 @@ void	quoted_token_counter(int *counter, char **s)
 	*counter += 1;
 }
 
+/*
+Hace lo mismo que la función anterior pero con los
+metacaracteres: |, <, <<, >, >>.
+*/
 void	redirection_token_counter(int *counter, char **s)
 {
 	if (**s == '|')
@@ -22,6 +31,10 @@ void	redirection_token_counter(int *counter, char **s)
 			(*s)++;
 	*counter += 1;
 }
+
+/*
+Se encarga de contar el resto de palabras.
+*/
 
 void	words_counter(int *counter, char **s)
 {
@@ -36,6 +49,10 @@ void	words_counter(int *counter, char **s)
 	}
 }
 
+/*
+Esta función calcula la memoria que hará falta para guardar
+los argumentos pasados por terminal en strings individuales.
+*/
 int	token_counter(char *s)
 {
 	int		counter;

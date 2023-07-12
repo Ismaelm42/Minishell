@@ -24,19 +24,19 @@ int	add_and_store_history(char *input)
 	return (0);
 }
 
-int	main(void)
-{
-	char	*input;
+// int	main(void)
+// {
+// 	char	*input;
 
-	while (1)
-	{
-		rl_on_new_line();
-		input = readline(">> ");
-		if (add_and_store_history(input) == 1)
-			clean_up_and_exit(EXIT_FAILURE, input);
-		if (ft_strncmp(input, "exit", 5) == 0)
-			clean_up_and_exit(EXIT_SUCCESS, input);
-		free(input);
-	}
-	return (0);
-}
+// 	while (1)
+// 	{
+// 		rl_on_new_line();
+// 		input = readline(">> ");
+// 		if (add_and_store_history(input) == 1)
+// 			clean_up_and_exit(EXIT_FAILURE, input);
+// 		if (ft_strncmp(input, "exit", 5) == 0)
+// 			clean_up_and_exit(EXIT_SUCCESS, input);
+// 		free(input);
+// 	}
+// 	return (0);
+// }

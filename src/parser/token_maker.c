@@ -1,5 +1,9 @@
 #include "../../include/minishell.h"
 
+
+/*
+Esta función se encarga de gestionar las comillas simples y dobles.
+*/
 void	quoted_token_splitter(int *n, char **s, char ***tokens)
 {
 	char	c;
@@ -16,6 +20,9 @@ void	quoted_token_splitter(int *n, char **s, char ***tokens)
 		(*s)++;
 }
 
+/*
+Aquí se separará cualquiera de estos metacaracteres: |, <, <<, >, >>.
+*/
 void	redirection_token_splitter(int *n, char **s, char ***tokens)
 {
 	int	length;
@@ -38,6 +45,10 @@ void	redirection_token_splitter(int *n, char **s, char ***tokens)
 	}
 }
 
+/*
+Gestiona todo los demás argumentos pasados a través del input mientras
+no coincida ningún caracter con los caracteres especiales.
+*/
 void	words_splitter(int *n, char **s, char ***tokens)
 {
 	int	length;
@@ -59,6 +70,9 @@ void	words_splitter(int *n, char **s, char ***tokens)
 	}
 }
 
+/*
+Libera la memoria reservada en caso de fallo.
+*/
 char	**free_tokens(int n, char **tokens)
 {
 	while (n > 0)
@@ -67,6 +81,9 @@ char	**free_tokens(int n, char **tokens)
 	return (NULL);
 }
 
+/*
+Se encarga de dividir en varios strings los argumentos pasados por terminal.
+*/
 char	**token_maker(char *s)
 {
 	char	**tokens;
@@ -96,7 +113,7 @@ char	**token_maker(char *s)
 // int	main(void)
 // {
 // 	char	**str;
-// 	char	*phrase = "ls '-l        jidjeidjie ";
+// 	char	*phrase = "         ls|kaka<huhuh|  jiji  koko  << zzz    ";
 // 	int		i;
 
 // 	str = token_maker(phrase);

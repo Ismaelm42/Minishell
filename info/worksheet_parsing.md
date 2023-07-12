@@ -22,6 +22,9 @@ Si se hace antes, se ahorra tener que retocar el split luego.
 Quizás ocurra lo mismo con el wildcard.
 Solo habría que modificar char *input que es más fácil.
 
+echo $$ devuelve el PID
+
+
 "$ARG" sí se expande.
 '$ARG' no se expande.
 
