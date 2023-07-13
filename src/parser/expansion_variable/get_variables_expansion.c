@@ -1,4 +1,4 @@
-#include "../../include/minishell.h"
+#include "../../../include/minishell.h"
 
 /*
 Función para contar el número de símbolos $ que hay que tener en cuenta.
@@ -21,6 +21,9 @@ int	variable_expansion_counter(char *input)
 		{
 			if (input[1] == '$')
 				input++;
+			else if (input[1] == '{')
+				while (*input != '}' && *input != '\0')
+					input++;
 			counter++;
 		}
 		input++;
@@ -51,9 +54,12 @@ void	tokens_filler(int *n, char **s, t_tokens *tokens)
 	length = 1;
 	if (((*s)[length] >= '0' && (*s)[length] <= '9')
 		|| (*s)[length] == '?' || (*s)[length] == '$')
-	{
 		length++;
-		tokens[*n].variable = ft_substr(*s, 0, length);
+	else if ((*s)[length] == '{')
+	{
+		while ((*s)[length] != '}' && (*s)[length] != '\0')
+			length++;
+		length++;
 	}
 	else
 	{
@@ -66,8 +72,8 @@ void	tokens_filler(int *n, char **s, t_tokens *tokens)
 				break ;
 			length++;
 		}
-		tokens[*n].variable = ft_substr(*s, 0, length);
 	}
+	tokens[*n].variable = ft_substr(*s, 0, length);
 	*n += 1;
 	while (length -- > 0)
 		(*s)++;
@@ -125,21 +131,21 @@ t_tokens	*variable_expansion_tokens(char *input)
 	return (tokens);
 }
 
-// int	main(void)
-// {
-// 	t_tokens	*prueba;
-// 	char	*str = "$?kaka$$jujujujuju$$$ARG";
+int	main(void)
+{
+	t_tokens	*prueba;
+	char	*str = "    ${ARG$hola$?";
 
-// 	printf("%d\n", variable_expansion_counter(str));
-// 	prueba = variable_expansion_tokens(str);
+	printf("%d\n", variable_expansion_counter(str));
+	prueba = variable_expansion_tokens(str);
 
-// 	int i = 0;
-// 	while (prueba[i].variable != NULL)
-// 	{
-// 		printf("prueba[%d] = %s\n", i, prueba[i].variable);
-// 		i++;
-// 	}
-// 	printf("prueba[%d] = %s\n", i, prueba[i].variable);
+	int i = 0;
+	while (prueba[i].variable != NULL)
+	{
+		printf("prueba[%d] = %s\n", i, prueba[i].variable);
+		i++;
+	}
+	printf("prueba[%d] = %s\n", i, prueba[i].variable);
 
-// 	return (0);
-// }
+	return (0);
+}

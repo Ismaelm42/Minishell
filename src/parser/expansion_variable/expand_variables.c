@@ -1,4 +1,4 @@
-#include "../../include/minishell.h"
+#include "../../../include/minishell.h"
 
 
 // int		get_variable_from_path();
@@ -52,25 +52,25 @@ void	get_variable_expansion_value(int *n, char **s, t_tokens *tokens)
 	*n += 1;
 }
 
-int	main(void)
-{
-	t_tokens	*prueba;
-	char		*str = "$PATH";
-	int			c;
+// int	main(void)
+// {
+// 	t_tokens	*prueba;
+// 	char		*str = "$PATH";
+// 	int			c;
 
-	c = 0;
-	printf("%d\n", variable_expansion_counter(str));
-	prueba = variable_expansion_tokens(str);
-	get_variable_expansion_value(&c, &str, prueba);
+// 	c = 0;
+// 	printf("%d\n", variable_expansion_counter(str));
+// 	prueba = variable_expansion_tokens(str);
+// 	get_variable_expansion_value(&c, &str, prueba);
 
-	int i = 0;
-	while (prueba[i].variable != NULL)
-	{
-		printf("prueba[%d] = %s\n", i, prueba[i].variable);
-		i++;
-	}
-	printf("prueba[%d] = %s\n", i, prueba[i].variable);
+// 	int i = 0;
+// 	while (prueba[i].variable != NULL)
+// 	{
+// 		printf("prueba[%d] = %s\n", i, prueba[i].variable);
+// 		i++;
+// 	}
+// 	printf("prueba[%d] = %s\n", i, prueba[i].variable);
 
-	return (0);
-}
+// 	return (0);
+// }
 
