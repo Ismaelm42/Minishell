@@ -30,29 +30,34 @@ typedef struct s_tokens
 void		clean_up_and_exit(int status, char *ptr);
 int			add_and_store_history(char *input);
 
-//parser/token_counter
+//parser/get_tokens/token_counter
 void		quoted_token_counter(int *counter, char **s);
 void		redirection_token_counter(int *counter, char **s);
 void		words_counter(int *counter, char **s);
 int			token_counter(char *s);
 
-//parser/token_maker
+//parser/get_tokens/token_maker
 void		quoted_token_splitter(int *n, char **s, char ***tokens);
 void		redirection_token_splitter(int *n, char **s, char ***tokens);
 void		words_splitter(int *n, char **s, char ***tokens);
 char		**free_tokens(int n, char **tokens);
 char		**token_maker(char *s);
 
-//parser/get_variables_expansion
+//parser/expansion_variable/get_variables
 int			variable_expansion_counter(char *input);
 void		skip_quotes(char **s);
-
-
-// void		tokens_filler(int *n, char **s, char ***tokens);
-// char		**variable_expansion_tokens(char *input);
-
-void		tokens_filler(int *n, char **s, t_tokens *tokens);
+void		tokens_filler(int *n, int length, char **s, t_tokens *tokens);
+void		check_expansion(int *n, char **s, t_tokens *tokens);
 t_tokens	*variable_expansion_tokens(char *input);
+
+//parser/expansion_variable/expand_variables
+
+int			get_variable_from_path(int *n, t_tokens *tokens);
+int			get_variable_from_history(int *n, t_tokens *tokens);
+void		get_variable_expansion_value(int *n, char **s, t_tokens *tokens);
+
+//parser/expansion_variable/utils
+t_tokens	*free_expansion_tokens(int n, t_tokens *tokens, int flag);
 
 //parser/gnl
 char		*gnl(int fd);

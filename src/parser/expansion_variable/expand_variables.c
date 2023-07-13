@@ -20,7 +20,7 @@ int	get_variable_from_path(int *n, t_tokens *tokens)
 	char	*environment;
 
 	copy = tokens[*n].variable;
-	//copy++;
+	copy++;
 	environment = getenv(copy);
 	if (environment == NULL)
 		return (1);

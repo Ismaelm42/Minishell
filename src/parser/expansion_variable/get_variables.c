@@ -43,11 +43,19 @@ void	skip_quotes(char **s)
 
 }
 
+void	tokens_filler(int *n, int length, char **s, t_tokens *tokens)
+{
+	tokens[*n].variable = ft_substr(*s, 0, length);
+	*n += 1;
+	while (length -- > 0)
+		(*s)++;
+}
+
 /*
 Permite guardar como token todos los símbolos $ teniendo en cuenta
 los casos particulares como $, $123, $$, $?, $$$ARG, etc...
 */
-void	tokens_filler(int *n, char **s, t_tokens *tokens)
+void	check_expansion(int *n, char **s, t_tokens *tokens)
 {
 	int	length;
 
@@ -73,27 +81,9 @@ void	tokens_filler(int *n, char **s, t_tokens *tokens)
 			length++;
 		}
 	}
-	tokens[*n].variable = ft_substr(*s, 0, length);
-	*n += 1;
-	while (length -- > 0)
-		(*s)++;
+	tokens_filler(n, length, s, tokens);
 }
-/*
-Función para liberar la memoria. Se resta primero para bajar un nivel más
-ya que en n es donde ha fallado la memoria.
-*/
-t_tokens	*free_expansion_tokens(int n, t_tokens *tokens, int flag)
-{
-	while (n > 0)
-	{
-		n--;
-		free (tokens[n].variable);
-		if (flag != 0)
-			free (tokens[n].variable);
-	}
-	free (tokens);
-	return (NULL);
-}
+
 
 /*
 Guarda en un struct todos los posibles símbolos $ para sustituirlos en
@@ -120,7 +110,7 @@ t_tokens	*variable_expansion_tokens(char *input)
 			skip_quotes(&input);
 		else if (*input == '$')
 		{
-			tokens_filler(&n, &input, tokens);
+			check_expansion(&n, &input, tokens);
 			if (!tokens[n - 1].variable)
 				return (free_expansion_tokens(n - 1, tokens, 0));
 		}
