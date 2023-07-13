@@ -40,7 +40,7 @@ void	get_variable_expansion_value(int *n, char **s, t_tokens *tokens)
 
 	token = s[*n];
 	if (ft_strlen(token) == 1)
-		tokens[*n].expanded = ft_strdup(token);
+		tokens[*n].expanded = ft_strdup("'$'");
 	else if (ft_strncmp(token, "$$", ft_strlen(token)) == 0)
 		tokens[*n].expanded = \
 		ft_strdup("ps -o ppid= | tail -n 1 | sed 's/^[[:space:]]*//'");

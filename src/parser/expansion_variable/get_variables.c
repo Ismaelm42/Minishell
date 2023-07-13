@@ -42,7 +42,10 @@ void	skip_quotes(char **s)
 	(*s)++;
 
 }
-
+/*
+Utiliza substring para crear la subcadena correspondiente, avanza el puntero de s
+y suma uno más a n.
+*/
 void	tokens_filler(int *n, int length, char **s, t_tokens *tokens)
 {
 	tokens[*n].variable = ft_substr(*s, 0, length);
@@ -124,7 +127,7 @@ t_tokens	*variable_expansion_tokens(char *input)
 int	main(void)
 {
 	t_tokens	*prueba;
-	char	*str = "    ${ARG}$$hola$?";
+	char	*str = "    $ ";
 
 	printf("%d\n", variable_expansion_counter(str));
 	prueba = variable_expansion_tokens(str);
