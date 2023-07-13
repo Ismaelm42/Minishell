@@ -1,8 +1,8 @@
 NAME = minishell
 
 SRC =	src/main.c																\
-		src/parser/token_counter.c												\
-		src/parser/token_maker.c												\
+		src/parser/get_tokens/token_counter.c									\
+		src/parser/get_tokens/token_maker.c										\
 		src/parser/utils/gnl.c													\
 		src/parser/expansion_variable/get_variables.c							\
 		src/parser/expansion_variable/expand_variables.c						\

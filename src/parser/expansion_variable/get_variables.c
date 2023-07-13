@@ -134,7 +134,7 @@ t_tokens	*variable_expansion_tokens(char *input)
 int	main(void)
 {
 	t_tokens	*prueba;
-	char	*str = "    ${ARG$hola$?";
+	char	*str = "    ${ARG}$$hola$?";
 
 	printf("%d\n", variable_expansion_counter(str));
 	prueba = variable_expansion_tokens(str);
