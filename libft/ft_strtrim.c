@@ -21,5 +21,5 @@ char	*ft_strtrim(char *s1, char *set)
 	i = ft_strlen(s1);
 	while (i && ft_strchr(set, s1[i]))
 		i--;
-	return (ft_substr(s1, 0, i + 1));
+	return (ft_substr(s1, 0, i + 1, 0));
 }

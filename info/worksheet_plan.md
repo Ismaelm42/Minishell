@@ -15,3 +15,23 @@
 
 
 Se debe usar la función unlink para eliminar el archivo .history
+
+
+
+
+input
+echo $ARG
+
+split->variable_expansion
+variable= $ARG
+expanded= ls -a
+
+nuevo input
+echo 1234567890
+
+token_maker
+[echo] [1234567890]
+
+[echo] [ls] [-a]
+
+ls > outfile <infile | cat -e | awk

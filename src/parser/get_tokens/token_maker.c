@@ -14,7 +14,7 @@ void	quoted_token_splitter(int *n, char **s, char ***tokens)
 	while ((*s)[length + 1] != c)
 		length++;
 	length += 2;
-	(*tokens)[*n] = ft_substr(*s, 0, length);
+	(*tokens)[*n] = ft_substr(*s, 0, length, 0);
 	*n += 1;
 	while (length -- > 0)
 		(*s)++;
@@ -29,7 +29,7 @@ void	redirection_token_splitter(int *n, char **s, char ***tokens)
 
 	if (**s == '|')
 	{
-		(*tokens)[*n] = ft_substr(*s, 0, 1);
+		(*tokens)[*n] = ft_substr(*s, 0, 1, 0);
 		(*s)++;
 		*n += 1;
 	}
@@ -38,7 +38,7 @@ void	redirection_token_splitter(int *n, char **s, char ***tokens)
 		length = 0;
 		while ((*s)[length] == '<' || (*s)[length] == '>')
 			length++;
-		(*tokens)[*n] = ft_substr(*s, 0, length);
+		(*tokens)[*n] = ft_substr(*s, 0, length, 0);
 		*n += 1;
 		while (length -- > 0)
 			(*s)++;
@@ -63,7 +63,7 @@ void	words_splitter(int *n, char **s, char ***tokens)
 		length++;
 	if (length > 0)
 	{
-		(*tokens)[*n] = ft_substr(*s, 0, length);
+		(*tokens)[*n] = ft_substr(*s, 0, length, 0);
 		*n += 1;
 		while (length -- > 0)
 		(*s)++;

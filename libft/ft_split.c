@@ -76,7 +76,7 @@ char	**ft_split(char *s, char c)
 	while (n < ft_string_counter(s, c))
 	{
 		start = ft_string_start(s, c, start);
-		str[n] = ft_substr(s, start, (size_t)ft_string_len(s, c, start));
+		str[n] = ft_substr(s, start, (size_t)ft_string_len(s, c, start), 0);
 		if (str[n] == NULL)
 		{
 			ft_free(str, n);

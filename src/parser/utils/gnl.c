@@ -34,7 +34,7 @@ char	*read_fd(int fd, char *static_buffer)
 		else if (!static_buffer)
 			static_buffer = ft_strdup(buffer);
 		else
-			static_buffer = ft_strjoin(static_buffer, buffer);
+			static_buffer = ft_strjoin(static_buffer, buffer, 1);
 		free(buffer);
 	}
 	return (static_buffer);
@@ -51,7 +51,7 @@ char	*return_line(char *static_buffer)
 		while (static_buffer[length] != 10)
 			length++;
 		length++;
-		buffer = ft_substr(static_buffer, 0, length);
+		buffer = ft_substr(static_buffer, 0, length, 0);
 		return (buffer);
 	}
 	return (static_buffer);
@@ -74,7 +74,7 @@ char	*return_static(char *static_buffer)
 			length++;
 		if (length == 0)
 			return (free (static_buffer), NULL);
-		buffer = ft_substr(static_buffer, n, length);
+		buffer = ft_substr(static_buffer, n, length, 0);
 		return (free (static_buffer), buffer);
 	}
 	return (NULL);

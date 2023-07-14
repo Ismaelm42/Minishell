@@ -40,7 +40,6 @@ void	skip_quotes(char **s)
 	while (**s != '\'' && **s != '\0')
 		(*s)++;
 	(*s)++;
-
 }
 /*
 Utiliza substring para crear la subcadena correspondiente, avanza el puntero de s
@@ -48,7 +47,7 @@ y suma uno más a n.
 */
 void	tokens_filler(int *n, int length, char **s, t_tokens *tokens)
 {
-	tokens[*n].variable = ft_substr(*s, 0, length);
+	tokens[*n].variable = ft_substr(*s, 0, length, 0);
 	*n += 1;
 	while (length -- > 0)
 		(*s)++;
@@ -124,21 +123,22 @@ t_tokens	*variable_expansion_tokens(char *input)
 	return (tokens);
 }
 
-int	main(void)
-{
-	t_tokens	*prueba;
-	char	*str = "    $ ";
+// int	main(void)
+// {
+// 	t_tokens	*prueba;
+// 	char	*str = "    $ ";
 
-	printf("%d\n", variable_expansion_counter(str));
-	prueba = variable_expansion_tokens(str);
+// 	printf("%d\n", variable_expansion_counter(str));
+// 	prueba = variable_expansion_tokens(NULL);
 
-	int i = 0;
-	while (prueba[i].variable != NULL)
-	{
-		printf("prueba[%d] = %s\n", i, prueba[i].variable);
-		i++;
-	}
-	printf("prueba[%d] = %s\n", i, prueba[i].variable);
+	
+// 	// int i = 0;
+// 	// while (prueba[i].variable != NULL)
+// 	// {
+// 	// 	printf("prueba[%d] = %s\n", i, prueba[i].variable);
+// 	// 	i++;
+// 	// }
+// 	// printf("prueba[%d] = %s\n", i, prueba[i].variable);
 
-	return (0);
-}
+// 	return (0);
+// }
