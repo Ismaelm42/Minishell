@@ -95,7 +95,7 @@ interpretados.
 Casos tenidos en cuenta: $$, $?, $$$ARG, $012345, $ARG, $ARG|<<<>>>...
 En principio cubre todos los casos existentes.
 */
-t_tokens	*variable_expansion_tokens(char *input)
+t_tokens	*get_variable_expansion_tokens(char *input)
 {
 	t_tokens	*tokens;
 	int			size;
@@ -122,23 +122,3 @@ t_tokens	*variable_expansion_tokens(char *input)
 	tokens[n].variable = 0;
 	return (tokens);
 }
-
-// int	main(void)
-// {
-// 	t_tokens	*prueba;
-// 	char	*str = "    $ ";
-
-// 	printf("%d\n", variable_expansion_counter(str));
-// 	prueba = variable_expansion_tokens(NULL);
-
-	
-// 	// int i = 0;
-// 	// while (prueba[i].variable != NULL)
-// 	// {
-// 	// 	printf("prueba[%d] = %s\n", i, prueba[i].variable);
-// 	// 	i++;
-// 	// }
-// 	// printf("prueba[%d] = %s\n", i, prueba[i].variable);
-
-// 	return (0);
-// }

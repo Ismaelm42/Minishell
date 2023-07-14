@@ -22,9 +22,9 @@ vincularlos luego con su variable de una forma más simple.
 */
 typedef struct s_tokens
 {
-	char	*variable;
-	char	*expanded;
-}			t_tokens;
+	char		*variable;
+	char		*expanded;
+}				t_tokens;
 
 //src
 void		clean_up_and_exit(int status, char *ptr);
@@ -48,13 +48,13 @@ int			variable_expansion_counter(char *input);
 void		skip_quotes(char **s);
 void		tokens_filler(int *n, int length, char **s, t_tokens *tokens);
 void		check_expansion(int *n, char **s, t_tokens *tokens);
-t_tokens	*variable_expansion_tokens(char *input);
+t_tokens	*get_variable_expansion_tokens(char *input);
 
 //parser/expansion_variable/expand_variables
 
-int			get_variable_from_path(int *n, t_tokens *tokens);
-int			get_variable_from_history(int *n, t_tokens *tokens);
-void		get_variable_expansion_value(int *n, char **s, t_tokens *tokens);
+int			get_variable_from_path(int n, t_tokens *tokens);
+int			get_variable_from_history(int n, t_tokens *tokens);
+void		get_variable_expansion_value(int n, t_tokens *tokens);
 
 //parser/expansion_variable/utils
 t_tokens	*free_expansion_tokens(int n, t_tokens *tokens, int flag);
