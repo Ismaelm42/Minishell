@@ -62,7 +62,7 @@ char	*ft_strmapi(char *s, char (*f)(unsigned int, char));
 int		ft_strncmp(char *s1, char *s2, size_t n);
 char	*ft_strnstr(char *haystack, char *needle, size_t len);
 char	*ft_strrchr(char *s, int c);
-char	*ft_strtrim(char *s1, char *set);
+char	*ft_strtrim(char *s1, char *set, int flag);
 char	*ft_substr(char *s, unsigned int start, size_t len, int flag);
 int		ft_tolower(int c);
 int		ft_toupper(int c);

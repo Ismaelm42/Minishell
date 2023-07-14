@@ -41,6 +41,7 @@ void	skip_quotes(char **s)
 		(*s)++;
 	(*s)++;
 }
+
 /*
 Utiliza substring para crear la subcadena correspondiente, avanza el puntero de s
 y suma uno más a n.
@@ -85,7 +86,6 @@ void	check_expansion(int *n, char **s, t_tokens *tokens)
 	}
 	tokens_filler(n, length, s, tokens);
 }
-
 
 /*
 Guarda en un struct todos los posibles símbolos $ para sustituirlos en

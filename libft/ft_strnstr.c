@@ -29,9 +29,7 @@ char	*ft_strnstr(char *haystack, char *needle, size_t len)
 			{
 				i++;
 				if (i == (size_t)ft_strlen(needle))
-				{
 					return ((char *)&haystack[j]);
-				}
 			}
 		}
 		j++;
