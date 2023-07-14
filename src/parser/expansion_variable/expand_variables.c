@@ -72,7 +72,13 @@ int	get_variable_from_history(int n, t_tokens *tokens)
 
 	size = ft_strlen(tokens[n].variable);
 	needle = ft_substr(tokens[n].variable, 1, size, 0);
-	needle = ft_strjoin(ft_substr(tokens[n].variable, 1, size, 0), "=", 1);
+	if (needle[0] == '{' && needle[ft_strlen(needle) - 1] == '}')
+	{
+		needle = ft_strtrim(needle, "{", 1);
+		needle = ft_strtrim(needle, "}", 1);
+		size -= 2;
+	}
+	needle = ft_strjoin(needle, "=", 1);
 	read_from_history(n, tokens, needle, size);
 	free(needle);
 	if (!tokens[n].expanded)

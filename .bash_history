@@ -3,7 +3,7 @@ buenos
 dias
 ARG="puto"
 adios
-ARG=hey!
+ARG=HOLA
 hasta
 mañana
 amigo
