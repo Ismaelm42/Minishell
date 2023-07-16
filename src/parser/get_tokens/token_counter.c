@@ -69,10 +69,3 @@ int	token_counter(char *s)
 	}
 	return (counter);
 }
-
-// int	main(void)
-// {
-// 	int i = token_counter("buenos ' dias '   >< <hola   ");
-// 	printf("%d\n", i);
-
-// }

@@ -92,9 +92,7 @@ char	**token_maker(char *s)
 
 	n = 0;
 	size = token_counter(s);
-	tokens = (char **)malloc(sizeof(char **) * size + 1);
-	if (!tokens)
-		return (NULL);
+	tokens = (char **)calloc(sizeof(char **), size + 1);
 	while (n < size)
 	{
 		if (*s == '\'' || *s == '"')
@@ -109,19 +107,3 @@ char	**token_maker(char *s)
 	tokens[n] = 0;
 	return (tokens);
 }
-
-// int	main(void)
-// {
-// 	char	**str;
-// 	char	*phrase = "         ls|kaka<huhuh|  jiji  koko  << zzz    ";
-// 	int		i;
-
-// 	str = token_maker(phrase);
-// 	i = 0;
-// 	while (str[i] != NULL)
-// 	{
-// 		printf("str[%d] = %s\n", i, str[i]);
-// 		i++;
-// 	}
-// 	printf("str[%d] = %s\n", i, str[i]);
-// }

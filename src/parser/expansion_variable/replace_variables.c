@@ -1,19 +1,21 @@
 #include "../../../include/minishell.h"
 
-
 /*
-
+Función que permite conseguir la posición exacta en el input de todas las variables $.
+tokens_ptr es un puntero a input que permite avanzar el puntero para que, si tenemos
+dos veces la misma variable ($$ $$, por ejemplo), podamos conseguir la posición de
+la segunda variable y la función ft_strnstr no devuelva de nuevo la anterior a esta.
 */
 void	get_size_variables(int *variable, int *expanded, char *input, t_tokens *tokens)
 {
 	char	*tokens_ptr;
-	int		i;
 	int		n;
+	int		i;
 
 	tokens_ptr = input;
-	i = 0;
 	*variable = 0;
 	*expanded = 0;
+	i = 0;
 	while (tokens[i].variable != NULL)
 	{
 		*variable += ft_strlen(tokens[i].variable);
@@ -29,42 +31,12 @@ void	get_size_variables(int *variable, int *expanded, char *input, t_tokens *tok
 		i++;
 	}
 }
-void	replace_function(char *new_input, char *input, t_tokens *tokens)
-{
-	int	i;
-	int	j;
-	int	k;
-	int	n;
 
-	i = 0;
-	j = 0;
-	k = 0;
-	while (input[i] != 0)
-	{
-		if (i == tokens[j].position)
-		{
-			// printf("position[%d]\n", tokens[j].position);
-			// printf("token[%d] = %s\n", j, tokens[j].expanded);
-			n = 0;
-			while (tokens[j].expanded[n] != 0)
-			{
-				new_input[k] = tokens[j].expanded[n];
-				k++;
-				n++;
-			}
-			i += ft_strlen(tokens[j].variable);
-			j++;
-		}
-		else
-		{
-			new_input[k] = input[i];
-			i++;
-			k++;
-		}
-	}
-}
-
-void	replace_variables(char *input, t_tokens *tokens)
+/*
+Se encarga de realizar la sustitución del input que obtenemos por la terminal
+a la versión final en la cual sustituimos todas las variables $ por su valor.
+*/
+char	*replace_variables(char *input, t_tokens *tokens)
 {
 	char	*new_input;
 	int		input_size;
@@ -75,20 +47,7 @@ void	replace_variables(char *input, t_tokens *tokens)
 	input_size = ft_strlen(input);
 	get_size_variables(&var_size, &exp_size, input, tokens);
 	size = (input_size - var_size + exp_size);
-	printf("size = %d\n", size);
 	new_input = (char *)calloc(sizeof(char), size + 1);
-	printf("%s\n", input);
 	replace_function(new_input, input, tokens);
-	printf("%s\n", new_input);
-	printf("sizedef = %d\n", ft_strlen(new_input));
-}
-
-int	main(void)
-{
-	char *input = ft_strdup("$NOARG $$ $   $12345 $ARG ${ARG} $HOME ${LOGNAME}  $PWD ");
-
-
-	expansion_variable(input);
-
-
+	return (new_input);
 }

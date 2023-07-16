@@ -27,8 +27,8 @@ int	get_variable_from_path(int n, t_tokens *tokens)
 Lee del historial y se usan las funciones strtrim para recortar las comillas dobles o simples,
 las que primero encuentre. Se está reservando y liberando constantemente para ir buscando
 por el historial.
-Nota:
-En el condicional if (fd == -1), ay que crear un exit específico que cierre
+¡¡¡¡Nota!!!!:
+En el condicional if (fd == -1), hay que crear un exit específico en utils que cierre
 correctamente el programa.
 Tiene en cuenta casos especiales como: ARG="'hola'", ARG='"hola"'...
 */
@@ -87,7 +87,7 @@ int	get_variable_from_history(int n, t_tokens *tokens)
 }
 
 /*
-Esta función establece los posibles parametros de la variable de expansión.
+Esta función establece los posibles parametros de la variable $.
 Para obtener el PID, simplemente cambiamos el token $$ por un comando que
 mostrará el número del PID en ejecución. Si no encuentra ningún valor de
 sustitución lo reemplazará por "". La función get_exit_status_variable

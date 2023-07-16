@@ -59,11 +59,12 @@ void		get_variable_expansion_value(int n, t_tokens *tokens);
 
 //parser/expansion_variable/replace_variables
 void		get_size_and_position_variables(int *variable, int *expanded, t_tokens *tokens);
-void		replace_variables(char *input, t_tokens *tokens);
+char		*replace_variables(char *input, t_tokens *tokens);
 void		replace_function(char *new_input, char *input, t_tokens *tokens);
 
 //parser/expansion_variable/utils
 t_tokens	*free_expansion_tokens(int n, t_tokens *tokens, int flag);
+int			search_for_more_sign_dollars(char *input);
 
 //parser/gnl
 char		*gnl(int fd);

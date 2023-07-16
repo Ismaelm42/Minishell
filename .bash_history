@@ -1,1 +1,1 @@
-ARG="OK"
+ARG="${LOGNAME}"
