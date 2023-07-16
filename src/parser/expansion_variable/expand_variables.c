@@ -39,7 +39,7 @@ void	read_from_history(int n, t_tokens *tokens, char *needle, int size)
 
 	fd = open(".bash_history", 0666);
 	if (fd == -1)
-		ft_putstr_fd("Error openning bash history", 2);
+		ft_putstr_fd("Error openning bash history\n", 2);
 	haystack = gnl(fd);
 	while (haystack != NULL)
 	{
@@ -98,7 +98,6 @@ void	get_variable_expansion_value(int n, t_tokens *tokens)
 {
 	char	*token;
 
-	printf("i = %d\n", n);
 	token = tokens[n].variable;
 	if (ft_strlen(token) == 1)
 		tokens[n].expanded = ft_strdup("'$'");

@@ -46,7 +46,7 @@ void	skip_quotes(char **s)
 Utiliza substring para crear la subcadena correspondiente, avanza el puntero de s
 y suma uno más a n.
 */
-void	tokens_filler(int *n, int length, char **s, t_tokens *tokens)
+void	variable_tokens_filler(int *n, int length, char **s, t_tokens *tokens)
 {
 	tokens[*n].variable = ft_substr(*s, 0, length, 0);
 	*n += 1;
@@ -58,7 +58,7 @@ void	tokens_filler(int *n, int length, char **s, t_tokens *tokens)
 Permite guardar como token todos los símbolos $ teniendo en cuenta
 los casos particulares como $, $123, $$, $?, $$$ARG, etc...
 */
-void	check_expansion(int *n, char **s, t_tokens *tokens)
+void	check_expansion_and_delimiters(int *n, char **s, t_tokens *tokens)
 {
 	int	length;
 
@@ -84,7 +84,7 @@ void	check_expansion(int *n, char **s, t_tokens *tokens)
 			length++;
 		}
 	}
-	tokens_filler(n, length, s, tokens);
+	variable_tokens_filler(n, length, s, tokens);
 }
 
 /*
@@ -112,7 +112,7 @@ t_tokens	*get_variable_expansion_tokens(char *input)
 			skip_quotes(&input);
 		else if (*input == '$')
 		{
-			check_expansion(&n, &input, tokens);
+			check_expansion_and_delimiters(&n, &input, tokens);
 			if (!tokens[n - 1].variable)
 				return (free_expansion_tokens(n - 1, tokens, 0));
 		}

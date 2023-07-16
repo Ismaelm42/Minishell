@@ -24,6 +24,7 @@ typedef struct s_tokens
 {
 	char		*variable;
 	char		*expanded;
+	int			position;
 }				t_tokens;
 
 //src
@@ -46,8 +47,8 @@ char		**token_maker(char *s);
 //parser/expansion_variable/get_variables
 int			variable_expansion_counter(char *input);
 void		skip_quotes(char **s);
-void		tokens_filler(int *n, int length, char **s, t_tokens *tokens);
-void		check_expansion(int *n, char **s, t_tokens *tokens);
+void		variable_tokens_filler(int *n, int length, char **s, t_tokens *tokens);
+void		check_expansion_and_delimiters(int *n, char **s, t_tokens *tokens);
 t_tokens	*get_variable_expansion_tokens(char *input);
 
 //parser/expansion_variable/expand_variables
@@ -55,6 +56,11 @@ t_tokens	*get_variable_expansion_tokens(char *input);
 int			get_variable_from_path(int n, t_tokens *tokens);
 int			get_variable_from_history(int n, t_tokens *tokens);
 void		get_variable_expansion_value(int n, t_tokens *tokens);
+
+//parser/expansion_variable/replace_variables
+void		get_size_and_position_variables(int *variable, int *expanded, t_tokens *tokens);
+void		replace_variables(char *input, t_tokens *tokens);
+void		replace_function(char *new_input, char *input, t_tokens *tokens);
 
 //parser/expansion_variable/utils
 t_tokens	*free_expansion_tokens(int n, t_tokens *tokens, int flag);
@@ -64,5 +70,10 @@ char		*gnl(int fd);
 char		*read_fd(int fd, char *static_buffer);
 char		*return_line(char *static_buffer);
 char		*return_static(char *static_buffer);
+
+
+
+//main.c
+char	*expansion_variable(char *input);
 
 #endif
