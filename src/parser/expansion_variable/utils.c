@@ -1,17 +1,64 @@
 #include "../../../include/minishell.h"
 
 /*
+Lee del historial y se usan las funciones strtrim para recortar las comillas dobles o simples,
+las que primero encuentre. Se está reservando y liberando constantemente para ir buscando
+por el historial.
+¡¡¡¡Nota!!!!:
+En el condicional if (fd == -1), hay que crear un exit específico en utils que cierre
+correctamente el programa.
+Tiene en cuenta casos especiales como: ARG="'hola'", ARG='"hola"'...
+*/
+void	read_from_history(int n, t_tokens *tokens, char *needle, int size)
+{
+	char	*haystack;
+	int		fd;
+
+	fd = open(".bash_history", 0666);
+	if (fd == -1)
+		ft_putstr_fd("Error openning bash history\n", 2);
+	haystack = gnl(fd);
+	while (haystack != NULL)
+	{
+		if (ft_strnstr(haystack, needle, ft_strlen(needle)))
+		{
+			if (tokens[n].expanded)
+				free(tokens[n].expanded);
+			tokens[n].expanded = ft_substr(haystack, size, 10000, 0);
+			tokens[n].expanded = ft_strtrim(tokens[n].expanded, "\n", 1);
+			if (tokens[n].expanded[0] == '\"')
+				tokens[n].expanded = ft_strtrim(tokens[n].expanded, "\"", 1);
+			else
+				tokens[n].expanded = ft_strtrim(tokens[n].expanded, "\'", 1);
+		}
+		free(haystack);
+		haystack = gnl(fd);
+	}
+	close(fd);
+}
+
+/*
 Función para liberar la memoria. Se resta primero para bajar un nivel más
 ya que en n es donde ha fallado la memoria.
 */
 t_tokens	*free_expansion_tokens(int n, t_tokens *tokens, int flag)
 {
-	while (n > 0)
+	int	i;
+
+	if (flag == 0)
 	{
-		n--;
-		free (tokens[n].variable);
-		if (flag != 0)
-			free (tokens[n].variable);
+		while (n > 0)
+			free (tokens[--n].variable);
+	}
+	if (flag == 1)
+	{
+		i = 0;
+		while (i < n)
+		{
+			free (tokens[i].variable);
+			free (tokens[i].expanded);
+			i++;
+		}
 	}
 	free (tokens);
 	return (NULL);
@@ -42,24 +89,4 @@ void	replace_function(char *new_input, char *input, t_tokens *tokens)
 		else
 			new_input[k++] = input[i++];
 	}
-}
-
-/*
-Busca en la cadena input si existen variables $ que no estén precedidas y seguidas por comillas.
-En caso de que sí hubiera, devuelve 1.
-*/
-int	search_for_more_sign_dollars(char *input)
-{
-	int	i;
-
-	i = 0;
-	while (input[i] != 0)
-	{
-		if (input[i] == '$')
-			if ((input[i - 1] != '\'' && (i - 1) != -1)
-				|| (input[i + 1] != '\'' && input[i + 1] != 0))
-				return (1);
-		i++;
-	}
-	return (0);
 }

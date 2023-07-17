@@ -24,43 +24,6 @@ int	get_variable_from_path(int n, t_tokens *tokens)
 }
 
 /*
-Lee del historial y se usan las funciones strtrim para recortar las comillas dobles o simples,
-las que primero encuentre. Se está reservando y liberando constantemente para ir buscando
-por el historial.
-¡¡¡¡Nota!!!!:
-En el condicional if (fd == -1), hay que crear un exit específico en utils que cierre
-correctamente el programa.
-Tiene en cuenta casos especiales como: ARG="'hola'", ARG='"hola"'...
-*/
-void	read_from_history(int n, t_tokens *tokens, char *needle, int size)
-{
-	char	*haystack;
-	int		fd;
-
-	fd = open(".bash_history", 0666);
-	if (fd == -1)
-		ft_putstr_fd("Error openning bash history\n", 2);
-	haystack = gnl(fd);
-	while (haystack != NULL)
-	{
-		if (ft_strnstr(haystack, needle, ft_strlen(needle)))
-		{
-			if (tokens[n].expanded)
-				free(tokens[n].expanded);
-			tokens[n].expanded = ft_substr(haystack, size, 10000, 0);
-			tokens[n].expanded = ft_strtrim(tokens[n].expanded, "\n", 1);
-			if (tokens[n].expanded[0] == '\"')
-				tokens[n].expanded = ft_strtrim(tokens[n].expanded, "\"", 1);
-			else
-				tokens[n].expanded = ft_strtrim(tokens[n].expanded, "\'", 1);
-		}
-		free(haystack);
-		haystack = gnl(fd);
-	}
-	close(fd);
-}
-
-/*
 Crea needle que es nombre de la variable más el símbolo igual para poder
 buscarlo por el historial en la función read_from_history.
 Ejemplo de needle: ARG= 
@@ -109,4 +72,38 @@ void	get_variable_expansion_value(int n, t_tokens *tokens)
 	else if (get_variable_from_path(n, tokens) == 1)
 		if (get_variable_from_history(n, tokens) == 1)
 			tokens[n].expanded = ft_strdup("");
+}
+
+/*
+Se encarga de realizar todo el procedimiento para expandir la variable $.
+En esta función, se realizan todas las demás de la carpeta src/expand_variables.
+Una vez realizada la llamada a esta función, obtenemos un nuevo input modificado
+con los valores reales de $.
+*/
+char	*expansion_variable(char *input)
+{
+	t_tokens	*tokens;
+	char		*new_input;
+	int			size;
+	int			i;
+
+	if (variable_expansion_counter(input) != 0)
+	{
+		tokens = get_variable_expansion_tokens(input);
+		size = variable_expansion_counter(input);
+		i = 0;
+		while (i < size)
+		{
+			get_variable_expansion_value(i, tokens);
+			i++;
+		}
+		new_input = replace_variables(input, tokens);
+		free(input);
+		if (variable_expansion_counter(new_input) != 0)
+			new_input = expansion_variable(new_input);
+		free_expansion_tokens(size, tokens, 1);
+		return (new_input);
+	}
+	else
+		return (input);
 }

@@ -1,7 +1,8 @@
 NAME = minishell
 
 SRC =	src/main.c																\
-		src/parser/history/bash_history.c												\
+		src/parser/history/bash_history.c										\
+		src/parser/get_tokens/get_tokens.c										\
 		src/parser/get_tokens/token_counter.c									\
 		src/parser/get_tokens/token_maker.c										\
 		src/parser/utils/gnl.c													\

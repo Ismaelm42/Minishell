@@ -28,8 +28,10 @@ typedef struct s_tokens
 }				t_tokens;
 
 //src
-void		clean_up_and_exit(int status, char *ptr);
-int			add_and_store_history(char *input);
+void		add_and_store_history(char *input);
+
+//parser/get_tokens/token_counter
+char		**get_tokens(char *input);
 
 //parser/get_tokens/token_counter
 void		quoted_token_counter(int *counter, char **s);
@@ -63,8 +65,9 @@ char		*replace_variables(char *input, t_tokens *tokens);
 void		replace_function(char *new_input, char *input, t_tokens *tokens);
 
 //parser/expansion_variable/utils
+void		read_from_history(int n, t_tokens *tokens, char *needle, int size);
 t_tokens	*free_expansion_tokens(int n, t_tokens *tokens, int flag);
-int			search_for_more_sign_dollars(char *input);
+int			search_for_dollar_sign(char *input);
 
 //parser/gnl
 char		*gnl(int fd);
