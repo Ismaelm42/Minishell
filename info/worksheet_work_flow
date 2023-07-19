@@ -13,7 +13,7 @@ Tasks
                 ◦ env sin opciones o argumentos.
                 ◦ exit sin opciones.
 
-  -struct tokens:
+  -struct tokens: -> Isma
 
                 char  **infile;  infile.txt / NULL  ( deberia ser un fd o lo crea a partir del string)
                 char  *command;
@@ -21,7 +21,7 @@ Tasks
                 char  **outfile; outfile.txt o NULL si no existe
                 int    fd; // si existe outfile fd seria el outfile
 
-  - << -->  bash-3.2$ << primerdel << segundodel <<tercerdel cat
+  - << -->  bash-3.2$ << primerdel << segundodel <<tercerdel cat  -> JAvi
 
             > sdfg
             > sdfgh  
@@ -33,7 +33,7 @@ Tasks
             > hola
             > tercerdel
             hola
-- >> hace un append // escribe al final del archivo
+- >> hace un append // escribe al final del archivo --> Javi
 
 NOTA SUBJECT ◦ “<<” debe recibir un delimitador, después leer del input de la fuente actual hasta que una línea que contenga solo el delimitador aparezca. Sin embargo, no necesita actualizar el historial.
 ◦ “>>” debe redirigir el output en modo append.
