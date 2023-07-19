@@ -15,10 +15,10 @@ Tasks
 
   -struct tokens:
 
-                char  *infile;  infile.txt / NULL  ( deberia ser un fd o lo crea a partir del string)
+                char  **infile;  infile.txt / NULL  ( deberia ser un fd o lo crea a partir del string)
                 char  *command;
                 char  **arg;    // Argumentos Si es Null no existen argumentos
-                char  *outfile; outfile.txt o NULL si no existe
+                char  **outfile; outfile.txt o NULL si no existe
                 int    fd; // si existe outfile fd seria el outfile
 
   - << -->  bash-3.2$ << primerdel << segundodel <<tercerdel cat
