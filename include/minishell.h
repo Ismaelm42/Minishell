@@ -27,7 +27,7 @@ typedef struct s_lexer
 	int			position;
 }				t_lexer;
 
-//src
+//parser/history/bash_history
 void		add_and_store_history(char *input);
 
 //parser/get_lexer/lexer_counter
@@ -46,6 +46,9 @@ void		words_splitter(int *n, char **s, char ***lexer);
 char		**free_lexer(int n, char **lexer);
 char		**lexer_maker(char *s);
 
+//parser/get_lexer/get_lexer
+char		*expansion_variable(char *input);
+
 //parser/expansion_variable/get_variables
 int			variable_expansion_counter(char *input);
 void		skip_quotes(char **s);
@@ -60,24 +63,18 @@ int			get_variable_from_history(int n, t_lexer *lexer);
 void		get_variable_expansion_value(int n, t_lexer *lexer);
 
 //parser/expansion_variable/replace_variables
-void		get_size_and_position_variables(int *variable, int *expanded, t_lexer *lexer);
+void		get_size_variables(int *var, int *exp, char *input, t_lexer *lexer);
 char		*replace_variables(char *input, t_lexer *lexer);
-void		replace_function(char *new_input, char *input, t_lexer *lexer);
 
 //parser/expansion_variable/utils
 void		read_from_history(int n, t_lexer *lexer, char *needle, int size);
 t_lexer		*free_expansion_lexer(int n, t_lexer *lexer, int flag);
-int			search_for_dollar_sign(char *input);
+void		replace_function(char *new_input, char *input, t_lexer *lexer);
 
-//parser/gnl
+//parser/utils/gnl
 char		*gnl(int fd);
 char		*read_fd(int fd, char *static_buffer);
 char		*return_line(char *static_buffer);
 char		*return_static(char *static_buffer);
-
-
-
-//main.c
-char	*expansion_variable(char *input);
 
 #endif

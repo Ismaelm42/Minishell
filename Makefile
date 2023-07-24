@@ -10,7 +10,7 @@ SRC =	src/main.c																\
 		src/parser/expansion_variable/expand_variables.c						\
 		src/parser/expansion_variable/replace_variables.c						\
 		src/parser/expansion_variable/utils.c									\
-																				\
+		src/parser/get_tokens/get_tokens.c										\
 																				\
 																				\
 																				\

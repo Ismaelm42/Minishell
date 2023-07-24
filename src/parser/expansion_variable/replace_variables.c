@@ -6,20 +6,20 @@ lexer_ptr es un puntero a input que permite avanzar el puntero para que, si tene
 dos veces la misma variable ($$ $$, por ejemplo), podamos conseguir la posición de
 la segunda variable y la función ft_strnstr no devuelva de nuevo la anterior a esta.
 */
-void	get_size_variables(int *variable, int *expanded, char *input, t_lexer *lexer)
+void	get_size_variables(int *var, int *exp, char *input, t_lexer *lexer)
 {
 	char	*lexer_ptr;
 	int		n;
 	int		i;
 
 	lexer_ptr = input;
-	*variable = 0;
-	*expanded = 0;
+	*var = 0;
+	*exp = 0;
 	i = 0;
 	while (lexer[i].variable != NULL)
 	{
-		*variable += ft_strlen(lexer[i].variable);
-		*expanded += ft_strlen(lexer[i].expanded);
+		*var += ft_strlen(lexer[i].variable);
+		*exp += ft_strlen(lexer[i].expanded);
 		lexer_ptr = ft_strnstr(lexer_ptr, lexer[i].variable, 1000);
 		lexer[i].position = lexer_ptr - input;
 		n = 0;
