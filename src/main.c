@@ -3,7 +3,7 @@
 int	main(void)
 {
 	char	*input;
-	char	**tokens;
+	char	**lexer;
 	int		i;
 
 	i = 0;
@@ -14,11 +14,11 @@ int	main(void)
 		input = ft_strdup("$$ $ $12345 $ARG ${ARG}|$HOME ${LOGNAME} $PWD $NOARG");
 		printf("%s\n\n", input);
 		add_and_store_history(input);
-		tokens = get_tokens(input);
+		lexer = get_lexer(input);
 		int n = 0;
-		while (tokens[n] != NULL)
+		while (lexer[n] != NULL)
 		{
-			printf("token[%d]\t%s\n", n, tokens[n]);
+			printf("token[%d]\t%s\n", n, lexer[n]);
 			n++;
 		}
 		if (ft_strncmp(input, "exit", 5) == 0)

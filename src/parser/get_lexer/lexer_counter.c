@@ -5,7 +5,7 @@ Cuando el argumento esté entre comillas (simples o dobles), esta
 función lo contará como un string y avanzará el puntero hasta
 salir de las comillas.
 */
-void	quoted_token_counter(int *counter, char **s)
+void	quoted_lexer_counter(int *counter, char **s)
 {
 	char	c;
 
@@ -22,7 +22,7 @@ void	quoted_token_counter(int *counter, char **s)
 Hace lo mismo que la función anterior pero con los
 metacaracteres: |, <, <<, >, >>.
 */
-void	redirection_token_counter(int *counter, char **s)
+void	redirection_lexer_counter(int *counter, char **s)
 {
 	if (**s == '|')
 		(*s)++;
@@ -53,7 +53,7 @@ void	words_counter(int *counter, char **s)
 Esta función calcula la memoria que hará falta para guardar
 los argumentos pasados por terminal en strings individuales.
 */
-int	token_counter(char *s)
+int	lexer_counter(char *s)
 {
 	int		counter;
 
@@ -61,9 +61,9 @@ int	token_counter(char *s)
 	while (*s != '\0')
 	{
 		if (*s == '\'' || *s == '"')
-			quoted_token_counter(&counter, &s);
+			quoted_lexer_counter(&counter, &s);
 		else if (*s == '<' || *s == '>' || *s == '|')
-			redirection_token_counter(&counter, &s);
+			redirection_lexer_counter(&counter, &s);
 		else
 			words_counter(&counter, &s);
 	}

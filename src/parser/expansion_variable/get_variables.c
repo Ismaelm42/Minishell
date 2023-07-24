@@ -46,19 +46,19 @@ void	skip_quotes(char **s)
 Utiliza substring para crear la subcadena correspondiente, avanza el puntero de s
 y suma uno más a n.
 */
-void	variable_tokens_filler(int *n, int length, char **s, t_tokens *tokens)
+void	variable_lexer_filler(int *n, int length, char **s, t_lexer *lexer)
 {
-	tokens[*n].variable = ft_substr(*s, 0, length, 0);
+	lexer[*n].variable = ft_substr(*s, 0, length, 0);
 	*n += 1;
 	while (length -- > 0)
 		(*s)++;
 }
 
 /*
-Permite guardar como token todos los símbolos $ teniendo en cuenta
+Permite guardar como lexer todos los símbolos $ teniendo en cuenta
 los casos particulares como $, $123, $$, $?, $$$ARG, etc...
 */
-void	check_expansion_and_delimiters(int *n, char **s, t_tokens *tokens)
+void	check_expansion_and_delimiters(int *n, char **s, t_lexer *lexer)
 {
 	int	length;
 
@@ -84,26 +84,26 @@ void	check_expansion_and_delimiters(int *n, char **s, t_tokens *tokens)
 			length++;
 		}
 	}
-	variable_tokens_filler(n, length, s, tokens);
+	variable_lexer_filler(n, length, s, lexer);
 }
 
 /*
 Guarda en un struct todos los posibles símbolos $ para sustituirlos en
-el char *input antes de pasar por el token_counter/token_maker, de forma
+el char *input antes de pasar por el lexer_counter/lexer_maker, de forma
 que si esa variable tiene a su vez metacaracteres, éstos puedan ser
 interpretados.
 Casos tenidos en cuenta: $$, $?, $$$ARG, $012345, $ARG, $ARG|<<<>>>...
 En principio cubre todos los casos existentes.
 */
-t_tokens	*get_variable_expansion_tokens(char *input)
+t_lexer	*get_variable_expansion_lexer(char *input)
 {
-	t_tokens	*tokens;
+	t_lexer		*lexer;
 	int			size;
 	int			n;
 
 	size = variable_expansion_counter(input);
-	tokens = (t_tokens *)ft_calloc(sizeof(t_tokens), size + 1);
-	if (!tokens)
+	lexer = (t_lexer *)ft_calloc(sizeof(t_lexer), size + 1);
+	if (!lexer)
 		return (NULL);
 	n = 0;
 	while (n < size)
@@ -112,13 +112,13 @@ t_tokens	*get_variable_expansion_tokens(char *input)
 			skip_quotes(&input);
 		else if (*input == '$')
 		{
-			check_expansion_and_delimiters(&n, &input, tokens);
-			if (!tokens[n - 1].variable)
-				return (free_expansion_tokens(n - 1, tokens, 0));
+			check_expansion_and_delimiters(&n, &input, lexer);
+			if (!lexer[n - 1].variable)
+				return (free_expansion_lexer(n - 1, lexer, 0));
 		}
 		else
 			input++;
 	}
-	tokens[n].variable = 0;
-	return (tokens);
+	lexer[n].variable = 0;
+	return (lexer);
 }

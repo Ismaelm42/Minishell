@@ -2,9 +2,9 @@ NAME = minishell
 
 SRC =	src/main.c																\
 		src/parser/history/bash_history.c										\
-		src/parser/get_tokens/get_tokens.c										\
-		src/parser/get_tokens/token_counter.c									\
-		src/parser/get_tokens/token_maker.c										\
+		src/parser/get_lexer/get_lexer.c										\
+		src/parser/get_lexer/lexer_counter.c									\
+		src/parser/get_lexer/lexer_maker.c										\
 		src/parser/utils/gnl.c													\
 		src/parser/expansion_variable/get_variables.c							\
 		src/parser/expansion_variable/expand_variables.c						\

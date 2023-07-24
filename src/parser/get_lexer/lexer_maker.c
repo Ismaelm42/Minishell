@@ -4,7 +4,7 @@
 /*
 Esta función se encarga de gestionar las comillas simples y dobles.
 */
-void	quoted_token_splitter(int *n, char **s, char ***tokens)
+void	quoted_lexer_splitter(int *n, char **s, char ***lexer)
 {
 	char	c;
 	int		length;
@@ -14,7 +14,7 @@ void	quoted_token_splitter(int *n, char **s, char ***tokens)
 	while ((*s)[length + 1] != c)
 		length++;
 	length += 2;
-	(*tokens)[*n] = ft_substr(*s, 0, length, 0);
+	(*lexer)[*n] = ft_substr(*s, 0, length, 0);
 	*n += 1;
 	while (length -- > 0)
 		(*s)++;
@@ -23,13 +23,13 @@ void	quoted_token_splitter(int *n, char **s, char ***tokens)
 /*
 Aquí se separará cualquiera de estos metacaracteres: |, <, <<, >, >>.
 */
-void	redirection_token_splitter(int *n, char **s, char ***tokens)
+void	redirection_lexer_splitter(int *n, char **s, char ***lexer)
 {
 	int	length;
 
 	if (**s == '|')
 	{
-		(*tokens)[*n] = ft_substr(*s, 0, 1, 0);
+		(*lexer)[*n] = ft_substr(*s, 0, 1, 0);
 		(*s)++;
 		*n += 1;
 	}
@@ -38,7 +38,7 @@ void	redirection_token_splitter(int *n, char **s, char ***tokens)
 		length = 0;
 		while ((*s)[length] == '<' || (*s)[length] == '>')
 			length++;
-		(*tokens)[*n] = ft_substr(*s, 0, length, 0);
+		(*lexer)[*n] = ft_substr(*s, 0, length, 0);
 		*n += 1;
 		while (length -- > 0)
 			(*s)++;
@@ -49,7 +49,7 @@ void	redirection_token_splitter(int *n, char **s, char ***tokens)
 Gestiona todo los demás argumentos pasados a través del input mientras
 no coincida ningún caracter con los caracteres especiales.
 */
-void	words_splitter(int *n, char **s, char ***tokens)
+void	words_splitter(int *n, char **s, char ***lexer)
 {
 	int	length;
 
@@ -63,7 +63,7 @@ void	words_splitter(int *n, char **s, char ***tokens)
 		length++;
 	if (length > 0)
 	{
-		(*tokens)[*n] = ft_substr(*s, 0, length, 0);
+		(*lexer)[*n] = ft_substr(*s, 0, length, 0);
 		*n += 1;
 		while (length -- > 0)
 		(*s)++;
@@ -73,37 +73,37 @@ void	words_splitter(int *n, char **s, char ***tokens)
 /*
 Libera la memoria reservada en caso de fallo.
 */
-char	**free_tokens(int n, char **tokens)
+char	**free_lexer(int n, char **lexer)
 {
 	while (n > 0)
-		free (tokens[--n]);
-	free (tokens);
+		free (lexer[--n]);
+	free (lexer);
 	return (NULL);
 }
 
 /*
 Se encarga de dividir en varios strings los argumentos pasados por terminal.
 */
-char	**token_maker(char *s)
+char	**lexer_maker(char *s)
 {
-	char	**tokens;
+	char	**lexer;
 	int		size;
 	int		n;
 
 	n = 0;
-	size = token_counter(s);
-	tokens = (char **)calloc(sizeof(char **), size + 1);
+	size = lexer_counter(s);
+	lexer = (char **)calloc(sizeof(char **), size + 1);
 	while (n < size)
 	{
 		if (*s == '\'' || *s == '"')
-			quoted_token_splitter(&n, &s, &tokens);
+			quoted_lexer_splitter(&n, &s, &lexer);
 		else if (*s == '<' || *s == '>' || *s == '|')
-			redirection_token_splitter(&n, &s, &tokens);
+			redirection_lexer_splitter(&n, &s, &lexer);
 		else
-			words_splitter(&n, &s, &tokens);
-		if (!tokens[n - 1])
-			return (free_tokens(n - 1, tokens));
+			words_splitter(&n, &s, &lexer);
+		if (!lexer[n - 1])
+			return (free_lexer(n - 1, lexer));
 	}
-	tokens[n] = 0;
-	return (tokens);
+	lexer[n] = 0;
+	return (lexer);
 }

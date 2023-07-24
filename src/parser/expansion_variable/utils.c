@@ -9,7 +9,7 @@ En el condicional if (fd == -1), hay que crear un exit específico en utils que 
 correctamente el programa.
 Tiene en cuenta casos especiales como: ARG="'hola'", ARG='"hola"'...
 */
-void	read_from_history(int n, t_tokens *tokens, char *needle, int size)
+void	read_from_history(int n, t_lexer *lexer, char *needle, int size)
 {
 	char	*haystack;
 	int		fd;
@@ -22,14 +22,14 @@ void	read_from_history(int n, t_tokens *tokens, char *needle, int size)
 	{
 		if (ft_strnstr(haystack, needle, ft_strlen(needle)))
 		{
-			if (tokens[n].expanded)
-				free(tokens[n].expanded);
-			tokens[n].expanded = ft_substr(haystack, size, 10000, 0);
-			tokens[n].expanded = ft_strtrim(tokens[n].expanded, "\n", 1);
-			if (tokens[n].expanded[0] == '\"')
-				tokens[n].expanded = ft_strtrim(tokens[n].expanded, "\"", 1);
+			if (lexer[n].expanded)
+				free(lexer[n].expanded);
+			lexer[n].expanded = ft_substr(haystack, size, 10000, 0);
+			lexer[n].expanded = ft_strtrim(lexer[n].expanded, "\n", 1);
+			if (lexer[n].expanded[0] == '\"')
+				lexer[n].expanded = ft_strtrim(lexer[n].expanded, "\"", 1);
 			else
-				tokens[n].expanded = ft_strtrim(tokens[n].expanded, "\'", 1);
+				lexer[n].expanded = ft_strtrim(lexer[n].expanded, "\'", 1);
 		}
 		free(haystack);
 		haystack = gnl(fd);
@@ -41,33 +41,33 @@ void	read_from_history(int n, t_tokens *tokens, char *needle, int size)
 Función para liberar la memoria. Se resta primero para bajar un nivel más
 ya que en n es donde ha fallado la memoria.
 */
-t_tokens	*free_expansion_tokens(int n, t_tokens *tokens, int flag)
+t_lexer	*free_expansion_lexer(int n, t_lexer *lexer, int flag)
 {
 	int	i;
 
 	if (flag == 0)
 	{
 		while (n > 0)
-			free (tokens[--n].variable);
+			free (lexer[--n].variable);
 	}
 	if (flag == 1)
 	{
 		i = 0;
 		while (i < n)
 		{
-			free (tokens[i].variable);
-			free (tokens[i].expanded);
+			free (lexer[i].variable);
+			free (lexer[i].expanded);
 			i++;
 		}
 	}
-	free (tokens);
+	free (lexer);
 	return (NULL);
 }
 
 /*
 Se encarga de escribir el nuevo input modificado con los valores de las variables de expansión.
 */
-void	replace_function(char *new_input, char *input, t_tokens *tokens)
+void	replace_function(char *new_input, char *input, t_lexer *lexer)
 {
 	int	i;
 	int	j;
@@ -79,12 +79,12 @@ void	replace_function(char *new_input, char *input, t_tokens *tokens)
 	k = 0;
 	while (input[i] != 0)
 	{
-		if (i == tokens[j].position)
+		if (i == lexer[j].position)
 		{
 			n = 0;
-			while (tokens[j].expanded[n] != 0)
-				new_input[k++] = tokens[j].expanded[n++];
-			i += ft_strlen(tokens[j++].variable);
+			while (lexer[j].expanded[n] != 0)
+				new_input[k++] = lexer[j].expanded[n++];
+			i += ft_strlen(lexer[j++].variable);
 		}
 		else
 			new_input[k++] = input[i++];
