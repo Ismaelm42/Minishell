@@ -20,12 +20,30 @@
 Estructura específica para guardar los lexer $ y poder
 vincularlos luego con su variable de una forma más simple.
 */
+
 typedef struct s_lexer
 {
 	char		*variable;
 	char		*expanded;
 	int			position;
 }				t_lexer;
+
+typedef struct s_token
+{
+	char		**in;
+	char		**out;
+	char		*cmd;
+	char		**arg;
+	int			fd_in;
+	int			fd_out;
+}				t_token;
+
+typedef struct s_global
+{
+	char		*input;
+	int			exit_status;
+	t_token		*tokens;
+}				t_global;
 
 //parser/history/bash_history
 void		add_and_store_history(char *input);
@@ -43,7 +61,7 @@ int			lexer_counter(char *s);
 void		quoted_lexer_splitter(int *n, char **s, char ***lexer);
 void		redirection_lexer_splitter(int *n, char **s, char ***lexer);
 void		words_splitter(int *n, char **s, char ***lexer);
-char		**free_lexer(int n, char **lexer);
+char		**free_lexer(char **lexer);
 char		**lexer_maker(char *s);
 
 //parser/get_lexer/get_lexer
@@ -76,5 +94,19 @@ char		*gnl(int fd);
 char		*read_fd(int fd, char *static_buffer);
 char		*return_line(char *static_buffer);
 char		*return_static(char *static_buffer);
+
+//parser/get_struct/get_struct
+t_global	*init_struct(void);
+void		get_struct_data(t_global *global, char *input);
+
+//parser/get_struct/get_tokens
+int			lexer_pipes_counter(char **lexer);
+t_token		*get_tokens(char *input);
+
+//parser/get_struct/check_syntax
+int			quotes_check(char **lexer, int n);
+int			pipes_and_redirections_check(char **lexer, int n);
+int			next_lexer_check(char **lexer, int n);
+int			syntax_error_check(char **lexer);
 
 #endif

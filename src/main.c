@@ -2,25 +2,20 @@
 
 int	main(void)
 {
-	char	*input;
-	char	**lexer;
-	int		i;
+	char		*input;
+	t_global	*global;
+	int			i;
 
+	global = init_struct();
 	i = 0;
 	while (i < 1)
 	{
 		rl_on_new_line();
 		//input = readline(">> ");
-		input = ft_strdup("$$ $ $12345 $ARG ${ARG}|$HOME ${LOGNAME} $PWD $NOARG");
-		printf("%s\n\n", input);
+		input = ft_strdup("| ls | cat -e 'hola ");
 		add_and_store_history(input);
-		lexer = get_lexer(input);
-		int n = 0;
-		while (lexer[n] != NULL)
-		{
-			printf("token[%d]\t%s\n", n, lexer[n]);
-			n++;
-		}
+		get_struct_data(global, input);
+		printf("\ninput =\t%s\n", global->input);
 		if (ft_strncmp(input, "exit", 5) == 0)
 			exit (0);
 		i++;

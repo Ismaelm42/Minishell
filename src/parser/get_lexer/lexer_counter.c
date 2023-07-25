@@ -25,7 +25,8 @@ metacaracteres: |, <, <<, >, >>.
 void	redirection_lexer_counter(int *counter, char **s)
 {
 	if (**s == '|')
-		(*s)++;
+		while (**s == '|')
+			(*s)++;
 	else
 		while (**s == '<' || **s == '>')
 			(*s)++;

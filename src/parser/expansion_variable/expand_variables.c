@@ -99,7 +99,7 @@ char	*expansion_variable(char *input)
 		}
 		new_input = replace_variables(input, lexer);
 		free(input);
-		if (variable_expansion_counter(new_input) != 0)
+		while (variable_expansion_counter(new_input) != 0)
 			new_input = expansion_variable(new_input);
 		free_expansion_lexer(size, lexer, 1);
 		return (new_input);

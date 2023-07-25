@@ -27,22 +27,17 @@ void	redirection_lexer_splitter(int *n, char **s, char ***lexer)
 {
 	int	length;
 
+	length = 0;
 	if (**s == '|')
-	{
-		(*lexer)[*n] = ft_substr(*s, 0, 1, 0);
-		(*s)++;
-		*n += 1;
-	}
+		while ((*s)[length] == '|')
+			length++;
 	else
-	{
-		length = 0;
 		while ((*s)[length] == '<' || (*s)[length] == '>')
 			length++;
-		(*lexer)[*n] = ft_substr(*s, 0, length, 0);
-		*n += 1;
-		while (length -- > 0)
-			(*s)++;
-	}
+	(*lexer)[*n] = ft_substr(*s, 0, length, 0);
+	*n += 1;
+	while (length -- > 0)
+		(*s)++;
 }
 
 /*
@@ -73,11 +68,14 @@ void	words_splitter(int *n, char **s, char ***lexer)
 /*
 Libera la memoria reservada en caso de fallo.
 */
-char	**free_lexer(int n, char **lexer)
+char	**free_lexer(char **lexer)
 {
-	while (n > 0)
-		free (lexer[--n]);
-	free (lexer);
+	int	n;
+
+	n = 0;
+	while (lexer[n] != NULL)
+		free(lexer[n++]);
+	free(lexer);
 	return (NULL);
 }
 
@@ -102,7 +100,7 @@ char	**lexer_maker(char *s)
 		else
 			words_splitter(&n, &s, &lexer);
 		if (!lexer[n - 1])
-			return (free_lexer(n - 1, lexer));
+			return (free_lexer(lexer));
 	}
 	lexer[n] = 0;
 	return (lexer);
