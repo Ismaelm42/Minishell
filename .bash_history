@@ -137,3 +137,31 @@ ls | cat -e 'hola
 ls | cat -e 'hola 
 | ls | cat -e 'hola 
 | ls | cat -e 'hola 
+<> ls | cat -e 'hola 
+<<<<< ls | cat -e 'hola 
+<<<<< ls | cat -e 'hola 
+<<<<< ls | cat -e 'hola 
+<<<<< ls | cat -e 'hola 
+<<<<< ls | cat -e 'hola 
+<<<<< ls | cat -e 'hola 
+<<<<< ls | cat -e 'hola 
+<<<<< ls | cat -e 'hola 
+<<<<< ls | cat -e 'hola 
+<<<<< ls | cat -e 'hola 
+<<<<< ls | cat -e 'hola 
+<<<<< ls | cat -e 'hola 
+<<<<< ls | cat -e 'hola 
+<<<<< ls | cat -e 'hola 
+<<<<< ls | cat -e 'hola 
+<<<<< ls | cat -e 'hola 
+<<<<< ls | cat -e 'hola 
+<<<<< ls | cat -e 'hola 
+<<<<< ls | cat -e 'hola 
+<<<<< ls | cat -e 'hola 
+<<<<< ls | cat -e 'hola 
+<<<<< ls | cat -e 'hola 
+<<<<< ls | cat -e 'hola 
+ls | cat -e 
+ls | cat -e 
+ls | cat -e 
+ls | cat -e | $HOME

@@ -13,7 +13,11 @@ SRC =	src/main.c																\
 		src/parser/get_struct/check_syntax.c									\
 		src/parser/get_struct/get_tokens.c										\
 		src/parser/get_struct/get_struct.c										\
-																				\
+		src/signals/signal.c													\
+		src/parser/dictionary/var_environment.c									\
+		src/parser/dictionary/var_local.c										\
+		src/parser/utils/list_utils.c											\
+		src/parser/utils/list_utils_2.c											\
 																				\
 																				\
 																				\

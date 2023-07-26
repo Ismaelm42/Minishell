@@ -4,7 +4,7 @@
 Obtiene la variable a través del Path. También controla en caso de que la variable
 haya sido enviada entre paréntesis: ${HOME}
 */
-int	get_variable_from_path(int n, t_lexer *lexer)
+int	get_variable_from_path(int n, t_lexer *lexer, t_global *global)
 {
 	char	*copy;
 	char	*environment;
@@ -15,7 +15,7 @@ int	get_variable_from_path(int n, t_lexer *lexer)
 		copy = ft_strtrim(copy, "{", 1);
 		copy = ft_strtrim(copy, "}", 1);
 	}
-	environment = getenv(copy);
+	environment = search_key(global->lst_env, copy);
 	if (environment == NULL)
 		return (1);
 	lexer[n].expanded = ft_strdup(environment);
@@ -28,11 +28,12 @@ Crea needle que es nombre de la variable más el símbolo igual para poder
 buscarlo por el historial en la función read_from_history.
 Ejemplo de needle: ARG= 
 */
-int	get_variable_from_history(int n, t_lexer *lexer)
+int	get_variable_from_history(int n, t_lexer *lexer, t_global *global)
 {
 	char	*needle;
 	int		size;
 
+	(void)global;
 	size = ft_strlen(lexer[n].variable);
 	needle = ft_substr(lexer[n].variable, 1, size, 0);
 	if (needle[0] == '{' && needle[ft_strlen(needle) - 1] == '}')
@@ -57,7 +58,7 @@ sustitución lo reemplazará por "". La función get_exit_status_variable
 en principio debería recoger la variable global que se iría actualizando
 cada vez que ejecutara un proceso con la salida de éste.
 */
-void	get_variable_expansion_value(int n, t_lexer *lexer)
+void	get_variable_expansion_value(int n, t_lexer *lexer, t_global *global)
 {
 	char	*lex;
 
@@ -69,8 +70,8 @@ void	get_variable_expansion_value(int n, t_lexer *lexer)
 		ft_strdup("ps -o ppid= | tail -n 1 | sed 's/^[[:space:]]*//'");
 	// else if (ft_strncmp(lex, "$?", ft_strlen(lex)) == 0)
 	// 	get_exit_status_variable();
-	else if (get_variable_from_path(n, lexer) == 1)
-		if (get_variable_from_history(n, lexer) == 1)
+	else if (get_variable_from_path(n, lexer, global) == 1)
+		if (get_variable_from_history(n, lexer, global) == 1)
 			lexer[n].expanded = ft_strdup("");
 }
 
@@ -80,7 +81,7 @@ En esta función, se realizan todas las demás de la carpeta src/expand_variable
 Una vez realizada la llamada a esta función, obtenemos un nuevo input modificado
 con los valores reales de $.
 */
-char	*expansion_variable(char *input)
+char	*expansion_variable(char *input, t_global *global)
 {
 	t_lexer		*lexer;
 	char		*new_input;
@@ -94,13 +95,13 @@ char	*expansion_variable(char *input)
 		i = 0;
 		while (i < size)
 		{
-			get_variable_expansion_value(i, lexer);
+			get_variable_expansion_value(i, lexer, global);
 			i++;
 		}
 		new_input = replace_variables(input, lexer);
 		free(input);
 		while (variable_expansion_counter(new_input) != 0)
-			new_input = expansion_variable(new_input);
+			new_input = expansion_variable(new_input, global);
 		free_expansion_lexer(size, lexer, 1);
 		return (new_input);
 	}

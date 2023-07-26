@@ -20,16 +20,16 @@ int	lexer_pipes_counter(char **lexer)
 	return (size + 1);
 }
 
-t_token	*get_tokens(char *input)
+t_token	*get_tokens(char *input, t_global *global)
 {
 	t_token	*tokens;
 	char	**lexer;
 	int		n;
 
-	lexer = get_lexer(input);
+	lexer = get_lexer(input, global);
 	if (syntax_error_check(lexer) == -1)
 		return (NULL);
 	n = lexer_pipes_counter(lexer);
-	tokens = (t_token *)calloc(sizeof(t_token), n + 1);
+	tokens = (t_token *)ft_calloc(sizeof(t_token), n + 1);
 	return (tokens);
 }

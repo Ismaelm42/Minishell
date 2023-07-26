@@ -34,7 +34,7 @@ int	next_lexer_check(char **lexer, int n)
 {
 	printf("lexer[%d + 1] = %s\n", n, lexer[n + 1]);
 	if ((lexer[n][0] == '|' || lexer[n][0] == '<'
-		|| lexer[n][0] == '>') && (lexer[n + 1] == NULL
+		|| lexer[n][0] == '>') && (lexer[n + 1] == NULL // Solo contemplar los casos con varios pipes. Las redirecciones no deberían afectar en nada.
 		|| lexer[n + 1][0] == '|' || lexer[n + 1][0] == '<'
 		|| lexer[n + 1][0] == '>'))
 	{

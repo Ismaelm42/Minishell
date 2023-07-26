@@ -38,10 +38,20 @@ typedef struct s_token
 	int			fd_out;
 }				t_token;
 
+// Estructura para guardar una copia de environment a modo de diccionario y
+// que nuestra mini_shell trabaje directamente con esta copia
+
+typedef struct s_node
+{
+	char			*key;
+	char			*value;
+	struct s_node	*next;
+}					t_node;	
 typedef struct s_global
 {
 	char		*input;
 	int			exit_status;
+	t_node		*lst_env;
 	t_token		*tokens;
 }				t_global;
 
@@ -49,7 +59,7 @@ typedef struct s_global
 void		add_and_store_history(char *input);
 
 //parser/get_lexer/lexer_counter
-char		**get_lexer(char *input);
+char		**get_lexer(char *input, t_global *global);
 
 //parser/get_lexer/lexer_counter
 void		quoted_lexer_counter(int *counter, char **s);
@@ -65,7 +75,7 @@ char		**free_lexer(char **lexer);
 char		**lexer_maker(char *s);
 
 //parser/get_lexer/get_lexer
-char		*expansion_variable(char *input);
+char		*expansion_variable(char *input, t_global *global);
 
 //parser/expansion_variable/get_variables
 int			variable_expansion_counter(char *input);
@@ -76,9 +86,9 @@ t_lexer		*get_variable_expansion_lexer(char *input);
 
 //parser/expansion_variable/expand_variables
 
-int			get_variable_from_path(int n, t_lexer *lexer);
-int			get_variable_from_history(int n, t_lexer *lexer);
-void		get_variable_expansion_value(int n, t_lexer *lexer);
+int			get_variable_from_path(int n, t_lexer *lexer, t_global *global);
+int			get_variable_from_history(int n, t_lexer *lexer, t_global *global);
+void		get_variable_expansion_value(int n, t_lexer *lexer, t_global *global);
 
 //parser/expansion_variable/replace_variables
 void		get_size_variables(int *var, int *exp, char *input, t_lexer *lexer);
@@ -96,12 +106,12 @@ char		*return_line(char *static_buffer);
 char		*return_static(char *static_buffer);
 
 //parser/get_struct/get_struct
-t_global	*init_struct(void);
+t_global	*init_struct(char **env);
 void		get_struct_data(t_global *global, char *input);
 
 //parser/get_struct/get_tokens
 int			lexer_pipes_counter(char **lexer);
-t_token		*get_tokens(char *input);
+t_token		*get_tokens(char *input, t_global *global);
 
 //parser/get_struct/check_syntax
 int			quotes_check(char **lexer, int n);
@@ -109,4 +119,28 @@ int			pipes_and_redirections_check(char **lexer, int n);
 int			next_lexer_check(char **lexer, int n);
 int			syntax_error_check(char **lexer);
 
+//parser/dictionary
+void		copy_environment(t_node **lst_env, char **env);
+
+//parser/utils list
+t_node		*init_list(void);
+t_node		*create_nodo(char *key, char *value);
+void		insert_last(t_node **list, t_node *new_nodo);
+t_node		*final(t_node *list);
+void		print_stack(t_node *list);
+void		ft_free_lst(t_node *lst);
+int			ft_size_lst(t_node *lst);
+void		error(void);
+char		*search_key(t_node *lst, char *c);
+int			search_key_and_replace(t_node *lst, char *key, char *val);
+char		*extract_clue(char *c);
+char		*extract_value(char *c);
+int			local_var(char *s);
+
+//signal
+void		ft_sigint_handler(int sig);
+void		ft_sigquit_handler(int sig);
+
+//build_in
+int			control_d(char *input);
 #endif
