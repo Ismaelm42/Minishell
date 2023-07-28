@@ -4,7 +4,7 @@
 Obtiene la variable a través del Path. También controla en caso de que la variable
 haya sido enviada entre paréntesis: ${HOME}
 */
-int	get_variable_from_path(int n, t_lexer *lexer, t_global *global)
+int	get_variable_from_env(int n, t_lexer *lexer, t_global *global)
 {
 	char	*copy;
 	char	*environment;
@@ -70,7 +70,7 @@ void	get_variable_expansion_value(int n, t_lexer *lexer, t_global *global)
 		ft_strdup("ps -o ppid= | tail -n 1 | sed 's/^[[:space:]]*//'");
 	// else if (ft_strncmp(lex, "$?", ft_strlen(lex)) == 0)
 	// 	get_exit_status_variable();
-	else if (get_variable_from_path(n, lexer, global) == 1)
+	else if (get_variable_from_env(n, lexer, global) == 1)
 		if (get_variable_from_history(n, lexer, global) == 1)
 			lexer[n].expanded = ft_strdup("");
 }
@@ -99,10 +99,11 @@ char	*expansion_variable(char *input, t_global *global)
 			i++;
 		}
 		new_input = replace_variables(input, lexer);
-		free(input);
-		while (variable_expansion_counter(new_input) != 0)
+		if (variable_expansion_counter(new_input) != 0)
+		{
+			free_expansion_lexer(lexer, 1);
 			new_input = expansion_variable(new_input, global);
-		free_expansion_lexer(size, lexer, 1);
+		}
 		return (new_input);
 	}
 	else

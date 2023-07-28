@@ -4,28 +4,38 @@
 Función para contar el número de símbolos $ que hay que tener en cuenta.
 Contempla todos los casos problemáticos por ahora.
 */
+
+void	handle_edge_cases(char **input, int *counter)
+{
+	if ((*input)[1] == '$')
+		(*input)++;
+	else if ((*input)[1] == '{')
+		while (**input != '}' && **input != '\0')
+			(*input)++;
+	*counter += 1;
+}
+
 int	variable_expansion_counter(char *input)
 {
-	int	counter;
+	int		counter;
+	char	c;
 
 	counter = 0;
 	while (*input != '\0')
 	{
-		if (*input == '\'')
+		if (*input == '\'' || *input == '\"')
 		{
+			c = *input;
 			input++;
-			while (*input != '\'')
+			while (*input != c && *input != '\0')
+			{
+				if (*input == '$' && c == '\"')
+					handle_edge_cases(&input, &counter);
 				input++;
+			}
 		}
 		else if (*input == '$')
-		{
-			if (input[1] == '$')
-				input++;
-			else if (input[1] == '{')
-				while (*input != '}' && *input != '\0')
-					input++;
-			counter++;
-		}
+			handle_edge_cases(&input, &counter);
 		input++;
 	}
 	return (counter);
@@ -34,12 +44,21 @@ int	variable_expansion_counter(char *input)
 /*
 Permite avanzar el puntero cuando se encuentre unas comillas simples.
 */
-void	skip_quotes(char **s)
+void	skip_quotes_and_check_expansion(int *n, char **s, t_lexer *lexer)
 {
+	char	c;
+
+	c = **s;
 	(*s)++;
-	while (**s != '\'' && **s != '\0')
+	while (**s != c && **s != '\0')
+	{
+		if (**s == '$' && c == '\"')
+			check_expansion_and_delimiters(n, s, lexer);
+		else
+			(*s)++;
+	}
+	if (**s != '\0')
 		(*s)++;
-	(*s)++;
 }
 
 /*
@@ -49,6 +68,7 @@ y suma uno más a n.
 void	variable_lexer_filler(int *n, int length, char **s, t_lexer *lexer)
 {
 	lexer[*n].variable = ft_substr(*s, 0, length, 0);
+	lexer[*n].position = ft_strlen(lexer[*n].input) - ft_strlen(*s);
 	*n += 1;
 	while (length -- > 0)
 		(*s)++;
@@ -102,19 +122,18 @@ t_lexer	*get_variable_expansion_lexer(char *input)
 	int			n;
 
 	size = variable_expansion_counter(input);
-	lexer = (t_lexer *)ft_calloc(sizeof(t_lexer), size + 1);
-	if (!lexer)
-		return (NULL);
+	lexer = create_expansion_lexer_struct(input, size);
 	n = 0;
 	while (n < size)
 	{
-		if (*input == '\'')
-			skip_quotes(&input);
-		else if (*input == '$')
+		if (*input == '\'' || *input == '\"' || *input == '$')
 		{
-			check_expansion_and_delimiters(&n, &input, lexer);
+			if (*input != '$')
+				skip_quotes_and_check_expansion(&n, &input, lexer);
+			else
+				check_expansion_and_delimiters(&n, &input, lexer);
 			if (!lexer[n - 1].variable)
-				return (free_expansion_lexer(n - 1, lexer, 0));
+				return (free_expansion_lexer(lexer, 0));
 		}
 		else
 			input++;

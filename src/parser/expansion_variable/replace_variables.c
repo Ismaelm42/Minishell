@@ -6,28 +6,15 @@ lexer_ptr es un puntero a input que permite avanzar el puntero para que, si tene
 dos veces la misma variable ($$ $$, por ejemplo), podamos conseguir la posición de
 la segunda variable y la función ft_strnstr no devuelva de nuevo la anterior a esta.
 */
-void	get_size_variables(int *var, int *exp, char *input, t_lexer *lexer)
+void	get_size_variables(int *var, int *exp, t_lexer *lexer)
 {
-	char	*lexer_ptr;
-	int		n;
 	int		i;
 
-	lexer_ptr = input;
-	*var = 0;
-	*exp = 0;
 	i = 0;
 	while (lexer[i].variable != NULL)
 	{
-		*var += ft_strlen(lexer[i].variable);
-		*exp += ft_strlen(lexer[i].expanded);
-		lexer_ptr = ft_strnstr(lexer_ptr, lexer[i].variable, 1000);
-		lexer[i].position = lexer_ptr - input;
-		n = 0;
-		while (lexer_ptr && n < ft_strlen(lexer[i].variable))
-		{
-			lexer_ptr++;
-			n++;
-		}
+		*var = ft_strlen(lexer[i].variable);
+		*exp = ft_strlen(lexer[i].expanded);
 		i++;
 	}
 }
@@ -45,9 +32,10 @@ char	*replace_variables(char *input, t_lexer *lexer)
 	int		size;
 
 	input_size = ft_strlen(input);
-	get_size_variables(&var_size, &exp_size, input, lexer);
+	get_size_variables(&var_size, &exp_size, lexer);
 	size = (input_size - var_size + exp_size);
 	new_input = (char *)calloc(sizeof(char), size + 1);
 	replace_function(new_input, input, lexer);
+	free(input);
 	return (new_input);
 }

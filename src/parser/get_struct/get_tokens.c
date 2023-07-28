@@ -16,7 +16,6 @@ int	lexer_pipes_counter(char **lexer)
 			size++;
 		lexer++;
 	}
-	printf("size = %d\n", size + 1);
 	return (size + 1);
 }
 

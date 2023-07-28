@@ -23,6 +23,7 @@ vincularlos luego con su variable de una forma más simple.
 
 typedef struct s_lexer
 {
+	char		*input;
 	char		*variable;
 	char		*expanded;
 	int			position;
@@ -79,24 +80,25 @@ char		*expansion_variable(char *input, t_global *global);
 
 //parser/expansion_variable/get_variables
 int			variable_expansion_counter(char *input);
-void		skip_quotes(char **s);
+void		skip_quotes_and_check_expansion(int *n, char **s, t_lexer *lexer);
 void		variable_lexer_filler(int *n, int length, char **s, t_lexer *lexer);
 void		check_expansion_and_delimiters(int *n, char **s, t_lexer *lexer);
 t_lexer		*get_variable_expansion_lexer(char *input);
 
 //parser/expansion_variable/expand_variables
 
-int			get_variable_from_path(int n, t_lexer *lexer, t_global *global);
+int			get_variable_from_env(int n, t_lexer *lexer, t_global *global);
 int			get_variable_from_history(int n, t_lexer *lexer, t_global *global);
 void		get_variable_expansion_value(int n, t_lexer *lexer, t_global *global);
 
 //parser/expansion_variable/replace_variables
-void		get_size_variables(int *var, int *exp, char *input, t_lexer *lexer);
+void		get_size_variables(int *var, int *exp, t_lexer *lexer);
 char		*replace_variables(char *input, t_lexer *lexer);
 
 //parser/expansion_variable/utils
+t_lexer		*create_expansion_lexer_struct(char *input, int size);
 void		read_from_history(int n, t_lexer *lexer, char *needle, int size);
-t_lexer		*free_expansion_lexer(int n, t_lexer *lexer, int flag);
+t_lexer		*free_expansion_lexer(t_lexer *lexer, int flag);
 void		replace_function(char *new_input, char *input, t_lexer *lexer);
 
 //parser/utils/gnl

@@ -32,7 +32,6 @@ int	pipes_and_redirections_check(char **lexer, int n)
 
 int	next_lexer_check(char **lexer, int n)
 {
-	printf("lexer[%d + 1] = %s\n", n, lexer[n + 1]);
 	if ((lexer[n][0] == '|' || lexer[n][0] == '<'
 		|| lexer[n][0] == '>') && (lexer[n + 1] == NULL // Solo contemplar los casos con varios pipes. Las redirecciones no deberían afectar en nada.
 		|| lexer[n + 1][0] == '|' || lexer[n + 1][0] == '<'
@@ -55,8 +54,6 @@ int	syntax_error_check(char **lexer)
 	n = 0;
 	while (lexer[n] != NULL)
 	{
-		printf("n = %d\n", n);
-		printf("lexer[%d]= %s\n", n, lexer[n]);
 		if (quotes_check(lexer, n) == -1
 			|| pipes_and_redirections_check(lexer, n) == -1
 			|| next_lexer_check(lexer, n) == -1)
