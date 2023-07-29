@@ -20,6 +20,33 @@ void	get_size_variables(int *var, int *exp, t_lexer *lexer)
 }
 
 /*
+Se encarga de escribir el nuevo input modificado con los valores de las variables de expansión.
+*/
+void	replace_function(char *new_input, char *input, t_lexer *lexer)
+{
+	int	i;
+	int	j;
+	int	k;
+	int	n;
+
+	i = 0;
+	j = 0;
+	k = 0;
+	while (input[i] != 0)
+	{
+		if (i == lexer[j].position)
+		{
+			n = 0;
+			while (lexer[j].expanded[n] != 0)
+				new_input[k++] = lexer[j].expanded[n++];
+			i += ft_strlen(lexer[j++].variable);
+		}
+		else
+			new_input[k++] = input[i++];
+	}
+}
+
+/*
 Se encarga de realizar la sustitución del input que obtenemos por la terminal
 a la versión final en la cual sustituimos todas las variables $ por su valor.
 */

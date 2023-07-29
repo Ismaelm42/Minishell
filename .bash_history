@@ -124,3 +124,69 @@ ARG="${LOGNAME}"
       '$USER'   '"$USER  "'    '$USER'     "$ARG"    
       '$USER'   '"$USER  "'      "$ARG"    
       '$USER'   '"$USER  "'      "$ARG"    
+      '$USER'   '"$USER  "'      "$ARG"    
+      '$USER'   '"$USER  "'      "$ARG"    
+      '$USER'   '"$USER  "'      "$ARG"    
+      '$USER'   '"$USER  "'      "$ARG"    
+      '$USER'   '"$USER  "'      "'$ARG'"    
+"'$USER'""$USER"'"$USER"'
+"'$  USER'""$USER"'"$USER"'
+"'$  USER'""$USER"'"$USER"'
+"'$  USER'""$USER"'"$USER"'
+"'$  USER'""$USER"'"$USER"'
+"'$  USER'""$USER"'"$USER"'
+"'$  USER'""$USER"'"$USER"'
+"'$  USER'""$USER"'"$USER"'
+"'$  USER'""$USER"'"$USER"'
+"'$  USER'""$USER"'"$USER"'
+"'$  USER'""$USER"'"$USER"'
+"'$  USER'""$USER"'"$USER"'
+"'$  USER'""$USER"'"$USER"'
+"'$  USER'""$USER"'"$USER"'
+"'$  USER'""$USER"'"$USER"'
+"'$  USER'""$USER"'"$USER"'
+"'$  USER'""$USER"'"$USER"'
+"'$  USER'""$USER"'"$USER"'
+"'$  USER'""$USER"'"$USER"'
+"          '$  USER'"      '"$USER"'   
+"          '$  USER'"    "$USER"   '"$USER"'   
+"          '$  USER'"    "$USER"   '"$USER"'   
+"          '$  USER'"    "$USER"   '"$USER"'   
+"          '$  USER'"    "$USER"   '"$USER"'   
+"          '$  USER'"    "$USER"   '"$USER"'   
+  "          '$  USER'"    "$USER"   '"$USER"'   
+  "          '$USER'"    "$USER"   '"$USER"'   
+  "          '$   USER'"    "$USER"   '"$USER"'   
+  "          '$   USER'"    "$USER"   '"$USER"'   
+  "          '$   USER'"    "$USER"   '"$USER"'   
+  "          '$   USER'"    "$USER"   '"$USER"'   
+  "          '$   USER'"    "$USER"   '"$USER"'   
+  "          '$   USER'"    "$USER"   '"$USER"'   
+  "          '$   USER'"    "$USER"   '"$USER"'   
+  "          '$   USER'"    "$USER"   '"$USER"'   
+  "          '$   USER'"    "$USER"   '"$USER"'   
+  "          '$USER'"    "$USER"   '"$USER"'   
+  "'$USER'"    "$USER"   '"$USER"'   
+$  "'$USER'"    "$USER"   '"$USER"'   $
+$  "'$USER'"    "$USER"   '"$USER"'   $
+$|  "'$USER'"    "$USER"   '"$USER"'   $
+$|
+$|
+'$|'
+'$'|
+ " ' $| '  "      
+ " ' $| '  "      
+ " ' $| '  "      
+ " ' $< '  "      
+ " ' $ '  "      
+ " ' $ '  "      
+ " ' $ '  "      
+ " ' $ '  "      
+ " ' $ '  "      
+
+clear
+clear
+
+"'$HOME'" '$' $ "$LOGNAME" $$
+"   '${HOME} '  "
+   '"${HOME} "'  

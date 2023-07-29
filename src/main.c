@@ -4,22 +4,20 @@ int	main(int argc, char **argv, char **env)
 {
 	char		*input;
 	t_global	*global;
-	int			i;
 
 	(void)argc;
 	(void)argv;
 	global = init_struct(env);
-	i = 0;
-	while (i < 1)
+	while (1)
 	{
 		rl_on_new_line();
-		//input = readline(">> ");
-		input = ft_strdup("      '$USER'   '\"$USER  \"'      \"$ARG\"    ");
+		input = readline(">> ");
+		//input = ft_strdup(" \" ' $ '  \"      ");
+		printf("orig input =\t%s\n", input);
 		add_and_store_history(input);
 		get_struct_data(global, input);
 		if (ft_strncmp(input, "exit", 5) == 0)
 			exit (0);
-		i++;
 	}
 	return (0);
 }

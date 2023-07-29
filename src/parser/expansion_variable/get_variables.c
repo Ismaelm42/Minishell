@@ -5,16 +5,6 @@ Función para contar el número de símbolos $ que hay que tener en cuenta.
 Contempla todos los casos problemáticos por ahora.
 */
 
-void	handle_edge_cases(char **input, int *counter)
-{
-	if ((*input)[1] == '$')
-		(*input)++;
-	else if ((*input)[1] == '{')
-		while (**input != '}' && **input != '\0')
-			(*input)++;
-	*counter += 1;
-}
-
 int	variable_expansion_counter(char *input)
 {
 	int		counter;
@@ -42,28 +32,9 @@ int	variable_expansion_counter(char *input)
 }
 
 /*
-Permite avanzar el puntero cuando se encuentre unas comillas simples.
-*/
-void	skip_quotes_and_check_expansion(int *n, char **s, t_lexer *lexer)
-{
-	char	c;
-
-	c = **s;
-	(*s)++;
-	while (**s != c && **s != '\0')
-	{
-		if (**s == '$' && c == '\"')
-			check_expansion_and_delimiters(n, s, lexer);
-		else
-			(*s)++;
-	}
-	if (**s != '\0')
-		(*s)++;
-}
-
-/*
 Utiliza substring para crear la subcadena correspondiente, avanza el puntero de s
-y suma uno más a n.
+y suma uno más a n. Además también recoge la posición exacta del comienzo de la variable
+de expansión.
 */
 void	variable_lexer_filler(int *n, int length, char **s, t_lexer *lexer)
 {
@@ -119,19 +90,20 @@ t_lexer	*get_variable_expansion_lexer(char *input)
 {
 	t_lexer		*lexer;
 	int			size;
+	int			lock;
 	int			n;
 
 	size = variable_expansion_counter(input);
 	lexer = create_expansion_lexer_struct(input, size);
+	lock = 0;
 	n = 0;
 	while (n < size)
 	{
-		if (*input == '\'' || *input == '\"' || *input == '$')
+		if (*input == '\'' || *input == '\"')
+			skip_quotes(&input, &lock);
+		else if (check_edge_cases(input) == 0)
 		{
-			if (*input != '$')
-				skip_quotes_and_check_expansion(&n, &input, lexer);
-			else
-				check_expansion_and_delimiters(&n, &input, lexer);
+			check_expansion_and_delimiters(&n, &input, lexer);
 			if (!lexer[n - 1].variable)
 				return (free_expansion_lexer(lexer, 0));
 		}
@@ -141,3 +113,15 @@ t_lexer	*get_variable_expansion_lexer(char *input)
 	lexer[n].variable = 0;
 	return (lexer);
 }
+
+// int	main(void)
+// {
+// 	char		*input;
+
+// 	input = ft_strdup(" \" ' $ '  \"     ");
+// 	printf("orig input =\t%s\n", input);
+// 	printf("counter = %d\n", variable_expansion_counter(input));
+// 	get_variable_expansion_lexer(input);
+// 	return (0);
+// }
+
