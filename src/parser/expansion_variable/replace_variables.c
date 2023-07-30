@@ -36,25 +36,15 @@ void	replace_function(char *new_input, char *input, t_lexer *lexer)
 	k = 0;
 	while (input[i] != 0)
 	{
-
 		if (i == lexer[j].position)
 		{
 			n = 0;
 			while (lexer[j].expanded[n] != 0)
-			{
-				new_input[k] = lexer[j].expanded[n];
-				k++;
-				n++;
-			}
-			i += ft_strlen(lexer[j].variable);
-			j++;
+				new_input[k++] = lexer[j].expanded[n++];
+			i += ft_strlen(lexer[j++].variable);
 		}
 		else
-		{
-			new_input[k] = input[i];
-			k++;
-			i++;
-		}
+			new_input[k++] = input[i++];
 	}
 }
 
