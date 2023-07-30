@@ -11,10 +11,12 @@ void	get_size_variables(int *var, int *exp, t_lexer *lexer)
 	int		i;
 
 	i = 0;
+	*var = 0;
+	*exp = 0;
 	while (lexer[i].variable != NULL)
 	{
-		*var = ft_strlen(lexer[i].variable);
-		*exp = ft_strlen(lexer[i].expanded);
+		*var += ft_strlen(lexer[i].variable);
+		*exp += ft_strlen(lexer[i].expanded);
 		i++;
 	}
 }
@@ -34,15 +36,25 @@ void	replace_function(char *new_input, char *input, t_lexer *lexer)
 	k = 0;
 	while (input[i] != 0)
 	{
+
 		if (i == lexer[j].position)
 		{
 			n = 0;
 			while (lexer[j].expanded[n] != 0)
-				new_input[k++] = lexer[j].expanded[n++];
-			i += ft_strlen(lexer[j++].variable);
+			{
+				new_input[k] = lexer[j].expanded[n];
+				k++;
+				n++;
+			}
+			i += ft_strlen(lexer[j].variable);
+			j++;
 		}
 		else
-			new_input[k++] = input[i++];
+		{
+			new_input[k] = input[i];
+			k++;
+			i++;
+		}
 	}
 }
 
@@ -61,7 +73,7 @@ char	*replace_variables(char *input, t_lexer *lexer)
 	input_size = ft_strlen(input);
 	get_size_variables(&var_size, &exp_size, lexer);
 	size = (input_size - var_size + exp_size);
-	new_input = (char *)calloc(sizeof(char), size + 1);
+	new_input = (char *)ft_calloc(sizeof(char), size + 1);
 	replace_function(new_input, input, lexer);
 	free(input);
 	return (new_input);

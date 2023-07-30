@@ -26,7 +26,8 @@ int	variable_expansion_counter(char *input)
 		}
 		else if (*input == '$')
 			handle_edge_cases(&input, &counter);
-		input++;
+		if (*input != '\0')
+			input++;
 	}
 	return (counter);
 }

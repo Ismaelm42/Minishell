@@ -6,7 +6,7 @@ char	**get_lexer(char *input, t_global *global)
 	char	**lexer;
 
 	new_input = expansion_variable(input, global);
-	printf("new_input =\t%s\n", new_input);
+	printf("new_input = %s\n", new_input);
 	lexer = lexer_maker(new_input);
 	free(new_input);
 	return (lexer);

@@ -1,0 +1,20 @@
+'prueba' "'$LOGNAME'" "'   $ARG  '" valor_de_expansion
+'prueba' "'$LOGNAME'" '"   $ARG  " valor_de_expansion_con_comillas_simples_sin_cerrar_en_ARG
+'prueba' "'$LOGNAME'" '"   $ARG  " valor_de_expansion_con_comillas_simples_sin_cerrar_en_ARG
+'prueba' "'$LOGNAME'" "'   $ARG  '
+'prueba' "'$LOGNAME'" '"   $ARG  "
+'""
+'las comillas no se cierran
+'
+$
+prueba normal|con 'varios' < \"'parámetros $ARG'\" > y | un $USER para <<realizar >>el split
+| prueba
+prueba con >
+prueba con <
+prueba con >>
+prueba con <<
+prueba con |
+prueba con | | y más input
+prueba con | < y más input
+prueba con | << y más input
+prueba con | >> y más input

@@ -16,10 +16,10 @@ int	get_variable_from_env(int n, t_lexer *lexer, t_global *global)
 		copy = ft_strtrim(copy, "}", 1);
 	}
 	environment = search_key(global->lst_env, copy);
+	free(copy);
 	if (environment == NULL)
 		return (1);
 	lexer[n].expanded = ft_strdup(environment);
-	free(copy);
 	return (0);
 }
 
@@ -99,11 +99,9 @@ char	*expansion_variable(char *input, t_global *global)
 			i++;
 		}
 		new_input = replace_variables(input, lexer);
+		free_expansion_lexer(lexer, 1);
 		if (variable_expansion_counter(new_input) != 0)
-		{
-			free_expansion_lexer(lexer, 1);
 			new_input = expansion_variable(new_input, global);
-		}
 		return (new_input);
 	}
 	else

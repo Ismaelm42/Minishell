@@ -14,4 +14,5 @@ void	add_and_store_history(char *input)
 	}
 	ft_putstr_fd(input, fd_history);
 	ft_putchar_fd('\n', fd_history);
+	close(fd_history);
 }

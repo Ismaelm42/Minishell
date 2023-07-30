@@ -5,7 +5,7 @@ int	quotes_check(char **lexer, int n)
 	if ((lexer[n][0] == '\'' && lexer[n][ft_strlen(lexer[n]) - 1] != '\'')
 		|| (lexer[n][0] == '\"' && lexer[n][ft_strlen(lexer[n]) - 1] != '\"'))
 	{
-		ft_putstr_fd("minishell: syntax error: unexpected end of file", 2);
+		ft_putstr_fd("minishell: syntax error: unexpected end of file\n", 2);
 		free_lexer(lexer);
 		return (-1);
 	}

@@ -26,6 +26,16 @@ t_token	*get_tokens(char *input, t_global *global)
 	int		n;
 
 	lexer = get_lexer(input, global);
+
+	int i = 0;
+	printf("\n\n");
+	while (lexer[i] != NULL)
+	{
+		printf("lexer = %s\n", lexer[i]);
+		i++;
+	}
+	printf("\n\n");
+
 	if (syntax_error_check(lexer) == -1)
 		return (NULL);
 	n = lexer_pipes_counter(lexer);

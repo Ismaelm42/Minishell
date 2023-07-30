@@ -11,7 +11,7 @@ void	quoted_lexer_splitter(int *n, char **s, char ***lexer)
 
 	length = 0;
 	c = **s;
-	while ((*s)[length + 1] != c)
+	while ((*s)[length + 1] != c && (*s)[length + 1] != '\0')
 		length++;
 	length += 2;
 	(*lexer)[*n] = ft_substr(*s, 0, length, 0);
@@ -49,20 +49,15 @@ void	words_splitter(int *n, char **s, char ***lexer)
 	int	length;
 
 	length = 0;
-	while (**s == ' ' || **s == '\t')
-		(*s)++;
 	while ((*s)[length] != '\'' && (*s)[length] != '"'
 		&& (*s)[length] != '<' && (*s)[length] != '>'
 		&& (*s)[length] != ' ' && (*s)[length] != '\t'
 		&& (*s)[length] != '|' && (*s)[length] != '\0')
-		length++;
-	if (length > 0)
-	{
-		(*lexer)[*n] = ft_substr(*s, 0, length, 0);
-		*n += 1;
-		while (length -- > 0)
-		(*s)++;
-	}
+	length++;
+	(*lexer)[*n] = ft_substr(*s, 0, length, 0);
+	*n += 1;
+	while (length -- > 0)
+	(*s)++;
 }
 
 /*
@@ -93,6 +88,8 @@ char	**lexer_maker(char *s)
 	lexer = (char **)calloc(sizeof(char **), size + 1);
 	while (n < size)
 	{
+		while (*s == ' ' || *s == '\t')
+			s++;
 		if (*s == '\'' || *s == '"')
 			quoted_lexer_splitter(&n, &s, &lexer);
 		else if (*s == '<' || *s == '>' || *s == '|')

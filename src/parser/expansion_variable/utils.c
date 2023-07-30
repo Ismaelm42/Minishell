@@ -20,6 +20,7 @@ t_lexer	*create_expansion_lexer_struct(char *input, int size)
 	}
 	return (lexer);
 }
+
 /*
 Toma en cuenta los casos complicados con la variable de expansión.
 Si hay un espacio tras esta no se considera variable de expansión sino
@@ -28,10 +29,12 @@ si encuentra unos corchetes abiertos lo protege y lo toma como variable.
 */
 void	handle_edge_cases(char **input, int *counter)
 {
-	if ((*input)[1] == '\'' || (*input)[1] == '"'
-			|| (*input)[1] == '<' || (*input)[1] == '>'
-			|| (*input)[1] == ' ' || (*input)[1] == '\t'
-			|| (*input)[1] == '|' || (*input)[1] == '\0')
+	if ((*input)[1] == '\0')
+		return ;
+	if ((*input)[1] == '\''
+		|| (*input)[1] == '"' || (*input)[1] == '<'
+		|| (*input)[1] == '>' || (*input)[1] == ' '
+		|| (*input)[1] == '\t' || (*input)[1] == '|')
 	{
 		(*input)++;
 		return ;
@@ -124,15 +127,15 @@ lexer->expanded.
 */
 t_lexer	*free_expansion_lexer(t_lexer *lexer, int flag)
 {
-	int	i;
+	int	n;
 
-	i = 0;
-	while (lexer[i].variable != NULL)
+	n = 0;
+	while (lexer[n].variable != NULL)
 	{
-		free (lexer[i].variable);
+		free (lexer[n].variable);
 		if (flag == 1)
-			free (lexer[i].expanded);
-		i++;
+			free (lexer[n].expanded);
+		n++;
 	}
 	free (lexer);
 	return (NULL);
