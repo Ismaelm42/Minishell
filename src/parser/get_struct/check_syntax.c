@@ -8,7 +8,6 @@ int	quotes_check(char **lexer, int n)
 		&& (ft_strlen(lexer[n]) - 1 == 0)))
 	{
 		ft_putstr_fd("minishell: syntax error: unexpected end of file\n", 2);
-		free_lexer(lexer);
 		return (-1);
 	}
 	return (0);
@@ -26,7 +25,6 @@ int	pipes_and_redirections_check(char **lexer, int n)
 		ft_putstr_fd("\'", 2);
 		ft_putchar_fd(lexer[n][0], 2);
 		ft_putstr_fd("\'\n", 2);
-		free_lexer(lexer);
 		return (-1);
 	}
 	return (0);
@@ -43,7 +41,6 @@ int	next_lexer_check(char **lexer, int n)
 		ft_putstr_fd("\'", 2);
 		ft_putchar_fd(lexer[n][0], 2);
 		ft_putstr_fd("\'\n", 2);
-		free_lexer(lexer);
 		return (-1);
 	}
 	return (0);
