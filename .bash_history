@@ -387,3 +387,30 @@ prueba con | >> y más input
 prueba normal|con 'varios' < "'parámetros $ARG"' > y | un $USER para <<realizar >>el split
 prueba normal|con 'varios' < "'parámetros $ARG'" > y | un $USER para <<realizar >>el split
 prueba normal|con 'varios' < "'parámetros $ARG'" > y | un $USER para <<realizar >>el split
+prueba normal|con 'varios' < "'parámetros $ARG'" > y | un $USER para <<realizar >>el split
+prueba normal|con 'varios' < "'parámetros $ARG'" > y | un $USER para <<realizar >>el split
+< file wc >> file3 > file2 -l << end << "fin" -w > file4
+hola >
+< file wc >> file3 > file2 -l << end << "fin" -w > file4
+'            
+'                  ""
+hola '
+'
+"
+'  
+
+'
+"
+"
+"
+"
+"
+'
+hola '
+hola 'que tal estas
+
+hola 'joder
+hola buenos dias '" hola "
+'""
+'"buenos dias'"
+'"buenos dias'

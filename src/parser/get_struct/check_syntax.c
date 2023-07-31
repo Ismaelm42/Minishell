@@ -3,7 +3,9 @@
 int	quotes_check(char **lexer, int n)
 {
 	if ((lexer[n][0] == '\'' && lexer[n][ft_strlen(lexer[n]) - 1] != '\'')
-		|| (lexer[n][0] == '\"' && lexer[n][ft_strlen(lexer[n]) - 1] != '\"'))
+		|| (lexer[n][0] == '\"' && lexer[n][ft_strlen(lexer[n]) - 1] != '\"')
+		|| ((lexer[n][0] == '\'' || lexer[n][0] == '\"')
+		&& (ft_strlen(lexer[n]) - 1 == 0)))
 	{
 		ft_putstr_fd("minishell: syntax error: unexpected end of file\n", 2);
 		free_lexer(lexer);
@@ -33,7 +35,7 @@ int	pipes_and_redirections_check(char **lexer, int n)
 int	next_lexer_check(char **lexer, int n)
 {
 	if ((lexer[n][0] == '|' || lexer[n][0] == '<'
-		|| lexer[n][0] == '>') && (lexer[n + 1] == NULL // Solo contemplar los casos con varios pipes. Las redirecciones no deberían afectar en nada.
+		|| lexer[n][0] == '>') && (lexer[n + 1] == NULL
 		|| lexer[n + 1][0] == '|' || lexer[n + 1][0] == '<'
 		|| lexer[n + 1][0] == '>'))
 	{

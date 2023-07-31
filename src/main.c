@@ -7,22 +7,19 @@ int	main(int argc, char **argv, char **env)
 
 	(void)argc;
 	(void)argv;
-	(void)env;
 	global = init_struct(env);
-
-
-	// while (1)
-	// {
-		//rl_on_new_line();
-		//input = readline(">> ");
-		input = ft_strdup("prueba normal|con 'varios' < \"'parámetros $ARG'\" > y | un $USER para <<realizar >>el split");
+	while (1)
+	{
+		rl_on_new_line();
+		input = readline(">> ");
+		//input = ft_strdup("prueba normal|con 'varios' < \"'parámetros $ARG'\" > y | un $USER para <<realizar >>el split");
 		add_and_store_history(input);
 		get_struct_data(global, input);
 
 
 		// if (ft_strncmp(input, "exit", 5) == 0)
 		// 	exit (0);
-	// }
+	}
 		return (0);
 }
 
