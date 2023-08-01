@@ -12,10 +12,9 @@ int	main(int argc, char **argv, char **env)
 	// {
 		//rl_on_new_line();
 		//input = readline(">> ");
-		input = ft_strdup("\"");
+		input = ft_strdup("< file wc >> | file3 > file2 -l << end << \"fin\" -w > file4");
 		add_and_store_history(input);
 		get_struct_data(global, input);
-
 
 		// if (ft_strncmp(input, "exit", 5) == 0)
 		// 	exit (0);
@@ -55,3 +54,5 @@ int	main(int argc, char **argv, char **env)
 // 	// 	}
 // 	// }
 // }
+
+

@@ -11,8 +11,10 @@ SRC =	src/main.c																\
 		src/parser/expansion_variable/replace_variables.c						\
 		src/parser/expansion_variable/utils.c									\
 		src/parser/get_struct/check_syntax.c									\
-		src/parser/get_struct/get_tokens.c										\
 		src/parser/get_struct/get_struct.c										\
+		src/parser/get_tokens/get_tokens.c										\
+		src/parser/get_tokens/tokens_counter.c									\
+		src/parser/get_tokens/tokens_maker.c									\
 		src/signals/signal.c													\
 		src/parser/dictionary/var_environment.c									\
 		src/parser/dictionary/var_local.c										\

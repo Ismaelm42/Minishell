@@ -1,491 +1,97 @@
 ARG="${LOGNAME}"
-A="HOLA"
-"$ARG"
-'"$ARG"'
-      '$USER'   '   "$USER  " '    
-      '$USER'   '   "$USER  " ''$USER'    
-      '$USER'   '   "$USER  " ''$USER'"$USER"    
-      '$USER'   '   "$USER  " ''$USER'"$USER"    
-      '$USER'   '   "$USER  " ''$USER' "$USER"    
-      '$USER'   '   "$USER  " ''$USER' " $USER "    
-     " $USER "    
-      '$USER'   '   "$USER  " ''$USER' " $USER "    
-      '$USER'   '   "$USER  " ''$USER' " $USER "    
-      '$USER'   '   "$USER  " ''$USER' " $USER "    
-      '$USER'   '   "$USER  " ''$USER' " $USER "    
-      '$USER'   '   "$USER  " ''$USER' " $USER "    
-      '$USER'   '   "$USER  " ''$USER' " $USER "    
-      '$USER'   '   "$USER  " ''$USER' " $LOGNAME"    
-      '$USER'   '   "$USER  " ''$USER' " $USER"    
-      '$USER'   '   "$USER  " ''$USER' " $HOME"    
-      '$USER'   '"$USER  "'    '$USER'     "$HOME"    
-      '$USER'   '"$USER  "'    '$USER'     "$HOME"    
-      '$USER'   '"$USER  "'    '$USER'     "$HOME"    
-      '$USER'   '"$USER  "'    '$USER'     "$HOME"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'       "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-"$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$USER"    
-      '$USER'   '"$USER  "'    '$USER'     "$ARG"    
-      '$USER'   '"$USER  "'    '$USER'     "$ARG"    
-      '$USER'   '"$USER  "'    '$USER'     "$ARG"    
-      '$USER'   '"$USER  "'    '$USER'     "$ARG"    
-      '$USER'   '"$USER  "'    '$USER'     "$ARG"    
-      '$USER'   '"$USER  "'    '$USER'     "$ARG"    
-      '$USER'   '"$USER  "'    '$USER'     "$ARG"    
-      '$USER'   '"$USER  "'    '$USER'     "$ARG"    
-      '$USER'   '"$USER  "'      "$ARG"    
-      '$USER'   '"$USER  "'      "$ARG"    
-      '$USER'   '"$USER  "'      "$ARG"    
-      '$USER'   '"$USER  "'      "$ARG"    
-      '$USER'   '"$USER  "'      "$ARG"    
-      '$USER'   '"$USER  "'      "$ARG"    
-      '$USER'   '"$USER  "'      "'$ARG'"    
-"'$USER'""$USER"'"$USER"'
-"'$  USER'""$USER"'"$USER"'
-"'$  USER'""$USER"'"$USER"'
-"'$  USER'""$USER"'"$USER"'
-"'$  USER'""$USER"'"$USER"'
-"'$  USER'""$USER"'"$USER"'
-"'$  USER'""$USER"'"$USER"'
-"'$  USER'""$USER"'"$USER"'
-"'$  USER'""$USER"'"$USER"'
-"'$  USER'""$USER"'"$USER"'
-"'$  USER'""$USER"'"$USER"'
-"'$  USER'""$USER"'"$USER"'
-"'$  USER'""$USER"'"$USER"'
-"'$  USER'""$USER"'"$USER"'
-"'$  USER'""$USER"'"$USER"'
-"'$  USER'""$USER"'"$USER"'
-"'$  USER'""$USER"'"$USER"'
-"'$  USER'""$USER"'"$USER"'
-"'$  USER'""$USER"'"$USER"'
-"          '$  USER'"      '"$USER"'   
-"          '$  USER'"    "$USER"   '"$USER"'   
-"          '$  USER'"    "$USER"   '"$USER"'   
-"          '$  USER'"    "$USER"   '"$USER"'   
-"          '$  USER'"    "$USER"   '"$USER"'   
-"          '$  USER'"    "$USER"   '"$USER"'   
-  "          '$  USER'"    "$USER"   '"$USER"'   
-  "          '$USER'"    "$USER"   '"$USER"'   
-  "          '$   USER'"    "$USER"   '"$USER"'   
-  "          '$   USER'"    "$USER"   '"$USER"'   
-  "          '$   USER'"    "$USER"   '"$USER"'   
-  "          '$   USER'"    "$USER"   '"$USER"'   
-  "          '$   USER'"    "$USER"   '"$USER"'   
-  "          '$   USER'"    "$USER"   '"$USER"'   
-  "          '$   USER'"    "$USER"   '"$USER"'   
-  "          '$   USER'"    "$USER"   '"$USER"'   
-  "          '$   USER'"    "$USER"   '"$USER"'   
-  "          '$USER'"    "$USER"   '"$USER"'   
-  "'$USER'"    "$USER"   '"$USER"'   
-$  "'$USER'"    "$USER"   '"$USER"'   $
-$  "'$USER'"    "$USER"   '"$USER"'   $
-$|  "'$USER'"    "$USER"   '"$USER"'   $
-$|
-$|
-'$|'
-'$'|
- " ' $| '  "      
- " ' $| '  "      
- " ' $| '  "      
- " ' $< '  "      
- " ' $ '  "      
- " ' $ '  "      
- " ' $ '  "      
- " ' $ '  "      
- " ' $ '  "      
-
-clear
-clear
-
-"'$HOME'" '$' $ "$LOGNAME" $$
-"   '${HOME} '  "
-   '"${HOME} "'  
- " ' $ '  "      
- " ' $ '  "      
- " ' $ '  "      
- " ' $ '  "      
- " ' $ '  "      
- " ' $ '  "      
- " ' $ '  "      
- " ' $ '  "      
- " ' $ '  "      
- " ' $ '  "      
- " ' $ '  "      
- " ' $ '  "      
- " ' $ '  "      
- " ' $ '  "      
- " ' $ '  "      
- " ' $ '  "      
- " ' $ '  "      
- " ' $ '  " $LOGNAME     
- " ' $ '  "    
- " ' $ '  "    
- " ' $ '  "    
- " ' $ '  "    
- " ' $HOME '  "    
- " ' $HOME '  "    
- " ' $HOME '  "    
- " ' $HOME '  "    
- " ' $HOME '  "    
- " ' $HOME '  "    
- " ' $HOME '  "    
- " ' $HOME '  "    
- " ' $HOME '  "    
- " ' $HOME '  "    
- " ' $HOME '  "    
- " ' $HOME '  "    
- " ' $HOME '  "    
- " ' $ARG '  "  $HOME $  
- " ' $ARG '  "  $HOME $  
- " ' $ARG '  "  $HOME $  
- " ' $ARG '  "  $HOME $  
- " ' $ARG '  "  $HOME $  
- " ' $ARG '  "  $HOME $  
- " ' $ARG '  "  $HOME $  
- " ' $ARG '  "  $HOME $  
- " ' $ARG '  "  $HOME $  
- " ' $ARG '  "  $HOME $  
- " ' $ARG '  "  $HOME $  
- " ' $ARG '  "  $HOME $  
- " ' $ARG '  "  $HOME $  
- " ' $ARG '  "  $HOME $  
- " ' $ARG '  "  $HOME $  
- " ' $ARG '  "  $HOME $  
- " ' $ARG '  "  $HOME $  
- " ' $ARG '  "  $HOME $  
- " ' $ARG '  "  $HOME $  
- " ' $ARG '  "  $HOME $  
- " ' $ARG '  "  $HOME $  
- " ' $ARG '  "  $HOME $  
- " ' $ARG '  "  $HOME $  
- " ' $ARG '  "  $HOME $  
- " ' $ARG '  "  $HOME $  
- " ' $ARG '  "  $HOME $  
- " ' $ARG '  "  $HOME $  
- " ' $ARG '  "  $HOME $  
- " ' $ARG '  "  $HOME $  
- " ' $ARG '  "  $HOME $  
- " ' $ARG '  "  $HOME $  
- " ' $ARG '  "  $HOME $  
- " ' $ARG '  "  $HOME $  
- " ' $ARG '  "  $HOME $  
- " ' $ARG '  "  $HOME $  
- " ' $ARG '  "  $HOME $  
- " ' $ARG '  "  $HOME $  
- " ' $ARG '  "  $HOME $  
-$LOGNAME
-$LOGNAME
- " ' $ARG '  "  $HOME $  
- " ' $ARG '  "  $HOME $  
- " ' $ARG '  "  $HOME $  
- " ' $ARG '  "  $HOME $  
- "hola" '"bu"enos' dias|que tal<estas  
- "hola" '"bu"enos' dias|que tal<estas  
- "hola" '"bu"enos' dias|que tal<estas  
- "hola" '"bu"enos' dias|que tal<estas  
- "hola" '"bu"enos' dias|que tal<estas  
- "hola" '"bu"enos' dias|que tal<estas  
- "hola" '"bu"enos' dias|que tal<estas  
- "hola" '"bu"enos' dias|que tal<estas  
- "hola" '"bu"enos' dias|que tal<estas  
- "hola" '"bu"enos' dias|que tal<estas  
- "hola" '"bu"enos' dias|que tal<estas  
- "hola" '"bu"enos' dias|que tal<estas  
- "hola" '"bu"enos' dias|que tal<estas  
- "hola" '"bu"enos' dias|que tal<estas  
- "hola" '"bu"enos' dias|que tal<estas  
- "hola" '"bu"enos' dias|que tal<estas  
- "hola" '"bu"enos' dias|que tal<estas  
- "hola" '"bu"enos' dias|que tal<estas  
- "hola" '"bu"enos' dias|que tal<estas  
- "hola" '"bu"enos' dias|que tal<estas  
- "hola" '"bu"enos' dias|que tal<estas  
- "hola" '"bu"enos' dias|que tal<estas  
- "hola" '"bu"enos' dias|que tal<estas  
- "hola" '"bu"enos' dias|que tal<estas  
- "hola" '"bu"enos' dias|que tal<estas  
- "hola" '"bu"enos' dias|que tal<estas  
- "hola" '"bu"enos' dias|que tal<estas  
- "hola" '"bu"enos' dias|que tal<estas  
- "hola" '"bu"enos' dias|que tal<estas  
- "hola" '"bu"enos' $ARG dias|que tal<estas  
- "hola" '"bu"enos' $ARG dias|que tal<estas  
- "hola" '"bu"enos' $ARG dias|que tal<estas  
- "hola" '"bu"enos' $ARG dias|que tal<estas  
- "hola" '"bu"enos' $ARG dias|que tal<estas  
- "hola" '"bu"enos' $ARG dias|que tal<estas  
- "hola" '"bu"enos' $ARG dias|que tal<estas  
- "hola" '"bu"enos' $ARG dias|que tal<estas  
- "hola" '"bu"enos' $ARG dias|que tal<estas  
- "hola" '"bu"enos' $ARG dias|que tal<estas  
- "hola" '"bu"enos' $ARG dias|que tal<estas  
- "hola" '"bu"enos' $ARG dias|que tal<estas  
- "hola" '"bu"enos' $ARG dias|que tal<estas  
- "hola" '"bu"enos' $ARG dias|que tal<estas  
- "hola" '"bu"enos' $ARG dias|que tal<estas  
- "hola" '"bu"enos' $ARG dias|que tal<estas  
- "hola" '"bu"enos' $ARG dias|que tal<estas  
- "hola" '"bu"enos' $ARG dias|que tal<estas  
- "hola" '"bu"enos' $ARG dias|que tal<estas  
- "hola" '"bu"enos' $ARG dias|que tal<estas  
- "hola" '"bu"enos' $ARG dias|que tal<estas  
- "hola" '"bu"enos' $ARG dias|que tal<estas  
-fe
-
-clear
-
-'prueba' "'$LOGNAME'" "'   $ARG  '" valor_de_expansion
-'prueba' "'$LOGNAME'" "'   $ARG  '" valor_de_expansion
-'prueba' "'$LOGNAME'" "'   $ARG  '" valor_de_expansion
-
-'prueba' "'$LOGNAME'" "   $ARG  " valor_de_expansion
-'prueba' "'$LOGNAME'"    $ARG  valor_de_expansion
-'prueba' "'$LOGNAME'"    $HOME  valor_de_expansion
-
-
-'prueba' "'$LOGNAME'" "'   $ARG  '" valor_de_expansion
-'prueba' "'$LOGNAME'" "'   $ARG  '" valor_de_expansion
-
- 'prueba' "'$LOGNAME'" "'   $ARG  '" valor_de_expansion
- 'prueba' "'$LOGNAME'" "'   $A  '" valor_de_expansion
- 'prueba' "'$LOGNAME'" "'   $A  '" valor_de_expansion
- 'prueba' "'$LOGNAME'" "'   $A  '" valor_de_expansion $
- 'prueba' "'$LOGNAME'" "'   $A  '" valor_de_expansion $
-$
-'prueba' "'$LOGNAME'" "'   $ARG  '" valor_de_expansion
-'prueba' "'$LOGNAME'" '"   $ARG  " valor_de_expansion_con_comillas_simples_sin_cerrar_en_ARG
-'prueba' "'$LOGNAME'" '"   $ARG  " valor_de_expansion_con_comillas_simples_sin_cerrar_en_ARG
-'prueba' "'$LOGNAME'" '"   $ARG  " valor_de_expansion_con_comillas_simples_sin_cerrar_en_ARG
-'prueba' "'$LOGNAME'" '"   $ARG  " valor_de_expansion_con_comillas_simples_sin_cerrar_en_ARG
-'prueba' "'$LOGNAME'" '"   $ARG  " valor_de_expansion_con_comillas_simples_sin_cerrar_en_ARG
-
-'prueba' "'$LOGNAME'" '"   $ARG  " valor_de_expansion_con_comillas_simples_sin_cerrar_en_ARG
-'prueba' "'$LOGNAME'" '"   $ARG  " valor_de_expansion_con_comillas_simples_sin_cerrar_en_ARG
-
-'prueba' "'$LOGNAME'" "'   $ARG  '" valor_de_expansion
-'prueba' "'$LOGNAME'" '"   $ARG  " valor_de_expansion_con_comillas_simples_sin_cerrar_en_ARG
-'prueba' "'$LOGNAME'" "'   $ARG  '" valor_de_expansion
-'prueba' "'$LOGNAME'" '"   $ARG  " valor_de_expansion_con_comillas_simples_sin_cerrar_en_ARG
-'prueba' "'$LOGNAME'" '"   $ARG  " valor_de_expansion_con_comillas_simples_sin_cerrar_en_ARG
-'prueba' "'$LOGNAME'" "'   $ARG  '
-'prueba' "'$LOGNAME'" "'   $ARG  '
-'prueba' "'$LOGNAME'" '"   $ARG  "
-
-'""
-'las comillas no se cierran
-'
-
-$
-
-$
-prueba normal|con varios < parámetros > y | un $HOME para <<realizar >>el split
-| prueb
-prueba con >
-prueba con <
-
-prueba con >
-prueba con >>
-prueba con <<
-prueba con |
-prueba con | | y más input
-prueba con | < y más input
-prueba con | << y más input
-prueba con | >> y más input
-
-prueba con | >> y más input
-prueba normal|con 'varios' < "'parámetros $ARG"' > y | un $USER para <<realizar >>el split
-prueba normal|con 'varios' < "'parámetros $ARG'" > y | un $USER para <<realizar >>el split
-prueba normal|con 'varios' < "'parámetros $ARG'" > y | un $USER para <<realizar >>el split
-prueba normal|con 'varios' < "'parámetros $ARG'" > y | un $USER para <<realizar >>el split
-prueba normal|con 'varios' < "'parámetros $ARG'" > y | un $USER para <<realizar >>el split
+"
+comando1 arg1| comando2 '"arg2"'| comando3 arg3 "$ARG" >outfile
+comando1 arg1| comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+comando1 <infile | comando2 argument1 argument2 argument3 <infile2 | 'comando' | '"comando3"' $HOME | caca
+'hola'hola"hola"'"hola"'
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile >outfile2 >   outfile3 $ARG arg2 arg3 | ls
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
+<infile comando1 arg1 >outfile | comando2 '"$ARG"'| comando3 arg3 "$ARG" >outfile
 < file wc >> file3 > file2 -l << end << "fin" -w > file4
-hola >
 < file wc >> file3 > file2 -l << end << "fin" -w > file4
-'            
-'                  ""
-hola '
-'
-"
-'  
-
-'
-"
-"
-"
-"
-"
-'
-hola '
-hola 'que tal estas
-
-hola 'joder
-hola buenos dias '" hola "
-'""
-'"buenos dias'"
-'"buenos dias'
-"
-"
-
-"   
-
-"  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-"  
-" 
-"
-"
-"
-
-
-"
-
-"
-"
-"
-"
-"
-"
-"
+< file wc >> file3 > file2 -l << end << "fin" -w > file4
+< file wc >> file3 > file2 -l << end << "fin" -w > file4
+< file wc >> | file3 > file2 -l << end << "fin" -w > file4
+< file wc >> | file3 > file2 -l << end << "fin" -w > file4
+< file wc >> | file3 > file2 -l << end << "fin" -w > file4

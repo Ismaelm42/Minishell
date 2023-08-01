@@ -4,7 +4,7 @@
 'prueba' "'$LOGNAME'" "'   $ARG  '
 'prueba' "'$LOGNAME'" '"   $ARG  "
 '""
-'las comillas no se cierran
+'hola 
 hola '
 $
 prueba normal|con 'varios' < \"'parámetros $ARG'\" > y | un $USER para <<realizar >>el split

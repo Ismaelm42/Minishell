@@ -16,11 +16,6 @@
 # include <termios.h>
 # include <unistd.h>
 
-/*
-Estructura específica para guardar los lexer $ y poder
-vincularlos luego con su variable de una forma más simple.
-*/
-
 typedef struct s_lexer
 {
 	char		*input;
@@ -31,16 +26,15 @@ typedef struct s_lexer
 
 typedef struct s_token
 {
-	char		**in;
-	char		**out;
-	char		*cmd;
+	char		**infile;
+	char		**outfile;
+	char		**heredoc;
+	char		**append;
+	char		*command;
 	char		**arg;
 	int			fd_in;
 	int			fd_out;
 }				t_token;
-
-// Estructura para guardar una copia de environment a modo de diccionario y
-// que nuestra mini_shell trabaje directamente con esta copia
 
 typedef struct s_node
 {
@@ -110,19 +104,27 @@ char		*read_fd(int fd, char *static_buffer);
 char		*return_line(char *static_buffer);
 char		*return_static(char *static_buffer);
 
-//parser/get_struct/get_struct
-t_global	*init_struct(char **env);
-void		get_struct_data(t_global *global, char *input);
-
-//parser/get_struct/get_tokens
-int			lexer_pipes_counter(char **lexer);
-t_token		*get_tokens(char *input, t_global *global);
-
 //parser/get_struct/check_syntax
 int			quotes_check(char **lexer, int n);
 int			pipes_and_redirections_check(char **lexer, int n);
 int			next_lexer_check(char **lexer, int n);
 int			syntax_error_check(char **lexer);
+
+//parser/get_struct/get_struct
+t_global	*init_struct(char **env);
+void		get_struct_data(t_global *global, char *input);
+
+//src/parser/get_tokens/get_tokens
+int			lexer_pipes_counter(char **lexer);
+t_token		*get_tokens(char *input, t_global *global);
+
+//src/parser/get_tokens/tokens_counter
+void		redirection_and_command_token_counter(char ***lexer, int **size);
+int			*token_counter(char **lexer);
+
+
+//src/parser/get_tokens/tokens_maker
+void		token_maker(t_token *tokens, char **lexer);
 
 //parser/dictionary
 void		copy_environment(t_node **lst_env, char **env);
