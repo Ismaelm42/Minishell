@@ -125,6 +125,7 @@ void	token_maker(t_token *tokens, char **lexer)
 		size = token_counter(lexer);
 		allocate_token_memory(tokens, size);
 		token_filler(tokens, lexer);
+		printf("hola\n");
 		print_result(tokens, size);
 		advance_lexer_tokens_and_free_size(&lexer, &tokens);
 	}

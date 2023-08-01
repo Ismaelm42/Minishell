@@ -40,6 +40,8 @@ int	next_lexer_check(char **lexer, int n)
 		ft_putstr_fd("minishell: syntax error near unexpected token ", 2);
 		ft_putstr_fd("\'", 2);
 		ft_putchar_fd(lexer[n][0], 2);
+		if (lexer[n][1] != '\0')
+			ft_putchar_fd(lexer[n][1], 2);
 		ft_putstr_fd("\'\n", 2);
 		return (-1);
 	}

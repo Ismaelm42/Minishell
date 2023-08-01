@@ -95,3 +95,11 @@ comando1 <infile | comando2 argument1 argument2 argument3 <infile2 | 'comando' |
 < file wc >> | file3 > file2 -l << end << "fin" -w > file4
 < file wc >> | file3 > file2 -l << end << "fin" -w > file4
 < file wc >> | file3 > file2 -l << end << "fin" -w > file4
+< file wc >> | file3 > file2 -l << end << "fin" -w > file4
+< file wc >> | file3 > file2 -l << end << "fin" -w > file4
+< file wc >> | file3 > file2 -l << end << "fin" -w > file4
+< file wc >> file3 > file2 -l << end << "fin" -w > file4
+<file wc>> file3> file2 -l<<end<< "fin" -w >file4        
+<file wc>> |file3> file2 -l<<end<< "fin" -w >file4        
+<file wc>> |file3> file2 -l<<end<< "fin" -w >file4        
+<file wc>< |file3> file2 -l<<end<< "fin" -w >file4        
