@@ -34,9 +34,9 @@ char	*ft_strjoin(char *s1, char *s2, int flag)
 		j++;
 	}
 	str[i + j] = '\0';
-	if (flag == 1 || flag == 2)
+	if (flag == 1 || flag == 3)
 		free(s1);
-	if (flag == 2)
+	if (flag == 2 || flag == 3)
 		free(s2);
 	return ((char *)str);
 }

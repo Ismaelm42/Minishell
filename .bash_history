@@ -103,3 +103,650 @@ comando1 <infile | comando2 argument1 argument2 argument3 <infile2 | 'comando' |
 <file wc>> |file3> file2 -l<<end<< "fin" -w >file4        
 <file wc>> |file3> file2 -l<<end<< "fin" -w >file4        
 <file wc>< |file3> file2 -l<<end<< "fin" -w >file4        
+comando1 > outfile arg1 <infile arg2 -l | >outfile<infile comando2 <infile3 -l >
+comando1 > outfile arg1 <infile arg2 -l | >outfile<infile comando2 <infile3 -l
+comando1 > outfile arg1 <infile arg2 -l | >outfile<infile comando2 <infile3 -l
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+ls |
+
+hola
+ls
+ls |
+hola
+
+ls |
+hola
+hola
+hola
+hola
+hola
+hola
+hola
+hola
+hola
+hola
+
+hola
+hola
+hola
+hola
+hola
+hola
+
+hola |
+hola |
+hola |
+hola
+hola
+hola
+hola
+hola
+hola |
+hola
+hola |
+hola
+hola |
+hola
+hola |
+hola
+hola |
+hola
+hola |
+hola
+hola
+hola |
+hola
+
+hola
+hola |
+hola
+hola |
+hola
+hola
+hola
+hola
+hola
+hola
+hola joder
+
+hola |
+ahora si hay strjoin
+hola
+hola
+hola
+hola |
+hola
+hola
+hola
+hola |
+hola
+hola
+
+hola
+hola |
+ buenos dias
+hola
+hola
+
+hola buenos dias| que tal estas?
+
+hola |
+buenos dias
+clear
+hola |
+buenos dias
+hola |
+buenos dias
+hola |
+ buenos dias
+hola |
+ buenos dias
+hola
+hola |
+ buenos dias
+hola
+joder | parece que va bien |
+pareciera que si, no? |
+ sigue un poco más:|
+
+ya vale
+clear
+hola |
+ buenos dias
+que tal |
+ esta amigo?
+hola |
+hola |
+hola |
+hola |
+
+hola |
+fin
+hola |
+hola
+hola |
+hola
+hola |
+ buenos dias
+hola
+hola |
+hola
+hola
+hola
+hola | 
+
+hola
+hola
+hola
+hola
+caca
+hola
+hola
+hola
+caca
+hola
+
+
+hola
+caca
+hola
+buyakabuyaka
+hola
+caca
+caca
+caca
+ls |
+ cat -e
+amke
+ls |
+ cat -e
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+
+hola |
+buenos dias
+
+
+hola
+hola
+hola
+hola |
+hola |
+ buenos dias
+hola
+hola |
+buenos dias |
+hola buenos dias |
+hola
+hola
+hola
+hola
+
+hola
+hola
+
+
+hola
+hola
+hola
+hola
+hola
+
+hola
+hola
+
+hola
+
+hola
+hola
+hola
+
+hola
+hola
+hola
+hola
+hola
+hola
+
+hola
+hoal
+d
+d
+s
+s
+ds
+ds
+d
+s
+s
+d
+
+s
+d
+d
+d
+
+d
+sd
+s
+ds
+ds
+d
+sd
+sd
+sd
+sd
+s
+ds
+d
+sd
+sd
+sd
+s
+ds
+d
+sd
+sd
+sd
+s
+ds
+d
+sd
+sd
+sd
+s
+ds
+d
+sd
+sd
+sd
+s
+ds
+hola
+buenos dias
+joder
+
+que calor hace
+
+hola
+
+hola |
+hola
+
+hola |
+hola
+hola
+
+hola
+hola
+buenos dias
+joder
+hola |
+buenos dias |
+joder |
+hola
+hola |
+buenos dias |
+buenos dias |
+buenos dias |
+buenos dias |
+buenos dias |+
+buenos dias |
+hola |
+
+hola |
+hola |
+hola
+hola |
+make
+hola |
+hola |
+hola |
+hola |
+hola
+hola
+hola |
+hola |
+hola |
+hola |
+hola |
+hola |
+hola
+hola
+hola |
+hola |
+hola |
+hola |
+hola |
+hola |
+hola
+hola |
+hola |
+hola |
+hola |
+hola  |
+hola
+
+hola |
+
+hola |
+hola |
+hola
+hola
+
+hola |
+hola |
+hola |
+hola  |
+hola
+hola |
+make
+hola |
+hola |
+hola |
+
+hola |
+hola
+hola |
+hola |
+hola |
+
+hola |
+hola |
+hola
+hola |
+hola |
+hola
+hola |
+hola | hola | hola |
+hola
+hola |
+hola |
+hola |
+hola |
+hola |
+hola
+hola |
+
+hola |
+hola |
+hola |
+hola
+hola |
+hola |
+hola |
+hola |
+hola
+hola |
+hola |
+hoal
+hola
+ded
+d
+ed
+ef
+ef
+e
+fe
+fe
+f
+ef
+e
+fe
+f
+ef
+ef
+e
+fe
+f
+ef
+ef
+ef
+e
+fe
+fe
+f
+hola |
+hola |
+hola |
+hola |
+hola |
+hola |
+hola |
+hola |
+
+hola |
+hola |
+
+hola |
+
+
+
+ç
+hola
+hola
+hola
+hola |
+hola
+hola |
+
+hola |
+hola |
+hola |
+
+hola
+hola|
+hola  |
+hola |
+
+hola
+hola
+hola
+hola
+hola | hola | hola | hola |
+hola
+
+hola | hola | hola  | hola
+hola
+hola
+hola | hola
+hola
+hola
+hola
+
+hola | hola
+hola | hola
+hola | hola | hola | hola
+hola |
+hola |
+
+hola |
+hola |
+hola |
+hola |
+hola |
+hola
+ola
+ola
+ola
+hola hola
+hola hola |hola
+hola hola |hola | hola |
+hola
+hola |
+hola
+hola | hola
+hola | hola | hola
+hola | hola | hola | hola | hola
+hola | hola
+
+hola | hola |
+hola |
+hola |
+
+hola |
+
+hola |
+
+
+hola  |
+hola  |
+hola  1
+
+hola
+
+hola | hola
+hola | hola |
+hola | hola
+hola |
+hola
+hola
+
+hola hola hola
+
+hola | hola |
+hola |
+hola
+
+hola | hola |
+hola | hola
+
+
+hola | hola
+
+hola | joder | joder
+hola hola
+hola | hola
+
+hola
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+comando1 > outfile arg1 <infile arg2 -l | <infile comando2 <infile <infile3 >outfile -l
+hola buenos dias | hola
+hola1 hola2 hola3
+hola1 hola2 hola3
+hola1 hola2 hola3
+hola1 hola2 hola3
+hola1 hola2 hola3
+hola1 hola2 hola3
+hola1 hola2 hola3
+hola1 hola2 hola3 |
+hola |
+
+hola
+hola | hola
+hola |
+hola |
+hola |
+hola |
+hola |
+hola |
+hola |
+hola
+hola
+hola
+hola
+hola
+hola
+hola
+hola buenos dias |
+hola
+hola | hola | hola 
+hola |
+hola
+hola
+hola
+hola
+hola
+hola
+hola
+hola
+hola hola
+hola
+hola
+hpña
+ada
+fafafafaf
+hola
+gegfef
+fefefefe
+fefefeffwfwefwfwef
+ffrgr
+frfe
+efefefefefefe
+fefef
+fefefegegegegege
+hola
+hola
+hola |
+hola |
+hola |
+hola  |
+hola
+hola | hola
+hola | hola |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

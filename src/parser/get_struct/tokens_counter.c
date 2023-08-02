@@ -1,5 +1,8 @@
 #include "../../../include/minishell.h"
 
+/*
+Recorre lexer y avanza su puntero dependiendo del contenido.
+*/
 void	redirection_and_command_token_counter(char ***lexer, int **size)
 {
 	if (ft_strncmp(**lexer, "<", ft_strlen(**lexer)) == 0)
@@ -28,7 +31,9 @@ void	redirection_and_command_token_counter(char ***lexer, int **size)
 		(*size)[5]++;
 }
 
-
+/*
+Se encarga de contar el número de tokens total para la reserva de memoria.
+*/
 int	*token_counter(char **lexer)
 {
 	int	*size;

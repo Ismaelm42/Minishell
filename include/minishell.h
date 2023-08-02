@@ -45,6 +45,7 @@ typedef struct s_node
 typedef struct s_global
 {
 	char		*input;
+	int			pipeline;
 	int			exit_status;
 	t_node		*lst_env;
 	t_token		*tokens;
@@ -113,21 +114,29 @@ int			syntax_error_check(char **lexer);
 //parser/get_struct/get_struct
 t_global	*init_struct(char **env);
 void		get_struct_data(t_global *global, char *input);
+void		free_global(t_global *global, int flag);
 
-//src/parser/get_tokens/get_tokens
+//src/parser/get_struct/get_tokens
 int			lexer_pipes_counter(char **lexer);
-t_token		*get_tokens(char *input, t_global *global);
+int			get_tokens(char *input, t_global *global);
 
-//src/parser/get_tokens/tokens_counter
+//src/parser/get_struct/tokens_counter
 void		redirection_and_command_token_counter(char ***lexer, int **size);
 int			*token_counter(char **lexer);
 
-
-//src/parser/get_tokens/tokens_maker
+//src/parser/get_struct/tokens_maker
+void		allocate_token_memory(t_token *tokens, int *size);
+void		check_token_type(t_token *tokens, char ***lexer, int **i);
+void		token_filler(t_token *tokens, char **lexer);
+void		advance_lexer_tokens(char ***lexer, t_token **tokens);
 void		token_maker(t_token *tokens, char **lexer);
 
 //parser/dictionary
 void		copy_environment(t_node **lst_env, char **env);
+
+//parser/utils
+void		ft_free(void *mem);
+// void	print_result(t_token *tokens, int *size);
 
 //parser/utils list
 t_node		*init_list(void);

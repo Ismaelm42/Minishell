@@ -68,9 +68,17 @@ char	**free_lexer(char **lexer)
 	int	n;
 
 	n = 0;
-	while (lexer[n] != NULL)
-		free(lexer[n++]);
-	free(lexer);
+	if (lexer != NULL)
+	{
+		while (lexer[n] != NULL)
+		{
+			free(lexer[n]);
+			lexer[n] = NULL;
+			n++;
+		}
+		free(lexer);
+		lexer = NULL;
+	}
 	return (NULL);
 }
 

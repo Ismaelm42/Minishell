@@ -19,28 +19,26 @@ int	lexer_pipes_counter(char **lexer)
 	return (size + 1);
 }
 
-t_token	*get_tokens(char *input, t_global *global)
+/*
+Llama a la función get_lexer, y una vez obtenido el lexer, se utiliza para
+reservar la memoria y guardar la información en la estructura tokens.
+*/
+int	get_tokens(char *input, t_global *global)
 {
 	t_token	*tokens;
 	char	**lexer;
+	int		return_n;
 	int		n;
 
 	lexer = get_lexer(input, global);
-	int i = 0;
-	printf("\n\n");
-	while (lexer[i] != NULL)
-	{
-		printf("lexer = %s\n", lexer[i]);
-		i++;
-	}
-	printf("\n\n");
-	if (syntax_error_check(lexer) == -1)
-		return (free_lexer(lexer), NULL);
+	return_n = syntax_error_check(lexer);
+	if (return_n != 0)
+		return (free_lexer(lexer), return_n);
 	n = lexer_pipes_counter(lexer);
-	// printf("pipes = %d\n", n);
 	tokens = (t_token *)ft_calloc(sizeof(t_token), n + 1);
 	token_maker(tokens, lexer);
-	return (tokens);
+	global->pipeline = n;
+	global->tokens = tokens;
+	free_lexer(lexer);
+	return (0);
 }
-
-
