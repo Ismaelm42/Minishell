@@ -55,9 +55,6 @@ typedef struct s_global
 void		add_and_store_history(char *input);
 
 //parser/get_lexer/lexer_counter
-char		**get_lexer(char *input, t_global *global);
-
-//parser/get_lexer/lexer_counter
 void		quoted_lexer_counter(int *counter, char **s);
 void		redirection_lexer_counter(int *counter, char **s);
 void		words_counter(int *counter, char **s);
@@ -71,7 +68,7 @@ char		**free_lexer(char **lexer);
 char		**lexer_maker(char *s);
 
 //parser/get_lexer/get_lexer
-char		*expansion_variable(char *input, t_global *global);
+char		**get_lexer(char *input, t_global *global);
 
 //parser/expansion_variable/get_variables
 int			variable_expansion_counter(char *input);
@@ -114,7 +111,6 @@ int			syntax_error_check(char **lexer);
 //parser/get_struct/get_struct
 t_global	*init_struct(char **env);
 void		get_struct_data(t_global *global, char *input);
-void		free_global(t_global *global, int flag);
 
 //src/parser/get_struct/get_tokens
 int			lexer_pipes_counter(char **lexer);
@@ -131,27 +127,31 @@ void		token_filler(t_token *tokens, char **lexer);
 void		advance_lexer_tokens(char ***lexer, t_token **tokens);
 void		token_maker(t_token *tokens, char **lexer);
 
-//parser/dictionary
+//parser/dictionary/var_environment
+char		*extract_clue(char *c);
+char		*extract_value(char *c);
 void		copy_environment(t_node **lst_env, char **env);
+char		*search_key(t_node *lst, char *key);
+int			search_key_and_replace(t_node *lst, char *key, char *val);
+
+//parser/dictionary/var_local
+int	local_var(char *s);
 
 //parser/utils
-void		ft_free(void *mem);
-// void	print_result(t_token *tokens, int *size);
+void		destroy_global(t_global *global);
+void		free_global(t_global *global, int flag);
 
-//parser/utils list
+//parser/utils/list_utils
 t_node		*init_list(void);
 t_node		*create_nodo(char *key, char *value);
 void		insert_last(t_node **list, t_node *new_nodo);
 t_node		*final(t_node *list);
 void		print_stack(t_node *list);
+
+//parser/utils/list_utils_2
 void		ft_free_lst(t_node *lst);
 int			ft_size_lst(t_node *lst);
 void		error(void);
-char		*search_key(t_node *lst, char *c);
-int			search_key_and_replace(t_node *lst, char *key, char *val);
-char		*extract_clue(char *c);
-char		*extract_value(char *c);
-int			local_var(char *s);
 
 //signal
 void		ft_sigint_handler(int sig);
