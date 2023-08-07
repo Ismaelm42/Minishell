@@ -47,7 +47,8 @@ typedef struct s_global
 	char		*input;
 	int			pipeline;
 	int			exit_status;
-	t_node		*lst_env;
+	char		**env;
+	//t_node		*lst_env;
 	t_token		*tokens;
 }				t_global;
 
@@ -130,7 +131,10 @@ void		token_maker(t_token *tokens, char **lexer);
 //parser/dictionary/var_environment
 char		*extract_clue(char *c);
 char		*extract_value(char *c);
-void		copy_environment(t_node **lst_env, char **env);
+//void		copy_environment(t_node **lst_env, char **env);
+char		**copy_environment(char **env);
+char		*search_env(char *var, char **envp);
+
 char		*search_key(t_node *lst, char *key);
 int			search_key_and_replace(t_node *lst, char *key, char *val);
 

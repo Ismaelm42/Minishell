@@ -6,13 +6,14 @@ Inicio de la estructura al principio del programa.
 t_global	*init_struct(char **env)
 {
 	t_global	*global;
-	t_node		*lst_env;
+	// int			i;
 
+	// i= 0;
 	(void)env;
-	lst_env = init_list();
-	copy_environment(&lst_env, env);
+
 	global = (t_global *)ft_calloc(sizeof(t_global), 1);
-	global->lst_env = lst_env;
+	global->env = copy_environment(env);
+
 	return (global);
 }
 

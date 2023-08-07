@@ -15,7 +15,7 @@ int	get_variable_from_env(int n, t_lexer *lexer, t_global *global)
 		copy = ft_strtrim(copy, "{", 1);
 		copy = ft_strtrim(copy, "}", 1);
 	}
-	environment = search_key(global->lst_env, copy);
+	environment = search_env(copy, global->env);// search_key(global->lst_env, copy);//cambiar
 	free(copy);
 	if (environment == NULL)
 		return (1);

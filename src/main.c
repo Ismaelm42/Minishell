@@ -16,6 +16,7 @@ int	main(int argc, char **argv, char **env)
 		add_and_store_history(input);
 		get_struct_data(global, input);
 
+
 		// if (ft_strncmp(input, "exit", 5) == 0)
 		// 	exit (0);
 	}
@@ -24,15 +25,16 @@ int	main(int argc, char **argv, char **env)
 
 // int	main(int argc, char **argv, char **env)
 // {
-// 	//char	*input;
-// 	//t_node	*lst_env;
+// 	char	*input;
+// 	t_node	*lst_env;
+// 	t_node	*lst_locals;
 
 // 	(void)argc;
 // 	(void)argv;
 // 	lst_env = init_list();
 // 	lst_locals = init_list();
 // 	rl_catch_signals = 0;
-// 	copy_environment(env);
+// 	copy_environment(lst_env, env);
 // 	print_stack(lst_env);
 // 	printf("Valor de LESSOPEN : %s\n", search_key(lst_env, "LESSOPEN"));
 // 	printf("Valor de _: %s\n", search_key(lst_env, "_"));

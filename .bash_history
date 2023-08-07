@@ -758,3 +758,26 @@ ookeodkoekdoekofkoefk|
 ekofkoekfoekfoekfoekofkeofoekfoekfoekfoekofe|
 oekdoekdoekdo
 
+ARG=javi
+ls -l | $HOME
+ls -l>|
+ls -l |
+ls -l <
+ls -l |
+cat
+ls -l $HOME
+exit
+clear
+exit
+ls -l
+ls -la
+clear
+ls
+ls -la
+ls -la
+cleatç
+clear
+exit
+ls $HOME
+ls $HOME
+ls $HOME
