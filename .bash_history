@@ -781,3 +781,149 @@ exit
 ls $HOME
 ls $HOME
 ls $HOME
+ls -la 
+hola
+hola | hola
+hola | hola | hola | hola | hola |
+hola |
+hola | hola | hola |
+hola | hola | hola | hola | holaaaaaaaaaaa|
+hola
+hola
+hola
+ls -l| cat -e
+hola | que tal | estas |
+hola todo bien
+hola todo bien
+hola |
+hola
+hola | hola | hola
+hola $ARG $HOME
+hola $HOLA
+ls -l| cat -e
+ls -l| cat -e
+ls -l| cat -e
+ls -l| cat -e
+ls -l| cat -e
+ls -l| cat -e
+ls -l| cat -e
+ls -l| cat -e
+ls -l| cat -e
+ls -l| cat -e
+ls -l| cat -e
+ls -l| cat -e
+ls -l| cat -e
+ls | cat -e
+ls -l1 -l2| cat -e
+ls -l1 -l2| cat -e
+ls -l1 -l2| cat -e
+ls -l1 -l2| cat -e
+ls -l1 -l2| cat -e
+ls -l1 -l2| cat -e
+ls -l1 -l2| cat -e
+ls -l1 -l2| cat -e
+ls -l1 -l2| cat -e
+ls -l1 -l2| cat -e
+ls -l1 -l2| cat -e
+ls -l1 -l2| cat -e
+ls| cat -e
+ls 1 2 3| cat -e
+lso -l| cat -e
+lso -l| cat -e
+lso -l| cat -e
+lso -l| cat -e
+lso -l| cat -e
+lso -l| cat -e
+ls -l| cat -e
+/usr/bin/ls -l| cat -e
+/usr/bin/ls -l| cat -e
+/usr/bon/ls -l| cat -e
+./.pruebas.txt -l| cat -e
+./pruebas.txt -l| cat -e
+ls -l| cat -e
+ls -l| cat -e
+lso -l| cat -e
+/ls -l| cat -e
+ls -l| cat -e
+ls -l| cat -e
+ls -l| cat -e
+ls -l| cat -e
+ls -l| cat -e
+ls -l| cat -e
+ls -l| cat -e
+ls -l| cat -e
+ls -l| cat -e
+ls -l| cat -e
+ls -l| cat -e
+ls -l| cat -e
+ls -l| cat -e
+ls -l| cat -e
+ls -l| cat -e
+ls -l| cat -e
+ls -l| cat -e
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc
+ls -l| wc

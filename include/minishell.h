@@ -41,14 +41,14 @@ typedef struct s_node
 	char			*key;
 	char			*value;
 	struct s_node	*next;
-}					t_node;	
+}					t_node;
+
 typedef struct s_global
 {
+	char		**env;
 	char		*input;
 	int			pipeline;
 	int			exit_status;
-	char		**env;
-	//t_node		*lst_env;
 	t_token		*tokens;
 }				t_global;
 
@@ -65,7 +65,7 @@ int			lexer_counter(char *s);
 void		quoted_lexer_splitter(int *n, char **s, char ***lexer);
 void		redirection_lexer_splitter(int *n, char **s, char ***lexer);
 void		words_splitter(int *n, char **s, char ***lexer);
-char		**free_lexer(char **lexer);
+char		**free_matrix(char **matrix);
 char		**lexer_maker(char *s);
 
 //parser/get_lexer/get_lexer
@@ -134,12 +134,11 @@ char		*extract_value(char *c);
 //void		copy_environment(t_node **lst_env, char **env);
 char		**copy_environment(char **env);
 char		*search_env(char *var, char **envp);
-
 char		*search_key(t_node *lst, char *key);
 int			search_key_and_replace(t_node *lst, char *key, char *val);
 
 //parser/dictionary/var_local
-int	local_var(char *s);
+int			local_var(char *s);
 
 //parser/utils
 void		destroy_global(t_global *global);
@@ -157,10 +156,24 @@ void		ft_free_lst(t_node *lst);
 int			ft_size_lst(t_node *lst);
 void		error(void);
 
-//signal
+//signals/signals
 void		ft_sigint_handler(int sig);
 void		ft_sigquit_handler(int sig);
+int			control_d(char *input);
+
+//exec/exec
+int			child_process(t_global *global, char **cmd, int *fd);
+int			parent_process(t_global *global, int *fd);
+int			exec(t_global *global);
+
+//exec/get_command
+char		**get_path(char **env);
+int			check_cmd_path(char *cmd, char *cmd_path, char *path, int flag);
+char		*get_command_path(t_global *global, int n);
+char		**get_exec_command(t_global *global, int n);
+//exec/utils
+void		access_error_message(char *error, char *message);
+char		*search_in_path(t_global *global, int n, char **path, char *cmd_path);
 
 //build_in
-int			control_d(char *input);
 #endif

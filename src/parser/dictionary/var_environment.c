@@ -104,9 +104,6 @@ char	*search_env(char *var, char **envp)
 	return (var);
 }
 
-
-
-
 /*
 Función para buscar una clave en diccionario (lista) de variables locales,
 devolvera NULL si no lo encuentra y el valor asociado si se encuentra en 

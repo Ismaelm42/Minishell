@@ -81,7 +81,6 @@ int	local_var(char *s)
 		str = ft_substr(s, 0, i, 0);
 		printf("str->%s\n", str);
 		//busco comillas el cierre y concateno con la anterior strjoin
-		
 		if (ft_strrchr(str, 61) != NULL)
 		{
 			control_quotation_marks_1(str);

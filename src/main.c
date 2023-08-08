@@ -8,19 +8,16 @@ int	main(int argc, char **argv, char **env)
 	(void)argc;
 	(void)argv;
 	global = init_struct(env);
-	while (1)
-	{
-		rl_on_new_line();
-		input = readline(">> ");
-		//input = ft_strdup("hola1 hola2 hola3 |");
+	// while (1)
+	// {
+	// 	rl_on_new_line();
+	// 	input = readline(">> ");
+		input = ft_strdup("ls -l| wc");
 		add_and_store_history(input);
 		get_struct_data(global, input);
-
-
-		// if (ft_strncmp(input, "exit", 5) == 0)
-		// 	exit (0);
-	}
-	// 	return (0);
+		exec(global);
+	// }
+		return (0);
 }
 
 // int	main(int argc, char **argv, char **env)
