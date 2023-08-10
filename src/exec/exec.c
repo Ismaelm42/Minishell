@@ -1,73 +1,107 @@
 #include "../../include/minishell.h"
 
-int	child_process(t_global *global, char **cmd, int *fd)
+int	**pipe_generator(int pipeline)
 {
-	close(fd[0]);
-	global->exit_status = dup2(fd[1], STDOUT_FILENO);
-	if (global->exit_status == -1)
+	int	**fd;
+	int	n;
+
+	fd = (int **)ft_calloc(sizeof(int *), pipeline);
+	n = 0;
+	while (n < pipeline)
 	{
-		ft_putstr_fd("minishell: ", 2);
-		strerror(-1);
-		ft_putstr_fd("\n", 2);
-		return (1);
+		fd[n] = (int *)ft_calloc(sizeof(int), 2);
+		n++;
 	}
-	close(fd[1]);
-	global->exit_status = execve(cmd[0], cmd, global->env);
-	if (global->exit_status == -1)
+	n = 0;
+	while (n < pipeline)
 	{
-		ft_putstr_fd("minishell: ", 2);
-		strerror(-1);
-		ft_putstr_fd("\n", 2);
+		if (pipe(fd[n]) == -1)
+		{
+			ft_putstr_fd("minishell: error creating pipe\n", 2);
+			return (NULL);
+		}
+		n++;
 	}
-	return (1);
+	return (fd);
 }
 
-int	parent_process(t_global *global, int *fd)
+void	fd_closer(int **fd, int pipeline, int n)
 {
-	char	*str;
-	char	*str2;
+	int		i;
 
-	close(fd[1]);
-	close(STDIN_FILENO);
-	while (str != NULL)
-		printf("str1 = %s\n", str = gnl(fd[0]));
-	global->exit_status = dup2(STDOUT_FILENO, fd[0]);
-	close(STDOUT_FILENO);
-	while (str2 != NULL)
-		printf("str2 = %s\n", str2 = gnl(STDOUT_FILENO));
-	if (global->exit_status == -1)
+	i = 0;
+	while (i < pipeline + 1)
 	{
-		ft_putstr_fd("minishell: ", 2);
-		strerror(-1);
-		ft_putstr_fd("\n", 2);
-		return (1);
+		if (i != n)
+			close(fd[i][0]);
+		if (i != n + 1)
+			close(fd[i][1]);
+		i++;
 	}
-	return (0);
+}
+
+void	child_process(t_global *global, int **fd, int n)
+{
+	char	**command_line;
+	// char	*buffer;
+
+	command_line = get_exec_command(global, n);
+	fd_closer(fd, global->pipeline, n);
+	dup2(fd[n][0], STDIN_FILENO);
+	close(fd[n][0]);
+	// buffer = gnl(fd[n][0]);
+	// while (buffer != NULL)
+	// {
+	// 	dprintf(2, "buffer fd[%d][0] = %s", n, buffer);
+	// 	free(buffer);
+	// 	buffer = gnl(fd[n][0]);
+	// }
+	dup2(fd[n + 1][1], STDOUT_FILENO);
+	close(fd[n + 1][1]);
+	execve(command_line[0], command_line, global->env);
+}
+
+void	parent_process(t_global *global, int **fd, int n)
+{
+	char	*buffer;
+
+	fd_closer(fd, global->pipeline, n);
+	dup2(fd[n][0], STDIN_FILENO);
+	buffer = gnl(fd[n][0]);
+	while (buffer != NULL)
+	{
+		dprintf(2, "parent buffer fd[%d][0] = %s", n, buffer);
+		free(buffer);
+		buffer = gnl(fd[n][0]);
+	}
+	close(fd[n][0]);
+	close(fd[n + 1][1]);
 }
 
 int	exec(t_global *global)
 {
-	char	**command;
-	int		fd[2];
-	pid_t	pid;
+	int		**fd;
+	pid_t	*pid;
 	int		n;
 
-	if (pipe(fd) == -1)
-	{
-		ft_putstr_fd("minishell: error creating pipe\n", 2);
+	printf("pipeline = %d\n\n\n", global->pipeline);
+	fd = pipe_generator(global->pipeline + 1);
+	if (fd == NULL)
 		return (1);
-	}
+	pid = (int *)ft_calloc(sizeof(int), global->pipeline);
 	n = 0;
-	// while (n < global->pipeline)
-	// {
-		command = get_exec_command(global, n);
-		printf("cmd = %s\n", command[0]);
-		pid = fork();
-		if (pid == 0)
-			child_process(global, command, fd);
-		else
-			parent_process(global, fd);
-	// 	n++;
-	// }
+	while (n < global->pipeline)
+	{
+		pid[n] = fork();
+		if (pid[n] == -1)
+		{
+			ft_putstr_fd("minishell: error creating fork process\n", 2);
+			return (1);
+		}
+		if (pid[n] == 0)
+			child_process(global, fd, n);
+		n++;
+	}
+	parent_process(global, fd, n);
 	return (0);
 }

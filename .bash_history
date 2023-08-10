@@ -927,3 +927,319 @@ ls -l| wc
 ls -l| wc
 ls -l| wc
 ls -l| wc
+ls -l| wc
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+ls -l | wc -l | cat -e
+echo hola|ls -l | wc -l | cat -e
+echo hola|ls -l | cat -e
+echo hola|ls -l | echo adios
+echo hola|ls -l | echo adios
+echo hola|ls -l | echo adios
+echo hola|ls -l | echo adios
+echo hola|cat -e
+echo hola1|echo hola2|echo hola 3
+echo hola1|echo hola2|echo hola 3
+echo hola1|echo hola2|echo hola 3|echo hola 4|echo hola 5|echo hola 6
+echo hola1|echo hola2|cat -e|echo hola 4|echo hola 5|echo hola 6
+echo hola1|echo hola2|cat -e|echo hola 4|echo hola 5|echo hola 6
+echo hola1|echo hola2|cat -e|echo hola 4|echo hola 5|echo hola 6
+echo hola1|echo hola2|cat -e|echo hola 4|echo hola 5|echo hola 6
+echo hola1|echo hola2|ls -l|echo hola 4|echo hola 5|echo hola 6
+echo hola1|echo hola2|ls -l|echo hola 4|echo hola 5|echo hola 6
+echo hola1|echo hola2|ls -l|echo hola 4|echo hola 5|echo hola 6
+echo hola1|echo hola2|ls -l|echo hola 4|echo hola 5|echo hola 6
+echo hola1|echo hola2|ls -l|echo hola 4|echo hola 5|echo hola 6
+echo hola1|echo hola2|ls -l|echo hola 4|echo hola 5|echo hola 6
+echo hola1|echo hola2|ls -l|echo hola 4|echo hola 5|echo hola 6
+echo hola1|echo hola2|ls -l|echo hola 4|echo hola 5|echo hola 6
+echo hola1|echo hola2|ls -l|echo hola 4|echo hola 5|echo hola 6
+echo hola1|echo hola2|ls -l|echo hola 4|echo hola 5|echo hola 6
+echo hola1|echo hola2|ls -l|echo hola 4|echo hola 5|echo hola 6
+echo hola1|echo hola2|ls -l|echo hola 4|echo hola 5|echo hola 6
+echo hola1|echo hola2|ls -l|echo hola 4|echo hola 5|echo hola 6
+echo hola1|echo hola2|ls -l|echo hola 4|echo hola 5|echo hola 6
+echo hola1|echo hola2|ls -l|echo hola 4|echo hola 5|echo hola 6
+echo hola1|echo hola2|ls -l|echo hola 4|echo hola 5|echo hola 6
+echo hola1|echo hola2|ls -l|echo hola 4|echo hola 5|echo hola 6
+echo hola1|echo hola2|ls -l|echo hola 4|echo hola 5|echo hola 6
+echo hola1|echo hola2|ls -l|echo hola 4|echo hola 5|echo hola 6
+echo hola1|echo hola2|ls -l|echo hola 4|echo hola 5|echo hola 6
+ls -l | wc -l
+ls -l | grep 4096
+ls -l | grep 4096| echo hola |echo hola
+ls -l | grep 4096| echo hola |echo hola
+ls -l | grep 4096| echo hola |echo hola
+ls -l | grep 4096| echo hola |echo hola
+ls -l | grep 4096| echo hola3 |echo holaFIN
+ls -l | grep 4096| echo hola3 |echo holaFIN
+ls -l | grep 4096| echo hola3 |echo holaFIN
+ls -l | grep 4096| echo hola3 |echo holaFIN
+ls -l | grep 4096| echo hola3 |echo holaFIN
+ls -l | grep 4096| echo hola3 |echo holaFIN
+ls -l | grep 4096| echo hola3 |echo holaFIN
+ls -l | grep 4096| echo hola3 |echo holaFIN
+ls -l | grep 4096| echo hola3 |echo holaFIN
+ls -l | grep 4096| echo hola3 |echo holaFIN
+ls -l | grep 4096| echo hola3 |echo holaFIN
+ls -l | grep 4096| echo hola3 |echo holaFIN
+ls -l | grep 4096| echo hola3 |echo holaFIN
+ls -l | grep 4096| echo hola3 |echo holaFIN
+ls -l | grep 4096| echo hola3 |echo holaFIN
+ls -l | grep 4096| echo hola3 |echo holaFIN
+ls -l | grep 4096| echo hola3 |echo holaFIN
+ls -l | grep 4096| cat -e
+ls -l | grep 4096| cat -e
+ls -l | grep 4096| cat -e
+ls -l | grep 46680 | cat -e
+ls -l | grep 46680 | cat -e
+ls -l | grep 46680 | cat -e
+ls -l | grep 46680 | cat -e

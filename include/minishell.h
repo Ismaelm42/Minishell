@@ -162,8 +162,7 @@ void		ft_sigquit_handler(int sig);
 int			control_d(char *input);
 
 //exec/exec
-int			child_process(t_global *global, char **cmd, int *fd);
-int			parent_process(t_global *global, int *fd);
+int			**pipes_generator(int pipeline);
 int			exec(t_global *global);
 
 //exec/get_command

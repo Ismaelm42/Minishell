@@ -12,7 +12,8 @@ int	main(int argc, char **argv, char **env)
 	// {
 	// 	rl_on_new_line();
 	// 	input = readline(">> ");
-		input = ft_strdup("ls -l| wc");
+		//input = ft_strdup("echo hola1|echo hola2|ls -l|echo hola 4|echo hola 5|echo hola 6");
+		input = ft_strdup("ls -l | grep 46680 | cat -e");
 		add_and_store_history(input);
 		get_struct_data(global, input);
 		exec(global);
