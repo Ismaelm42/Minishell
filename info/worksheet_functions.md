@@ -197,11 +197,3 @@
 - tputs: Envía una cadena de escape a la terminal.
 
 		int tputs(const char *str, int affcnt, int (*putc)(int));
-
-
-ARG=$
-
-
-echo $ARG $ARG1 | cat -e
-
-ls '$' texto1.txt | cat -e

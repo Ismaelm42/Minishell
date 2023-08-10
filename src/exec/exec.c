@@ -43,19 +43,11 @@ void	fd_closer(int **fd, int pipeline, int n)
 void	child_process(t_global *global, int **fd, int n)
 {
 	char	**command_line;
-	// char	*buffer;
 
 	command_line = get_exec_command(global, n);
 	fd_closer(fd, global->pipeline, n);
 	dup2(fd[n][0], STDIN_FILENO);
 	close(fd[n][0]);
-	// buffer = gnl(fd[n][0]);
-	// while (buffer != NULL)
-	// {
-	// 	dprintf(2, "buffer fd[%d][0] = %s", n, buffer);
-	// 	free(buffer);
-	// 	buffer = gnl(fd[n][0]);
-	// }
 	dup2(fd[n + 1][1], STDOUT_FILENO);
 	close(fd[n + 1][1]);
 	execve(command_line[0], command_line, global->env);
@@ -65,17 +57,19 @@ void	parent_process(t_global *global, int **fd, int n)
 {
 	char	*buffer;
 
+	(void)global;
 	fd_closer(fd, global->pipeline, n);
 	dup2(fd[n][0], STDIN_FILENO);
-	buffer = gnl(fd[n][0]);
-	while (buffer != NULL)
+	while (1)
 	{
-		dprintf(2, "parent buffer fd[%d][0] = %s", n, buffer);
-		free(buffer);
 		buffer = gnl(fd[n][0]);
+		if (buffer == NULL)
+			break ;
+		write(STDOUT_FILENO, buffer, ft_strlen(buffer));
+		free(buffer);
 	}
 	close(fd[n][0]);
-	close(fd[n + 1][1]);
+	close(fd[n][1]);
 }
 
 int	exec(t_global *global)
@@ -84,7 +78,6 @@ int	exec(t_global *global)
 	pid_t	*pid;
 	int		n;
 
-	printf("pipeline = %d\n\n\n", global->pipeline);
 	fd = pipe_generator(global->pipeline + 1);
 	if (fd == NULL)
 		return (1);
