@@ -1,5 +1,14 @@
 #include "../../include/minishell.h"
 
+void	print_execve_error(char *command, int code_error)
+{
+	ft_putstr_fd("minishell: ", 2);
+	ft_putstr_fd(command, 2);
+	ft_putstr_fd(": ", 2);
+	strerror(code_error);
+	ft_putstr_fd("\n", 2);
+}
+
 void	access_error_message(char *error, char *message)
 {
 	ft_putstr_fd("minishell: ", 2);

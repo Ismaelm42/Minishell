@@ -12,7 +12,7 @@ int	main(int argc, char **argv, char **env)
 	// {
 		// rl_on_new_line();
 		// input = readline(">> ");
-		input = ft_strdup("ls -la | wc -l | cat -e | wc | cat -e | grep 1");
+		input = ft_strdup("ls -l | cat -e");
 		add_and_store_history(input);
 		get_struct_data(global, input);
 		exec(global);

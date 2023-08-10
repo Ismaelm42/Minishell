@@ -34,25 +34,30 @@ void	fd_closer(int **fd, int pipeline, int n)
 	}
 }
 
-void	child_process(t_global *global, int **fd, int n)
+int	child_process(t_global *global, int **fd, int n)
 {
 	char	**command_line;
 
 	command_line = get_exec_command(global, n);
 	fd_closer(fd, global->pipeline, n);
-	dup2(fd[n][0], STDIN_FILENO);
+	if (dup2(fd[n][0], STDIN_FILENO) == -1)
+		return (ft_putstr_fd("minishell: error redirecting pipe\n", 2), 1);
 	close(fd[n][0]);
-	dup2(fd[n + 1][1], STDOUT_FILENO);
+	if (dup2(fd[n + 1][1], STDOUT_FILENO) == -1)
+		return (ft_putstr_fd("minishell: error redirecting pipe\n", 2), 1);
 	close(fd[n + 1][1]);
 	execve(command_line[0], command_line, global->env);
+	print_execve_error(command_line[0], errno);
+	return (errno);
 }
 
-void	parent_process(t_global *global, int **fd, int n)
+int	parent_process(t_global *global, int **fd, int n)
 {
 	char	*buffer;
 
 	fd_closer(fd, global->pipeline, n);
-	dup2(fd[n][0], STDIN_FILENO);
+	if (dup2(fd[n][0], STDIN_FILENO) == -1)
+		return (ft_putstr_fd("minishell: error redirecting pipe\n", 2), 1);
 	while (1)
 	{
 		buffer = gnl(fd[n][0]);
@@ -62,6 +67,7 @@ void	parent_process(t_global *global, int **fd, int n)
 		free(buffer);
 	}
 	close(fd[n][0]);
+	return (0);
 }
 
 int	exec(t_global *global)
@@ -79,9 +85,11 @@ int	exec(t_global *global)
 		if (pid[n] == -1)
 			return (ft_putstr_fd("minishell: error creating fork\n", 2), 1);
 		if (pid[n] == 0)
-			child_process(global, fd, n);
+			if (child_process(global, fd, n) != 0)
+				return (1);
 		n++;
 	}
-	parent_process(global, fd, n);
+	if (parent_process(global, fd, n) != 0)
+		return (1);
 	return (0);
 }

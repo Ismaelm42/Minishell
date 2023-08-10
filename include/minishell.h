@@ -3,6 +3,7 @@
 # include "../libft/libft.h"
 # include <curses.h>
 # include <dirent.h>
+# include <errno.h>
 # include <fcntl.h>
 # include <readline/history.h>
 # include <readline/readline.h>
@@ -162,8 +163,12 @@ void		ft_sigquit_handler(int sig);
 int			control_d(char *input);
 
 //exec/exec
-int			**pipes_generator(int pipeline);
+int			create_pipes_and_pid(t_global *global, pid_t **pid, int ***fd);
+void		fd_closer(int **fd, int pipeline, int n);
+int			child_process(t_global *global, int **fd, int n);
+int			parent_process(t_global *global, int **fd, int n);
 int			exec(t_global *global);
+
 
 //exec/get_command
 char		**get_path(char **env);
@@ -171,6 +176,7 @@ int			check_cmd_path(char *cmd, char *cmd_path, char *path, int flag);
 char		*get_command_path(t_global *global, int n);
 char		**get_exec_command(t_global *global, int n);
 //exec/utils
+void		print_execve_error(char *command, int code_error);
 void		access_error_message(char *error, char *message);
 char		*search_in_path(t_global *global, int n, char **path, char *cmd_path);
 
