@@ -1,28 +1,22 @@
 #include "../../include/minishell.h"
 
-int	**pipe_generator(int pipeline)
+int	create_pipes_and_pid(t_global *global, pid_t **pid, int ***fd)
 {
-	int	**fd;
 	int	n;
 
-	fd = (int **)ft_calloc(sizeof(int *), pipeline);
 	n = 0;
-	while (n < pipeline)
+	*fd = (int **)ft_calloc(sizeof(int *), global->pipeline + 1);
+	while (n < global->pipeline + 1)
 	{
-		fd[n] = (int *)ft_calloc(sizeof(int), 2);
+		(*fd)[n] = (int *)ft_calloc(sizeof(int), 2);
+		if (pipe((*fd)[n]) == -1)
+			return (ft_putstr_fd("minishell: error creating pipe\n", 2), 1);
 		n++;
 	}
-	n = 0;
-	while (n < pipeline)
-	{
-		if (pipe(fd[n]) == -1)
-		{
-			ft_putstr_fd("minishell: error creating pipe\n", 2);
-			return (NULL);
-		}
-		n++;
-	}
-	return (fd);
+	*pid = (int *)ft_calloc(sizeof(int), global->pipeline);
+	if (*pid == NULL)
+		return (1);
+	return (0);
 }
 
 void	fd_closer(int **fd, int pipeline, int n)
@@ -57,7 +51,6 @@ void	parent_process(t_global *global, int **fd, int n)
 {
 	char	*buffer;
 
-	(void)global;
 	fd_closer(fd, global->pipeline, n);
 	dup2(fd[n][0], STDIN_FILENO);
 	while (1)
@@ -69,7 +62,6 @@ void	parent_process(t_global *global, int **fd, int n)
 		free(buffer);
 	}
 	close(fd[n][0]);
-	close(fd[n][1]);
 }
 
 int	exec(t_global *global)
@@ -78,19 +70,14 @@ int	exec(t_global *global)
 	pid_t	*pid;
 	int		n;
 
-	fd = pipe_generator(global->pipeline + 1);
-	if (fd == NULL)
+	if (create_pipes_and_pid(global, &pid, &fd) == 1)
 		return (1);
-	pid = (int *)ft_calloc(sizeof(int), global->pipeline);
 	n = 0;
 	while (n < global->pipeline)
 	{
 		pid[n] = fork();
 		if (pid[n] == -1)
-		{
-			ft_putstr_fd("minishell: error creating fork process\n", 2);
-			return (1);
-		}
+			return (ft_putstr_fd("minishell: error creating fork\n", 2), 1);
 		if (pid[n] == 0)
 			child_process(global, fd, n);
 		n++;

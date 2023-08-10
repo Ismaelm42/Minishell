@@ -10,10 +10,9 @@ int	main(int argc, char **argv, char **env)
 	global = init_struct(env);
 	// while (1)
 	// {
-	// 	rl_on_new_line();
-	// 	input = readline(">> ");
-		//input = ft_strdup("echo hola1|echo hola2|ls -l|echo hola 4|echo hola 5|echo hola 6");
-		input = ft_strdup("ls -l");
+		// rl_on_new_line();
+		// input = readline(">> ");
+		input = ft_strdup("ls -la | wc -l | cat -e | wc | cat -e | grep 1");
 		add_and_store_history(input);
 		get_struct_data(global, input);
 		exec(global);
