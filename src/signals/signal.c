@@ -4,7 +4,7 @@ int	control_d(char *input)
 {
 	if (!input)
 	{
-		printf("exit\n");
+		ft_putstr_fd("exit\n", 2);
 		exit (0);
 	}
 	return (1);

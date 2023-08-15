@@ -1,7 +1,7 @@
 #include "../../../include/minishell.h"
 
 /*
-Función para liberar una lista (nuestros diccionarios) al cerrar el  programa.
+Función para liberar una lista (diccionarios var local) al cerrar el  programa.
 */
 void	ft_free_lst(t_node *lst)
 {
@@ -11,6 +11,8 @@ void	ft_free_lst(t_node *lst)
 	{
 		tmp = lst;
 		lst = lst->next;
+		free(tmp->key);
+		free(tmp->value);
 		free(tmp);
 	}
 }

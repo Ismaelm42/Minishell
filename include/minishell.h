@@ -3,7 +3,6 @@
 # include "../libft/libft.h"
 # include <curses.h>
 # include <dirent.h>
-# include <errno.h>
 # include <fcntl.h>
 # include <readline/history.h>
 # include <readline/readline.h>
@@ -42,14 +41,14 @@ typedef struct s_node
 	char			*key;
 	char			*value;
 	struct s_node	*next;
-}					t_node;
-
+}					t_node;	
 typedef struct s_global
 {
-	char		**env;
 	char		*input;
 	int			pipeline;
 	int			exit_status;
+	char		**env;
+	t_node		*lst_local;
 	t_token		*tokens;
 }				t_global;
 
@@ -66,7 +65,7 @@ int			lexer_counter(char *s);
 void		quoted_lexer_splitter(int *n, char **s, char ***lexer);
 void		redirection_lexer_splitter(int *n, char **s, char ***lexer);
 void		words_splitter(int *n, char **s, char ***lexer);
-char		**free_matrix(char **matrix);
+char		**free_lexer(char **lexer);
 char		**lexer_maker(char *s);
 
 //parser/get_lexer/get_lexer
@@ -81,7 +80,7 @@ t_lexer		*get_variable_expansion_lexer(char *input);
 //parser/expansion_variable/expand_variables
 
 int			get_variable_from_env(int n, t_lexer *lexer, t_global *global);
-int			get_variable_from_history(int n, t_lexer *lexer, t_global *global);
+int			get_variable_from_local_var(int n, t_lexer *lexer, t_global *global);
 void		get_variable_expansion_value(int n, t_lexer *lexer, t_global *global);
 char		*expansion_variable(char *input, t_global *global);
 
@@ -129,17 +128,24 @@ void		token_filler(t_token *tokens, char **lexer);
 void		advance_lexer_tokens(char ***lexer, t_token **tokens);
 void		token_maker(t_token *tokens, char **lexer);
 
-//parser/dictionary/var_environment
-char		*extract_clue(char *c);
-char		*extract_value(char *c);
-//void		copy_environment(t_node **lst_env, char **env);
+//parser/var_environment
 char		**copy_environment(char **env);
 char		*search_env(char *var, char **envp);
-char		*search_key(t_node *lst, char *key);
-int			search_key_and_replace(t_node *lst, char *key, char *val);
+void		free_env(char **env_copy);
 
 //parser/dictionary/var_local
-int			local_var(char *s);
+int			local_var(t_global *g, char *input);
+char		*extract_clue(char *c);
+char		*extract_value(char *c);
+char		*search_key(t_node *lst, char *key);
+int			search_key_and_replace(t_node *lst, char *key, char *val);
+void		var_quoted_lexer_splitter(int *n, char **s, char ***lexer);
+void		var_quoted_lexer_counter(int *counter, char **s);
+void		var_words_counter(int *counter, char **s);
+int			var_lexer_counter(char *s);
+void		var_words_splitter(int *n, char **s, char ***lexer);
+char		**var_lexer_maker(char *s);
+void		put_dictionary_local(char *nv, t_global *g);
 
 //parser/utils
 void		destroy_global(t_global *global);
@@ -157,28 +163,12 @@ void		ft_free_lst(t_node *lst);
 int			ft_size_lst(t_node *lst);
 void		error(void);
 
-//signals/signals
+//signal
 void		ft_sigint_handler(int sig);
 void		ft_sigquit_handler(int sig);
+
+//built_ins
 int			control_d(char *input);
-
-//exec/exec
-int			create_pipes_and_pid(t_global *global, pid_t **pid, int ***fd);
-void		fd_closer(int **fd, int pipeline, int n);
-int			child_process(t_global *global, int **fd, int n);
-int			parent_process(t_global *global, int **fd, int n);
-int			exec(t_global *global);
-
-
-//exec/get_command
-char		**get_path(char **env);
-int			check_cmd_path(char *cmd, char *cmd_path, char *path, int flag);
-char		*get_command_path(t_global *global, int n);
-char		**get_exec_command(t_global *global, int n);
-//exec/utils
-void		print_execve_error(char *command, int code_error);
-void		access_error_message(char *error, char *message);
-char		*search_in_path(t_global *global, int n, char **path, char *cmd_path);
-
-//build_in
+void		ft_pwd(void);
+void		ft_env(t_global *g);
 #endif

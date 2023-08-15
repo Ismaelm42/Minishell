@@ -8,7 +8,7 @@ void	add_and_store_history(char *input)
 	fd_history = open(".bash_history", O_WRONLY | O_CREAT | O_APPEND, 0666);
 	if (fd_history == -1)
 	{
-		ft_putstr_fd("minishell: error openning bash history\n", 2);
+		ft_putstr_fd("Error openning bash history", 2);
 		free (input);
 		exit(EXIT_FAILURE);
 	}

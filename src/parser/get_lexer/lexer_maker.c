@@ -63,21 +63,21 @@ void	words_splitter(int *n, char **s, char ***lexer)
 /*
 Libera la memoria reservada en caso de fallo.
 */
-char	**free_matrix(char **matrix)
+char	**free_lexer(char **lexer)
 {
 	int	n;
 
 	n = 0;
-	if (matrix != NULL)
+	if (lexer != NULL)
 	{
-		while (matrix[n] != NULL)
+		while (lexer[n] != NULL)
 		{
-			free(matrix[n]);
-			matrix[n] = NULL;
+			free(lexer[n]);
+			lexer[n] = NULL;
 			n++;
 		}
-		free(matrix);
-		matrix = NULL;
+		free(lexer);
+		lexer = NULL;
 	}
 	return (NULL);
 }
@@ -105,7 +105,7 @@ char	**lexer_maker(char *s)
 		else
 			words_splitter(&n, &s, &lexer);
 		if (!lexer[n - 1])
-			return (free_matrix(lexer));
+			return (free_lexer(lexer));
 	}
 	lexer[n] = 0;
 	return (lexer);

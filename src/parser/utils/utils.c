@@ -5,17 +5,10 @@ Elimina la estructura global por completo.
 */
 void	destroy_global(t_global *global)
 {
-	int	i;
-
 	if (global->input != NULL)
 		free(global->input);
-	i = 0;
-	while (global->env[i] != NULL)
-	{
-		free (global->env[i]);
-		i++;
-	}
-	free (global->env);
+	free_env(global->env);
+	ft_free_lst(global->lst_local);
 	free(global);
 }
 
@@ -29,13 +22,13 @@ void	free_global(t_global *global, int flag)
 	n = 0;
 	while (n < global->pipeline)
 	{
-		free_matrix(global->tokens[n].infile);
-		free_matrix(global->tokens[n].outfile);
-		free_matrix(global->tokens[n].heredoc);
-		free_matrix(global->tokens[n].append);
+		free_lexer(global->tokens[n].infile);
+		free_lexer(global->tokens[n].outfile);
+		free_lexer(global->tokens[n].heredoc);
+		free_lexer(global->tokens[n].append);
 		if (global->tokens[n].command != NULL)
 			free(global->tokens[n].command);
-		free_matrix(global->tokens[n].arg);
+		free_lexer(global->tokens[n].arg);
 		n++;
 	}
 	global->pipeline = 0;

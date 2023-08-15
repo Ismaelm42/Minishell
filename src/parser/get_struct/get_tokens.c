@@ -33,12 +33,12 @@ int	get_tokens(char *input, t_global *global)
 	lexer = get_lexer(input, global);
 	return_n = syntax_error_check(lexer);
 	if (return_n != 0)
-		return (free_matrix(lexer), return_n);
+		return (free_lexer(lexer), return_n);
 	n = lexer_pipes_counter(lexer);
 	tokens = (t_token *)ft_calloc(sizeof(t_token), n + 1);
 	token_maker(tokens, lexer);
 	global->pipeline = n;
 	global->tokens = tokens;
-	free_matrix(lexer);
+	free_lexer(lexer);
 	return (0);
 }
