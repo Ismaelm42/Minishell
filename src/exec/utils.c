@@ -1,14 +1,5 @@
 #include "../../include/minishell.h"
 
-void	print_execve_error(char *command, int code_error)
-{
-	ft_putstr_fd("minishell: ", 2);
-	ft_putstr_fd(command, 2);
-	ft_putstr_fd(": ", 2);
-	strerror(code_error);
-	ft_putstr_fd("\n", 2);
-}
-
 void	access_error_message(char *error, char *message)
 {
 	ft_putstr_fd("minishell: ", 2);
@@ -42,4 +33,28 @@ char	*search_in_path(t_global *global, int n, char **path, char *cmd_path)
 		i++;
 	}
 	return (NULL);
+}
+
+void	fd_closer(int **fd, int pipeline, int n)
+{
+	int		i;
+
+	i = 0;
+	while (i < pipeline + 1)
+	{
+		if (i != n)
+			close(fd[i][0]);
+		if (i != n + 1)
+			close(fd[i][1]);
+		i++;
+	}
+}
+
+void	print_execve_error(char *command, int code_error)
+{
+	ft_putstr_fd("minishell: ", 2);
+	ft_putstr_fd(command, 2);
+	ft_putstr_fd(": ", 2);
+	strerror(code_error);
+	ft_putstr_fd("\n", 2);
 }

@@ -15,31 +15,38 @@ int	get_variable_from_env(int n, t_lexer *lexer, t_global *global)
 		copy = ft_strtrim(copy, "{", 1);
 		copy = ft_strtrim(copy, "}", 1);
 	}
-	environment = search_env(copy, global->env);
+	environment = search_env(copy, global->env);// search_key(global->lst_env, copy);//cambiar
 	free(copy);
 	if (environment == NULL)
 		return (1);
 	lexer[n].expanded = ft_strdup(environment);
-	free(environment);
 	return (0);
 }
 
-int	get_variable_from_local_var(int n, t_lexer *lexer, t_global *global)
+/*
+Crea needle que es nombre de la variable más el símbolo igual para poder
+buscarlo por el historial en la función read_from_history.
+Ejemplo de needle: ARG= 
+*/
+int	get_variable_from_history(int n, t_lexer *lexer, t_global *global)
 {
-	char	*copy;
-	char	*var;
+	char	*needle;
+	int		size;
 
-	copy = ft_substr(lexer[n].variable, 1, 1000, 0);
-	if (copy[0] == '{' && copy[ft_strlen(copy) - 1] == '}')
+	(void)global;
+	size = ft_strlen(lexer[n].variable);
+	needle = ft_substr(lexer[n].variable, 1, size, 0);
+	if (needle[0] == '{' && needle[ft_strlen(needle) - 1] == '}')
 	{
-		copy = ft_strtrim(copy, "{", 1);
-		copy = ft_strtrim(copy, "}", 1);
+		needle = ft_strtrim(needle, "{", 1);
+		needle = ft_strtrim(needle, "}", 1);
+		size -= 2;
 	}
-	var = search_key(global->lst_local, copy);
-	free(copy);
-	if (var == NULL)
+	needle = ft_strjoin(needle, "=", 1);
+	read_from_history(n, lexer, needle, size);
+	free(needle);
+	if (!lexer[n].expanded)
 		return (1);
-	lexer[n].expanded = ft_strdup(var);
 	return (0);
 }
 
@@ -64,7 +71,7 @@ void	get_variable_expansion_value(int n, t_lexer *lexer, t_global *global)
 	// else if (ft_strncmp(lex, "$?", ft_strlen(lex)) == 0)
 	// 	get_exit_status_variable();
 	else if (get_variable_from_env(n, lexer, global) == 1)
-		if (get_variable_from_local_var(n, lexer, global) == 1)
+		if (get_variable_from_history(n, lexer, global) == 1)
 			lexer[n].expanded = ft_strdup("");
 }
 
@@ -95,7 +102,6 @@ char	*expansion_variable(char *input, t_global *global)
 		free_expansion_lexer(lexer, 1);
 		if (variable_expansion_counter(new_input) != 0)
 			new_input = expansion_variable(new_input, global);
-		printf("%s\n", new_input);
 		return (new_input);
 	}
 	else

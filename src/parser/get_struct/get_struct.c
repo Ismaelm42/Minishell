@@ -9,7 +9,6 @@ t_global	*init_struct(char **env)
 
 	global = (t_global *)ft_calloc(sizeof(t_global), 1);
 	global->env = copy_environment(env);
-	global->lst_local = NULL;
 	return (global);
 }
 
@@ -24,12 +23,10 @@ void	get_struct_data(t_global *global, char *input)
 	if (global->input != NULL)
 		input = ft_strjoin(global->input, input, 3);
 	global->input = ft_strdup(input);
-	printf("global->input = %s\n", global->input);
 	if (get_tokens(input, global) != -2)
 	{
 		free(global->input);
 		global->input = NULL;
 	}
-	free_global(global, 0);
+	//free_global(global, 0);
 }
-
