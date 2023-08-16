@@ -23,7 +23,8 @@ SRC =	src/main.c																\
 		src/parser/utils/list_utils_2.c											\
 		src/exec/execute_commands.c												\
 		src/exec/get_command.c													\
-		src/exec/files.c														\
+		src/exec/infiles.c														\
+		src/exec/outfiles.c														\
 		src/exec/utils.c														\
 																				\
 																				\

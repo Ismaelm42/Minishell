@@ -19,3 +19,6 @@ prueba con | < y más input
 prueba con | << y más input
 prueba con | >> y más input
 < file wc >> file3 > file2 -l << end << "fin" -w > file4
+
+
+

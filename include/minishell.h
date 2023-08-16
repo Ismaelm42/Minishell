@@ -170,6 +170,17 @@ int			child_process(t_global *global, int **fd, int n);
 int			parent_process(t_global *global, int **fd, int n);
 int			execute_commands(t_global *global);
 
+//exec/infiles
+
+int			handle_infiles(char *infile, int write_flag, int type_flag, int infile_type);
+int			detect_input_file(char **infiles, int type_flag, int infile_type);
+int			get_infile(t_global *global, int n);
+
+//exec/outfiles
+int			handle_outfiles(char *outfile, int write_flag, int type_flag);
+int			detect_output_file(char **outfiles, int type_flag, int outfile_type);
+int			get_outfile(t_global *global, int n);
+
 //exec/get_command
 char		**get_path(char **env);
 int			check_cmd_path(char *cmd, char *cmd_path, char *path, int flag);
@@ -181,7 +192,9 @@ void		access_error_message(char *error, char *message);
 char		*search_in_path(t_global *global, int n, char **path, char *cmd_path);
 void		fd_closer(int **fd, int pipeline, int n);
 void		print_execve_error(char *command, int code_error);
-
+void		write_on_fd(int fd_in, int fd_out);
 
 //build_in
+
+
 #endif

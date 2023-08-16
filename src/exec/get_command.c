@@ -21,18 +21,18 @@ int	check_cmd_path(char *cmd, char *cmd_path, char *path, int flag)
 {
 	if (path == NULL)
 	{
-		access_error_message(cmd, ": command not found\n");
+		access_error_message(cmd, ": Command not found\n");
 		return (-1);
 	}
 	else if (access(cmd_path, F_OK) != 0)
 	{
 		if (flag == 0)
-			access_error_message(cmd_path, ": no such file or directory\n");
+			access_error_message(cmd_path, ": No such file or directory\n");
 		return (1);
 	}
 	else if (access(cmd_path, F_OK) == 0 && access(cmd_path, X_OK) != 0)
 	{
-		access_error_message(cmd_path, ": permission denied\n");
+		access_error_message(cmd_path, ": Permission denied\n");
 		return (-2);
 	}
 	else if (access(cmd_path, F_OK | X_OK) == 0)
@@ -45,21 +45,16 @@ char	*get_command_path(t_global *global, int n)
 	char	*cmd_path;
 	char	**path;
 
+	if (global->tokens[n].command == NULL)
+		return (NULL);
 	path = get_path(global->env);
 	cmd_path = ft_strdup(global->tokens[n].command);
 	if (ft_strchr(cmd_path, '/') != NULL)
 	{
 		if (check_cmd_path(NULL, cmd_path, *path, 0) != 0)
-		{
-			free(cmd_path);
-			free_matrix(path);
-			return (NULL);
-		}
+			return (free(cmd_path), free_matrix(path), NULL);
 		else
-		{
-			free_matrix(path);
-			return (cmd_path);
-		}
+			return (free_matrix(path), cmd_path);
 	}
 	return (search_in_path(global, n, path, cmd_path));
 }

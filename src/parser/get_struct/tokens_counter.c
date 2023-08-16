@@ -109,8 +109,6 @@ void	get_token_fd(t_token *tokens, char **lexer)
 			i++;
 		n = i;
 		check_last_token_file_fd(tokens, lexer, n);
-		printf("fd_in = %d\n", tokens->fd_in);
-		printf("fd_out = %d\n\n", tokens->fd_out);
 		tokens++;
 		if (lexer[i] != NULL)
 			i++;

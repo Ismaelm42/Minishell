@@ -17,16 +17,9 @@ char	*search_in_path(t_global *global, int n, char **path, char *cmd_path)
 	{
 		ret = check_cmd_path(global->tokens[n].command, cmd_path, path[i], 1);
 		if (ret == -1 || ret == -2)
-		{
-			free(cmd_path);
-			free_matrix(path);
-			return (NULL);
-		}
+			return (free(cmd_path), free_matrix(path), NULL);
 		else if (ret == 0)
-		{
-			free_matrix(path);
-			return (cmd_path);
-		}
+			return (free_matrix(path), cmd_path);
 		free(cmd_path);
 		cmd_path = ft_strjoin(path[i], "/", 0);
 		cmd_path = ft_strjoin(cmd_path, global->tokens[n].command, 1);
@@ -55,6 +48,20 @@ void	print_execve_error(char *command, int code_error)
 	ft_putstr_fd("minishell: ", 2);
 	ft_putstr_fd(command, 2);
 	ft_putstr_fd(": ", 2);
-	strerror(code_error);
+	ft_putstr_fd(strerror(code_error), 2);
 	ft_putstr_fd("\n", 2);
+}
+
+void	write_on_fd(int fd_in, int fd_out)
+{
+	char	*buffer;
+
+	while (1)
+	{
+		buffer = gnl(fd_in);
+		if (buffer == NULL)
+			break ;
+		ft_putstr_fd(buffer, fd_out);
+		free(buffer);
+	}
 }

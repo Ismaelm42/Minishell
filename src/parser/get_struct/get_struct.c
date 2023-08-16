@@ -28,5 +28,4 @@ void	get_struct_data(t_global *global, char *input)
 		free(global->input);
 		global->input = NULL;
 	}
-	//free_global(global, 0);
 }
