@@ -30,7 +30,7 @@ int	child_process(t_global *global, int **fd, int n)
 		printf("is_builtins\n");
 		return (1);
 	}
-	printf("no builtins\n");
+	printf("\nno builtins\n");
 	command_line = get_exec_command(global, n);
 	fd_closer(fd, global->pipeline, n);
 	if (global->tokens[n].fd_in != 0)

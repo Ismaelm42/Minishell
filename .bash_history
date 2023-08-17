@@ -102,3 +102,10 @@ env
 pwd | ls
 pwd | ls
 pwd | ls
+pwd | ls
+pwd | ls | wc -l
+pwd | ls | wc -l
+pwd | ls | wc -l
+pwd | ls | wc -l
+pwd | ls | wc -l
+pwd | ls | wc -l
