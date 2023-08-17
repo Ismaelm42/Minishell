@@ -25,12 +25,7 @@ int	child_process(t_global *global, int **fd, int n)
 {
 	char	**command_line;
 
-	if (buitlins(global, n) == 1)
-	{
-		printf("is_builtins\n");
-		return (1);
-	}
-	printf("\nno builtins\n");
+
 	command_line = get_exec_command(global, n);
 	fd_closer(fd, global->pipeline, n);
 	if (global->tokens[n].fd_in != 0)
@@ -55,6 +50,8 @@ int	child_process(t_global *global, int **fd, int n)
 			return (ft_putstr_fd(strerror(errno), 2), 1);
 	}
 	close(fd[n + 1][1]);
+	if (buitlins(global, n) == 1)
+		return (1);
 	if (command_line == NULL)
 		return (1);
 	else
