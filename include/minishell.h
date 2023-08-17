@@ -50,6 +50,7 @@ typedef struct s_global
 	char		**env;
 	int			pipeline;
 	int			exit_status;
+	t_node		*lst_local;
 	t_token		*tokens;
 }				t_global;
 
@@ -131,17 +132,28 @@ void		token_filler(t_token *tokens, char **lexer);
 void		advance_lexer_tokens(char ***lexer, t_token **tokens);
 void		token_maker(t_token *tokens, char **lexer);
 
-//parser/dictionary/var_environment
-char		*extract_clue(char *c);
-char		*extract_value(char *c);
-//void		copy_environment(t_node **lst_env, char **env);
+
+//parser/var_environment
 char		**copy_environment(char **env);
 char		*search_env(char *var, char **envp);
+void		free_env(char **env_copy);
+
+//parser/variables/var_local
+int			local_var(t_global *g, char *input);
+char		*extract_clue(char *c);
+char		*extract_value(char *c);
 char		*search_key(t_node *lst, char *key);
 int			search_key_and_replace(t_node *lst, char *key, char *val);
+void		var_quoted_lexer_splitter(int *n, char **s, char ***lexer);
+void		var_quoted_lexer_counter(int *counter, char **s);
+void		var_words_counter(int *counter, char **s);
+int			var_lexer_counter(char *s);
+void		var_words_splitter(int *n, char **s, char ***lexer);
+char		**var_lexer_maker(char *s);
+void		put_dictionary_local(char *nv, t_global *g);
+int			check_key(char *key);
 
-//parser/dictionary/var_local
-int			local_var(char *s);
+
 
 //parser/utils
 void		destroy_global(t_global *global);

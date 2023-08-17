@@ -11,6 +11,8 @@ void	ft_free_lst(t_node *lst)
 	{
 		tmp = lst;
 		lst = lst->next;
+		free(tmp->key);
+		free(tmp->value);
 		free(tmp);
 	}
 }

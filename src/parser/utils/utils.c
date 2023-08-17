@@ -5,15 +5,10 @@ Elimina la estructura global por completo.
 */
 void	destroy_global(t_global *global)
 {
-	int	i;
-
-	i = 0;
-	while (global->env[i] != NULL)
-	{
-		free (global->env[i]);
-		i++;
-	}
-	free (global->env);
+	if (global->input != NULL)
+		free(global->input);
+	free_env(global->env);
+	ft_free_lst(global->lst_local);
 	free(global);
 }
 

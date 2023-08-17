@@ -23,3 +23,53 @@ ls -la | wc -l
 ls -l | cat -e
 ls -l | cat -e
 ls -l | cat -e
+ ls -la | grep 4096
+ ARG=javi
+ARG=javi
+ARG=javi | ls $ARG
+ARG=javi | ls $ARG
+ARG=javi
+ARG=javi
+ARG=javi
+ls
+ARG=jaiv
+ls
+ls $ARG
+ls $ARG | cat $HOME
+exit
+ls $HOME
+ls $HOME
+ARG=pepe"joe"
+ARG=pepe"joe"
+ARG=pepe"joe"
+ARG=pepe"joe"
+ARG=pepe
+ARG=pepe
+ARG=pepe
+ARG=pepe
+ARG=pepe
+ARG=pepe
+ARG=pepe
+ARG=pepe
+ARG=pepe
+ARG=pepe
+ARG=pepe
+ARG=pepe
+ARG=pepe
+ARG=pepe
+ARG=pepe
+ARG=pepe
+ARG=pepe
+ARG=pepe
+ARG=pepe
+ls $HOME
+ls $HOME
+ls $HOME
+ls $HOME
+ARG=javi
+ls $HOME
+ls $HOME
+ls $HOME
+ls $HOME
+ls $HOME
+ls $HOME

@@ -12,10 +12,12 @@ int	main(int argc, char **argv, char **env)
 	// {
 		// rl_on_new_line();
 		// input = readline(">> ");
-		input = ft_strdup(" ls -la | grep 4096");
+		input = ft_strdup("ls $HOME");
 		add_and_store_history(input);
 		get_struct_data(global, input);
-		execute_commands(global);
+		free_global(global, 1);
+		//free (input);
+		//execute_commands(global);
 	// }
 		return (0);
 }

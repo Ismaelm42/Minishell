@@ -20,9 +20,8 @@ char	**var_lexer_maker(char *s)
 		else
 			var_words_splitter(&n, &s, &lexer);
 		if (!lexer[n - 1])
-			return (free_lexer(lexer));
+			return (free_matrix(lexer));
 	}
-	//free (s);
 	lexer[n] = 0;
 	return (lexer);
 }

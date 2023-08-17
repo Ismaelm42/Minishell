@@ -33,11 +33,7 @@ void	var_quoted_lexer_counter(int *counter, char **s)
 		*counter += 1;
 	}
 	else
-	{	
 		*counter = 0;
-		ft_putstr_fd("c: quoted no closed ", 2);
-		ft_putstr_fd("\n", 2);
-	}
 }
 
 // Función quee cuenta string sin comillas si contiene caracteres
@@ -66,11 +62,7 @@ int	var_lexer_counter(char *s)
 		if (*s == '\'' || *s == '"')
 			var_quoted_lexer_counter(&counter, &s);
 		else if (*s == ' ' || *s == '<' || *s == '>' || *s == '|' || *s == '!')
-		{
-			ft_putstr_fd("minishell: s: event not found ", 2);
-			ft_putstr_fd("\n", 2);
 			return (counter = 0);
-		}		
 		else
 			var_words_counter(&counter, &s);
 	}
