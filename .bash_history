@@ -73,3 +73,32 @@ ls $HOME
 ls $HOME
 ls $HOME
 ls $HOME
+ls $HOME
+ARG=pepe
+ls -l
+ls -l | grep obj | grep javier
+ls -l | grep obj | grep javier
+ls -l | grep obj | grep javier | wc -l
+ls -l > outfile | grep obj | grep javier | wc -l > outfile1
+ls -l -a
+ls -l -a
+ls -l -a
+ls -l -a "juan"
+ls -l -a "juan"
+ls -l -a "juan"
+pwd
+pwd
+pwd
+pwd
+pwd
+pwd
+pwd
+pwd
+pwd
+pwd
+pwd
+env
+env
+pwd | ls
+pwd | ls
+pwd | ls

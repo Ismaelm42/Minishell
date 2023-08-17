@@ -1,5 +1,6 @@
 #include "../../include/minishell.h"
 
+
 int	create_pipes_and_pid(t_global *global, pid_t **pid, int ***fd)
 {
 	int	n;
@@ -18,11 +19,18 @@ int	create_pipes_and_pid(t_global *global, pid_t **pid, int ***fd)
 		return (1);
 	return (0);
 }
+
 //ver función close parece dar problemas
 int	child_process(t_global *global, int **fd, int n)
 {
 	char	**command_line;
 
+	if (buitlins(global, n) == 1)
+	{
+		printf("is_builtins\n");
+		return (1);
+	}
+	printf("no builtins\n");
 	command_line = get_exec_command(global, n);
 	fd_closer(fd, global->pipeline, n);
 	if (global->tokens[n].fd_in != 0)

@@ -207,6 +207,9 @@ void		print_execve_error(char *command, int code_error);
 void		write_on_fd(int fd_in, int fd_out);
 
 //build_in
+void		ft_pwd(void);
+void		ft_env(t_global *g);
+int			buitlins(t_global *g, int n);
 
 
 #endif

@@ -22,7 +22,8 @@ void	get_size_variables(int *var, int *exp, t_lexer *lexer)
 }
 
 /*
-Se encarga de escribir el nuevo input modificado con los valores de las variables de expansión.
+Se encarga de escribir el nuevo input modificado con los valores de las variables
+ de expansión.
 */
 void	replace_function(char *new_input, char *input, t_lexer *lexer)
 {
