@@ -109,3 +109,5 @@ pwd | ls | wc -l
 pwd | ls | wc -l
 pwd | ls | wc -l
 pwd | ls | wc -l
+ < infile grep >> infile3 > infile2 1 << a << z > infile4 | echo "estoy fuera"
+ < infile grep >> infile3 > infile2 1 << a << z > infile4 | echo "estoy fuera"

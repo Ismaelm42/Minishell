@@ -12,12 +12,18 @@ int	main(int argc, char **argv, char **env)
 	// {
 		// rl_on_new_line();
 		// input = readline(">> ");
-		input = ft_strdup("pwd | ls | wc -l");
+		// input = ft_strdup("ls -l | hola");
+		// add_and_store_history(input);
+		// get_struct_data(global, input);
+		// free_global(global, 1);
+
+		input = ft_strdup(" < infile grep >> infile3 > infile2 1 << a << z > infile4 | echo \"estoy fuera\"");
 		add_and_store_history(input);
 		get_struct_data(global, input);
-		//free_global(global, 1);
-		//free (input);
 		execute_commands(global);
+
+		//free (input);
+		//execute_commands(global);
 	// }
 		return (0);
 }

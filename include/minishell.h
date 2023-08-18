@@ -184,13 +184,14 @@ int			execute_commands(t_global *global);
 
 //exec/infiles
 
-int			handle_infiles(char *infile, int write_flag, int type_flag, int infile_type);
-int			detect_input_file(char **infiles, int type_flag, int infile_type);
+int			heredoc(char ***infiles, int fd_type);
+int			handle_infiles(char ***infiles, int infile_type, int fd_type);
+int			detect_input_file(char **infiles, int infile_type, int fd_type);
 int			get_infile(t_global *global, int n);
 
 //exec/outfiles
-int			handle_outfiles(char *outfile, int write_flag, int type_flag);
-int			detect_output_file(char **outfiles, int type_flag, int outfile_type);
+int			handle_outfiles(char *outfile, int write_flag, int infile_type);
+int			detect_output_file(char **outfiles, int infile_type, int fd_type);
 int			get_outfile(t_global *global, int n);
 
 //exec/get_command

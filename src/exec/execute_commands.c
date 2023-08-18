@@ -1,6 +1,5 @@
 #include "../../include/minishell.h"
 
-
 int	create_pipes_and_pid(t_global *global, pid_t **pid, int ***fd)
 {
 	int	n;
@@ -20,11 +19,9 @@ int	create_pipes_and_pid(t_global *global, pid_t **pid, int ***fd)
 	return (0);
 }
 
-//ver función close parece dar problemas
 int	child_process(t_global *global, int **fd, int n)
 {
 	char	**command_line;
-
 
 	command_line = get_exec_command(global, n);
 	fd_closer(fd, global->pipeline, n);
@@ -50,8 +47,6 @@ int	child_process(t_global *global, int **fd, int n)
 			return (ft_putstr_fd(strerror(errno), 2), 1);
 	}
 	close(fd[n + 1][1]);
-	if (buitlins(global, n) == 1)
-		return (1);
 	if (command_line == NULL)
 		return (1);
 	else
@@ -72,6 +67,7 @@ int	parent_process(t_global *global, int **fd, int n)
 
 int	execute_commands(t_global *global)
 {
+	int		status;
 	int		**fd;
 	pid_t	*pid;
 	int		n;
@@ -89,6 +85,9 @@ int	execute_commands(t_global *global)
 				return (1);
 		n++;
 	}
+	n = 0;
+	while (n < global->pipeline)
+		waitpid(pid[n++], &status, 0);
 	if (parent_process(global, fd, n) != 0)
 		return (1);
 	return (0);

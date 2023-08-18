@@ -1,63 +1,93 @@
 #include "../../include/minishell.h"
 
-int	handle_infiles(char *infile, int write_flag, int type_flag, int infile_type)
+int	heredoc(char ***infiles, int fd_type)
 {
-	int	fd_file;
+	char			*buffer;
+	int				fd_heredoc;
 
-
-	infile_type = 0 + infile_type;
-	if (type_flag < 0)
+	fd_heredoc = open(".heredoc", O_RDWR | O_CREAT | O_TRUNC, 0666);
+	while (1)
 	{
-		
+		buffer = readline("");
+		if (buffer != NULL)
+		{
+			if (ft_strncmp(buffer, **infiles, ft_strlen(**infiles) + 1) == 0
+				&& (*infiles)[1] == NULL)
+			{
+				free(buffer);
+				break ;
+			}
+			if (ft_strncmp(buffer, **infiles, ft_strlen(**infiles) + 1) == 0
+				&& (*infiles)[1] != NULL)
+				(*infiles)++;
+			else if ((*infiles)[1] == NULL && fd_type < 0)
+			{
+				ft_putstr_fd(buffer, fd_heredoc);
+				ft_putstr_fd("\n", fd_heredoc);
+			}
+		}
+		free(buffer);
+		buffer = NULL;
 	}
-	else if (type_flag == 1)
-		fd_file = open(infile, O_RDONLY, 0666);
-	if (fd_file == -1)
+	close(fd_heredoc);
+	open(".heredoc", O_RDONLY, 0666);
+	if ((*infiles)[1] == NULL && fd_type < 0)
 	{
-		ft_putstr_fd("minishell: ", 2);
-		ft_putstr_fd(infile, 2);
-		ft_putstr_fd(": ", 2);
-		ft_putstr_fd(strerror(errno), 2);
-		ft_putstr_fd("\n", 2);
-		close(fd_file);
-		return (1);
+		if (dup2(fd_heredoc, STDIN_FILENO) == -1)
+			return (close(fd_heredoc), ft_putstr_fd(strerror(errno), 2), 1);
 	}
-	if (write_flag == 1)
-	{
-		if (dup2(fd_file, STDIN_FILENO) == -1)
-			return (ft_putstr_fd(strerror(errno), 2), 1);
-	}
-	close(fd_file);
+	close(fd_heredoc);
 	return (0);
 }
 
-int	detect_input_file(char **infiles, int type_flag, int infile_type)
+int	handle_infiles(char ***infiles, int infile_type, int fd_type)
 {
-	int	i;
-	int	write_flag;
+	int	fd_file;
 
-	i = 0;
-	write_flag = 0;
-	while (infiles[i] != NULL)
+	if (infile_type < 0)
+		return (heredoc(infiles, fd_type));
+	else
 	{
-		if (infiles[i + 1] == NULL && ((type_flag == infile_type)
-				|| (type_flag == -1 && infile_type < 0)))
-			write_flag = 1;
-		if (handle_infiles(infiles[i], write_flag, type_flag, infile_type) != 0)
+		fd_file = open(**infiles, O_RDONLY, 0666);
+		if (fd_file == -1)
+		{
+			ft_putstr_fd("minishell: ", 2);
+			ft_putstr_fd(**infiles, 2);
+			ft_putstr_fd(": ", 2);
+			ft_putstr_fd(strerror(errno), 2);
+			ft_putstr_fd("\n", 2);
+			return (close(fd_file), 1);
+		}
+		if ((*infiles)[1] == NULL && fd_type == 1)
+		{
+			printf("AQUINOSEENTRA VERDAD?\n");
+			if (dup2(fd_file, STDIN_FILENO) == -1)
+				return (close(fd_file), ft_putstr_fd(strerror(errno), 2), 1);
+		}
+		close(fd_file);
+	}
+	return (0);
+}
+
+int	detect_input_file(char **infiles, int infile_type, int fd_type)
+{
+	while (*infiles != NULL)
+	{
+		if (handle_infiles(&infiles, infile_type, fd_type) != 0)
 			return (1);
-		i++;
+		infiles++;
 	}
 	return (0);
 }
 
 int	get_infile(t_global *global, int n)
 {
-	int	infile_type;
+	int	fd_type;
 
-	infile_type = global->tokens[n].fd_in;
-	if (detect_input_file(global->tokens[n].heredoc, -1, infile_type) != 0)
+	fd_type = global->tokens[n].fd_in;
+	if (detect_input_file(global->tokens[n].heredoc, -1, fd_type) != 0)
 		return (1);
-	if (detect_input_file(global->tokens[n].infile, 1, infile_type) != 0)
+	if (detect_input_file(global->tokens[n].infile, 1, fd_type) != 0)
 		return (1);
 	return (0);
 }

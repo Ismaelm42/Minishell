@@ -1,12 +1,12 @@
 #include "../../include/minishell.h"
 
-int	handle_outfiles(char *outfile, int write_flag, int type_flag)
+int	handle_outfiles(char *outfile, int write_flag, int infile_type)
 {
 	int	fd_file;
 
-	if (type_flag == -1)
+	if (infile_type == -1)
 		fd_file = open(outfile, O_RDWR | O_CREAT | O_APPEND, 0666);
-	else if (type_flag == 1)
+	else if (infile_type == 1)
 		fd_file = open(outfile, O_RDWR | O_CREAT | O_TRUNC, 0666);
 	if (fd_file == -1)
 	{
@@ -27,7 +27,7 @@ int	handle_outfiles(char *outfile, int write_flag, int type_flag)
 	return (0);
 }
 
-int	detect_output_file(char **outfiles, int type_flag, int outfile_type)
+int	detect_output_file(char **outfiles, int infile_type, int fd_type)
 {
 	int	i;
 	int	write_flag;
@@ -36,9 +36,9 @@ int	detect_output_file(char **outfiles, int type_flag, int outfile_type)
 	write_flag = 0;
 	while (outfiles[i] != NULL)
 	{
-		if (outfiles[i + 1] == NULL && type_flag == outfile_type)
+		if (outfiles[i + 1] == NULL && infile_type == fd_type)
 			write_flag = 1;
-		if (handle_outfiles(outfiles[i], write_flag, type_flag) != 0)
+		if (handle_outfiles(outfiles[i], write_flag, infile_type) != 0)
 			return (1);
 		i++;
 	}
@@ -47,12 +47,12 @@ int	detect_output_file(char **outfiles, int type_flag, int outfile_type)
 
 int	get_outfile(t_global *global, int n)
 {
-	int	outfile_type;
+	int	fd_type;
 
-	outfile_type = global->tokens[n].fd_out;
-	if (detect_output_file(global->tokens[n].append, -1, outfile_type) != 0)
+	fd_type = global->tokens[n].fd_out;
+	if (detect_output_file(global->tokens[n].append, -1, fd_type) != 0)
 		return (1);
-	if (detect_output_file(global->tokens[n].outfile, 1, outfile_type) != 0)
+	if (detect_output_file(global->tokens[n].outfile, 1, fd_type) != 0)
 		return (1);
 	return (0);
 }
