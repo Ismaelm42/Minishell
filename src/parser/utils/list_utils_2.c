@@ -40,3 +40,35 @@ void	error(void)
 	ft_putstr_fd("Error\n", 2);
 	exit(EXIT_FAILURE);
 }
+
+/*
+Funcion que ordena la lista de environment alfabaticamente
+*/
+void	ft_envlst_short(t_node **lst)
+{
+	int			diff;
+	char		*change_key;
+	char		*change_val;
+	t_node		*tmp;
+
+	tmp = *lst;
+	if (!*lst)
+		return ;
+	while (tmp->next)
+	{
+		diff = ft_strncmp(tmp->key, tmp->next->key, 20);
+		if (diff > 0)
+		{
+			change_key = tmp->key;
+			change_val = tmp->value;
+			tmp->key = tmp->next->key;
+			tmp->value = tmp->next->value;
+			tmp->next->key = change_key;
+			tmp->next->value = change_val;
+
+			tmp = *lst;
+		}
+		else
+			tmp = tmp->next;
+	}
+}

@@ -9,6 +9,9 @@ t_global	*init_struct(char **env)
 
 	global = (t_global *)ft_calloc(sizeof(t_global), 1);
 	global->env = copy_environment(env);
+	global->lst_env = init_list();
+	copy_environment_list(&global->lst_env, env);
+	ft_envlst_short(&global->lst_env);
 	return (global);
 }
 

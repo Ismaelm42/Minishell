@@ -27,6 +27,7 @@ SRC =	src/main.c																\
 		src/parser/variables/utils_var_2.c										\
 		src/builtins/ft_pwd.c													\
 		src/builtins/ft_env.c													\
+		src/builtins/ft_export.c													\
 		src/builtins/util_builtin.c												\
 		src/exec/execute_commands.c												\
 		src/exec/get_command.c													\

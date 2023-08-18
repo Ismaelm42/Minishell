@@ -29,6 +29,8 @@ int	child_process(t_global *global, int **fd, int n)
 		return (1);
 	if (fd_out_handler(global, n, fd[n + 1][1]) != 0)
 		return (1);
+	if (buitlins(global, n) == 1)
+		return (1);
 	if (command_line == NULL)
 		return (1);
 	else

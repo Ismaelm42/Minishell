@@ -50,6 +50,7 @@ typedef struct s_global
 	char		**env;
 	int			pipeline;
 	int			exit_status;
+	t_node		*lst_env;
 	t_node		*lst_local;
 	t_token		*tokens;
 }				t_global;
@@ -161,6 +162,8 @@ t_node		*create_nodo(char *key, char *value);
 void		insert_last(t_node **list, t_node *new_nodo);
 t_node		*final(t_node *list);
 void		print_stack(t_node *list);
+void		copy_environment_list(t_node **lst_env, char **env);
+void		ft_envlst_short(t_node **lst);
 
 //parser/utils/list_utils_2
 void		ft_free_lst(t_node *lst);
@@ -207,6 +210,7 @@ void		write_on_fd(int fd_in, int fd_out);
 //build_in
 void		ft_pwd(void);
 void		ft_env(t_global *g);
+void		ft_export(t_global *g, int n);
 int			buitlins(t_global *g, int n);
 
 

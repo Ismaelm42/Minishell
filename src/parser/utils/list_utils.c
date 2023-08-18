@@ -56,7 +56,8 @@ t_node	*final(t_node *list)
 	return (aux);
 }
 /*
-Función para imprimir la lista, basicamente es para nuestras comprobaciones.
+Función para imprimir la lista en el formato que simula export sin 
+argumentos
 */
 
 void	print_stack(t_node *list)
@@ -66,9 +67,7 @@ void	print_stack(t_node *list)
 	aux = list;
 	while (aux != NULL)
 	{
-		printf("*******************\n");
-		printf("key->%s\n", aux->key);
-		printf("value->%s\n", aux->value);
+		printf("declare -x %s=%s\n", aux->key, aux->value);
 		aux = aux -> next;
 	}	
 }

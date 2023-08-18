@@ -166,3 +166,24 @@ echo hola
 < infile1 grep >> infile3 > infile2  << a <<z q > infile4 | echo hola | >>infile3 grep bin |echo hola2
 < infile1 grep >> infile3 > infile2  << a <<z q > infile4 | echo hola | >>infile3 grep bin |echo hola2
 < infile1 grep >> infile3 > infile2  << a <<z q > infile4 | echo hola | echo hola1 |echo hola2
+< infile1 grep >> infile3 > infile2  << a <<z q > infile4 | echo hola | >>infile3 grep bin |echo hola2
+< infile1 grep >> infile3 > infile2  << a <<z q > infile4 | echo hola | >>infile3 grep bin |echo hola2
+cat << a << z  > infile5
+env
+env
+export
+export
+pwd
+pwd
+pwd
+export
+env
+export
+juan
+juan
+export
+export
+env
+env
+export arg=pepe
+export arg=pepe
