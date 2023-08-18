@@ -25,28 +25,10 @@ int	child_process(t_global *global, int **fd, int n)
 
 	command_line = get_exec_command(global, n);
 	fd_closer(fd, global->pipeline, n);
-	if (global->tokens[n].fd_in != 0)
-	{
-		if (get_infile(global, n) != 0)
-			return (close(fd[n][0]), close(fd[n + 1][1]), 1);
-	}
-	else
-	{
-		if (dup2(fd[n][0], STDIN_FILENO) == -1)
-			return (ft_putstr_fd(strerror(errno), 2), 1);
-	}
-	close(fd[n][0]);
-	if (global->tokens[n].fd_out != 0)
-	{
-		if (get_outfile(global, n) != 0)
-			return (close(fd[n + 1][1]), 1);
-	}
-	else
-	{
-		if (dup2(fd[n + 1][1], STDOUT_FILENO) == -1)
-			return (ft_putstr_fd(strerror(errno), 2), 1);
-	}
-	close(fd[n + 1][1]);
+	if (fd_in_handler(global, n, fd[n][0], fd[n + 1][1]) != 0)
+		return (1);
+	if (fd_out_handler(global, n, fd[n + 1][1]) != 0)
+		return (1);
 	if (command_line == NULL)
 		return (1);
 	else
@@ -86,8 +68,13 @@ int	execute_commands(t_global *global)
 		n++;
 	}
 	n = 0;
+	printf("global->pipeline = %d\n", global->pipeline);
 	while (n < global->pipeline)
+	{
+		printf("n = %d\n", n);
 		waitpid(pid[n++], &status, 0);
+	}
+	printf("paso a proceso padre\n");
 	if (parent_process(global, fd, n) != 0)
 		return (1);
 	return (0);

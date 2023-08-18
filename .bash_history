@@ -111,3 +111,58 @@ pwd | ls | wc -l
 pwd | ls | wc -l
  < infile grep >> infile3 > infile2 1 << a << z > infile4 | echo "estoy fuera"
  < infile grep >> infile3 > infile2 1 << a << z > infile4 | echo "estoy fuera"
+ < infile1 grep >> infile3 > infile2 1 << a << z > infile4 | echo "estoy fuera"
+ < infile1 grep >> infile3 > infile2 1 << a << z > infile4 | echo "estoy fuera"
+ < infile1 grep >> infile3 > infile2 1 << a << a > infile4 | echo "estoy fuera"
+ < infile1 grep >> infile3 > infile2 1 << a << a > infile4 | echo "estoy fuera"
+ < infile1 grep >> infile3 > infile2 1 << a << a > infile4 | echo "estoy fuera"
+ < infile1 grep >> infile3 > infile2 1 << a << a > infile4 | echo "estoy fuera"
+ < infile1 grep >> infile3 > infile2 1 << a << a > infile4 | echo "estoy fuera"
+ < infile1 grep >> infile3 > infile2 1 << a << a > infile4 | echo "estoy fuera"
+ < infile1 grep >> infile3 > infile2 1 << a << a > infile4 | echo "estoy fuera"
+ < infile1 grep >> infile3 > infile2 1 << a << a > infile4 | echo "estoy fuera"
+ < infile1 grep >> infile3 > infile2 1 << a << a > infile4 | echo "estoy fuera"
+ < infile1 grep >> infile3 > infile2 1 << a << a > infile4 <infile1| echo "estoy fuera"
+ < infile1 grep >> infile3 > infile2 1 << a << a > infile4 <infile1| echo "estoy fuera"
+ < infile1 grep >> infile3 > infile2 1 << a << a > infile4| echo "estoy fuera"
+ < infile1 grep >> infile3 > infile2 1 << a << a > infile4| echo "estoy fuera"
+ < infile1 grep >> infile3 > infile2 1 << a << a > infile4| echo "estoy fuera"
+ < infile1 grep >> infile3 > infile2 1 << a << a > infile4| echo "estoy fuera"
+< file grep >> file3 > file2  << a <<"z" q > file4 | echo $HOME | >>file3 grep bin
+< file grep >> file3 > file2  << a <<"z" q > file4 | echo $HOME | >>file3 grep bin
+echo hola
+< file grep >> file3 > file2  << a <<"z" q > file4 | echo hola | >>file3 grep bin
+< file grep >> file3 > file2  << a <<"z" q > file4 | echo $HOME | >>file3 grep bin
+< infile grep >> infile3 > infile2  << a <<"z" q > infile4 | echo $HOME | >>infile3 grep bin
+< infile1 grep >> infile3 > infile2  << a <<"z" q > infile4 | echo $HOME | >>infile3 grep bin
+< infile1 grep >> infile3 > infile2  << a <<z q > infile4 | echo $HOME | >>infile3 grep bin
+< infile1 grep >> infile3 > infile2  << a <<z q > infile4 | echo $HOME | >>infile3 grep bin
+< infile1 grep >> infile3 > infile2  << a <<z q > infile4
+< infile1 grep >> infile3 > infile2  << a <<z q > infile4 | echo 'hola'
+< infile1 grep >> infile3 > infile2  << a <<z q > infile4 | echo hola | >>infile3 grep bin
+< infile1 grep >> infile3 > infile2  << a <<z q > infile4 | echo hola | >>infile3 grep bin
+< infile1 grep >> infile3 > infile2  << a <<z q > infile4 | echo hola | >>infile3 grep bin
+< infile1 grep >> infile3 > infile2  << a <<z q > infile4 | echo hola | >>infile3 grep bin
+< infile1 grep >> infile3 > infile2  << a <<z q > infile4 | echo hola | >>infile3 grep bin
+< infile1 grep >> infile3 > infile2  << a <<z <infile1 q > infile4 | echo hola | >>infile3 grep bin
+< infile1 grep >> infile3 > infile2  << a <<z <infile1 q > infile4 | echo hola | >>infile3 grep bin
+< infile1 grep >> infile3 > infile2  <infile1 q > infile4 | echo hola | >>infile3 grep bin
+< infile1 grep >> infile3 > infile2  <infile1 q > infile4 | echo hola | >>infile3 grep bin
+< infile1 grep >> infile3 > infile2  <infile1 q > infile4 | echo hola | >>infile3 grep bin
+< infile1 grep >> infile3 > infile2  <infile1 q > infile4 | echo hola | >>infile3 grep bin
+< infile1 grep >> infile3 > infile2  <infile1 q > infile4 | echo hola | >>infile3 grep bin
+< infile1 grep >> infile3 > infile2  <infile1 q > infile4 | echo hola | >>infile3 grep bin
+< infile1 grep >> infile3 > infile2  <infile1 q > infile4 | echo hola | >>infile3 grep bin
+< infile1 grep >> infile3 > infile2  <infile1 q > infile4 | echo hola | >>infile3 grep bin
+< infile1 grep >> infile3 > infile2  <infile1 q > infile4 | echo hola | >>infile3 grep bin
+< infile1 grep >> infile3 > infile2  <infile1 q > infile4 | echo hola | >>infile3 grep bin
+< infile1 grep >> infile3 > infile2  << a <<z q > infile4 | echo hola | >>infile3 grep bin
+< infile1 grep >> infile3 > infile2  << a <<z q > infile4 | echo hola | >>infile3 grep bin | echo puta que rico eh
+< infile1 grep >> infile3 > infile2  << a <<z q > infile4 | echo hola | >>infile3 grep bin | echo 'putamierda'
+< infile1 grep >> infile3 > infile2  << a <<z q > infile4 | echo hola | >>infile3 grep bin
+< infile1 grep >> infile3 > infile2  << a <<z q > infile4 | echo hola | >>infile3 grep bin
+< infile1 grep >> infile3 > infile2  << a <<z q > infile4 | echo hola | >>infile3 grep bin |echo hola2
+< infile1 grep >> infile3 > infile2  << a <<z q > infile4 | echo hola | >>infile3 grep bin |echo hola2
+< infile1 grep >> infile3 > infile2  << a <<z q > infile4 | echo hola | >>infile3 grep bin |echo hola2
+< infile1 grep >> infile3 > infile2  << a <<z q > infile4 | echo hola | >>infile3 grep bin |echo hola2
+< infile1 grep >> infile3 > infile2  << a <<z q > infile4 | echo hola | echo hola1 |echo hola2

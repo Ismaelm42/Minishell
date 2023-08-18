@@ -80,7 +80,6 @@ void		check_expansion_and_delimiters(int *n, char **s, t_lexer *lexer);
 t_lexer		*get_variable_expansion_lexer(char *input);
 
 //parser/expansion_variable/expand_variables
-
 int			get_variable_from_env(int n, t_lexer *lexer, t_global *global);
 int			get_variable_from_history(int n, t_lexer *lexer, t_global *global);
 void		get_variable_expansion_value(int n, t_lexer *lexer, t_global *global);
@@ -132,7 +131,6 @@ void		token_filler(t_token *tokens, char **lexer);
 void		advance_lexer_tokens(char ***lexer, t_token **tokens);
 void		token_maker(t_token *tokens, char **lexer);
 
-
 //parser/var_environment
 char		**copy_environment(char **env);
 char		*search_env(char *var, char **envp);
@@ -152,8 +150,6 @@ void		var_words_splitter(int *n, char **s, char ***lexer);
 char		**var_lexer_maker(char *s);
 void		put_dictionary_local(char *nv, t_global *g);
 int			check_key(char *key);
-
-
 
 //parser/utils
 void		destroy_global(t_global *global);
@@ -183,16 +179,17 @@ int			parent_process(t_global *global, int **fd, int n);
 int			execute_commands(t_global *global);
 
 //exec/infiles
-
-int			heredoc(char ***infiles, int fd_type);
-int			handle_infiles(char ***infiles, int infile_type, int fd_type);
-int			detect_input_file(char **infiles, int infile_type, int fd_type);
+int			exec_heredoc(char ***infiles, char *buffer, int fd_type, int fd);
+int			handle_heredoc(char ***infiles, int fd_type);
+int			handle_infile_and_heredoc(char ***infiles, int infile_type, int fd_type);
 int			get_infile(t_global *global, int n);
+int			fd_in_handler(t_global *global, int n, int fd_in, int fd_out);
 
 //exec/outfiles
 int			handle_outfiles(char *outfile, int write_flag, int infile_type);
 int			detect_output_file(char **outfiles, int infile_type, int fd_type);
 int			get_outfile(t_global *global, int n);
+int			fd_out_handler(t_global *global, int n, int fd_out);
 
 //exec/get_command
 char		**get_path(char **env);

@@ -56,3 +56,19 @@ int	get_outfile(t_global *global, int n)
 		return (1);
 	return (0);
 }
+
+int	fd_out_handler(t_global *global, int n, int fd_out)
+{
+	if (global->tokens[n].fd_out != 0)
+	{
+		if (get_outfile(global, n) != 0)
+			return (close(fd_out), 1);
+	}
+	else
+	{
+		if (dup2(fd_out, STDOUT_FILENO) == -1)
+			return (ft_putstr_fd(strerror(errno), 2), 1);
+	}
+	close(fd_out);
+	return (0);
+}
