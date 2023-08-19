@@ -181,17 +181,20 @@ int			child_process(t_global *global, int **fd, int n);
 int			parent_process(t_global *global, int **fd, int n);
 int			execute_commands(t_global *global);
 
+//exec/heredocs
+void		get_heredocs(char **heredoc, int fd);
+int			process_heredocs(t_global *global);
+
 //exec/infiles
-int			exec_heredoc(char ***infiles, char *buffer, int fd_type, int fd);
-int			handle_heredoc(char ***infiles, int fd_type);
-int			handle_infile_and_heredoc(char ***infiles, int infile_type, int fd_type);
-int			get_infile(t_global *global, int n);
+int			handle_heredocs(int n);
+int			handle_infiles(char ***infiles, int fd_type);
+int			get_input_file(t_global *global, int n);
 int			fd_in_handler(t_global *global, int n, int fd_in, int fd_out);
 
 //exec/outfiles
 int			handle_outfiles(char *outfile, int write_flag, int infile_type);
 int			detect_output_file(char **outfiles, int infile_type, int fd_type);
-int			get_outfile(t_global *global, int n);
+int			get_output_file(t_global *global, int n);
 int			fd_out_handler(t_global *global, int n, int fd_out);
 
 //exec/get_command

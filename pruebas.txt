@@ -22,3 +22,22 @@ prueba con | >> y más input
 cat << a << z  > infile5
 
 
+Pruebas Comandos MiniShell Pipes
+
+Problema con heredoc seguido de pipe.
+
+SIN wait(0);
+
+ls | <<a <<z | cat -e							OK (espera heredoc y no imprime nada)
+<<a <<z cat -e | cat -e							OK (espera heredoc e imprime q$$)
+
+ls | echo hola <<a <<z| cat -e					OK
+ls | <<a <<z cat -e | echo hola					NO (no espera heredoc y rompe terminal)
+
+
+CON wait(0);
+ls | <<a <<z | cat -e							NO (se queda esperando después de heredoc)
+<<a <<z cat -e | cat -e							NO (se queda esperando después de heredoc)
+
+ls | echo hola <<a <<z| cat -e					OK
+ls | <<a <<z cat -e | echo hola					OK

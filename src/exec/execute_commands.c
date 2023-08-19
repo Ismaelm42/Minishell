@@ -29,8 +29,8 @@ int	child_process(t_global *global, int **fd, int n)
 		return (1);
 	if (fd_out_handler(global, n, fd[n + 1][1]) != 0)
 		return (1);
-	if (buitlins(global, n) == 1)
-		return (1);
+	// if (buitlins(global, n) == 1)
+	// 	return (1);
 	if (command_line == NULL)
 		return (1);
 	else
@@ -51,11 +51,13 @@ int	parent_process(t_global *global, int **fd, int n)
 
 int	execute_commands(t_global *global)
 {
-	int		status;
+	// int		status;
 	int		**fd;
 	pid_t	*pid;
 	int		n;
 
+	if (process_heredocs(global) == 1)
+		return (1);
 	if (create_pipes_and_pid(global, &pid, &fd) == 1)
 		return (1);
 	n = 0;
@@ -69,14 +71,11 @@ int	execute_commands(t_global *global)
 				return (1);
 		n++;
 	}
-	n = 0;
-	printf("global->pipeline = %d\n", global->pipeline);
-	while (n < global->pipeline)
-	{
-		printf("n = %d\n", n);
-		waitpid(pid[n++], &status, 0);
-	}
-	printf("paso a proceso padre\n");
+	// n = 0;
+	// while (n < global->pipeline)
+	// 	waitpid(pid[n++], &status, WNOHANG);
+	//esto debería poder entrar en el proceso padre para ahorra líneas ya que
+	//tiene pocas líneas.
 	if (parent_process(global, fd, n) != 0)
 		return (1);
 	return (0);

@@ -187,3 +187,143 @@ env
 env
 export arg=pepe
 export arg=pepe
+ls -la | cat -e
+ls -la | cat -e >infile1
+<<a <<z | cat -e >infile1
+<<a <<z | cat -e >infile1
+<<a <<z | cat -e
+<infile grep infile | cat -e | echo 'estoy fuera'| echo 'aqui tmb'
+<infile1 grep infile | cat -e | echo 'estoy fuera'| echo 'aqui tmb'
+<infile3<infile1 grep infile | cat -e
+<infile3<infile1 grep infile | cat -e
+ls -la | cat -e
+ls -la | cat -e
+<<a <<z ls -la | cat -e
+<<a <<z | cat -e
+<<a <<z cat -e | echo hola
+<<a <<z cat -e | echo hola
+ls -la | echo hola
+ls -la
+< infile1 grep >> infile3 > infile2  << a <<z q > infile4 | echo hola | >>infile3 grep bin |echo hola2
+< infile1 grep >> infile3 > infile2  << a <<z q > infile4 | echo hola | >>infile3 grep bin |echo hola2
+< infile1 grep >> infile3 > infile2  << a <<z q > infile4 | echo hola | >>infile3 grep bin |echo hola2
+< infile1 grep >> infile3 > infile2  << a <<z q > infile4 | echo hola | >>infile3 grep bin |echo hola2
+< infile1 grep >> infile3 > infile2  << a <<z q > infile4 | echo hola | >>infile3 grep bin
+< infile1 grep >> infile3 > infile2  << a <<z q > infile4 | >>infile3 grep bin
+grep q <<a <<z > infile4 | >>infile3 grep bin
+grep q << a <<z > infile4 | >>infile3 grep bin
+grep q <<a <<z > infile4 | >>infile3 grep bin
+grep q <<a <<z | >>infile3 grep bin
+<<a <<z | >>infile3 grep bin
+<<a <<z | grep a
+<<a <<z | cat -e
+<<a <<z | cat -e
+<<a <<z | cat -e
+<<a <<z | cat -e
+<<a <<z | cat -e
+<<a <<z | cat -e
+<<a <<z | cat -e
+<<a <<z | cat -e
+<<a <<z | cat -e
+<<a <<z | cat -e
+ls -la| cat -e
+<<a <<z | cat -e
+<<a <<z | cat -e
+<<a <<z | cat -e
+<<a <<z | cat -e
+ls -l <<a <<z | cat -e
+<<a <<z cat -e| cat -e
+ls <<a <<z| cat -e
+ls | <<a <<z| cat -e
+ls | <<a <<z| cat -e
+ls | echo hola <<a <<z| cat -e
+ls | echo hola <<a <<z| cat -e
+ls | <<a <<z| cat -e
+ls | <<a <<z| cat -e
+ls | <<a <<z| cat -e
+ls | <<a <<z| cat -e
+ls | <<a <<z| cat -e
+ls | <<a <<z| cat -e
+ls | <<a <<z| cat -e
+ls | <<a <<z| cat -e
+ls | <<a <<z| cat -e
+ls | <<a <<z| cat -e
+ls | <<a <<z| cat -e
+ls | <<a <<z| cat -e
+ls | <<a <<z| cat -e
+ls | <<a <<z| cat -e
+ls | <<a <<z| cat -e
+ls | <<a <<z| cat -e
+ls | <<a <<z| cat -e
+ls | <<a <<z| cat -e
+ls | <<a <<z| cat -e
+ls | <<a <<z| cat -e
+ls | <<a <<z| cat -e
+ls | <<a <<z| cat -e
+ls | <<a <<z| cat -e
+ls | <<a <<z| cat -e
+ls | <<a <<z| cat -e
+ls | <<a <<z| cat -e
+ls | <<a <<z| cat -e
+ls | <<a <<z| cat -e
+ls | <<a <<z| cat -e
+ls | <<a <<z| cat -e
+ls | <<a <<z| cat -e
+ls | <<a <<z cat -e | echo hola
+ls | <<a <<z cat -e | echo hola
+ls | <<a <<z cat -e | echo hola
+ls | echo hola
+ls | <<a <<z cat -e | echo hola
+ls | <<a <<z grep a | echo hola
+ls | <<a <<z grep a | echo hola
+ls | <<a <<z grep a | echo hola
+ls | <<a <<z grep a | echo hola
+ls | <<a <<z grep a | echo hola
+ls | echo hola
+ls -la
+ls | <<a <<z | cat -e
+ls | <<a <<z cat -e | cat -e
+ls | <<a <<z cat -e | cat -e
+<<a <<z cat -e | cat -e
+<<a <<z cat -e | cat -e
+<<a <<z cat -e | cat -e
+ls cat -e | cat -e
+ls | cat -e | cat -e
+ls | cat -e | cat -e
+ls | cat -e | cat -e
+ls | cat -e | cat -e
+ls | cat -e | cat -e
+ls | cat -e | cat -e
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+<<a <<z
+<<a <<z
+<<a <<z
+<<a <<z | <<a <<z <<k
+<<a <<z | <<a <<z <<k
+<<a <<z | <<a <<z <<k
+<<a <<z | <<a <<z <<k
+<<a <<z | <<a <<z <<k
+<<a <<z | <<a <<z <<k
+
+ls | <<a <<z cat -e | echo hola
+ls | <<a <<z cat -e | echo hola
+ls | <<a <<z cat -e | echo hola
+ls | <<a <<z cat -e | echo hola
+ls | <<a <<z cat -e | echo hola
+ls | <<a <<z cat -e | echo hola
+ls | <<a <<z cat -e | echo hola
+< infile1 grep >> infile3 > infile2  << a <<z q > infile4 | echo hola | >>infile3 grep bin |echo hola2
+ls -la
+ls -la <<a <<z <<o| cat -e
+ls -la <<a <<z <<o| cat -e

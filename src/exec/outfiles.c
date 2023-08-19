@@ -45,7 +45,7 @@ int	detect_output_file(char **outfiles, int infile_type, int fd_type)
 	return (0);
 }
 
-int	get_outfile(t_global *global, int n)
+int	get_output_file(t_global *global, int n)
 {
 	int	fd_type;
 
@@ -61,7 +61,7 @@ int	fd_out_handler(t_global *global, int n, int fd_out)
 {
 	if (global->tokens[n].fd_out != 0)
 	{
-		if (get_outfile(global, n) != 0)
+		if (get_output_file(global, n) != 0)
 			return (close(fd_out), 1);
 	}
 	else
