@@ -81,12 +81,7 @@ void	check_last_token_file_fd(t_token *tokens, char **lexer, int n)
 	while (--i >= 0 && ft_strncmp(lexer[i], "|", ft_strlen(lexer[i])) != 0)
 	{
 		if (ft_strncmp(lexer[i], "<<", 2) == 0 && tokens->fd_in == 0)
-		{
-			if (tokens->heredoc[1] == NULL)
-				tokens->fd_in = -1;
-			else
-				tokens->fd_in = -2;
-		}
+			tokens->fd_in = -1;
 		else if (ft_strncmp(lexer[i], "<", 2) == 0 && tokens->fd_in == 0)
 			tokens->fd_in = 1;
 		if (ft_strncmp(lexer[i], ">>", 2) == 0 && tokens->fd_out == 0)

@@ -327,3 +327,9 @@ ls | <<a <<z cat -e | echo hola
 ls -la
 ls -la <<a <<z <<o| cat -e
 ls -la <<a <<z <<o| cat -e
+ls -la <<a <<z <<o| cat -e
+ <<a <<z <<o| cat -e
+ <<a <<z <<o cat -e
+ <<a <<z <<o cat -e
+< infile1 grep >> infile3 > infile2  << a <<z q > infile4 | echo hola | >>infile3 grep bin |echo hola2
+< infile1 grep >> infile3 > infile2  << a <<z q > infile4 | echo hola | >>infile3 grep bin |echo hola2
