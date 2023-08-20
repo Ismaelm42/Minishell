@@ -2,28 +2,23 @@
 
 int	handle_outfiles(char *outfile, int write_flag, int infile_type)
 {
-	int	fd_file;
+	int	fd;
 
 	if (infile_type == -1)
-		fd_file = open(outfile, O_RDWR | O_CREAT | O_APPEND, 0666);
+		fd = open(outfile, O_RDWR | O_CREAT | O_APPEND, 0666);
 	else if (infile_type == 1)
-		fd_file = open(outfile, O_RDWR | O_CREAT | O_TRUNC, 0666);
-	if (fd_file == -1)
+		fd = open(outfile, O_RDWR | O_CREAT | O_TRUNC, 0666);
+	if (fd == -1)
 	{
-		ft_putstr_fd("minishell: ", 2);
-		ft_putstr_fd(outfile, 2);
-		ft_putstr_fd(": ", 2);
-		ft_putstr_fd(strerror(errno), 2);
-		ft_putstr_fd("\n", 2);
-		close(fd_file);
-		return (1);
+		print_error(outfile, errno);
+		return (close(fd), 1);
 	}
 	if (write_flag == 1)
 	{
-		if (dup2(fd_file, STDOUT_FILENO) == -1)
-			return (ft_putstr_fd(strerror(errno), 2), 1);
+		if (dup2(fd, STDOUT_FILENO) == -1)
+			return (print_error("pipeline error", errno), 1);
 	}
-	close(fd_file);
+	close(fd);
 	return (0);
 }
 
@@ -67,7 +62,7 @@ int	fd_out_handler(t_global *global, int n, int fd_out)
 	else
 	{
 		if (dup2(fd_out, STDOUT_FILENO) == -1)
-			return (ft_putstr_fd(strerror(errno), 2), 1);
+			return (print_error("pipeline error", errno), 1);
 	}
 	close(fd_out);
 	return (0);

@@ -43,7 +43,7 @@ int	process_heredocs(t_global *global)
 			heredoc = ft_strjoin(".heredoc", ft_itoa(n), 2);
 			fd = open(heredoc, O_RDWR | O_CREAT | O_TRUNC, 0666);
 			if (fd == -1)
-				return (ft_putstr_fd(strerror(errno), 2), 1);
+				return (print_error("heredoc", errno), 1);
 			free(heredoc);
 			get_heredocs(global->tokens[n].heredoc, fd);
 			close(fd);

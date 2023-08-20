@@ -10,7 +10,7 @@ int	create_pipes_and_pid(t_global *global, pid_t **pid, int ***fd)
 	{
 		(*fd)[n] = (int *)ft_calloc(sizeof(int), 2);
 		if (pipe((*fd)[n]) == -1)
-			return (ft_putstr_fd("minishell: error creating pipe\n", 2), 1);
+			return (print_error("pipeline error", errno), 1);
 		n++;
 	}
 	*pid = (pid_t *)ft_calloc(sizeof(pid_t), global->pipeline);
@@ -35,15 +35,20 @@ int	child_process(t_global *global, int **fd, int n)
 		return (1);
 	else
 		execve(command_line[0], command_line, global->env);
-	print_execve_error(command_line[0], errno);
+	print_error(command_line[0], errno);
 	return (errno);
 }
 
 int	parent_process(t_global *global, int **fd, int n)
 {
+	// int		status;
+
+	// n = 0;
+	// while (n < global->pipeline)
+	// 	waitpid(pid[n++], &status, WNOHANG);
 	fd_closer(fd, global->pipeline, n);
 	if (dup2(fd[n][0], STDIN_FILENO) == -1)
-		return (ft_putstr_fd(strerror(errno), 2), 1);
+		return (print_error("pipeline error", errno), 1);
 	write_on_fd(fd[n][0], STDOUT_FILENO);
 	close(fd[n][0]);
 	return (0);
@@ -51,9 +56,8 @@ int	parent_process(t_global *global, int **fd, int n)
 
 int	execute_commands(t_global *global)
 {
-	// int		status;
-	int		**fd;
 	pid_t	*pid;
+	int		**fd;
 	int		n;
 
 	if (process_heredocs(global) == 1)
@@ -65,17 +69,12 @@ int	execute_commands(t_global *global)
 	{
 		pid[n] = fork();
 		if (pid[n] == -1)
-			return (ft_putstr_fd("minishell: error creating fork\n", 2), 1);
+			return (print_error("fork error", errno), 1);
 		if (pid[n] == 0)
 			if (child_process(global, fd, n) != 0)
 				return (1);
 		n++;
 	}
-	// n = 0;
-	// while (n < global->pipeline)
-	// 	waitpid(pid[n++], &status, WNOHANG);
-	//esto debería poder entrar en el proceso padre para ahorra líneas ya que
-	//tiene pocas líneas.
 	if (parent_process(global, fd, n) != 0)
 		return (1);
 	return (0);

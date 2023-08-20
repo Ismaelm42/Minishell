@@ -1,6 +1,28 @@
 #include "../../../include/minishell.h"
 
 /*
+Libera la memoria reservada en caso de fallo.
+*/
+char	**free_matrix(char **matrix)
+{
+	int	n;
+
+	n = 0;
+	if (matrix != NULL)
+	{
+		while (matrix[n] != NULL)
+		{
+			free(matrix[n]);
+			matrix[n] = NULL;
+			n++;
+		}
+		free(matrix);
+		matrix = NULL;
+	}
+	return (NULL);
+}
+
+/*
 Elimina la estructura global por completo.
 */
 void	destroy_global(t_global *global)

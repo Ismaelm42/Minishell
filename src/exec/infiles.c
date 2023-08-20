@@ -8,9 +8,14 @@ int	handle_heredocs(int n)
 	heredoc = ft_strjoin(".heredoc", ft_itoa(n), 2);
 	fd = open(heredoc, O_RDONLY, 0666);
 	if (fd == -1)
-		return (ft_putstr_fd(strerror(errno), 2), 1);
+		return (print_error("heredoc", errno), 1);
 	if (dup2(fd, STDIN_FILENO) == -1)
-		return (close(fd), free(heredoc), ft_putstr_fd(strerror(errno), 2), 1);
+	{
+		close(fd);
+		free(heredoc);
+		print_error("pipeline error", errno);
+		return (1);
+	}
 	close(fd);
 	free(heredoc);
 	return (0);
@@ -23,17 +28,13 @@ int	handle_infiles(char ***infiles, int fd_type)
 	fd_file = open(**infiles, O_RDONLY, 0666);
 	if (fd_file == -1)
 	{
-		ft_putstr_fd("minishell: ", 2);
-		ft_putstr_fd(**infiles, 2);
-		ft_putstr_fd(": ", 2);
-		ft_putstr_fd(strerror(errno), 2);
-		ft_putstr_fd("\n", 2);
+		print_error(**infiles, errno);
 		return (close(fd_file), 1);
 	}
 	if ((*infiles)[1] == NULL && fd_type == 1)
 	{
 		if (dup2(fd_file, STDIN_FILENO) == -1)
-			return (close(fd_file), ft_putstr_fd(strerror(errno), 2), 1);
+			return (close(fd_file), print_error("pipeline error", errno), 1);
 	}
 	close(fd_file);
 	return (0);
@@ -65,7 +66,7 @@ int	fd_in_handler(t_global *global, int n, int fd_in, int fd_out)
 	else
 	{
 		if (dup2(fd_in, STDIN_FILENO) == -1)
-			return (ft_putstr_fd(strerror(errno), 2), 1);
+			return (print_error("pipeline error", errno), 1);
 	}
 	close(fd_in);
 	return (0);

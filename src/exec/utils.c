@@ -43,10 +43,10 @@ void	fd_closer(int **fd, int pipeline, int n)
 	}
 }
 
-void	print_execve_error(char *command, int code_error)
+void	print_error(char *message, int code_error)
 {
 	ft_putstr_fd("minishell: ", 2);
-	ft_putstr_fd(command, 2);
+	ft_putstr_fd(message, 2);
 	ft_putstr_fd(": ", 2);
 	ft_putstr_fd(strerror(code_error), 2);
 	ft_putstr_fd("\n", 2);

@@ -68,7 +68,6 @@ int			lexer_counter(char *s);
 void		quoted_lexer_splitter(int *n, char **s, char ***lexer);
 void		redirection_lexer_splitter(int *n, char **s, char ***lexer);
 void		words_splitter(int *n, char **s, char ***lexer);
-char		**free_matrix(char **matrix);
 char		**lexer_maker(char *s);
 
 //parser/get_lexer/get_lexer
@@ -153,6 +152,7 @@ void		put_dictionary_local(char *nv, t_global *g);
 int			check_key(char *key);
 
 //parser/utils
+char		**free_matrix(char **matrix);
 void		destroy_global(t_global *global);
 void		free_global(t_global *global, int flag);
 
@@ -207,7 +207,7 @@ char		**get_exec_command(t_global *global, int n);
 void		access_error_message(char *error, char *message);
 char		*search_in_path(t_global *global, int n, char **path, char *cmd_path);
 void		fd_closer(int **fd, int pipeline, int n);
-void		print_execve_error(char *command, int code_error);
+void		print_error(char *message, int code_error);
 void		write_on_fd(int fd_in, int fd_out);
 
 //build_in

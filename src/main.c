@@ -21,12 +21,11 @@ int	main(int argc, char **argv, char **env)
 		//con la línea >>infile3 grep bin falla, ver por qué, quizás no tenga ninguna entrada para ejecutar grep y se esté rayando
 		//no entra en proceso padre porque se queda esperando al hijo. Quizás utilizar flag whonang por si se queda colgado????
 		//revisar
-		input = ft_strdup("< infile1 grep >> infile3 > infile2  << a <<z q > infile4 | echo hola | >>infile3 grep bin |echo hola2");
+		input = ft_strdup(" <<a <<z cat -e");
 		add_and_store_history(input);
 		get_struct_data(global, input);
 		execute_commands(global);
-
-		//free (input);
+		free_global(global, 1);
 	// }
 		return (0);
 }

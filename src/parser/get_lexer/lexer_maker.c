@@ -61,28 +61,6 @@ void	words_splitter(int *n, char **s, char ***lexer)
 }
 
 /*
-Libera la memoria reservada en caso de fallo.
-*/
-char	**free_matrix(char **matrix)
-{
-	int	n;
-
-	n = 0;
-	if (matrix != NULL)
-	{
-		while (matrix[n] != NULL)
-		{
-			free(matrix[n]);
-			matrix[n] = NULL;
-			n++;
-		}
-		free(matrix);
-		matrix = NULL;
-	}
-	return (NULL);
-}
-
-/*
 Se encarga de dividir en varios strings los argumentos pasados por terminal.
 */
 char	**lexer_maker(char *s)
