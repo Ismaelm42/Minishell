@@ -402,3 +402,42 @@ hola hola'"hola buenos dias"hola' hola
 hola hola"hola 'buenos' dias"hola hola
 hola"hola 'firulais' dias"hola
 hola"hola 'firulais' diashola
+cat 'inf'i'le'"1"
+cat 'inf'i'le'"1
+cat 'inf'i'le"1"
+cat 'infi'le'"1"
+cat 'infi'le'"1"
+cat 'infi'le'"1"
+cat 'infi'le'"1"
+
+
+      
+ls
+ls
+ls
+ls
+ls
+ls
+ls
+ls
+ls
+ls
+clear
+ls
+ls
+ks
+ls
+kdoekofe
+clear
+ls
+k
+kofef
+lsfwf
+>infile1
+>infile1
+ls
+ls -la | cat -e
+jifjiefe
+wdwfwfwf
+>infile1
+git add .

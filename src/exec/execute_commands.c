@@ -31,8 +31,6 @@ int	child_process(t_global *global, int **fd, int n)
 		return (1);
 	// if (buitlins(global, n) == 1)
 	// 	return (1);
-	if (command_line == NULL)
-		return (1);
 	else
 		execve(command_line[0], command_line, global->env);
 	print_error(command_line[0], errno);
@@ -57,9 +55,12 @@ int	parent_process(t_global *global, int **fd, int n)
 int	execute_commands(t_global *global)
 {
 	pid_t	*pid;
+	int		def_fd[2];
 	int		**fd;
 	int		n;
 
+	def_fd[0] = dup(STDIN_FILENO);
+	def_fd[1] = dup(STDOUT_FILENO);
 	if (process_heredocs(global) == 1)
 		return (1);
 	if (create_pipes_and_pid(global, &pid, &fd) == 1)
@@ -77,5 +78,7 @@ int	execute_commands(t_global *global)
 	}
 	if (parent_process(global, fd, n) != 0)
 		return (1);
+	dup2(def_fd[0], STDIN_FILENO);
+	dup2(def_fd[1], STDOUT_FILENO);
 	return (0);
 }

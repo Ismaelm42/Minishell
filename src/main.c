@@ -8,10 +8,11 @@ int	main(int argc, char **argv, char **env)
 	(void)argc;
 	(void)argv;
 	global = init_struct(env);
-	// while (1)
-	// {
-		// rl_on_new_line();
-		// input = readline(">> ");
+	while (1)
+	{
+		rl_on_new_line();
+		input = readline(">> ");
+		printf("input = %s\n", input);
 		// input = ft_strdup("ls -l | hola");
 		// add_and_store_history(input);
 		// get_struct_data(global, input);
@@ -21,12 +22,12 @@ int	main(int argc, char **argv, char **env)
 		//con la línea >>infile3 grep bin falla, ver por qué, quizás no tenga ninguna entrada para ejecutar grep y se esté rayando
 		//no entra en proceso padre porque se queda esperando al hijo. Quizás utilizar flag whonang por si se queda colgado????
 		//revisar
-		input = ft_strdup("hola\"hola 'firulais' diashola");
+		// input = ft_strdup("");
 		add_and_store_history(input);
 		get_struct_data(global, input);
-		// execute_commands(global);
-		free_global(global, 1);
-	// }
+		execute_commands(global);
+		free_global(global, 0);
+	}
 		return (0);
 }
 
