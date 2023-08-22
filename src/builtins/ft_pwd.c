@@ -13,5 +13,6 @@ void	ft_pwd(void)
 	}
 	printf("\nentra en building pwd\n");
 	ft_putstr_fd(dir, STDOUT_FILENO);
+	ft_putchar_fd('\n', STDOUT_FILENO);
 	free(dir);
 }

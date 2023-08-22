@@ -95,12 +95,7 @@ int	local_var(t_global *g, char *input)
 				print_stack(g->lst_local);
 				return (0);
 			}
-			else
-				return (1);
 		}
-		else
-			return (1);
 	}
-	else
-		return (1);
+	return (1);
 }

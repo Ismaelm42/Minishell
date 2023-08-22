@@ -501,3 +501,25 @@ $$
 $$
 $
 
+export ARG=JUAN
+pwd
+clear
+env
+export
+ARG=juan
+export $ARG
+export ARG=JUAN
+clear
+echo Hola"Alfonso"
+ls -l
+ls -la| cat -e >infile1
+ls -la | cat -e
+clear
+<<a <<z <<k cat -e
+<<z cat -e
+$$
+ARG=FIRULAIS
+cat $ARG
+echo $ARG
+ls
+export

@@ -66,9 +66,11 @@ int	search_key_and_replace(t_node *lst, char *key, char *val)
 	aux = lst;
 	while (aux)
 	{
-		if (ft_strncmp(key, aux->key, (size_t)ft_strlen(key)) == 0)
+		if (ft_strncmp(key, aux->key, (size_t)ft_strlen(key) + 1) == 0)
 		{
+			free(aux->value);
 			aux->value = val;
+			free (key); // hacerlo con strdup
 			return (0);
 		}
 		else

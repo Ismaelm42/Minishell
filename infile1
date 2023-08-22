@@ -1,20 +1,22 @@
-total 216
-drwxr-xr-x  19 imoro-sa  2022_malaga    646 Aug 22 17:02 .
-drwxr-xr-x   4 imoro-sa  2022_malaga    136 Aug 22 13:11 ..
--rw-r--r--   1 imoro-sa  2022_malaga  12460 Aug 22 17:03 .bash_history
-drwxr-xr-x  13 imoro-sa  2022_malaga    442 Aug 22 17:01 .git
--rw-r--r--   1 imoro-sa  2022_malaga      0 Aug 22 13:57 .heredoc0
--rw-r--r--   1 imoro-sa  2022_malaga   2175 Aug 22 13:13 Makefile
--rw-r--r--   1 imoro-sa  2022_malaga     11 Aug 22 13:13 README.md
-drwxr-xr-x   3 imoro-sa  2022_malaga    102 Aug 22 13:13 include
--rw-r--r--   1 imoro-sa  2022_malaga      0 Aug 22 17:03 infile1
--rw-r--r--   1 imoro-sa  2022_malaga      0 Aug 22 13:13 infile2
--rw-r--r--   1 imoro-sa  2022_malaga      0 Aug 22 13:13 infile3
--rw-r--r--   1 imoro-sa  2022_malaga      0 Aug 22 13:13 infile4
-drwxr-xr-x   7 imoro-sa  2022_malaga    238 Aug 22 13:13 info
-drwxr-xr-x  91 imoro-sa  2022_malaga   3094 Aug 22 17:02 libft
--rwxr-xr-x   1 imoro-sa  2022_malaga  74088 Aug 22 17:02 minishell
-drwxr-xr-x   3 imoro-sa  2022_malaga    102 Aug 22 17:02 objt
--rwxr-xr-x   1 imoro-sa  2022_malaga   1270 Aug 22 13:13 pruebas.txt
--rw-r--r--   1 imoro-sa  2022_malaga    221 Aug 22 13:13 readline.supp
-drwxr-xr-x   7 imoro-sa  2022_malaga    238 Aug 22 13:13 src
+entra en el menu de builtin
+entra en el menu de builtin$
+total 216$
+drwxr-xr-x  19 jroldan-  2022_malaga    646 Aug 22 18:27 .$
+drwxr-xr-x  27 jroldan-  2022_malaga    918 Aug 22 18:06 ..$
+-rw-r--r--   1 jroldan-  2022_malaga  12918 Aug 22 18:32 .bash_history$
+drwxr-xr-x  12 jroldan-  2022_malaga    408 Aug 22 18:06 .git$
+-rw-r--r--   1 jroldan-  2022_malaga      0 Aug 22 18:06 .heredoc0$
+-rw-r--r--   1 jroldan-  2022_malaga   2175 Aug 22 18:06 Makefile$
+-rw-r--r--   1 jroldan-  2022_malaga     11 Aug 22 18:06 README.md$
+drwxr-xr-x   3 jroldan-  2022_malaga    102 Aug 22 18:06 include$
+-rw-r--r--   1 jroldan-  2022_malaga      0 Aug 22 18:32 infile1$
+-rw-r--r--   1 jroldan-  2022_malaga      0 Aug 22 18:06 infile2$
+-rw-r--r--   1 jroldan-  2022_malaga      0 Aug 22 18:06 infile3$
+-rw-r--r--   1 jroldan-  2022_malaga      0 Aug 22 18:06 infile4$
+drwxr-xr-x   7 jroldan-  2022_malaga    238 Aug 22 18:06 info$
+drwxr-xr-x  91 jroldan-  2022_malaga   3094 Aug 22 18:09 libft$
+-rwxr-xr-x   1 jroldan-  2022_malaga  74176 Aug 22 18:27 minishell$
+drwxr-xr-x   3 jroldan-  2022_malaga    102 Aug 22 18:09 objt$
+-rwxr-xr-x   1 jroldan-  2022_malaga   1270 Aug 22 18:06 pruebas.txt$
+-rw-r--r--   1 jroldan-  2022_malaga    221 Aug 22 18:06 readline.supp$
+drwxr-xr-x   7 jroldan-  2022_malaga    238 Aug 22 18:06 src$

@@ -67,7 +67,25 @@ void	print_stack(t_node *list)
 	aux = list;
 	while (aux != NULL)
 	{
-		printf("declare -x %s=%s\n", aux->key, aux->value);
+		if (aux->value != NULL)
+		{
+			ft_putstr_fd("declare -x ", STDOUT_FILENO);
+			ft_putstr_fd(aux->key, STDOUT_FILENO);
+			ft_putchar_fd('=', STDOUT_FILENO);
+			ft_putchar_fd('\"', STDOUT_FILENO);
+			ft_putstr_fd(aux->value, STDOUT_FILENO);
+			ft_putchar_fd('\"', STDOUT_FILENO);
+			ft_putchar_fd('\n', STDOUT_FILENO);
+		}
+		else
+		{
+			ft_putstr_fd("declare -x ", STDOUT_FILENO);
+			ft_putstr_fd(aux->key, STDOUT_FILENO);
+			ft_putchar_fd('=', STDOUT_FILENO);
+			ft_putchar_fd('\"', STDOUT_FILENO);
+			ft_putchar_fd('\"', STDOUT_FILENO);
+			ft_putchar_fd('\n', STDOUT_FILENO);
+		}
 		aux = aux -> next;
 	}	
 }
