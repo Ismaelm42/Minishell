@@ -1,6 +1,6 @@
 #include "../../../include/minishell.h"
 
-char	*check_quotes(char *s)
+char	*delete_quotes_substr(char *s)
 {
 	char	*substr;
 	char	c;
@@ -13,17 +13,19 @@ char	*check_quotes(char *s)
 	substr = (char *) malloc(sizeof(char) * ft_strlen(s));
 	while (s[j] != '\0')
 	{
-		if ((s[j] == '\'' || s[j] == '\"') && c == 0)
-			c = s[j++];
-		if (s[j] == c)
+		if (c != 0 && c == s[j])
 		{
-			j++;
 			c = 0;
+			j++;
 		}
+		if (c == 0 && (s[j] == '\'' || s[j] == '\"'))
+			c = s[j++];
 		substr[i++] = s[j++];
 	}
 	substr[i] = '\0';
-	return (substr);
+	if (c != 0)
+		return (free(substr), s);
+	return (free(s), substr);
 }
 
 /*
@@ -76,7 +78,7 @@ void	words_splitter(int *n, char **s, char ***lexer)
 			|| (*s)[length] == '<' || (*s)[length] == '>')
 			break ;
 	}
-	(*lexer)[*n] = check_quotes(ft_substr(*s, 0, length, 0));
+	(*lexer)[*n] = delete_quotes_substr(ft_substr(*s, 0, length, 0));
 	*n += 1;
 	while (length -- > 0)
 	(*s)++;

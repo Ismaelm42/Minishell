@@ -353,3 +353,52 @@ echo <<a <<z | wc -l | cat -e > infile1
 'hola''problema'hola'hola''bububu'
 'hola''hola'
 'holahola
+'holahola
+'hola''hola'
+'hola''hola'
+'hola''hola'
+'hola''hola'
+'hola''hola'
+'hola''hola'
+'hola''hola'
+'hola''hola'
+'hola''hola'
+'hola''hola'
+'hola''hola'
+'hola''hola'
+'hola''hola'
+'hola''hola'
+'hola''hola'
+'hola''hola'
+'hola''hola'
+'hola''hola'
+'hola''hola'
+'holahola
+'holahola
+  'holahola
+  'holahola
+  'holahola
+  'holahola
+  'holahola
+  'holahola
+  'hola''hola'
+  'hola'hola
+  'hola"hola2"'hola
+  'hola"hola2"'hola
+  'holahola2'hola
+  'holahola2''hola'
+  'holahola2''hola'
+  'holahola2''hola
+  'holahola2''hola
+  'holahola2''hola'
+  'holahola2''hola'
+  'holahola2'hola'
+  'holahola2 'hola' hola
+  'holahola2 'hola' hola'
+hola 'hola' hola
+hola 'hola'hola hola
+hola hola'hola' hola
+hola hola'"hola buenos dias"hola' hola
+hola hola"hola 'buenos' dias"hola hola
+hola"hola 'firulais' dias"hola
+hola"hola 'firulais' diashola
