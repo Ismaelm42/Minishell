@@ -95,7 +95,6 @@ char	*expansion_variable(char *input, t_global *global)
 		free_expansion_lexer(lexer, 1);
 		if (variable_expansion_counter(new_input) != 0)
 			new_input = expansion_variable(new_input, global);
-		printf("%s\n", new_input);
 		return (new_input);
 	}
 	else

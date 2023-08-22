@@ -441,3 +441,63 @@ jifjiefe
 wdwfwfwf
 >infile1
 git add .
+ARG=infile1
+ls -la >$ARG
+echo $$
+$$
+$$
+clear
+$$
+clear
+ls
+ls
+clear
+$$
+ls
+clear
+$$
+ARG=pepe
+$$
+$$
+$$
+clear
+$$
+$$
+$$
+$$
+$$
+echo $$
+ls
+$$
+$$
+$$
+$$
+ls |
+cat -e
+ls |
+cat -e |
+echo hola
+ls |
+cat -e
+clear
+$$
+$$
+$$
+$$
+,ñsa,.ax | echo
+,ñsa,.ax | cat
+ARG=10301
+$ARG
+echo $ARG
+exit
+echo $SHELL
+echo $RANDOM
+echo $RANDOM
+echo $HOSTNAME
+echo $USER
+$$
+clear
+$$
+$$
+$
+
