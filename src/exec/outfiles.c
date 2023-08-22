@@ -6,7 +6,7 @@ int	handle_outfiles(char *outfile, int write_flag, int infile_type)
 
 	if (infile_type == -1)
 		fd = open(outfile, O_RDWR | O_CREAT | O_APPEND, 0666);
-	else if (infile_type == 1)
+	if (infile_type == 1)
 		fd = open(outfile, O_RDWR | O_CREAT | O_TRUNC, 0666);
 	if (fd == -1)
 	{

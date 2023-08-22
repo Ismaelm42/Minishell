@@ -1,37 +1,29 @@
 #include "../../../include/minishell.h"
 
-/*
-Esta función se encarga de gestionar las comillas simples y dobles.
-*/
-void	quoted_lexer_splitter(int *n, char **s, char ***lexer)
+char	*check_quotes(char *s)
 {
+	char	*substr;
 	char	c;
-	int		length;
+	int		i;
+	int		j;
 
-	length = 0;
-	while (1)
+	i = 0;
+	j = 0;
+	c = 0;
+	substr = (char *) malloc(sizeof(char) * ft_strlen(s));
+	while (s[j] != '\0')
 	{
-		c = 0;
-		if ((*s)[length] == '\'' || (*s)[length] == '\"')
+		if ((s[j] == '\'' || s[j] == '\"') && c == 0)
+			c = s[j++];
+		if (s[j] == c)
 		{
-			c = (*s)[length++];
-			while ((*s)[length] != c && (*s)[length] != '\0')
-				length++;
-			length++;
+			j++;
+			c = 0;
 		}
-		while ((*s)[length] != '\0' && (*s)[length] != ' '
-			&& (*s)[length] != '\t' && (*s)[length] != '|'
-			&& (*s)[length] != '<' && (*s)[length] != '>')
-			length++;
-		if ((*s)[length] == '\0' || (*s)[length] == ' '
-			|| (*s)[length] == '\t' || (*s)[length] == '|'
-			|| (*s)[length] == '<' || (*s)[length] == '>')
-			break ;
+		substr[i++] = s[j++];
 	}
-	(*lexer)[*n] = ft_substr(*s, 0, length, 0);
-	*n += 1;
-	while (length -- > 0)
-		(*s)++;
+	substr[i] = '\0';
+	return (substr);
 }
 
 /*
@@ -84,7 +76,7 @@ void	words_splitter(int *n, char **s, char ***lexer)
 			|| (*s)[length] == '<' || (*s)[length] == '>')
 			break ;
 	}
-	(*lexer)[*n] = ft_substr(*s, 0, length, 0);
+	(*lexer)[*n] = check_quotes(ft_substr(*s, 0, length, 0));
 	*n += 1;
 	while (length -- > 0)
 	(*s)++;
@@ -102,13 +94,11 @@ char	**lexer_maker(char *s)
 	n = 0;
 	size = lexer_counter(s);
 	printf("size = %d\n\n", size);
-	lexer = (char **)calloc(sizeof(char **), size + 1);
+	lexer = (char **)ft_calloc(sizeof(char **), size + 1);
 	while (n < size)
 	{
 		while (*s == ' ' || *s == '\t')
 			s++;
-		// if (*s == '\'' || *s == '"')
-		// 	quoted_lexer_splitter(&n, &s, &lexer);
 		if (*s == '<' || *s == '>' || *s == '|')
 			redirection_lexer_splitter(&n, &s, &lexer);
 		else

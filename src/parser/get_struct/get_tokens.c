@@ -14,6 +14,12 @@ int	get_tokens(char *input, t_global *global)
 	lexer = get_lexer(input, global);
 	if (lexer == NULL)
 		return (-3);
+	int i = 0;
+	while (lexer[i] != NULL)
+	{
+		printf("*lexer = %s\n", lexer[i]);
+		i++;
+	}
 	return_n = syntax_error_check(lexer);
 	if (return_n != 0)
 		return (free_matrix(lexer), return_n);

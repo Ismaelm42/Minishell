@@ -342,3 +342,14 @@ echo <<a <<z | wc -l | cat -e > infile1
  <<a <<z cat -e | echo hello
  <<a <<z cat -e
  <<a <<z cat -e
+ <<a <<z cat -e
+ ls -la | hola
+ hola'hola' 
+ hola'hola 
+ hola'hola''a' 
+ hola'hola''bububu' 
+'hola'hola'hola''bububu'
+'hola''problema'hola'hola''bububu'
+'hola''problema'hola'hola''bububu'
+'hola''hola'
+'holahola
