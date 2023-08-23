@@ -13,6 +13,9 @@ char	*search_in_path(t_global *global, int n, char **path, char *cmd_path)
 	int	i;
 
 	i = 0;
+	free(cmd_path);
+	cmd_path = ft_strjoin(path[i], "/", 0);
+	cmd_path = ft_strjoin(cmd_path, global->tokens[n].command, 1);
 	while (1)
 	{
 		ret = check_cmd_path(global->tokens[n].command, cmd_path, path[i], 1);

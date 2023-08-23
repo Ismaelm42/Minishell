@@ -23,15 +23,15 @@ int	child_process(t_global *global, int **fd, int n)
 {
 	char	**command_line;
 
-	if (check_built_ins(global, n) == 1)
+	// if (check_built_ins(global, n) == 1)
 		command_line = get_exec_command(global, n);
 	fd_closer(fd, global->pipeline, n);
 	if (fd_in_handler(global, n, fd[n][0], fd[n + 1][1]) != 0)
 		return (1);
 	if (fd_out_handler(global, n, fd[n + 1][1]) != 0)
 		return (1);
-	if (check_built_ins(global, n) == 0)
-		built_ins(global, n);
+	// if (check_built_ins(global, n) == 0)
+	// 	built_ins(global, n);
 	else
 		execve(command_line[0], command_line, global->env);
 	print_error(command_line[0], errno);

@@ -70,6 +70,10 @@ void		redirection_lexer_splitter(int *n, char **s, char ***lexer);
 void		words_splitter(int *n, char **s, char ***lexer);
 char		**lexer_maker(char *s);
 
+//parser/get_lexer/utils
+char		reject_quotes(char *s, char *substr, int *i, int *j);
+void		check_quotes(char *s, int *length);
+
 //parser/get_lexer/get_lexer
 char		**get_lexer(char *input, t_global *global);
 
@@ -105,7 +109,7 @@ char		*return_line(char *static_buffer);
 char		*return_static(char *static_buffer);
 
 //parser/get_struct/check_syntax
-int			quotes_check(char **lexer, int n);
+int			quotes_check(char *lexer);
 int			pipes_and_redirections_check(char **lexer, int n);
 int			next_lexer_check(char **lexer, int n);
 int			syntax_error_check(char **lexer);
@@ -213,9 +217,9 @@ void		write_on_fd(int fd_in, int fd_out);
 //build_in
 void		ft_pwd(void);
 void		ft_env(t_global *g);
-void		ft_export(t_global *g, int n);
+void		ft_export(t_global **g, int n);
 int			check_built_ins(t_global *g, int n);
 int			built_ins(t_global *g, int n);
 
+
 #endif
-    

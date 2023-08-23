@@ -6,6 +6,7 @@ SRC =	src/main.c																\
 		src/parser/get_lexer/get_lexer.c										\
 		src/parser/get_lexer/lexer_counter.c									\
 		src/parser/get_lexer/lexer_maker.c										\
+		src/parser/get_lexer/utils.c											\
 		src/parser/utils/gnl.c													\
 		src/parser/utils/utils.c												\
 		src/parser/expansion_variable/get_variables.c							\
@@ -28,7 +29,7 @@ SRC =	src/main.c																\
 		src/builtins/ft_pwd.c													\
 		src/builtins/ft_env.c													\
 		src/builtins/ft_export.c												\
-		src/builtins/util_builtin.c												\
+		src/builtins/utils_built_ins.c											\
 		src/exec/execute_commands.c												\
 		src/exec/get_command.c													\
 		src/exec/heredocs.c														\

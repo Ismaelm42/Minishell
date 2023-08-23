@@ -3,16 +3,32 @@
 /*
 Controla los errores de comillas no cerradas
 */
-int	quotes_check(char **lexer, int n)
+int	quotes_check(char *lexer)
 {
-	if ((lexer[n][0] == '\'' && lexer[n][ft_strlen(lexer[n]) - 1] != '\'')
-		|| (lexer[n][0] == '\"' && lexer[n][ft_strlen(lexer[n]) - 1] != '\"')
-		|| ((lexer[n][0] == '\'' || lexer[n][0] == '\"')
-		&& (ft_strlen(lexer[n]) - 1 == 0)))
+	char	c;
+	int		i;
+
+	i = 0;
+	c = 0;
+	while (lexer[i] != '\0')
 	{
-		ft_putstr_fd("minishell: Syntax error: unexpected end of file\n", 2);
-		return (-1);
+		while (lexer[i] != '\'' && lexer[i] != '\"' && lexer[i] != '\0')
+			i++;
+		if (lexer[i] == '\'' || lexer[i])
+		{
+			c = lexer[i++];
+			while (lexer[i] != c && lexer[i] != '\0')
+				i++;
+			if (lexer[i] == c)
+			{
+				c = 0;
+				i++;
+			}
+		}
 	}
+	if (c != 0)
+		return (ft_putstr_fd("minishell: \
+		Syntax error: unexpected end of file\n", 2), -1);
 	return (0);
 }
 
@@ -67,7 +83,7 @@ int	syntax_error_check(char **lexer)
 	n = 0;
 	while (lexer[n] != NULL)
 	{
-		if (quotes_check(lexer, n) == -1
+		if (quotes_check(lexer[n]) == -1
 			|| pipes_and_redirections_check(lexer, n) == -1)
 			return (-1);
 		if (next_lexer_check(lexer, n) != 0)
