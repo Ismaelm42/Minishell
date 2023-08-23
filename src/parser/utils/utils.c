@@ -58,8 +58,8 @@ void	free_global(t_global *global, int flag)
 		free(global->tokens);
 		global->tokens = NULL;
 	}
-	if (global->input != NULL)
-		free(global->input);
+	// if (global->input != NULL)
+	// 	free(global->input);
 	global->pipeline = 0;
 	if (flag == 1)
 		destroy_global(global);

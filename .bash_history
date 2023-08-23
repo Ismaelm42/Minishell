@@ -573,3 +573,6871 @@ exit
 a
 export aaa
 export
+export AA AB=JUAN AA=pepe
+export
+clear
+ARG=pepe
+echo $ARG
+ARG=pepita
+echo $ARG
+export AAA
+export
+kk
+pwd
+pwd
+env
+ls -l |
+>outfile42
+clear
+ls -l|
+>outfile
+ls -l |
+>outfile42
+ls
+export AAA
+clear
+export
+ls -l | >outfiel
+ls -l  >outfiel
+ls -l  | wc -l 
+ls -l  |
+wc -l
+clear
+ls -l | wc -l
+ls -l | wc -l
+ls -l |
+wc -l
+
+ls -l |
+wc -l
+ls -l
+wc -l
+clear
+ls -l |
+wc
+clear
+ls -l | wc
+ls -l |wc 
+ls -l | wc 
+ls -l
+wc -l
+wc
+export AAA=pepe
+export
+export
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+ls -l | wcexport AAA=pepe
+
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+ls -l | wc
+ls -l | >outfile
+clear
+ls
+ls -l | wc
+ls -l |
+wc
+export AAA
+clear
+export
+ls -l
+ls -l | wc
+wc <infile1
+chdir 777 infile1
+chmod 777 infile1
+chmod 777 <infile1
+ls -l | wc -l
+chmod 777 infile1
+wc -l infile1
+wc -l <infile1
+chmod 777 infile1
+wc -l <infile1
+ls -l | wc -l
+ls -l
+clear
+ls -la | wc -l 
+ls -la |
+wc -l
+export AAA
+export
+clear
+export AAA
+export AAA
+export
+clear
+export AAA=pepe
+export
+export
+export AAA=pepe
+export
+export
+export AAA=pepe
+export
+export AA1=ISMA
+export
+export
+export
+export
+export
+export
+export AA1=ISMA
+export
+export
+export
+export
+export
+export
+export
+export AA1=ISMA
+export
+export
+export
+export
+export
+export
+export AA1=ISMA
+export
+export
+export
+export
+export
+export
+export AAA=pepe AA!1=ISMA
+export AAA=pepe AA!1=ISMA
+export
+export
+export AAA=pepe AA!1=ISMA
+export
+export
+export
+export
+export
+export
+export AAA=pepe AA!1=ISMA
+export
+export
+export
+export
+export
+export
+export AAA=pepe AA!1=ISMA
+export
+export
+export
+export
+export
+export
+export AAA=pepe AA!1=ISMA
+export
+export
+export
+export
+export
+export
+export AAA=pepe AA1=ISMA
+export
+export
+export
+export
+export
+export
+export AAA=pepe AA1=ISMA
+export
+export
+export AAA=pepe AA1=ISMA
+export
+export
+export
+export
+export
+export
+export AAA=pepe AA1=ISMA
+export
+export
+export AAA=pepe AA1=ISMA
+export
+export
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMA
+export AAA=pepe AA1=ISMAls
+export AAA
+export
+export
+export AAA=BBB
+export
+export AA=BB
+export >out
+open .
+export
+export AAA
+export
+export ARG=JUAN
+export
+ls 
+ls -l 
+exit
+ls -l | wc -l
+wc 
+cat out
+cat outexit
+export 
+export ARG=JUAN
+export
+pwd
+export AAA=pepe AA1=ISMA
+export
+export
+export AAA=pepe AA1=ISMA
+export AA3=LOLA
+export
+export
+export AA3=LOLA
+export
+export
+export AAA=pepe AA1=ISMA
+export AA3=LOLA
+export
+export
+export AA3=LOLA
+export
+export
+export AAA=pepe AA1=ISMA
+export AA3=LOLA
+export
+export
+export AA3=LOLA
+export
+export
+export AAA=pepe AA1=ISMA
+export AA3=LOLA
+export
+export
+export AA3=LOLA
+export
+export
+export AAA=pepe AA1=ISMA
+export AA3=LOLA
+export
+export
+export AA3=LOLA
+export
+export
+ls -l
+echo juan
+echo pepe
+ls -l
+echo juan
+echo pepe
+ls -l
+echo juan
+echo pepe
+ls -l
+echo juan
+echo pepe
+pwd
+pwd
+pwd
+pwd
+pwd
+pwd
+pwd
+pwd
+pwd
+pwd
+pwd
+pwd
+pwd
+pwd
+ls -l
+ls -l
+ls -l
+ls -l
+ls -l
+ls -l
+ls -l
+ls -l
+pwd
+pwd
+pwd
+pwd
+pwd
+pwd
+pwd
+pwd
+export AAA
+export
+export AAA=NANA
+export
+export AAA=NANA ARG=PEPE
+export
+export AAA=NANA ARG=PEPE
+export AAA=NANA ARG=PEPE
+export
+export AAA=NANA ARG=PEPE
+export
+export AAA=NANA ARG=PEPE
+export
+export AAA
+export
+clear
+export
+export AAA
+export
+ls -la
+clear
+man cout
+man count
+wc $HOME
+ls $HOME
+clear
+man ls
+clear
+ARG=pepe
+export
+export
+export ARG=pepe
+export
+pwd

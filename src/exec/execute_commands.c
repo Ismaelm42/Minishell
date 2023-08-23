@@ -30,8 +30,8 @@ int	child_process(t_global *global, int **fd, int n)
 		return (1);
 	if (fd_out_handler(global, n, fd[n + 1][1]) != 0)
 		return (1);
-	if (built_ins(global, n) == 1)
-		return (1);
+	if (check_built_ins(global, n) == 0)
+		built_ins(global, n);
 	else
 		execve(command_line[0], command_line, global->env);
 	print_error(command_line[0], errno);

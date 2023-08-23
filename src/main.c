@@ -12,11 +12,30 @@ int	main(int argc, char **argv, char **env)
 	{
 		rl_on_new_line();
 		input = readline(">> ");
-		// input = ft_strdup("ls -l | hola");
+		//input = ft_strdup("export AAA=NANA ARG=PEPE");
 		add_and_store_history(input);
 		get_struct_data(global, input);
 		execute_commands(global);
 		free_global(global, 0);
+
+		// input = ft_strdup("export");
+		// add_and_store_history(input);
+		// get_struct_data(global, input);
+		// execute_commands(global);
+		// free_global(global, 0);
+
+		// input = ft_strdup("pwd");
+		// add_and_store_history(input);
+		// get_struct_data(global, input);
+		// execute_commands(global);
+		// free_global(global, 0);
+
+
+		// input = ft_strdup("export");
+		// add_and_store_history(input);
+		// get_struct_data(global, input);
+		// execute_commands(global);
+		//free_global(global, 0);
 	}
 	return (0);
 }

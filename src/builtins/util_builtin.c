@@ -2,7 +2,7 @@
 
 int	check_built_ins(t_global *g, int n)
 {
-	printf("comando = %s\n", g->tokens[n].command);
+	//printf("comando = %s\n", g->tokens[n].command);
 	if (ft_strncmp(g->tokens[n].command, "pwd", 4) == 0 
 		|| (ft_strncmp(g->tokens[n].command, "env", 4) == 0)
 		|| (ft_strncmp(g->tokens[n].command, "export", 7) == 0))

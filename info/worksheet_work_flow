@@ -1,7 +1,41 @@
 cuando  get_exec_command no tiene valor ( no encuentra ejecutable o no lo busca)
 
-error readline >> >>
+error readline >> >>expp
 
 error cuando comando ""argumento // comillas vacias en cualquier posicion
 
 zsh: segmentation fault cuando input vacio  
+
+
+ // PRUEBAS REALIZADAS  comentando el gree global input de la funcion:
+ 	void	free_global(t_global *global, int flag)
+
+	// if (global->input != NULL)
+	// 	free(global->input);
+
+>> ls -l | wc -l
+comando = ls
+comando = wc
+minishell: wc: Permission denied
+
+>> chmod 777 infile1
+comando = chmod
+>> wc -l <infile1
+comando = wc
+minishell: wc: Permission denied
+
+>> ls -l | wc -l
+comando = ls
+comando = wc
+minishell: wc: Permission denied
+>> 
+
+>> ls -la |
+>> wc -l
+comando = ls
+comando = wc
+minishell: wc: Permission denied
+>> 
+
+
+// resumiendo wc es el que no funciona , 
