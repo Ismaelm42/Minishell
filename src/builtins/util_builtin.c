@@ -21,7 +21,10 @@ int	built_ins(t_global *g, int n)
 	else if (ft_strncmp(g->tokens[n].command, "env", 4) == 0)
 		ft_env(g);
 	else if (ft_strncmp(g->tokens[n].command, "export", 7) == 0)
+	{
 		ft_export(g, n);
+		//print_stack(g->lst_env);
+	}	
 	else
 		flag = 0;
 	return (flag);

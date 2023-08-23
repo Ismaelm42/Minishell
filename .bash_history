@@ -7441,3 +7441,23 @@ export
 export ARG=pepe
 export
 pwd
+export
+export AAA=!
+export AAA=123
+export
+export
+export AAA=ppp
+export
+export
+export ARG=109
+export
+export ARF=42
+export ARR
+export ARR=90 APP=pp A01=109
+export
+export = 
+
+export ARG=pepe
+export
+export ARG=pepe
+export

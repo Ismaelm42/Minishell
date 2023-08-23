@@ -213,9 +213,9 @@ void		write_on_fd(int fd_in, int fd_out);
 //build_in
 void		ft_pwd(void);
 void		ft_env(t_global *g);
-void		ft_export(t_global **g, int n);
+void		ft_export(t_global *g, int n);
 int			check_built_ins(t_global *g, int n);
 int			built_ins(t_global *g, int n);
 
-
 #endif
+    
