@@ -1,3 +1,7 @@
 cuando  get_exec_command no tiene valor ( no encuentra ejecutable o no lo busca)
+
 error readline >> >>
 
+error cuando comando ""argumento // comillas vacias en cualquier posicion
+
+zsh: segmentation fault cuando input vacio  

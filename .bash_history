@@ -523,3 +523,53 @@ cat $ARG
 echo $ARG
 ls
 export
+ls
+cat infile1""
+cat in'fi'le1
+cat infi''le1
+exit
+export
+clear
+export JUAN
+env
+clear
+pwd
+export JUAN
+clear
+export
+clear
+export anton
+export
+clear
+export AAA ABC= ACD=firulais AAA=perico
+clear
+expprt
+export
+make
+ARG=pepe
+echo $ARG
+echo $ARG" se fue"
+echo $ARG" se fue" por pan
+clear
+ARG=juan
+ARG=pepe
+ARG=JUAN
+ARG=pepe
+ARG=juan
+echo $ARG
+echo $ARG
+echo $ARG se fue "por pan"
+export
+clear
+expor AAA ABC= AAA=pepe
+export AAA ABC= AAA=pepe
+clear
+export
+exit
+
+  
+""
+"""
+a
+export aaa
+export

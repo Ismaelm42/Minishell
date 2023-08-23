@@ -11,7 +11,6 @@ int	check_built_ins(t_global *g, int n)
 		return (1);
 }
 
-
 int	built_ins(t_global *g, int n)
 {
 	int	flag;

@@ -70,7 +70,7 @@ int	search_key_and_replace(t_node *lst, char *key, char *val)
 		{
 			free(aux->value);
 			aux->value = val;
-			free (key); // hacerlo con strdup
+			//free (key); // hacerlo con strdup
 			return (0);
 		}
 		else

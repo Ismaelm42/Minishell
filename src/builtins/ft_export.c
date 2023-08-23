@@ -53,20 +53,20 @@ parametro tiene comillas peta y noo debe petar
 
 static void	action_export(t_global *g, int n, int i)
 {
-	if (ft_strrchr(g->tokens[n].arg[i], '=') == NULL) // si no tiene = buscar si ya esta, si esta no hace nada, si no esta la añade
+	if (ft_strrchr(g->tokens[n].arg[i], '=') == NULL)
 	{
-		//if (search_key_and_replace(g->lst_env, g->tokens[n].arg[i], NULL) == -1)
-		if (search_key(g->lst_env, g->tokens[n].arg[i]) != NULL)
+		if (search_key(g->lst_env, g->tokens[n].arg[i]) == NULL)
 			insert_last(&g->lst_env, create_nodo(g->tokens[n].arg[i], NULL));
-	}	
+	}
 	else
 	{
-		if (search_key_and_replace(g->lst_env, extract_clue(g->tokens[n].arg[i]), extract_value(g->tokens[n].arg[i])) == -1)
+		if (search_key_and_replace(g->lst_env, extract_clue(g->tokens[n].arg[i])\
+		, extract_value(g->tokens[n].arg[i])) == -1)
 		{	
-			insert_last(&g->lst_env, create_nodo(extract_clue(g->tokens[n].arg[i]), extract_value(g->tokens[n].arg[i])));
+			insert_last(&g->lst_env, create_nodo(extract_clue(g->tokens[n].arg[i])\
+			, extract_value(g->tokens[n].arg[i])));
 		}
 	}
-
 }
 
 void	ft_export(t_global *g, int n)
