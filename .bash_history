@@ -7496,3 +7496,113 @@ pwd
 pwd
 pwd
 pwd
+pwd
+pwd
+pwd
+pwd
+pwd
+pwd
+ls -l | cat -e
+ls -l | cat -e | echo hola
+ls -l | cat -e | echo hola | <<a <<z cat -e
+ls -l | cat -e | echo hola | <<a <<z cat -e
+pwd
+pwd
+pwd
+pwd
+pwd
+pwd
+pwd
+ls -la | cat -e
+ls -la | cat -e | echo hola
+ls -la | cat -e | echo hola'hola2'
+ls -la | cat -e
+echo hola >infile1
+ls -la | cat -e
+ls
+ls -la
+echo hola
+echo joder
+echo hola >outfile1
+echo buenos días!
+ls -la | wc
+ls
+ls -la
+<<a <<z <infile1 cat -e
+ls -la
+ls
+ls
+ls
+ls
+ls
+
+ls
+ls
+ls
+ls
+ls
+ls
+ls
+echo hola
+ls
+ls -la
+echo hola
+ls
+ls -la | cat -e
+ls
+ls
+ls -la
+<<a <<z cat -e
+ls -la
+ls
+ls cat
+ushua fefe
+ls
+ls
+ls -la
+ls
+ls -la
+ls
+ls -la
+echo hola
+ls -la | cat -e | >outfile1
+>outfile1
+ls
+<infile1
+clear
+<infile1 cat -e
+ls -la >>infile1
+<infile1 cat -e
+echo ''>infile1
+ls
+ls
+clear
+ls
+echo ''>infile1
+echo ''>infile1
+echo ''>infile1
+echo ''>infile1
+ls
+ls -la
+ls
+echo ''>outfile
+echo ''>outfile
+echo '' >outfile
+echo '' >outfile
+echo '' > outfile
+echo 'hola' > outfile
+echo 'hola' > outfile
+echo  > outfile
+echo 'hola'hola > outfile
+echo 'hola'hola > outfile
+echo 'hola'hola > outfile
+echo 'hola'hola > outfile
+echo 'hola'hola > outfile
+echo 'hola'hola > outfile
+echo 'hola'hola > outfile
+echo 'hola'hola > outfile
+echo 'hola'hola > outfile
+echo 'hola'hola > outfile
+echo 'hola'hola > outfile
+echo 'hola'hola > outfile
+echo 'hola'hola > outfile

@@ -10,6 +10,12 @@ t_global	*init_struct(char **env)
 	global = (t_global *)ft_calloc(sizeof(t_global), 1);
 	global->env = copy_environment(env);
 	global->lst_env = init_list();
+	global->fd_stdin = dup(STDIN_FILENO);
+	if (global->fd_stdin == -1)
+		return (free_global(global, 1), NULL);
+	global->fd_stdout = dup(STDOUT_FILENO);
+	if (global->fd_stdout == -1)
+		return (free_global(global, 1), NULL);
 	copy_environment_list(&global->lst_env, env);
 	ft_envlst_short(&global->lst_env);
 	return (global);

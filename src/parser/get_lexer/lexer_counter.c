@@ -9,11 +9,9 @@ void	quoted_lexer_counter(int *counter, char **s)
 {
 	char	c;
 
-	while (**s != '\0')
+	while (1)
 	{
-		while (**s != '\'' && **s != '\"' && **s != '\0')
-			s++;
-		if (**s == '\'' || **s)
+		if (**s == '\'' || **s == '\"')
 		{
 			c = **s;
 			(*s)++;
@@ -25,6 +23,12 @@ void	quoted_lexer_counter(int *counter, char **s)
 				(*s)++;
 			}
 		}
+		while (**s != '\'' && **s != '\"' && **s != '|'
+			&& **s != '<' && **s != '>' && **s != ' '
+			&& **s != '\t' && **s != '\0')
+			(*s)++;
+		if (**s != '\'' || **s != '\"')
+			break ;
 	}
 	*counter += 1;
 }

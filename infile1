@@ -1,22 +1,21 @@
-entra en el menu de builtin
-entra en el menu de builtin$
-total 216$
-drwxr-xr-x  19 jroldan-  2022_malaga    646 Aug 22 18:27 .$
-drwxr-xr-x  27 jroldan-  2022_malaga    918 Aug 22 18:06 ..$
--rw-r--r--   1 jroldan-  2022_malaga  12918 Aug 22 18:32 .bash_history$
-drwxr-xr-x  12 jroldan-  2022_malaga    408 Aug 22 18:06 .git$
--rw-r--r--   1 jroldan-  2022_malaga      0 Aug 22 18:06 .heredoc0$
--rw-r--r--   1 jroldan-  2022_malaga   2175 Aug 22 18:06 Makefile$
--rw-r--r--   1 jroldan-  2022_malaga     11 Aug 22 18:06 README.md$
-drwxr-xr-x   3 jroldan-  2022_malaga    102 Aug 22 18:06 include$
--rw-r--r--   1 jroldan-  2022_malaga      0 Aug 22 18:32 infile1$
--rw-r--r--   1 jroldan-  2022_malaga      0 Aug 22 18:06 infile2$
--rw-r--r--   1 jroldan-  2022_malaga      0 Aug 22 18:06 infile3$
--rw-r--r--   1 jroldan-  2022_malaga      0 Aug 22 18:06 infile4$
-drwxr-xr-x   7 jroldan-  2022_malaga    238 Aug 22 18:06 info$
-drwxr-xr-x  91 jroldan-  2022_malaga   3094 Aug 22 18:09 libft$
--rwxr-xr-x   1 jroldan-  2022_malaga  74176 Aug 22 18:27 minishell$
-drwxr-xr-x   3 jroldan-  2022_malaga    102 Aug 22 18:09 objt$
--rwxr-xr-x   1 jroldan-  2022_malaga   1270 Aug 22 18:06 pruebas.txt$
--rw-r--r--   1 jroldan-  2022_malaga    221 Aug 22 18:06 readline.supp$
-drwxr-xr-x   7 jroldan-  2022_malaga    238 Aug 22 18:06 src$
+hola
+total 248
+drwxrwxr-x 8 fwks fwks   4096 ago 24 14:09 .
+drwxr-xr-x 5 fwks fwks   4096 ago 24 12:13 ..
+-rw-rw-r-- 1 fwks fwks 139155 ago 24 14:11 .bash_history
+drwxrwxr-x 8 fwks fwks   4096 ago 24 14:07 .git
+-rw-rw-r-- 1 fwks fwks      5 ago 24 14:02 .heredoc0
+drwxrwxr-x 2 fwks fwks   4096 ago 24 12:13 include
+-rwxrwxr-x 1 fwks fwks      5 ago 24 13:35 infile1
+-rw-rw-r-- 1 fwks fwks      0 ago 24 12:13 infile2
+-rw-rw-r-- 1 fwks fwks      0 ago 24 12:13 infile3
+-rw-rw-r-- 1 fwks fwks      0 ago 24 12:13 infile4
+drwxrwxr-x 2 fwks fwks   4096 ago 24 12:13 info
+drwxrwxr-x 2 fwks fwks   4096 ago 24 14:09 libft
+-rw-rw-r-- 1 fwks fwks   2220 ago 24 12:13 Makefile
+-rwxrwxr-x 1 fwks fwks  56896 ago 24 14:09 minishell
+drwxrwxr-x 3 fwks fwks   4096 ago 24 14:09 objt
+-rwxrwxr-x 1 fwks fwks   1270 ago 24 12:13 pruebas.txt
+-rw-rw-r-- 1 fwks fwks    221 ago 24 12:13 readline.supp
+-rw-rw-r-- 1 fwks fwks     11 ago 24 12:13 README.md
+drwxrwxr-x 6 fwks fwks   4096 ago 24 12:13 src

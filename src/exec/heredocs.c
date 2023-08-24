@@ -18,7 +18,7 @@ void	get_heredocs(char **heredoc, int fd)
 			if (ft_strncmp(buffer, *heredoc, ft_strlen(*heredoc) + 1) == 0
 				&& heredoc[1] != NULL)
 				heredoc++;
-			else if (heredoc[1] == NULL )
+			else if (heredoc[1] == NULL)
 			{
 				ft_putstr_fd(buffer, fd);
 				ft_putstr_fd("\n", fd);

@@ -13,7 +13,7 @@ int	handle_heredocs(int n)
 	{
 		close(fd);
 		free(heredoc);
-		print_error("pipeline error", errno);
+		print_error("Pipeline error", errno);
 		return (1);
 	}
 	close(fd);
@@ -34,7 +34,7 @@ int	handle_infiles(char ***infiles, int fd_type)
 	if ((*infiles)[1] == NULL && fd_type == 1)
 	{
 		if (dup2(fd_file, STDIN_FILENO) == -1)
-			return (close(fd_file), print_error("pipeline error", errno), 1);
+			return (close(fd_file), print_error("Pipeline error", errno), 1);
 	}
 	close(fd_file);
 	return (0);
@@ -66,7 +66,7 @@ int	fd_in_handler(t_global *global, int n, int fd_in, int fd_out)
 	else
 	{
 		if (dup2(fd_in, STDIN_FILENO) == -1)
-			return (print_error("pipeline error", errno), 1);
+			return (print_error("Pipeline error", errno), 1);
 	}
 	close(fd_in);
 	return (0);

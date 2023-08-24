@@ -8,8 +8,8 @@ int	quotes_check(char *lexer)
 	char	c;
 	int		i;
 
-	i = 0;
 	c = 0;
+	i = 0;
 	while (lexer[i] != '\0')
 	{
 		while (lexer[i] != '\'' && lexer[i] != '\"' && lexer[i] != '\0')
@@ -27,8 +27,7 @@ int	quotes_check(char *lexer)
 		}
 	}
 	if (c != 0)
-		return (ft_putstr_fd("minishell: \
-		Syntax error: unexpected end of file\n", 2), -1);
+		return (ft_putstr_fd("minishell: Syntax error unexpected EOF\n", 2), -1);
 	return (0);
 }
 

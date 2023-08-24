@@ -41,3 +41,18 @@ ls | <<a <<z | cat -e							NO (se queda esperando después de heredoc)
 
 ls | echo hola <<a <<z| cat -e					OK
 ls | <<a <<z cat -e | echo hola					OK
+
+
+
+
+
+
+
+
+
+Segmentation_fault ->lexer_maker
+echo ''>infile1
+
+
+No crea el archivo
+>outfile

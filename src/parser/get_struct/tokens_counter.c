@@ -103,6 +103,8 @@ void	get_token_fd(t_token *tokens, char **lexer)
 			&& ft_strncmp(lexer[i], "|", strlen(lexer[i])) != 0)
 			i++;
 		n = i;
+		tokens->fd_in = 0;
+		tokens->fd_out = 0;
 		check_last_token_file_fd(tokens, lexer, n);
 		tokens++;
 		if (lexer[i] != NULL)

@@ -12,7 +12,7 @@ int	main(int argc, char **argv, char **env)
 	// {
 	// 	rl_on_new_line();
 	// 	input = readline(">> ");
-		input = ft_strdup("pwd");
+		input = ft_strdup("echo 'hola'hola > outfile");
 		add_and_store_history(input);
 		get_struct_data(global, input);
 		execute_commands(global);

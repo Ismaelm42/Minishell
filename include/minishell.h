@@ -49,6 +49,8 @@ typedef struct s_global
 	char		*input;
 	char		**env;
 	int			pipeline;
+	int			fd_stdin;
+	int			fd_stdout;
 	int			exit_status;
 	t_node		*lst_env;
 	t_node		*lst_local;
@@ -65,7 +67,7 @@ void		words_counter(int *counter, char **s);
 int			lexer_counter(char *s);
 
 //parser/get_lexer/lexer_maker
-void		quoted_lexer_splitter(int *n, char **s, char ***lexer);
+char		*handle_quoted_substr(char *s);
 void		redirection_lexer_splitter(int *n, char **s, char ***lexer);
 void		words_splitter(int *n, char **s, char ***lexer);
 char		**lexer_maker(char *s);
@@ -182,7 +184,7 @@ int			control_d(char *input);
 //exec/execute_commands
 int			create_pipes_and_pid(t_global *global, pid_t **pid, int ***fd);
 int			child_process(t_global *global, int **fd, int n);
-int			parent_process(t_global *global, int **fd, int n);
+int			parent_process(t_global *global, int **fd, pid_t *pid, int n);
 int			execute_commands(t_global *global);
 
 //exec/heredocs
