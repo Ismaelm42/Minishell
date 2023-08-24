@@ -7677,3 +7677,9 @@ export |cat -e
 export |wc
 export |wc
 <infile1 wc
+export |wc
+export |wc
+echo hola'hola'''buenos dias
+echo hola'hola'''buenos dias
+echo hola'hola'''buenos dias
+echo hola'hola'''buenos dias

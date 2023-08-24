@@ -12,12 +12,11 @@ int	main(int argc, char **argv, char **env)
 	// {
 	// 	rl_on_new_line();
 	// 	input = readline(">> ");
-		input = ft_strdup("export |wc");
+		input = ft_strdup("echo hola'hola'''buenos dias");
 		add_and_store_history(input);
 		get_struct_data(global, input);
 		execute_commands(global);
-		free_global(global, 0);
-		printf("\n\n\n\n");
+		free_global(global, 1);
 
 		// input = ft_strdup("pwd");
 		// add_and_store_history(input);

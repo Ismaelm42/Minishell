@@ -31,6 +31,7 @@ void	destroy_global(t_global *global)
 		free(global->input);
 	free_env(global->env);
 	ft_free_lst(global->lst_local);
+	ft_free_lst(global->lst_env);
 	free(global);
 }
 

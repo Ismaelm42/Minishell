@@ -92,7 +92,7 @@ int	local_var(t_global *g, char *input)
 		{
 			if (get_var_local(g) == 0)
 			{
-				print_stack(g->lst_local);
+				// print_stack(g->lst_local, );
 				return (0);
 			}
 		}
