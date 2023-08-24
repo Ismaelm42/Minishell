@@ -27,7 +27,7 @@ void	quoted_lexer_counter(int *counter, char **s)
 			&& **s != '<' && **s != '>' && **s != ' '
 			&& **s != '\t' && **s != '\0')
 			(*s)++;
-		if (**s != '\'' || **s != '\"')
+		if (**s != '\'' && **s != '\"')
 			break ;
 	}
 	*counter += 1;

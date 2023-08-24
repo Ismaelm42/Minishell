@@ -7606,3 +7606,5 @@ echo 'hola'hola > outfile
 echo 'hola'hola > outfile
 echo 'hola'hola > outfile
 echo 'hola'hola > outfile
+echo 'hola'hola'' > outfile
+echo 'hola'hola'' > outfile
