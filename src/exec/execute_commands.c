@@ -67,6 +67,8 @@ int	execute_commands(t_global *global)
 	int		**fd;
 	int		n;
 
+	//meter *pid y **fd en el global
+
 	// export ARG=PEPE | echo hola
 	// Si aparece este comando en los built_ins se hace exit sin hacer nada
 	//No tiene que hacer nada

@@ -7683,3 +7683,25 @@ echo hola'hola'''buenos dias
 echo hola'hola'''buenos dias
 echo hola'hola'''buenos dias
 echo hola'hola'''buenos dias
+ls
+ls -la
+ls
+ls -la
+clear
+export
+export | cat -e
+export | wc
+clear
+ls -la | cat -e | echo chochitobienrico
+ls -la | cat -e | export
+clear
+>outfile
+ 
+export
+export | cat -e
+export | cat -e
+pwd
+pwd
+pwd
+ls -la
+ls -la

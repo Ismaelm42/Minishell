@@ -30,6 +30,7 @@ int	built_ins(t_global *g, int n, int fd_in, int fd_out)
 		flag = 0;
 	close(fd_in);
 	close(fd_out);
+	free_global(g, 1);
 	exit(flag);
 	return (flag);
 }
