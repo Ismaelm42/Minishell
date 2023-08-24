@@ -56,7 +56,10 @@ static void	action_export(t_global *g, int n, int i)
 	if (ft_strrchr(g->tokens[n].arg[i], '=') == NULL)
 	{
 		if (search_key(g->lst_env, g->tokens[n].arg[i]) == NULL)
+		{
 			insert_last(&g->lst_env, create_nodo(g->tokens[n].arg[i], NULL));
+			dprintf(2, "hola\n");
+		}
 	}
 	else
 	{
@@ -67,13 +70,13 @@ static void	action_export(t_global *g, int n, int i)
 	}
 }
 
-void	ft_export(t_global *g, int n)
+void	ft_export(t_global *g, int n, int fd_out)
 {
 	int	i;
 
 	i = 0;
 	if (g->tokens[n].arg[0] == NULL)
-		print_stack(g->lst_env);
+		print_stack(g->lst_env, fd_out);
 	else
 	{
 		//printf("tiene argumentos\n");
@@ -87,7 +90,7 @@ void	ft_export(t_global *g, int n)
 			}
 		}
 		ft_envlst_short(&g->lst_env);
-		//print_stack(g->lst_env);
+		// print_stack(g->lst_env, fd_out);
 	}
 }
 

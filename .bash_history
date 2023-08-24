@@ -7608,3 +7608,72 @@ echo 'hola'hola > outfile
 echo 'hola'hola > outfile
 echo 'hola'hola'' > outfile
 echo 'hola'hola'' > outfile
+echo 'hola'hola'' > outfile
+echo 'hola'hola''hola > outfile
+echo 'hola'hola''hola> outfile
+echo 'hola'hola''hola| outfile
+echo hola'hola'hola''hola| outfile
+pwd
+pwd
+pwd
+pwd
+pwd
+pwd
+pwd
+pwd
+pwd
+pwd
+pwd | cat -e
+pwd | cat -e
+pwd | cat -e
+pwd | cat -e
+pwd >outfile
+pwd | cat -e
+ls | cat -e
+pwd | cat -e
+pwd | cat -e
+pwd | cat -e
+pwd | cat -e
+pwd | cat -e
+pwd | cat -e
+pwd | cat -e
+pwd | cat -e
+pwd | cat -e
+pwd | cat -e
+pwd | cat -e>infile1
+pwd | cat -e>infi'le''1'
+pwd | cat -e>infi'le''1'
+export AA=1
+export
+export AA=1
+export AA=1
+export
+export AA=1
+export
+export AA=1
+export
+export AA=1
+export
+export AB
+export
+export HOLA2
+export
+export HOLA2
+export HOLA2=pepe
+export HOLA2=pepe
+export
+export HOLA2=pepe
+export
+export HOLA2=pepe
+export
+export HOLA2=pepe
+export HOLA2=pepe
+export HOLA2=pepe
+ls -la | cat -e
+export ARG=PIPI
+export ARG=PIPI
+export ARG=PIPI
+export |cat -e
+export |wc
+export |wc
+<infile1 wc

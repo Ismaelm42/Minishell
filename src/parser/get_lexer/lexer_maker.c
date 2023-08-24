@@ -81,7 +81,6 @@ char	**lexer_maker(char *s)
 
 	n = 0;
 	size = lexer_counter(s);
-	printf("size = %d\n", size);
 	lexer = (char **)ft_calloc(sizeof(char **), size + 1);
 	while (n < size)
 	{

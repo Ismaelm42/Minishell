@@ -60,7 +60,7 @@ Función para imprimir la lista en el formato que simula export sin
 argumentos
 */
 
-void	print_stack(t_node *list)
+void	print_stack(t_node *list, int fd_out)
 {
 	t_node	*aux;
 
@@ -69,22 +69,22 @@ void	print_stack(t_node *list)
 	{
 		if (aux->key != NULL)
 		{
-			ft_putstr_fd("declare -x ", STDOUT_FILENO);
-			ft_putstr_fd(aux->key, STDOUT_FILENO);
-			ft_putchar_fd('=', STDOUT_FILENO);
-			ft_putchar_fd('\"', STDOUT_FILENO);
-			ft_putstr_fd(aux->value, STDOUT_FILENO);
-			ft_putchar_fd('\"', STDOUT_FILENO);
-			ft_putchar_fd('\n', STDOUT_FILENO);
+			ft_putstr_fd("declare -x ", fd_out);
+			ft_putstr_fd(aux->key, fd_out);
+			ft_putchar_fd('=', fd_out);
+			ft_putchar_fd('\"', fd_out);
+			ft_putstr_fd(aux->value, fd_out);
+			ft_putchar_fd('\"', fd_out);
+			ft_putchar_fd('\n', fd_out);
 		}
 		else
 		{
-			ft_putstr_fd("declare -x ", STDOUT_FILENO);
-			ft_putstr_fd(aux->key, STDOUT_FILENO);
-			ft_putchar_fd('=', STDOUT_FILENO);
-			ft_putchar_fd('\"', STDOUT_FILENO);
-			ft_putchar_fd('\"', STDOUT_FILENO);
-			ft_putchar_fd('\n', STDOUT_FILENO);
+			ft_putstr_fd("declare -x ", fd_out);
+			ft_putstr_fd(aux->key, fd_out);
+			ft_putchar_fd('=', fd_out);
+			ft_putchar_fd('\"', fd_out);
+			ft_putchar_fd('\"', fd_out);
+			ft_putchar_fd('\n', fd_out);
 		}
 		aux = aux -> next;
 	}	

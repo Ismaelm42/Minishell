@@ -167,7 +167,7 @@ t_node		*init_list(void);
 t_node		*create_nodo(char *key, char *value);
 void		insert_last(t_node **list, t_node *new_nodo);
 t_node		*final(t_node *list);
-void		print_stack(t_node *list);
+void		print_stack(t_node *list, int fd_out);
 void		copy_environment_list(t_node **lst_env, char **env);
 void		ft_envlst_short(t_node **lst);
 
@@ -217,11 +217,11 @@ void		print_error(char *message, int code_error);
 void		write_on_fd(int fd_in, int fd_out);
 
 //build_in
-void		ft_pwd(void);
+void		ft_pwd(int fd_in, int fd_out);
 void		ft_env(t_global *g);
-void		ft_export(t_global *g, int n);
+void		ft_export(t_global *g, int n, int fd_out);
 int			check_built_ins(t_global *g, int n);
-int			built_ins(t_global *g, int n);
+int			built_ins(t_global *g, int n, int fd_in, int fd_out);
 
 
 #endif
