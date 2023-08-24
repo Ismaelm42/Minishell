@@ -7465,3 +7465,34 @@ hola'''aqui no se cierra
 hola'''aqui no se cierra
 hola'''aqui no se cierra
 hola'''aqui no se cierra
+hola'''aqui no se cierra
+hola'''aqui no se cierra
+hola'''aqui no se cierra
+hola'''aqui no se cierra
+ls
+ls
+export
+pwd
+pwd
+pwd
+pwd
+pwd
+pwd
+pwd
+pwd
+pwd
+ls
+export
+pwd
+ls
+ls
+pwd
+pwd
+pwd
+pwd
+pwd
+pwd
+pwd
+pwd
+pwd
+pwd

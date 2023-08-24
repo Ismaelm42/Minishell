@@ -51,45 +51,45 @@ parametro tiene comillas peta y noo debe petar
 // 	return (0);
 // }
 
-// static void	action_export(t_global *g, int n, int i)
-// {
-// 	if (ft_strrchr(g->tokens[n].arg[i], '=') == NULL)
-// 	{
-// 		if (search_key(g->lst_env, g->tokens[n].arg[i]) == NULL)
-// 			insert_last(&g->lst_env, create_nodo(g->tokens[n].arg[i], NULL));
-// 	}
-// 	else
-// 	{
-// 		if (search_key_and_replace(g->lst_env, extract_clue(g->tokens[n].arg[i]), extract_value(g->tokens[n].arg[i])) == -1)
-// 		{	
-// 			insert_last(&g->lst_env, create_nodo(extract_clue(g->tokens[n].arg[i]), extract_value(g->tokens[n].arg[i])));
-// 		}
-// 	}
-// }
+static void	action_export(t_global *g, int n, int i)
+{
+	if (ft_strrchr(g->tokens[n].arg[i], '=') == NULL)
+	{
+		if (search_key(g->lst_env, g->tokens[n].arg[i]) == NULL)
+			insert_last(&g->lst_env, create_nodo(g->tokens[n].arg[i], NULL));
+	}
+	else
+	{
+		if (search_key_and_replace(g->lst_env, extract_clue(g->tokens[n].arg[i]), extract_value(g->tokens[n].arg[i])) == -1)
+		{	
+			insert_last(&g->lst_env, create_nodo(extract_clue(g->tokens[n].arg[i]), extract_value(g->tokens[n].arg[i])));
+		}
+	}
+}
 
-// void	ft_export(t_global *g, int n)
-// {
-// 	int	i;
+void	ft_export(t_global *g, int n)
+{
+	int	i;
 
-// 	i = 0;
-// 	if (g->tokens[n].arg[0] == NULL)
-// 		print_stack(g->lst_env);
-// 	else
-// 	{
-// 		//printf("tiene argumentos\n");
-// 		if (g->tokens[n].arg[i] != NULL)
-// 		{
-// 			while ((g->tokens[n].arg[i] != NULL))
-// 			{
-// 				// printf("ARGUMENTO %d %s\n", i, g->tokens[n].arg[i]);
-// 				action_export(g, n, i);
-// 				i++;
-// 			}
-// 		}
-// 		ft_envlst_short(&g->lst_env);
-// 		//print_stack(g->lst_env);
-// 	}
-// }
+	i = 0;
+	if (g->tokens[n].arg[0] == NULL)
+		print_stack(g->lst_env);
+	else
+	{
+		//printf("tiene argumentos\n");
+		if (g->tokens[n].arg[i] != NULL)
+		{
+			while ((g->tokens[n].arg[i] != NULL))
+			{
+				// printf("ARGUMENTO %d %s\n", i, g->tokens[n].arg[i]);
+				action_export(g, n, i);
+				i++;
+			}
+		}
+		ft_envlst_short(&g->lst_env);
+		//print_stack(g->lst_env);
+	}
+}
 
 /*
 
