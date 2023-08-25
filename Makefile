@@ -30,7 +30,7 @@ SRC =	src/builtins/ft_env.c									\
 		src/parser/variables/var_environment.c					\
 		src/parser/variables/var_local.c						\
 		src/signals/signal.c									\
-		src/utils/free/free.c									\
+		src/utils/clean/free_and_unlink.c						\
 		src/utils/gnl/gnl.c										\
 		src/utils/list_utils/list_utils_2.c						\
 		src/utils/list_utils/list_utils.c						\

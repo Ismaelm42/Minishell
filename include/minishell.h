@@ -159,6 +159,7 @@ void		put_dictionary_local(char *nv, t_global *g);
 int			check_key(char *key, int wall);
 
 //parser/utils
+void		unlink_files(int pipeline);
 void		free_mem(void **mem);
 char		**free_matrix(void ***matrix, int size);
 void		destroy_global(t_global *global);
