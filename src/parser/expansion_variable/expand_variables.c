@@ -51,16 +51,13 @@ sustitución lo reemplazará por "". La función get_exit_status_variable
 en principio debería recoger la variable global que se iría actualizando
 cada vez que ejecutara un proceso con la salida de éste.
 */
-void	get_variable_expansion_value(int n, t_lexer *lexer, t_global *global)
+void	get_expansion_value(int n, t_lexer *lexer, t_global *global)
 {
 	char	*lex;
 
 	lex = lexer[n].variable;
 	if (ft_strlen(lex) == 1)
 		lexer[n].expanded = ft_strdup("'$'");
-	else if (ft_strncmp(lex, "$$", ft_strlen(lex)) == 0)
-		lexer[n].expanded = \
-		ft_strdup("ps -o ppid= | tail -n 1 | sed 's/^[[:space:]]*//'");
 	// else if (ft_strncmp(lex, "$?", ft_strlen(lex)) == 0)
 	// 	get_exit_status_variable();
 	else if (get_variable_from_env(n, lexer, global) == 1)
@@ -88,7 +85,7 @@ char	*expansion_variable(char *input, t_global *global)
 		i = 0;
 		while (i < size)
 		{
-			get_variable_expansion_value(i, lexer, global);
+			get_expansion_value(i, lexer, global);
 			i++;
 		}
 		new_input = replace_variables(input, lexer);

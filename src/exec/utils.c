@@ -7,7 +7,7 @@ void	access_error_message(char *error, char *message)
 	ft_putstr_fd(message, 2);
 }
 
-char	*search_in_path(t_global *global, int n, char **path, char *cmd_path)
+char	*search_path(t_global *global, int n, char **path, char *cmd_path)
 {
 	int	ret;
 	int	i;

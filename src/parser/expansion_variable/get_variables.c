@@ -114,15 +114,3 @@ t_lexer	*get_variable_expansion_lexer(char *input)
 	lexer[n].variable = 0;
 	return (lexer);
 }
-
-// int	main(void)
-// {
-// 	char		*input;
-
-// 	input = ft_strdup(" \" ' $ '  \"     ");
-// 	printf("orig input =\t%s\n", input);
-// 	printf("counter = %d\n", variable_expansion_counter(input));
-// 	get_variable_expansion_lexer(input);
-// 	return (0);
-// }
-

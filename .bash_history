@@ -7951,3 +7951,12 @@ ls -la | cat -e
 <infile1 cat -e >outfile1
 <infile1 cat -e >outfile1
 ls -l | cat -e
+ARG=gato
+cat -e $ARG
+echo $ARG
+ARG=gato
+echo $ARG
+ARG=gato
+echo $ARG
+echo $HOME
+ls -la | cat -e

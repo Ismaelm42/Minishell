@@ -56,7 +56,7 @@ char	*get_command_path(t_global *global, int n)
 		else
 			return (free_matrix(path), cmd_path);
 	}
-	return (search_in_path(global, n, path, cmd_path));
+	return (search_path(global, n, path, cmd_path));
 }
 
 char	**get_exec_command(t_global *global, int n)

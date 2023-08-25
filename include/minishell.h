@@ -90,7 +90,7 @@ t_lexer		*get_variable_expansion_lexer(char *input);
 //parser/expansion_variable/expand_variables
 int			get_variable_from_env(int n, t_lexer *lexer, t_global *global);
 int			get_variable_from_history(int n, t_lexer *lexer, t_global *global);
-void		get_variable_expansion_value(int n, t_lexer *lexer, t_global *global);
+void		get_expansion_value(int n, t_lexer *lexer, t_global *global);
 char		*expansion_variable(char *input, t_global *global);
 
 //parser/expansion_variable/replace_variables
@@ -103,7 +103,6 @@ t_lexer		*create_expansion_lexer_struct(char *input, int size);
 void		handle_edge_cases(char **input, int *counter);
 void		skip_quotes(char **s, int *lock);
 int			check_edge_cases(char *s);
-void		read_from_history(int n, t_lexer *lexer, char *needle, int size); //obsoleta
 t_lexer		*free_expansion_lexer(t_lexer *lexer, int flag);
 
 //parser/utils/gnl
@@ -213,7 +212,7 @@ char		**get_exec_command(t_global *global, int n);
 
 //exec/utils
 void		access_error_message(char *error, char *message);
-char		*search_in_path(t_global *global, int n, char **path, char *cmd_path);
+char		*search_path(t_global *global, int n, char **path, char *cmd_path);
 void		fd_closer(int **fd, int pipeline, int n);
 void		print_error(char *message, int code_error);
 void		write_on_fd(int fd_in, int fd_out);
@@ -225,6 +224,5 @@ void		ft_export(t_global *g, int n, int fd_out);
 void		action_export(t_global *g, int n, int i);
 int			check_built_ins(t_global *g, int n);
 int			built_ins(t_global *g, int n);
-
 
 #endif
