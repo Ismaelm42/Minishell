@@ -23,75 +23,66 @@ CORREGIR check_key  comprueba que el primer caracter sea alfanumerico si el
 parametro tiene comillas peta y noo debe petar
 */
 
-// static int	parse_arg(t_global *g, int n)
-// {
-// 	int		i;
-// 	// char	*key;
-// 	// char	*val;
-
-// 	i = 0;
-// 	while (g->tokens[n].arg[i] != NULL)
-// 	{
-// 		if (ft_strrchr(g->tokens[n].arg[i], '=') == NULL)
-// 		{	
-// 			if (check_key(g->tokens[n].arg[i], 0) != 0) // lo esta liberando
-// 				return (printf("ERROR0\n"), 1);
-// 		}	
-// 		else
-// 		{
-// 			if (check_key(extract_clue(g->tokens[n].arg[i]), 1) != 0)
-// 				return (printf("ERROR1\n"), 1);
-// 			// if (ft_strchr(extract_value(g->tokens[n].arg[i]),'!' ) != NULL)
-// 			// 	return (printf("ERROR2\n"), 1);
-// 		}
-// 		printf("ARGUMENTO %d %s\n", i, g->tokens[n].arg[i]);
-// 		i++;
-// 	}
-// 	printf("llega fin parse\n");
-// 	return (0);
-// }
-
-static void	action_export(t_global *g, int n, int i)
+static int	parse_arg(t_global *g, int n)
 {
+	int		i;
+	// char	*key;
+	// char	*val;
+
+	i = 0;
+	
 	if (ft_strrchr(g->tokens[n].arg[i], '=') == NULL)
-	{
-		if (search_key(g->lst_env, g->tokens[n].arg[i]) == NULL)
-		{
-			insert_last(&g->lst_env, create_nodo(g->tokens[n].arg[i], NULL));
-			dprintf(2, "hola\n");
-		}
-	}
+	{	
+		//dprintf(1, "ENTRA EN PARSE NO =");
+		if (check_key(g->tokens[n].arg[i], 0) != 0)
+			return (1);
+	}	
 	else
 	{
-		if (search_key_and_replace(g->lst_env, extract_clue(g->tokens[n].arg[i]), extract_value(g->tokens[n].arg[i])) == -1)
-		{	
-			insert_last(&g->lst_env, create_nodo(extract_clue(g->tokens[n].arg[i]), extract_value(g->tokens[n].arg[i])));
-		}
+		//dprintf(1, "ENTRA EN PARSE =");
+		if (check_key(extract_clue(g->tokens[n].arg[i]), 1) != 0)
+			return (1);
+		else if (ft_strchr(extract_value(g->tokens[n].arg[i]), '!' ) != NULL)
+			return (1);
 	}
+	// printf("ARGUMENTO %d %s\n", i, g->tokens[n].arg[i]);
+	// printf("llega fin parse\n");
+	return (0);
+}
+
+void	action_export(t_global *g, int n, int i)
+{
+	char	*key;
+
+	while ((g->tokens[n].arg[i] != NULL))
+	{
+		if(parse_arg(g, n) == 0)
+		{
+		if (ft_strrchr(g->tokens[n].arg[i], '=') == NULL)
+		{
+			if (search_key(g->lst_env, g->tokens[n].arg[i]) == NULL)
+			{
+				key = ft_strdup(g->tokens[n].arg[i]);
+				insert_last(&g->lst_env, create_nodo(key, ""));
+			}
+		}
+		else
+		{
+			if (search_key_and_replace(g->lst_env, extract_clue \
+			(g->tokens[n].arg[i]), extract_value(g->tokens[n].arg[i])) == -1)
+				insert_last(&g->lst_env, create_nodo(extract_clue \
+				(g->tokens[n].arg[i]), extract_value(g->tokens[n].arg[i])));
+		}
+		}
+		i++;
+	}
+	ft_envlst_short(&g->lst_env);
 }
 
 void	ft_export(t_global *g, int n, int fd_out)
 {
-	int	i;
-
-	i = 0;
 	if (g->tokens[n].arg[0] == NULL)
 		print_stack(g->lst_env, fd_out);
-	else
-	{
-		//printf("tiene argumentos\n");
-		if (g->tokens[n].arg[i] != NULL)
-		{
-			while ((g->tokens[n].arg[i] != NULL))
-			{
-				// printf("ARGUMENTO %d %s\n", i, g->tokens[n].arg[i]);
-				action_export(g, n, i);
-				i++;
-			}
-		}
-		ft_envlst_short(&g->lst_env);
-		// print_stack(g->lst_env, fd_out);
-	}
 }
 
 /*

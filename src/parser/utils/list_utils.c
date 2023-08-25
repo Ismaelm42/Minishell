@@ -67,7 +67,7 @@ void	print_stack(t_node *list, int fd_out)
 	aux = list;
 	while (aux != NULL)
 	{
-		if (aux->key != NULL)
+		if (aux->next != NULL)
 		{
 			ft_putstr_fd("declare -x ", fd_out);
 			ft_putstr_fd(aux->key, fd_out);

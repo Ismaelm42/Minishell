@@ -15,3 +15,9 @@
 //estructurar el código correctamente para que sea más legible
 
 //pasar utils_list a libft
+
+// SI en input es una asignacion de variable local (ARG=pepe), la ejecucion debe 
+    pasar a una nueva recogida de input (readline) no debe ejecutar comando ya
+    que no ha recogido tokens. Meto comprobacion en exec_command (pasa de líneas)
+
+//extraccion de key y val tendra a veces que liberar ?¿? pruebas cpn valgrind

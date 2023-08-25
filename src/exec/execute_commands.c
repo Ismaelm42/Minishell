@@ -78,6 +78,17 @@ int	execute_commands(t_global *global)
 
 	// export ARG=PEPE
 	// Si global->pipeline es == 1, se realiza el export y se hace return para que no entre ni cree pipes/procesos hijos
+	//n = 0;
+	if (global->tokens == NULL)
+		return (1);
+	if (ft_strncmp(global->tokens[0].command, "export", 7) == 0)
+	{
+		if (global->tokens[0].arg[0] != NULL)
+		{
+			action_export(global, 0, 0);
+			return (0);
+		}
+	}
 	if (process_heredocs(global) == 1)
 		return (1);
 	if (create_pipes_and_pid(global, &pid, &fd) == 1)

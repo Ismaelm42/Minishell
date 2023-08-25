@@ -7705,3 +7705,210 @@ pwd
 pwd
 ls -la
 ls -la
+ls -la
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export
+export AAA=pepe
+export AAA=pepe
+pwd
+export AAA=pepe
+pwd
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export AAA=pepe
+export
+export AAA=pepe
+export
+export AAA=pepe
+ls
+export AAA=pepe
+ls
+export AAA=pepe
+export
+pwd
+ls
+export AAA=pepe
+export
+pwd
+ls
+export | cat -e 
+export AMARILLO=PERRO
+export | cat -e
+export AMARILLO=
+export | cat -e
+export AMARILLO=
+export
+export AMARILLO=
+export AMARILLO=FIRULAIS
+export AMARILLO=
+export AMARILLO=FIRULAIS
+export
+export AMARILLO= AAA=PEPE
+export AMARILLO=FIRULAIS
+export
+export AMARILLO= AAA=PEPE
+export AMARILLO=FIRULAIS
+export
+export AMARILLO= AAA=PEPE
+export AMARILLO=FIRULAIS
+export
+export AMARILLO= AAA=PEPE
+export AM
+export
+export AMARILLO= AAA=PEPE
+export AM=
+export
+export AMARILLO
+export
+export AMARILLO
+export
+export AMARILLO
+export
+export AMARILLO
+export
+export AMARILLO
+export AMARILLO
+export
+export AAAA
+export
+export AAAA
+export AAAA
+export AAAA
+export
+export AAAA
+export AAAA
+export
+export AAAA
+export
+export AAAA
+export
+export AAAA
+export
+export AAAA
+export
+export AAAA
+export
+export AAAA
+export
+export AAAA
+export AAAA
+export
+export AAAA
+export
+export AAAA
+export
+export AAAA
+export
+export AAAA=
+export
+export AAA
+export
+export AAA
+export
+export AAA
+export
+export AAA
+export
+export AAA
+export
+export AAA= AA1=1 AA2=42
+export
+export AAA
+export
+export AAA
+export
+export AAA
+export
+export AAA
+export
+export AAA AA1=1 AA2=2
+export
+export AAA AA1=1 AA2=2
+export
+export 1AA
+export
+export 1AA='hola pepe'firulais
+export
+export 1AA=prueba'hola pepe'firulais
+export
+export 1AA=prueba'hola pepe'firulais
+export
+ARG=pepe
+ARG=pepe
+ls
+echo HOLA
+ARG=pepe
+ARG=pepe
+ARG=pepe
+ARG=pepe
+ARG=pepe
+echo $ARG
+ARG=pepe
+echo $ARG
+ARG=pepe
+echo $ARG
+ARG=pepe
+echo $ARG
+ARG=pepe
+echo $ARG
+ARG=pepe
+echo $ARG
+ARG=pepe
+echo $ARG
+export AAA !AA2=pepe
+export
+export AAA !AA2=pepe
+export
+export AAA
+export
+export AAA
+export
+export AAA
+export
+export AAA
+export
+export AAA !AA1
+export
+export AAA !AA1 AA2=!PEPE
+export
+export !AA
+export
+export !AA AA1 AA2=PEPE
+export
+export !AA AA1 AA2=PEPE
+export
+export AA2=PEPE
+export
+export !AA AA1 AA2=PEPE AA3=JU!AN
+export
+export AA1 AA2=PEPE AA3=JU!AN
+export
+export AA1 AA2=PEPE 1A3=JU!AN
+export
+export AA1 AA2=PEPE !A3=JU!AN
+export
+export AA1 AA2=PEPE !A3=JU!AN
+export
+export AA1 !HOLA AA2=PEPE !A3=JU!AN
+export
+export AA1 !HOLA AA2=PEPE !A3=JU!AN
+export
+export AA1 !HOLA AA2=PEPE !A3=JU!AN
+export
+export AAA | ls
+export AAA | ls
+echo Hola | ls
+export | ls

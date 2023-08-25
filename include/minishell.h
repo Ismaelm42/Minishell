@@ -155,7 +155,7 @@ int			var_lexer_counter(char *s);
 void		var_words_splitter(int *n, char **s, char ***lexer);
 char		**var_lexer_maker(char *s);
 void		put_dictionary_local(char *nv, t_global *g);
-int			check_key(char *key);
+int			check_key(char *key, int wall);
 
 //parser/utils
 char		**free_matrix(char **matrix);
@@ -220,6 +220,7 @@ void		write_on_fd(int fd_in, int fd_out);
 void		ft_pwd(int fd_in, int fd_out);
 void		ft_env(t_global *g);
 void		ft_export(t_global *g, int n, int fd_out);
+void		action_export(t_global *g, int n, int i);
 int			check_built_ins(t_global *g, int n);
 int			built_ins(t_global *g, int n, int fd_in, int fd_out);
 

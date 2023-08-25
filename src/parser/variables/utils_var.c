@@ -28,7 +28,7 @@ char	*extract_value(char *c)
 	char	*position;
 
 	position = ft_strchr(c, 61);
-	while (c != position)
+	while (c != position && c != NULL)
 		c++;
 	return (ft_substr(c, 1, ft_strlen(c), 0));
 }
@@ -45,11 +45,12 @@ char	*search_key(t_node *lst, char *key)
 	aux = lst;
 	while (aux)
 	{
-		if (ft_strncmp(key, aux->key, (size_t)ft_strlen(key)) == 0)
+		if (ft_strncmp(key, aux->key, (size_t)ft_strlen(key) + 1) == 0)
 			return (aux->value);
 		else
 			aux = aux->next;
 	}
+	//printf("NO LA ENCUENTRA\n");
 	return (NULL);
 }
 
@@ -68,7 +69,7 @@ int	search_key_and_replace(t_node *lst, char *key, char *val)
 	{
 		if (ft_strncmp(key, aux->key, (size_t)ft_strlen(key) + 1) == 0)
 		{
-			free(aux->value);
+			//free(aux->value);
 			aux->value = val;
 			//free (key); // hacerlo con strdup
 			return (0);

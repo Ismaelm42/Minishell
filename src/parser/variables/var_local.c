@@ -88,7 +88,7 @@ int	local_var(t_global *g, char *input)
 		i++;
 	if (ft_strrchr(input, '=') != NULL)
 	{
-		if (check_key(extract_clue(g->input)) == 0)
+		if (check_key(extract_clue(g->input), 1) == 0)
 		{
 			if (get_var_local(g) == 0)
 			{
