@@ -23,15 +23,15 @@ int	child_process(t_global *global, int n)
 {
 	char	**command_line;
 
-	if (check_built_ins(global, n) == 1)
+	if (check_builtins(global, n) == 1)
 		command_line = get_exec_command(global, n);
 	fd_closer(global->fd, global->pipeline, n);
 	if (fd_in_handler(global, n) != 0)
 		return (1);
 	if (fd_out_handler(global, n) != 0)
 		return (1);
-	if (check_built_ins(global, n) == 0)
-		built_ins(global, n);
+	if (check_builtins(global, n) == 0)
+		builtins(global, n);
 	else
 	{
 		close(global->fd[n][0]);
@@ -66,7 +66,7 @@ int	execute_commands(t_global *global)
 	int		n;
 
 	// export ARG=PEPE | echo hola
-	// Si aparece este comando en los built_ins se hace exit sin hacer nada
+	// Si aparece este comando en los builtins se hace exit sin hacer nada
 	//No tiene que hacer nada
 
 	// export | cat -e

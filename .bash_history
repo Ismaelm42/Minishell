@@ -7982,3 +7982,4 @@ echo hola
 efefe
 ls fefef
 ls -l | cat -e
+ls -l | cat -e

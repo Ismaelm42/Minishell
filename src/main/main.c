@@ -1,4 +1,4 @@
-#include "../include/minishell.h"
+#include "../../include/minishell.h"
 
 int	main(int argc, char **argv, char **env)
 {
@@ -16,7 +16,7 @@ int	main(int argc, char **argv, char **env)
 		add_and_store_history(input);
 		get_struct_data(global, input);
 		execute_commands(global);
-		free_global(global, 0);
+		free_global(global, 1);
 
 
 		// input = ft_strdup("export AA2=JUAN AA1=FIRULAIS");

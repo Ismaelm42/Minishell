@@ -1,43 +1,46 @@
 NAME = minishell
 
-SRC =	src/main.c																\
-		src/signals/signal.c													\
-		src/parser/history/bash_history.c										\
-		src/parser/get_lexer/get_lexer.c										\
-		src/parser/get_lexer/lexer_counter.c									\
-		src/parser/get_lexer/lexer_maker.c										\
-		src/parser/get_lexer/utils.c											\
-		src/parser/utils/gnl.c													\
-		src/parser/utils/utils.c												\
-		src/parser/expansion_variable/get_variables.c							\
-		src/parser/expansion_variable/expand_variables.c						\
-		src/parser/expansion_variable/replace_variables.c						\
-		src/parser/expansion_variable/utils.c									\
-		src/parser/get_struct/check_syntax.c									\
-		src/parser/get_struct/get_struct.c										\
-		src/parser/get_struct/get_tokens.c										\
-		src/parser/get_struct/tokens_counter.c									\
-		src/parser/get_struct/tokens_maker.c									\
-		src/parser/variables/var_environment.c									\
-		src/parser/variables/var_local.c										\
-		src/parser/utils/list_utils.c											\
-		src/parser/utils/list_utils_2.c											\
-		src/parser/variables/lexer_var_local.c		   							\
-		src/parser/variables/lexer_var_local_2.c								\
-		src/parser/variables/utils_var.c										\
-		src/parser/variables/utils_var_2.c										\
-		src/builtins/ft_pwd.c													\
-		src/builtins/ft_env.c													\
-		src/builtins/ft_export.c												\
-		src/builtins/utils_built_ins.c											\
-		src/exec/execute_commands.c												\
-		src/exec/get_command.c													\
-		src/exec/heredocs.c														\
-		src/exec/infiles.c														\
-		src/exec/outfiles.c														\
-		src/exec/utils.c														\
-																				\
-																				\
+SRC =	src/builtins/ft_env.c									\
+		src/builtins/ft_export.c								\
+		src/builtins/ft_pwd.c									\
+		src/builtins/utils_builtins.c							\
+		src/exec/execute_commands.c								\
+		src/exec/get_command.c									\
+		src/exec/heredocs.c										\
+		src/exec/infiles.c										\
+		src/exec/outfiles.c										\
+		src/exec/utils.c										\
+		src/history/bash_history.c								\
+		src/main/main.c											\
+		src/parser/expansion_variable/expand_variables.c		\
+		src/parser/expansion_variable/get_variables.c			\
+		src/parser/expansion_variable/replace_variables.c		\
+		src/parser/expansion_variable/utils.c					\
+		src/parser/get_lexer/get_lexer.c						\
+		src/parser/get_lexer/lexer_counter.c					\
+		src/parser/get_lexer/lexer_maker.c						\
+		src/parser/get_lexer/utils.c							\
+		src/parser/get_struct/check_syntax.c					\
+		src/parser/get_struct/get_struct.c						\
+		src/parser/get_struct/get_tokens.c						\
+		src/parser/get_struct/tokens_counter.c					\
+		src/parser/get_struct/tokens_maker.c					\
+		src/parser/variables/lexer_var_local_2.c				\
+		src/parser/variables/lexer_var_local.c					\
+		src/parser/variables/var_environment.c					\
+		src/parser/variables/var_local.c						\
+		src/signals/signal.c									\
+		src/utils/free/free.c									\
+		src/utils/gnl/gnl.c										\
+		src/utils/list_utils/list_utils_2.c						\
+		src/utils/list_utils/list_utils.c						\
+		src/utils/list_utils/utils_var_2.c						\
+		src/utils/list_utils/utils_var.c						\
+
+
+
+
+
 
 OBJT_DIR = objt
 

@@ -1,6 +1,6 @@
 #include "../../include/minishell.h"
 
-int	check_built_ins(t_global *g, int n)
+int	check_builtins(t_global *g, int n)
 {
 	//printf("comando = %s\n", g->tokens[n].command);
 	if (ft_strncmp(g->tokens[n].command, "pwd", 4) == 0 
@@ -11,7 +11,7 @@ int	check_built_ins(t_global *g, int n)
 		return (1);
 }
 
-int	built_ins(t_global *g, int n)
+int	builtins(t_global *g, int n)
 {
 	int	flag;
 

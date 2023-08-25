@@ -223,7 +223,7 @@ void		ft_pwd(int fd_in, int fd_out);
 void		ft_env(t_global *g, int fd_out);
 void		ft_export(t_global *g, int n, int fd_out);
 void		action_export(t_global *g, int n, int i);
-int			check_built_ins(t_global *g, int n);
-int			built_ins(t_global *g, int n);
+int			check_builtins(t_global *g, int n);
+int			builtins(t_global *g, int n);
 
 #endif

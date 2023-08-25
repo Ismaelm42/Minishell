@@ -1,4 +1,4 @@
-#include "../../../include/minishell.h"
+#include "../../include/minishell.h"
 
 void	add_and_store_history(char *input)
 {
