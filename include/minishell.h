@@ -218,7 +218,7 @@ void		write_on_fd(int fd_in, int fd_out);
 
 //build_in
 void		ft_pwd(int fd_in, int fd_out);
-void		ft_env(t_global *g);
+void		ft_env(t_global *g, int fd_out);
 void		ft_export(t_global *g, int n, int fd_out);
 void		action_export(t_global *g, int n, int i);
 int			check_built_ins(t_global *g, int n);

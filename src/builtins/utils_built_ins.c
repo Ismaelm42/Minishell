@@ -20,7 +20,7 @@ int	built_ins(t_global *g, int n, int fd_in, int fd_out)
 	if (ft_strncmp(g->tokens[n].command, "pwd", 4) == 0)
 		ft_pwd(fd_in, fd_out);
 	else if (ft_strncmp(g->tokens[n].command, "env", 4) == 0)
-		ft_env(g);
+		ft_env(g, fd_out);
 	else if (ft_strncmp(g->tokens[n].command, "export", 7) == 0)
 	{
 		ft_export(g, n, fd_out);

@@ -7935,3 +7935,8 @@ export
 export AA1 !HOLA AA2=PEPE !A3=JU!AN
 export AA2=JUAN
 export
+export AA1 !HOLA AA2=PEPE !A3=JU!AN
+export AA2=JUAN AA1=FIRULAIS
+export
+env
+env | cat -e
