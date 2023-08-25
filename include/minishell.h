@@ -141,7 +141,9 @@ void		token_maker(t_token *tokens, char **lexer);
 //parser/var_environment
 char		**copy_environment(char **env);
 char		*search_env(char *var, char **envp);
-void		free_env(char **env_copy);
+int			search_env_replace(char *var, char *val, char **envp);
+void		add_env(char ***env, char *argv);
+//void		free_env(char **env_copy);
 
 //parser/variables/var_local
 int			local_var(t_global *g, char *input);

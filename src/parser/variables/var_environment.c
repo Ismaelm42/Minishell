@@ -46,23 +46,23 @@ char	**copy_environment(char **env)
 /*
 funcion para liberar memoria de la copia de environments char **
 */
-void	free_env(char **env_copy)
-{
-	int	n;
+// void	free_env(char **env_copy)
+// {
+// 	int	n;
 
-	n = 0;
-	if (env_copy != NULL)
-	{
-		while (env_copy[n] != NULL)
-		{
-			free(env_copy[n]);
-			env_copy[n] = NULL;
-			n++;
-		}
-		free(env_copy);
-		env_copy = NULL;
-	}
-}
+// 	n = 0;
+// 	if (env_copy != NULL)
+// 	{
+// 		while (env_copy[n] != NULL)
+// 		{
+// 			free(env_copy[n]);
+// 			env_copy[n] = NULL;
+// 			n++;
+// 		}
+// 		free(env_copy);
+// 		env_copy = NULL;
+// 	}
+// }
 
 
 /*
@@ -88,10 +88,46 @@ char	*search_env(char *var, char **envp)
 	}
 	free(str);
 	len_str = ft_strlen(envp[i]);
-	var = ft_substr(envp[i], len, (len_str - len),0);
+	var = ft_substr(envp[i], len, (len_str - len), 0);
 	return (var);
 }
 
+int	search_env_replace(char *var, char *val, char **envp)
+{
+	int		len;
+	int		i;
+	char	*str;
 
+	i = 0;
+	str = ft_strjoin(var, "=", 0);
+	len = ft_strlen(str);
+	while (ft_strnstr(envp[i], str, len) == 0)
+	{
+		if (!envp[i + 1])
+		{
+			free(var);
+			free(val);
+			return (free(str), 1);
+		}	
+		i++;
+	}
+	free(envp[i]);
+	envp[i] = ft_strjoin(str, val, 3);
+	return (0);
+}
+void	add_env(char ***env, char *argv)
+{
+	char	**env_cp;
+	int		i;
 
-
+	i = 0;
+	while ((*env)[i])
+		i++;
+	env_cp = ft_calloc(sizeof(char *), (i + 2));
+	i = -1;
+	while ((*env)[++i])
+			env_cp[i] = ft_strdup((*env)[i]);
+	env_cp[i] = ft_strdup(argv);
+	free_matrix((void ***)env, 0);
+	*env = env_cp;
+}

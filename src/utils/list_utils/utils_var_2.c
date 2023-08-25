@@ -16,15 +16,15 @@ int	check_key(char *key, int wall)
 	if (key[i] != '\0')
 	{
 		if (wall == 1)
-			free(key);
-		key = NULL;
+			free_mem((void **)&key);
+		//key = NULL;
 		return (1);
 	}
 	else
 	{
 		if (wall == 1)
-			free(key);
-		key = NULL;
+			free_mem((void **)&key);
+		//key = NULL;
 		return (0);
 	}
 }

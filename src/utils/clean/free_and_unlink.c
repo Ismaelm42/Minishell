@@ -50,7 +50,7 @@ Elimina la estructura global por completo.
 void	destroy_global(t_global *global)
 {
 	unlink(".bash_history");
-	free_env(global->env);
+	free_matrix((void ***)&global->env, 0);
 	ft_free_lst(global->lst_local);
 	ft_free_lst(global->lst_env);
 	free_mem((void **)&global);
