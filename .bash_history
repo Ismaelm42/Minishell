@@ -7912,3 +7912,26 @@ export AAA | ls
 export AAA | ls
 echo Hola | ls
 export | ls
+export AA1 !HOLA AA2=PEPE !A3=JU!AN
+export AA1 !HOLA AA2=PEPE !A3=JU!AN
+export AA1 !HOLA AA2=PEPE !A3=JU!AN
+export
+export AA1 !HOLA AA2=PEPE !A3=JU!AN
+export
+export AA1 !HOLA AA2=PEPE !A3=JU!AN
+export
+export AA2=PEPE !A3=JU!AN
+export
+export AA2=PEPE !A3
+export
+export AA2=PEPE !A3
+export
+export AA1 !HOLA AA2=PEPE !A3=JU!AN
+export
+export AA1 !HOLA AA2=PEPE !A3=JU!AN
+export
+export AA1 !HOLA AA2=PEPE !A3=JU!AN
+export
+export AA1 !HOLA AA2=PEPE !A3=JU!AN
+export AA2=JUAN
+export

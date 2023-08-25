@@ -23,30 +23,20 @@ CORREGIR check_key  comprueba que el primer caracter sea alfanumerico si el
 parametro tiene comillas peta y noo debe petar
 */
 
-static int	parse_arg(t_global *g, int n)
+static int	parse_arg(t_global *g, int n, int i)
 {
-	int		i;
-	// char	*key;
-	// char	*val;
-
-	i = 0;
-	
 	if (ft_strrchr(g->tokens[n].arg[i], '=') == NULL)
 	{	
-		//dprintf(1, "ENTRA EN PARSE NO =");
 		if (check_key(g->tokens[n].arg[i], 0) != 0)
 			return (1);
 	}	
 	else
 	{
-		//dprintf(1, "ENTRA EN PARSE =");
 		if (check_key(extract_clue(g->tokens[n].arg[i]), 1) != 0)
 			return (1);
 		else if (ft_strchr(extract_value(g->tokens[n].arg[i]), '!' ) != NULL)
 			return (1);
 	}
-	// printf("ARGUMENTO %d %s\n", i, g->tokens[n].arg[i]);
-	// printf("llega fin parse\n");
 	return (0);
 }
 
@@ -56,23 +46,23 @@ void	action_export(t_global *g, int n, int i)
 
 	while ((g->tokens[n].arg[i] != NULL))
 	{
-		if(parse_arg(g, n) == 0)
+		if (parse_arg(g, n, i) == 0)
 		{
-		if (ft_strrchr(g->tokens[n].arg[i], '=') == NULL)
-		{
-			if (search_key(g->lst_env, g->tokens[n].arg[i]) == NULL)
+			if (ft_strrchr(g->tokens[n].arg[i], '=') == NULL)
 			{
-				key = ft_strdup(g->tokens[n].arg[i]);
-				insert_last(&g->lst_env, create_nodo(key, ""));
+				if (search_key(g->lst_env, g->tokens[n].arg[i]) == NULL)
+				{
+					key = ft_strdup(g->tokens[n].arg[i]);
+					insert_last(&g->lst_env, create_nodo(key, ""));
+				}
 			}
-		}
-		else
-		{
-			if (search_key_and_replace(g->lst_env, extract_clue \
-			(g->tokens[n].arg[i]), extract_value(g->tokens[n].arg[i])) == -1)
-				insert_last(&g->lst_env, create_nodo(extract_clue \
-				(g->tokens[n].arg[i]), extract_value(g->tokens[n].arg[i])));
-		}
+			else
+			{
+				if (search_key_and_replace(g->lst_env, extract_clue \
+				(g->tokens[n].arg[i]), extract_value(g->tokens[n].arg[i])))
+					insert_last(&g->lst_env, create_nodo(extract_clue \
+					(g->tokens[n].arg[i]), extract_value(g->tokens[n].arg[i])));
+			}
 		}
 		i++;
 	}

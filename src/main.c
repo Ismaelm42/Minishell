@@ -12,23 +12,23 @@ int	main(int argc, char **argv, char **env)
 	// {
 	// 	rl_on_new_line();
 	// 	input = readline(">> ");
-		input = ft_strdup("export | ls");
+		input = ft_strdup("export AA1 !HOLA AA2=PEPE !A3=JU!AN");
 		add_and_store_history(input);
 		get_struct_data(global, input);
 		execute_commands(global);
 		free_global(global, 0);
 
-		// input = ft_strdup("export AM=");
-		// add_and_store_history(input);
-		// get_struct_data(global, input);
-		// execute_commands(global);
-		// free_global(global, 0);
+		input = ft_strdup("export AA2=JUAN");
+		add_and_store_history(input);
+		get_struct_data(global, input);
+		execute_commands(global);
+		free_global(global, 0);
 
-		// input = ft_strdup("export");
-		// add_and_store_history(input);
-		// get_struct_data(global, input);
-		// execute_commands(global);
-		// free_global(global, 0);
+		input = ft_strdup("export");
+		add_and_store_history(input);
+		get_struct_data(global, input);
+		execute_commands(global);
+		free_global(global, 0);
 
 
 		// input = ft_strdup("ls");
