@@ -56,16 +56,16 @@ int	get_input_file(t_global *global, int n)
 	return (0);
 }
 
-int	fd_in_handler(t_global *global, int n, int fd_in, int fd_out)
+int	fd_in_handler(t_global *global, int n)
 {
 	if (global->tokens[n].fd_in != 0)
 	{
 		if (get_input_file(global, n) != 0)
-			return (close(fd_in), close(fd_out), 1);
+			return (close(global->fd[n][0]), close(global->fd[n + 1][1]), 1);
 	}
 	else
 	{
-		if (dup2(fd_in, STDIN_FILENO) == -1)
+		if (dup2(global->fd[n][0], STDIN_FILENO) == -1)
 			return (print_error("Pipeline error4", errno), 1);
 	}
 	return (0);

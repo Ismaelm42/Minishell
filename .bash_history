@@ -7940,3 +7940,14 @@ export AA2=JUAN AA1=FIRULAIS
 export
 env
 env | cat -e
+env | cat -e
+ls -la | cat -e
+ls -la | cat -e
+ls -la | cat -e
+ls -la | cat -e
+ls -la | cat -e
+<infile1 cat-e
+<infile1 cat -e
+<infile1 cat -e >outfile1
+<infile1 cat -e >outfile1
+ls -l | cat -e

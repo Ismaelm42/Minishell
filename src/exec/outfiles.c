@@ -52,16 +52,16 @@ int	get_output_file(t_global *global, int n)
 	return (0);
 }
 
-int	fd_out_handler(t_global *global, int n, int fd_out)
+int	fd_out_handler(t_global *global, int n)
 {
 	if (global->tokens[n].fd_out != 0)
 	{
 		if (get_output_file(global, n) != 0)
-			return (close(fd_out), 1);
+			return (close(global->fd[n + 1][1]), 1);
 	}
 	else
 	{
-		if (dup2(fd_out, STDOUT_FILENO) == -1)
+		if (dup2(global->fd[n + 1][1], STDOUT_FILENO) == -1)
 			return (print_error("Pipeline error7", errno), 1);
 	}
 	return (0);

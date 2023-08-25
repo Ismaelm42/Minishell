@@ -48,10 +48,12 @@ typedef struct s_global
 {
 	char		*input;
 	char		**env;
+	int			**fd;
 	int			pipeline;
 	int			fd_stdin;
 	int			fd_stdout;
 	int			exit_status;
+	pid_t		*pid;
 	t_node		*lst_env;
 	t_node		*lst_local;
 	t_token		*tokens;
@@ -182,9 +184,9 @@ void		ft_sigquit_handler(int sig);
 int			control_d(char *input);
 
 //exec/execute_commands
-int			create_pipes_and_pid(t_global *global, pid_t **pid, int ***fd);
-int			child_process(t_global *global, int **fd, int n);
-int			parent_process(t_global *global, int **fd, pid_t *pid, int n);
+int			create_pipes_and_pid(t_global *global);
+int			child_process(t_global *global, int n);
+int			parent_process(t_global *global, int n);
 int			execute_commands(t_global *global);
 
 //exec/heredocs
@@ -195,13 +197,13 @@ int			process_heredocs(t_global *global);
 int			handle_heredocs(int n);
 int			handle_infiles(char ***infiles, int fd_type);
 int			get_input_file(t_global *global, int n);
-int			fd_in_handler(t_global *global, int n, int fd_in, int fd_out);
+int			fd_in_handler(t_global *global, int n);
 
 //exec/outfiles
 int			handle_outfiles(char *outfile, int write_flag, int infile_type);
 int			detect_output_file(char **outfiles, int infile_type, int fd_type);
 int			get_output_file(t_global *global, int n);
-int			fd_out_handler(t_global *global, int n, int fd_out);
+int			fd_out_handler(t_global *global, int n);
 
 //exec/get_command
 char		**get_path(char **env);
@@ -222,7 +224,7 @@ void		ft_env(t_global *g, int fd_out);
 void		ft_export(t_global *g, int n, int fd_out);
 void		action_export(t_global *g, int n, int i);
 int			check_built_ins(t_global *g, int n);
-int			built_ins(t_global *g, int n, int fd_in, int fd_out);
+int			built_ins(t_global *g, int n);
 
 
 #endif
