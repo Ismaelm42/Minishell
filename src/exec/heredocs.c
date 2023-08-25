@@ -12,7 +12,7 @@ void	get_heredocs(char **heredoc, int fd)
 			if (ft_strncmp(buffer, *heredoc, ft_strlen(*heredoc) + 1) == 0
 				&& heredoc[1] == NULL)
 			{
-				free(buffer);
+				free_mem((void **)&buffer);
 				break ;
 			}
 			if (ft_strncmp(buffer, *heredoc, ft_strlen(*heredoc) + 1) == 0
@@ -24,8 +24,7 @@ void	get_heredocs(char **heredoc, int fd)
 				ft_putstr_fd("\n", fd);
 			}
 		}
-		free(buffer);
-		buffer = NULL;
+		free_mem((void **)&buffer);
 	}
 }
 
@@ -44,7 +43,7 @@ int	process_heredocs(t_global *global)
 			fd = open(heredoc, O_RDWR | O_CREAT | O_TRUNC, 0666);
 			if (fd == -1)
 				return (print_error("heredoc", errno), 1);
-			free(heredoc);
+			free_mem((void **)&heredoc);
 			get_heredocs(global->tokens[n].heredoc, fd);
 			close(fd);
 		}

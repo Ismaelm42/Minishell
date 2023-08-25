@@ -7960,3 +7960,25 @@ ARG=gato
 echo $ARG
 echo $HOME
 ls -la | cat -e
+ls -la|cat .e
+ls -la|cat -e
+ls
+ls -l | cat -e
+ls -l | cat -e
+ls -l | cat -e
+ls
+ls -la
+ls
+ls -la
+ls
+ls -la|cat -e
+echo 'hola'
+clear
+ls -l | cat -e
+ls -l | cat -e
+ls -l | cat -e
+ls -la
+echo hola
+efefe
+ls fefef
+ls -l | cat -e

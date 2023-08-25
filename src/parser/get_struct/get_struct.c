@@ -34,7 +34,7 @@ void	get_struct_data(t_global *global, char *input)
 	global->input = ft_strdup(input);
 	if (get_tokens(input, global) != -2)
 	{
-		free(global->input);
+		free_mem((void **)&global->input);
 		global->input = NULL;
 	}
 }

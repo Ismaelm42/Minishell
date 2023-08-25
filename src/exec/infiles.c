@@ -12,12 +12,12 @@ int	handle_heredocs(int n)
 	if (dup2(fd, STDIN_FILENO) == -1)
 	{
 		close(fd);
-		free(heredoc);
+		free_mem((void **)&heredoc);
 		print_error("Pipeline error6", errno);
 		return (1);
 	}
 	close(fd);
-	free(heredoc);
+	free_mem((void **)&heredoc);
 	return (0);
 }
 

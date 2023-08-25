@@ -159,7 +159,8 @@ void		put_dictionary_local(char *nv, t_global *g);
 int			check_key(char *key, int wall);
 
 //parser/utils
-char		**free_matrix(char **matrix);
+void		free_mem(void **mem);
+char		**free_matrix(void ***matrix, int size);
 void		destroy_global(t_global *global);
 void		free_global(t_global *global, int flag);
 

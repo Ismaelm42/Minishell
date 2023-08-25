@@ -9,6 +9,6 @@ char	**get_lexer(char *input, t_global *global)
 		return (NULL);
 	new_input = expansion_variable(input, global);
 	lexer = lexer_maker(new_input);
-	free(new_input);
+	free_mem((void **)&new_input);
 	return (lexer);
 }

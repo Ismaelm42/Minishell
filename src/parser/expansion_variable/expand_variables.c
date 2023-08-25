@@ -16,11 +16,11 @@ int	get_variable_from_env(int n, t_lexer *lexer, t_global *global)
 		copy = ft_strtrim(copy, "}", 1);
 	}
 	environment = search_env(copy, global->env);
-	free(copy);
+	free_mem((void **)&copy);
 	if (environment == NULL)
 		return (1);
 	lexer[n].expanded = ft_strdup(environment);
-	free(environment);
+	free_mem((void **)&environment);
 	return (0);
 }
 
@@ -36,7 +36,7 @@ int	get_variable_from_local_var(int n, t_lexer *lexer, t_global *global)
 		copy = ft_strtrim(copy, "}", 1);
 	}
 	var = search_key(global->lst_local, copy);
-	free(copy);
+	free_mem((void **)&copy);
 	if (var == NULL)
 		return (1);
 	lexer[n].expanded = ft_strdup(var);

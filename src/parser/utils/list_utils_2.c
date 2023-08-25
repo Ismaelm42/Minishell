@@ -65,7 +65,6 @@ void	ft_envlst_short(t_node **lst)
 			tmp->value = tmp->next->value;
 			tmp->next->key = change_key;
 			tmp->next->value = change_val;
-
 			tmp = *lst;
 		}
 		else

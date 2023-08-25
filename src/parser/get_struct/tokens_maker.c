@@ -10,7 +10,7 @@ void	allocate_token_memory(t_token *tokens, int *size)
 	tokens->heredoc = (char **)ft_calloc(sizeof(char *), size[2] + 1);
 	tokens->append = (char **)ft_calloc(sizeof(char *), size[3] + 1);
 	tokens->arg = (char **)ft_calloc(sizeof(char *), size[5] + 1);
-	free(size);
+	free_mem((void **)&size);
 }
 
 /*
@@ -57,7 +57,7 @@ void	token_filler(t_token *tokens, char **lexer)
 		check_token_type(tokens, &lexer, &i);
 		lexer++;
 	}
-	free(i);
+	free_mem((void **)&i);
 }
 
 /*

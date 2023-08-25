@@ -13,17 +13,21 @@ char	*search_path(t_global *global, int n, char **path, char *cmd_path)
 	int	i;
 
 	i = 0;
-	free(cmd_path);
+	free_mem((void **)&cmd_path);
 	cmd_path = ft_strjoin(path[i], "/", 0);
 	cmd_path = ft_strjoin(cmd_path, global->tokens[n].command, 1);
 	while (1)
 	{
 		ret = check_cmd_path(global->tokens[n].command, cmd_path, path[i], 1);
 		if (ret == -1 || ret == -2)
-			return (free(cmd_path), free_matrix(path), NULL);
+		{
+			free_mem((void **)&cmd_path);
+			free_matrix((void ***)&path, 0);
+			return (NULL);
+		}
 		else if (ret == 0)
-			return (free_matrix(path), cmd_path);
-		free(cmd_path);
+			return (free_matrix((void ***)&path, 0), cmd_path);
+		free_mem((void **)&cmd_path);
 		cmd_path = ft_strjoin(path[i], "/", 0);
 		cmd_path = ft_strjoin(cmd_path, global->tokens[n].command, 1);
 		i++;
@@ -65,6 +69,6 @@ void	write_on_fd(int fd_in, int fd_out)
 		if (buffer == NULL)
 			break ;
 		ft_putstr_fd(buffer, fd_out);
-		free(buffer);
+		free_mem((void **)&buffer);
 	}
 }

@@ -52,9 +52,9 @@ char	*get_command_path(t_global *global, int n)
 	if (ft_strchr(cmd_path, '/') != NULL)
 	{
 		if (check_cmd_path(NULL, cmd_path, *path, 0) != 0)
-			return (free(cmd_path), free_matrix(path), NULL);
+			return (free(cmd_path), free_matrix((void ***)&path, 0), NULL);
 		else
-			return (free_matrix(path), cmd_path);
+			return (free_matrix((void ***)&path, 0), cmd_path);
 	}
 	return (search_path(global, n, path, cmd_path));
 }
@@ -82,6 +82,6 @@ char	**get_exec_command(t_global *global, int n)
 		i++;
 	}
 	cmd_exec[i + 1] = NULL;
-	free(cmd_path);
+	free_mem((void **)&cmd_path);
 	return (cmd_exec);
 }

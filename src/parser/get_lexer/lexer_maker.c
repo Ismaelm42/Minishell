@@ -18,8 +18,8 @@ char	*handle_quoted_substr(char *s)
 		c = reject_quotes(s, substr, &i, &j);
 	}
 	if (c != 0)
-		return (free(substr), s);
-	return (free(s), substr);
+		return (free_mem((void **)&substr), s);
+	return (free_mem((void **)&s), substr);
 }
 
 /*
@@ -91,7 +91,7 @@ char	**lexer_maker(char *s)
 		else
 			words_splitter(&n, &s, &lexer);
 		if (!lexer[n - 1])
-			return (free_matrix(lexer));
+			return (free_matrix((void ***)&lexer, 0));
 	}
 	lexer[n] = 0;
 	return (lexer);

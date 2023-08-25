@@ -66,6 +66,6 @@ char	*replace_variables(char *input, t_lexer *lexer)
 	size = (input_size - var_size + exp_size);
 	new_input = (char *)ft_calloc(sizeof(char), size + 1);
 	replace_function(new_input, input, lexer);
-	free(input);
+	free_mem((void **)&input);
 	return (new_input);
 }
