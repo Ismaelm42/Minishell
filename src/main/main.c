@@ -8,15 +8,15 @@ int	main(int argc, char **argv, char **env)
 	(void)argc;
 	(void)argv;
 	global = init_struct(env);
-	// while (1)
-	// {
-	// 	rl_on_new_line();
-	// 	input = readline(">> ");
-		input = ft_strdup("echo <<a <<a| echo hola | echo<<a <<a | echo<<a <<a");
+	while (1)
+	{
+		rl_on_new_line();
+		input = readline(">> ");
+		// input = ft_strdup("echo <<a <<a| echo hola | echo<<a <<a | echo<<a <<a");
 		add_and_store_history(input);
 		get_struct_data(global, input);
 		execute_commands(global);
-		free_global(global, 1);
+		free_global(global, 0);
 
 
 		// input = ft_strdup("export AA2=JUAN AA1=FIRULAIS");
@@ -37,7 +37,7 @@ int	main(int argc, char **argv, char **env)
 		// get_struct_data(global, input);
 		// execute_commands(global);
 		// free_global(global, 1);
-	// }
+	}
 	return (0);
 }
 
