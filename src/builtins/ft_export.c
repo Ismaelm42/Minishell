@@ -25,6 +25,9 @@ parametro tiene comillas peta y noo debe petar
 
 static int	parse_arg(t_global *g, int n, int i)
 {
+	char *val;
+
+	val = extract_value(g->tokens[n].arg[i]);
 	if (ft_strrchr(g->tokens[n].arg[i], '=') == NULL)
 	{	
 		if (check_key(g->tokens[n].arg[i], 0) != 0)
@@ -34,9 +37,13 @@ static int	parse_arg(t_global *g, int n, int i)
 	{
 		if (check_key(extract_clue(g->tokens[n].arg[i]), 1) != 0)
 			return (1);
-		else if (ft_strchr(extract_value(g->tokens[n].arg[i]), '!' ) != NULL)
+		else if (ft_strchr(val, '!' ) != NULL)
+		{
+			free_mem((void **)&val);
 			return (1);
+		}
 	}
+	free_mem((void **)&val);
 	return (0);
 }
 
