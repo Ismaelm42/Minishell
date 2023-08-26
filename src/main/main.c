@@ -12,7 +12,7 @@ int	main(int argc, char **argv, char **env)
 	// {
 	// 	rl_on_new_line();
 	// 	input = readline(">> ");
-		input = ft_strdup("export AAA=PEPE");
+		input = ft_strdup("env > outfile | wc -l");
 		add_and_store_history(input);
 		get_struct_data(global, input);
 		execute_commands(global);

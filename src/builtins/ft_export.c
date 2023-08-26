@@ -43,7 +43,7 @@ static int	parse_arg(t_global *g, int n, int i)
 			return (1);
 		}
 	}
-	free_mem((void **)&val);""
+	free_mem((void **)&val);
 	return (0);
 }
 
@@ -79,10 +79,10 @@ void	action_export(t_global *g, int n, int i)
 	ft_envlst_short(&g->lst_env);
 }
 
-void	ft_export(t_global *g, int n, int fd_out)
+void	ft_export(t_global *g, int n)
 {
 	if (g->tokens[n].arg[0] == NULL)
-		print_stack(g->lst_env, fd_out);
+		print_stack(g->lst_env, STDOUT_FILENO);
 }
 
 /*
