@@ -1,0 +1,4 @@
+ls
+./minishell 
+ls
+exit

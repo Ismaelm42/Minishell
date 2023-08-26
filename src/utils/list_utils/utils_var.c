@@ -50,7 +50,6 @@ char	*search_key(t_node *lst, char *key)
 		else
 			aux = aux->next;
 	}
-	//printf("NO LA ENCUENTRA\n");
 	return (NULL);
 }
 
