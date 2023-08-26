@@ -11,12 +11,9 @@ void	ft_free_lst(t_node *lst)
 	{
 		tmp = lst;
 		lst = lst->next;
-		free(tmp->key);
-		free(tmp->value);
-		free(tmp);
-		// free_mem((void **)&tmp->key);
-		// free_mem((void **)&tmp->value);
-		// free_mem((void **)&tmp);
+		free_mem((void **)&tmp->key);
+		free_mem((void **)&tmp->value);
+		free_mem((void **)&tmp);
 	}
 }
 /*

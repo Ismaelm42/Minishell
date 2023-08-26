@@ -25,9 +25,8 @@ parametro tiene comillas peta y noo debe petar
 
 static int	parse_arg(t_global *g, int n, int i)
 {
-	char *val;
+	char	*val;
 
-	val = extract_value(g->tokens[n].arg[i]);
 	if (ft_strrchr(g->tokens[n].arg[i], '=') == NULL)
 	{	
 		if (check_key(g->tokens[n].arg[i], 0) != 0)
@@ -37,13 +36,18 @@ static int	parse_arg(t_global *g, int n, int i)
 	{
 		if (check_key(extract_clue(g->tokens[n].arg[i]), 1) != 0)
 			return (1);
-		else if (ft_strchr(val, '!' ) != NULL)
-		{
-			free_mem((void **)&val);
-			return (1);
+		else
+		{	
+			val = extract_value(g->tokens[n].arg[i]);
+			if (ft_strchr(val, '!' ) != NULL)
+			{
+				free_mem((void **)&val);
+				return (1);
+			}
+			else
+				free_mem((void **)&val);
 		}
 	}
-	free_mem((void **)&val);
 	return (0);
 }
 
@@ -60,7 +64,7 @@ void	action_export(t_global *g, int n, int i)
 				if (search_key(g->lst_env, g->tokens[n].arg[i]) == NULL)
 				{
 					key = ft_strdup(g->tokens[n].arg[i]);
-					insert_last(&g->lst_env, create_nodo(key, ""));
+					insert_last(&g->lst_env, create_nodo(key, ft_strdup("")));
 				}
 			}
 			else
@@ -82,7 +86,7 @@ void	action_export(t_global *g, int n, int i)
 void	ft_export(t_global *g, int n)
 {
 	if (g->tokens[n].arg[0] == NULL)
-		print_stack(g->lst_env, STDOUT_FILENO);
+		print_stack(g->lst_env);
 }
 
 /*

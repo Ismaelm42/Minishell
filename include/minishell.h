@@ -172,7 +172,7 @@ t_node		*init_list(void);
 t_node		*create_nodo(char *key, char *value);
 void		insert_last(t_node **list, t_node *new_nodo);
 t_node		*final(t_node *list);
-void		print_stack(t_node *list, int fd_out);
+void		print_stack(t_node *list);
 void		copy_environment_list(t_node **lst_env, char **env);
 void		ft_envlst_short(t_node **lst);
 
@@ -227,6 +227,6 @@ void		ft_env(t_global *g);
 void		ft_export(t_global *g, int n);
 void		action_export(t_global *g, int n, int i);
 int			check_builtins(t_global *g, int n);
-void		builtins(t_global *g, int n);
+int			builtins(t_global *g, int n);
 
 #endif

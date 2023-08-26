@@ -27,7 +27,7 @@ int	quotes_check(char *lexer)
 		}
 	}
 	if (c != 0)
-		return (ft_putstr_fd("minishell: Syntax error unexpected EOF\n", 2), -1);
+		return (ft_putstr_fd("minishell: Syntax error unexpected EOF\n", 2), 1);
 	return (0);
 }
 
@@ -47,7 +47,7 @@ int	pipes_and_redirections_check(char **lexer, int n)
 		ft_putstr_fd("\'", 2);
 		ft_putchar_fd(lexer[n][0], 2);
 		ft_putstr_fd("\'\n", 2);
-		return (-1);
+		return (1);
 	}
 	return (0);
 }
@@ -59,7 +59,7 @@ y cuando se encuentra una redirección seguida de un pipe.
 int	next_lexer_check(char **lexer, int n)
 {
 	if (lexer[n][0] == '|' && lexer[n + 1] == NULL)
-		return (-2);
+		return (-1);
 	if ((lexer[n][0] == '<' || lexer[n][0] == '>')
 		&& (lexer[n + 1] == NULL || lexer[n + 1][0] == '|'
 		|| lexer[n + 1][0] == '<' || lexer[n + 1][0] == '>'))
@@ -70,7 +70,7 @@ int	next_lexer_check(char **lexer, int n)
 		if (lexer[n][1] != '\0')
 			ft_putchar_fd(lexer[n][1], 2);
 		ft_putstr_fd("\'\n", 2);
-		return (-1);
+		return (1);
 	}
 	return (0);
 }
@@ -84,7 +84,7 @@ int	syntax_error_check(char **lexer)
 	{
 		if (quotes_check(lexer[n]) == -1
 			|| pipes_and_redirections_check(lexer, n) == -1)
-			return (-1);
+			return (1);
 		if (next_lexer_check(lexer, n) != 0)
 			return (next_lexer_check(lexer, n));
 		n++;

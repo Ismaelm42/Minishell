@@ -105,13 +105,14 @@ int	search_env_replace(char *var, char *val, char **envp)
 	{
 		if (!envp[i + 1])
 		{
-			free(var);
-			free(val);
-			return (free(str), 1);
+			free_mem((void **)&var);
+			free_mem((void **)&val);
+			return (free_mem((void **)&str), 1);
 		}	
 		i++;
 	}
-	free(envp[i]);
+	free_mem((void **)&var);
+	free_mem((void **)&envp[i]);
 	envp[i] = ft_strjoin(str, val, 3);
 	return (0);
 }

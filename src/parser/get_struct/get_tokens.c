@@ -13,7 +13,7 @@ int	get_tokens(char *input, t_global *global)
 
 	lexer = get_lexer(input, global);
 	if (lexer == NULL)
-		return (-3);
+		return (1);
 	return_n = syntax_error_check(lexer);
 	if (return_n != 0)
 		return (free_matrix((void ***)&lexer, 0), return_n);
