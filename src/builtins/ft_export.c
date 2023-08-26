@@ -43,7 +43,7 @@ static int	parse_arg(t_global *g, int n, int i)
 			return (1);
 		}
 	}
-	free_mem((void **)&val);
+	free_mem((void **)&val);""
 	return (0);
 }
 
