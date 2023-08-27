@@ -17,3 +17,10 @@ export
 unset AA1 AA2
 export
 env
+export AAA=pepe
+env
+unset AAA
+env
+unset
+unset
+clear

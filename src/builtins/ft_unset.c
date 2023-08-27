@@ -5,6 +5,33 @@ El comando unset eliminara una variable global o varias recibidas como
 de argumento de char ** env 
 y de lst_env. Puede recibir varias variables como Argumentos 
 */
+void	delete_var_env(char ***env, char *key)
+{
+	char	**env_cp;
+	int		i;
+	int		j;
+
+	i = 0;
+	j = 0;
+	if (search_env(key, *env) == 0)
+	{
+		while ((*env)[i])
+			i++;
+		env_cp = ft_calloc(sizeof(char *), i + 1);
+		i = 0;
+		while ((*env)[i])
+		{
+			if (ft_strncmp(key, (*env)[i], ft_strlen(key)))
+			{
+				env_cp[j] = ft_strdup((*env)[i]);
+				j++;
+			}
+			i++;
+		}
+		free_matrix((void ***)env, 0);
+		*env = env_cp;
+	}
+}
 
 void	ft_unset(t_global *g, int n)
 {

@@ -140,6 +140,7 @@ void		token_maker(t_token *tokens, char **lexer);
 
 //parser/var_environment
 char		**copy_environment(char **env);
+int			search_env(char *var, char **env);
 char		*search_env_expand(char *var, char **envp);
 int			search_env_replace(char *var, char *val, char **envp);
 void		add_env(char ***env, char *argv);
