@@ -71,3 +71,21 @@ void	ft_envlst_short(t_node **lst)
 			tmp = tmp->next;
 	}
 }
+
+/*
+Función para hacer copia de environments en una lista para
+usarla en pricipio con comando export y unset
+*/
+void	copy_environment_list(t_node **lst_env, char **env)
+{
+	int		i;
+	t_node	*aux;
+
+	i = 0;
+	while (env[i] != NULL)
+	{
+		aux = create_nodo(extract_clue(env[i]), extract_value(env[i]));
+		insert_last(lst_env, aux);
+		i++;
+	}
+}

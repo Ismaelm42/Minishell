@@ -18,8 +18,8 @@ void	ft_unset(t_global *g, int n)
 		while (g->tokens[n].arg[i] != NULL)
 		{
 			search_key_and_delete(&g->lst_env, g->tokens[n].arg[i]);
+			delete_var_env(&g->env, g->tokens[n].arg[i]);
 			i++;
 		}
-		//print_stack(g->lst_env);	
 	}
 }

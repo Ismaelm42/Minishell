@@ -14,8 +14,16 @@
 
 //pasar utils_list a libft
 
+
+                // ANOTACIONES JAVI FIN DE SEMANA
+                
 // SI en input es una asignacion de variable local (ARG=pepe), la ejecucion debe 
 // pasar a una nueva recogida de input (readline) no debe ejecutar comando ya
 // que no ha recogido tokens. Meto comprobacion en exec_command (pasa de líneas)
 
 //extraccion de key y val tendra a veces que liberar ?¿? pruebas cpn valgrind
+
+//en exec_command se deben ejecutar ciertas builtins en el proceso padre ya que modifican variables de la global
+//hacer una funcion para limpiar código quitar lineas
+
+//main por normativa y legibilidad debe ir fuera de la carpeta src en el directorio principal del proyecto

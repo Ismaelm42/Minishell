@@ -1,24 +1,6 @@
 #include "../../../include/minishell.h"
 
 /*
-Función para hacer copia de environments en una lista para
-usarla en pricipio con comando export y unset
-*/
-void	copy_environment_list(t_node **lst_env, char **env)
-{
-	int		i;
-	t_node	*aux;
-
-	i = 0;
-	while (env[i] != NULL)
-	{
-		aux = create_nodo(extract_clue(env[i]), extract_value(env[i]));
-		insert_last(lst_env, aux);
-		i++;
-	}
-}
-
-/*
 Funcion modificada para hacer copia de environment char **env
 guardando una copa excacta.
 */
@@ -44,33 +26,11 @@ char	**copy_environment(char **env)
 }
 
 /*
-funcion para liberar memoria de la copia de environments char **
-*/
-// void	free_env(char **env_copy)
-// {
-// 	int	n;
-
-// 	n = 0;
-// 	if (env_copy != NULL)
-// 	{
-// 		while (env_copy[n] != NULL)
-// 		{
-// 			free(env_copy[n]);
-// 			env_copy[n] = NULL;
-// 			n++;
-// 		}
-// 		free(env_copy);
-// 		env_copy = NULL;
-// 	}
-// }
-
-
-/*
 Funcion para buscar en global->env una variable de entorno key= y 
 devolver su valor para la expansion del lexer 
 */
 
-char	*search_env(char *var, char **envp)
+char	*search_env_expand(char *var, char **envp)
 {
 	int		len;
 	int		len_str;
@@ -83,7 +43,7 @@ char	*search_env(char *var, char **envp)
 	while (ft_strnstr(envp[i], str, len) == 0)
 	{
 		if (!envp[i + 1])
-			return (free(str), NULL);// ft_strdup(""));
+			return (free(str), NULL);
 		i++;
 	}
 	free(str);
@@ -116,6 +76,7 @@ int	search_env_replace(char *var, char *val, char **envp)
 	envp[i] = ft_strjoin(str, val, 3);
 	return (0);
 }
+
 void	add_env(char ***env, char *argv)
 {
 	char	**env_cp;
@@ -131,4 +92,48 @@ void	add_env(char ***env, char *argv)
 	env_cp[i] = ft_strdup(argv);
 	free_matrix((void ***)env, 0);
 	*env = env_cp;
+}
+
+int	search_env(char *var, char **env)
+{
+	int		i;
+	char	*str;
+
+	i = 0;
+	str = ft_strjoin(var, "=", 0);
+	while (ft_strnstr(env[i], str, ft_strlen(str)) == 0)
+	{
+		if (!env[i + 1])
+			return (free(str), 1);
+		i++;
+	}
+	free(str);
+	return (0);
+}
+void delete_var_env(char ***env, char *key)
+{
+	char	**env_cp;
+	int		i;
+	int		j;
+
+	i = 0;
+	j = 0;
+	if (search_env(key, *env) == 0)
+	{
+		while ((*env)[i])
+			i++;
+		env_cp = ft_calloc(sizeof(char *), i + 1);
+		i = 0;
+		while ((*env)[i])
+		{
+			if (ft_strncmp(key, (*env)[i], ft_strlen(key)))
+			{
+				env_cp[j] = ft_strdup((*env)[i]);
+				j++;
+			}
+			i++;
+		}
+		free_matrix((void ***)env, 0);
+		*env = env_cp;
+	}
 }
