@@ -97,5 +97,5 @@ void	put_dictionary_local(char *nv, t_global *g)
 		insert_last(&(g)->lst_local, aux);
 	}
 	else
-		free(key);
+		free_mem((void **)&key);
 }

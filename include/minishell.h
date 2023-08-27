@@ -151,6 +151,7 @@ char		*extract_clue(char *c);
 char		*extract_value(char *c);
 char		*search_key(t_node *lst, char *key);
 int			search_key_and_replace(t_node *lst, char *key, char *val);
+int			search_key_and_delete(t_node **lst, char *key);
 void		var_quoted_lexer_splitter(int *n, char **s, char ***lexer);
 void		var_quoted_lexer_counter(int *counter, char **s);
 void		var_words_counter(int *counter, char **s);
@@ -226,7 +227,8 @@ void		ft_pwd(void);
 void		ft_env(t_global *g);
 void		ft_export(t_global *g, int n);
 void		action_export(t_global *g, int n, int i);
+void		ft_unset(t_global *g, int n);
 int			check_builtins(t_global *g, int n);
-int			builtins(t_global *g, int n);
+void		builtins(t_global *g, int n);
 
 #endif

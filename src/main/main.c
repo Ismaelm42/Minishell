@@ -8,15 +8,16 @@ int	main(int argc, char **argv, char **env)
 	(void)argc;
 	(void)argv;
 	global = init_struct(env);
-	while (1)
-	{
-		rl_on_new_line();
-		input = readline(">> ");
-		//input = ft_strdup("export AAA AAA=pepe AAA=JUAN");
+	// while (1)
+	// {
+	// 	rl_on_new_line();
+	// 	input = readline(">> ");
+		input = ft_strdup("unset COLORTERM");
 
 		add_and_store_history(input);
 		get_struct_data(global, input);
 		execute_commands(global);
+		//print_stack(global->lst_env);
 		free_global(global, 0);
 
 
@@ -26,11 +27,11 @@ int	main(int argc, char **argv, char **env)
 		// execute_commands(global);
 		// free_global(global, 0);
 
-		// input = ft_strdup("export");
-		// add_and_store_history(input);
-		// get_struct_data(global, input);
-		// execute_commands(global);
-		// free_global(global, 0);
+		input = ft_strdup("export");
+		add_and_store_history(input);
+		get_struct_data(global, input);
+		execute_commands(global);
+		free_global(global, 1);
 
 
 		// input = ft_strdup("ls");
@@ -38,7 +39,7 @@ int	main(int argc, char **argv, char **env)
 		// get_struct_data(global, input);
 		// execute_commands(global);
 		// free_global(global, 1);
-	}
+	// }
 	return (0);
 }
 

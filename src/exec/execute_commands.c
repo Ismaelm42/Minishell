@@ -85,6 +85,14 @@ int	execute_commands(t_global *global)
 			return (0);
 		}
 	}
+	if (ft_strncmp(global->tokens[0].command, "unset", 6) == 0)
+	{
+		if (global->tokens[0].arg[0] != NULL)
+		{
+			ft_unset(global, 0);
+			return (0);
+		}
+	}
 	if (process_heredocs(global) == 1)
 		return (1);
 	if (create_pipes_and_pid(global) == 1)
