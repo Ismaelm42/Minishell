@@ -43,7 +43,7 @@ int	pipes_and_redirections_check(char **lexer, int n)
 		|| ((lexer[n][0] == '>' || lexer[n][0] == '<')
 		&& ft_strlen(lexer[n]) > 2))
 	{
-		ft_putstr_fd("minishell 1: Syntax error near unexpected token ", 2);
+		ft_putstr_fd("minishell: Syntax error near unexpected token ", 2);
 		ft_putstr_fd("\'", 2);
 		ft_putchar_fd(lexer[n][0], 2);
 		ft_putstr_fd("\'\n", 2);
@@ -64,7 +64,7 @@ int	next_lexer_check(char **lexer, int n)
 		&& (lexer[n + 1] == NULL || lexer[n + 1][0] == '|'
 		|| lexer[n + 1][0] == '<' || lexer[n + 1][0] == '>'))
 	{
-		ft_putstr_fd("minishell 2: Syntax error near unexpected token ", 2);
+		ft_putstr_fd("minishell: Syntax error near unexpected token ", 2);
 		ft_putstr_fd("\'", 2);
 		ft_putchar_fd(lexer[n][0], 2);
 		if (lexer[n][1] != '\0')
