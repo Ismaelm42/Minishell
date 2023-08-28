@@ -16,7 +16,7 @@ int	handle_outfiles(char *outfile, int write_flag, int infile_type)
 	if (write_flag == 1)
 	{
 		if (dup2(fd, STDOUT_FILENO) == -1)
-			return (print_error("Pipeline error8", errno), 1);
+			return (print_error("Pipeline error", errno), 1);
 	}
 	close(fd);
 	return (0);
@@ -62,7 +62,8 @@ int	fd_out_handler(t_global *global, int n)
 	else
 	{
 		if (dup2(global->fd[n + 1][1], STDOUT_FILENO) == -1)
-			return (print_error("Pipeline error7", errno), 1);
+			return (print_error("Pipeline error", errno), 1);
 	}
+	close(global->fd[n + 1][1]);
 	return (0);
 }

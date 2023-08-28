@@ -19,11 +19,18 @@ int	create_pipes_and_pid(t_global *global)
 	return (0);
 }
 
+//se cierran los fd en fd_in_handler (si hay algún problema se cierra tanto el de 
+//lectura como el de escritura) y en fd_out_handler (solo el de escritura ya que
+//el otro está cerrado)
+//se ha suprimido el else delante del execve ya que no es necesario puesto que si
+//es un building se sale del child_process con un exit y termina el programa
+//en ese proceso hijo.
+
 int	child_process(t_global *global, int n)
 {
 	char	**command_line;
 
-	if (check_builtins(global, n) == 1)
+	// if (check_builtins(global, n) == 1)
 		command_line = get_exec_command(global, n);
 	fd_closer(global->fd, global->pipeline, n);
 	if (fd_in_handler(global, n) != 0)
@@ -32,13 +39,8 @@ int	child_process(t_global *global, int n)
 		return (1);
 	if (check_builtins(global, n) == 0)
 		builtins(global, n);
-	else
-	{
-		close(global->fd[n][0]);
-		close(global->fd[n + 1][1]);
-		execve(command_line[0], command_line, global->env);
-		print_error(command_line[0], errno);
-	}
+	execve(command_line[0], command_line, global->env);
+	print_error(command_line[0], errno);
 	return (errno);
 }
 
@@ -51,13 +53,13 @@ int	parent_process(t_global *global, int n)
 		waitpid(global->pid[n++], &status, WNOHANG);
 	fd_closer(global->fd, global->pipeline, n);
 	if (dup2(global->fd[n][0], STDIN_FILENO) == -1)
-		return (print_error("Pipeline error1", errno), 1);
+		return (print_error("Pipeline error", errno), 1);
 	write_on_fd(global->fd[n][0], STDOUT_FILENO);
 	close(global->fd[n][0]);
 	if (dup2(global->fd_stdin, STDIN_FILENO) == -1)
-		return (print_error("Pipeline error2", errno), 1);
+		return (print_error("Pipeline error", errno), 1);
 	if (dup2(global->fd_stdout, STDOUT_FILENO) == -1)
-		return (print_error("Pipeline error3", errno), 1);
+		return (print_error("Pipeline error", errno), 1);
 	return (0);
 }
 
@@ -75,24 +77,22 @@ int	execute_commands(t_global *global)
 	// export ARG=PEPE
 	// Si global->pipeline es == 1, se realiza el export y se hace return para que no entre ni cree pipes/procesos hijos
 	//n = 0;
-	if (global->tokens == NULL)
-		return (1);
-	if (ft_strncmp(global->tokens[0].command, "export", 7) == 0)
-	{
-		if (global->tokens[0].arg[0] != NULL)
-		{
-			action_export(global, 0, 0);
-			return (0);
-		}
-	}
-	if (ft_strncmp(global->tokens[0].command, "unset", 6) == 0)
-	{
-		if (global->tokens[0].arg[0] != NULL)
-		{
-			ft_unset(global, 0);
-			return (0);
-		}
-	}
+	// if (ft_strncmp(global->tokens[0].command, "export", 7) == 0)
+	// {
+	// 	if (global->tokens[0].arg[0] != NULL)
+	// 	{
+	// 		action_export(global, 0, 0);
+	// 		return (0);
+	// 	}
+	// }
+	// if (ft_strncmp(global->tokens[0].command, "unset", 6) == 0)
+	// {
+	// 	if (global->tokens[0].arg[0] != NULL)
+	// 	{
+	// 		ft_unset(global, 0);
+	// 		return (0);
+	// 	}
+	// }
 	if (process_heredocs(global) == 1)
 		return (1);
 	if (create_pipes_and_pid(global) == 1)
