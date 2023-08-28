@@ -5,6 +5,8 @@ void	ft_echo(t_global *g, int n)
 	int	i;
 
     i = -1;
+	if (!g->tokens[n].arg[0])
+		ft_putstr_fd("\n", STDOUT_FILENO);
 	if (ft_strncmp(g->tokens[n].arg[0], "-n", 3) == 0)
 		i++;
 	while (g->tokens[n].arg[++i])
