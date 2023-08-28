@@ -24,3 +24,20 @@ env
 unset
 unset
 clear
+echo HOLA Juan
+echo -n Hola juan
+make re
+clear
+echo HOLA
+echo -n Hola
+echo Hola JUAN Sin miedo
+clear
+echo Hola Juan
+echo -n HOLA pepe
+exit
+clear
+>infile echo
+echo HOLA JUAN >outfile
+cat outfile
+echo >>a >>B
+hola 

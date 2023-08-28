@@ -4,6 +4,7 @@ SRC =	src/builtins/ft_env.c									\
 		src/builtins/ft_export.c								\
 		src/builtins/ft_pwd.c									\
 		src/builtins/ft_unset.c									\
+		src/builtins/ft_echo.c									\
 		src/builtins/utils_builtins.c							\
 		src/exec/execute_commands.c								\
 		src/exec/get_command.c									\

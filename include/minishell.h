@@ -227,6 +227,7 @@ void		write_on_fd(int fd_in, int fd_out);
 void		ft_pwd(void);
 void		ft_env(t_global *g);
 void		ft_export(t_global *g, int n);
+void		ft_echo(t_global *g, int n);
 void		action_export(t_global *g, int n, int i);
 void		ft_unset(t_global *g, int n);
 int			check_builtins(t_global *g, int n);
