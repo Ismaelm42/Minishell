@@ -27,7 +27,7 @@ int	quotes_check(char *lexer)
 		}
 	}
 	if (c != 0)
-		return (ft_putstr_fd("minishell: Syntax error unexpected EOF\n", 2), 1);
+		return (ft_putstr_fd("minishell: Syntax error unexpected EOF\n", 2), 2);
 	return (0);
 }
 
@@ -43,11 +43,11 @@ int	pipes_and_redirections_check(char **lexer, int n)
 		|| ((lexer[n][0] == '>' || lexer[n][0] == '<')
 		&& ft_strlen(lexer[n]) > 2))
 	{
-		ft_putstr_fd("minishell: Syntax error near unexpected token ", 2);
+		ft_putstr_fd("minishell 1: Syntax error near unexpected token ", 2);
 		ft_putstr_fd("\'", 2);
 		ft_putchar_fd(lexer[n][0], 2);
 		ft_putstr_fd("\'\n", 2);
-		return (1);
+		return (2);
 	}
 	return (0);
 }
@@ -64,13 +64,13 @@ int	next_lexer_check(char **lexer, int n)
 		&& (lexer[n + 1] == NULL || lexer[n + 1][0] == '|'
 		|| lexer[n + 1][0] == '<' || lexer[n + 1][0] == '>'))
 	{
-		ft_putstr_fd("minishell: Syntax error near unexpected token ", 2);
+		ft_putstr_fd("minishell 2: Syntax error near unexpected token ", 2);
 		ft_putstr_fd("\'", 2);
 		ft_putchar_fd(lexer[n][0], 2);
 		if (lexer[n][1] != '\0')
 			ft_putchar_fd(lexer[n][1], 2);
 		ft_putstr_fd("\'\n", 2);
-		return (1);
+		return (2);
 	}
 	return (0);
 }
@@ -78,15 +78,19 @@ int	next_lexer_check(char **lexer, int n)
 int	syntax_error_check(char **lexer)
 {
 	int	n;
+	int	ret;
 
 	n = 0;
+	ret = 0;
 	while (lexer[n] != NULL)
 	{
-		if (quotes_check(lexer[n]) == -1
-			|| pipes_and_redirections_check(lexer, n) == -1)
-			return (1);
-		if (next_lexer_check(lexer, n) != 0)
-			return (next_lexer_check(lexer, n));
+		ret = quotes_check(lexer[n]);
+		if (ret == 0)
+			ret = pipes_and_redirections_check(lexer, n);
+		if (ret == 0)
+			ret = next_lexer_check(lexer, n);
+		if (ret != 0)
+			return (ret);
 		n++;
 	}
 	return (0);

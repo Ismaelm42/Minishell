@@ -29,11 +29,19 @@ que ya no es necesaria (tokens) para seguir con una nueva linea.
 */
 void	get_struct_data(t_global *global, char *input)
 {
+	int	token_return;
+
 	global->input = ft_strdup(input);
-	while (get_tokens(input, global) == -1)
+	token_return = -1;
+	while (token_return == -1)
 	{
+		token_return = get_tokens(input, global);
+		if (token_return != -1)
+			break ;
 		input = readline("> ");
 		input = ft_strjoin(global->input, input, 3);
 		global->input = ft_strdup(input);
 	}
+	if (token_return == 1)
+		free_global(global, 0);
 }
