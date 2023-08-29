@@ -46,12 +46,13 @@ int	child_process(t_global *global, int n)
 
 int	parent_process(t_global *global, int n)
 {
+	int		i;
 	int		status;
 
-	n = 0;
-	while (n < global->pipeline)
-		waitpid(global->pid[n++], &status, WNOHANG);
+	i = 0;
 	fd_closer(global->fd, global->pipeline, n);
+	while (i < global->pipeline)
+		waitpid(global->pid[i++], &status, 0);
 	if (dup2(global->fd[n][0], STDIN_FILENO) == -1)
 		return (print_error("Pipeline error", errno), 1);
 	write_on_fd(global->fd[n][0], STDOUT_FILENO);
