@@ -11,7 +11,9 @@ int	main(int argc, char **argv, char **env)
 	while (1)
 	{
 		rl_on_new_line();
-		input = readline(">> ");
+		ft_putstr_fd("minishell:", 1);
+		ft_pwd(0);
+		input = readline("$ ");
 		// input = ft_strdup(">outfile");
 		add_and_store_history(input);
 		get_struct_data(global, input);

@@ -65,4 +65,3 @@ void	ft_export(t_global *g, int n)
 	if (g->tokens[n].arg[0] == NULL)
 		print_stack(g->lst_env);
 }
-

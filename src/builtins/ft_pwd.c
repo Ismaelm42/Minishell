@@ -1,6 +1,6 @@
 #include "../../include/minishell.h"
 
-void	ft_pwd(void)
+void	ft_pwd(int newline)
 {
 	char	*dir;
 
@@ -12,6 +12,7 @@ void	ft_pwd(void)
 		ft_putchar_fd('\n', 2);
 	}
 	ft_putstr_fd(dir, STDOUT_FILENO);
-	ft_putchar_fd('\n', STDOUT_FILENO);
+	if (newline == 1)
+		ft_putchar_fd('\n', STDOUT_FILENO);
 	free(dir);
 }

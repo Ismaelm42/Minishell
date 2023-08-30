@@ -5,7 +5,7 @@ int	handle_heredocs(int n)
 	char	*heredoc;
 	int		fd;
 
-	heredoc = ft_strjoin(".heredoc", ft_itoa(n), 2);
+	heredoc = ft_strjoin("/tmp/.heredoc", ft_itoa(n), 2);
 	fd = open(heredoc, O_RDONLY, 0666);
 	if (fd == -1)
 		return (print_error("heredoc", errno), 1);

@@ -18,7 +18,6 @@
 # include <unistd.h>
 # include <limits.h>
 
-
 typedef struct s_lexer
 {
 	char		*input;
@@ -226,13 +225,14 @@ void		print_error(char *message, int code_error);
 void		write_on_fd(int fd_in, int fd_out);
 
 //build_in
-void		ft_pwd(void);
+void		ft_pwd(int newline);
 void		ft_env(t_global *g);
 void		ft_export(t_global *g, int n);
 void		ft_echo(t_global *g, int n);
 int			ft_cd(t_global *g, int n);
 void		action_export(t_global *g, int n, int i);
 void		ft_unset(t_global *g, int n);
+int			check_edge_builtins(t_global *global);
 int			check_builtins(t_global *g, int n);
 void		builtins(t_global *g, int n);
 

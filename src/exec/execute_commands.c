@@ -19,18 +19,11 @@ int	create_pipes_and_pid(t_global *global)
 	return (0);
 }
 
-//se cierran los fd en fd_in_handler (si hay algún problema se cierra tanto el de 
-//lectura como el de escritura) y en fd_out_handler (solo el de escritura ya que
-//el otro está cerrado)
-//se ha suprimido el else delante del execve ya que no es necesario puesto que si
-//es un building se sale del child_process con un exit y termina el programa
-//en ese proceso hijo.
-
 int	child_process(t_global *global, int n)
 {
 	char	**command_line;
 
-	if (check_builtins(global, n) == 1)
+	if (check_builtins(global, n) != 0)
 		command_line = get_exec_command(global, n);
 	fd_closer(global->fd, global->pipeline, n);
 	if (fd_in_handler(global, n) != 0)
@@ -68,43 +61,8 @@ int	execute_commands(t_global *global)
 {
 	int		n;
 
-	// export ARG=PEPE | echo hola
-	// Si aparece este comando en los builtins se hace exit sin hacer nada
-	//No tiene que hacer nada
-
-	// export | cat -e
-	// Si aparece este comando, tienes que escribir en el fd correspondiente la lista de export
-
-	// export ARG=PEPE
-	// Si global->pipeline es == 1, se realiza el export y se hace return para que no entre ni cree pipes/procesos hijos
-	if (global->tokens == NULL)
-		return (1);
-
-	//dprintf(1, "global ->pipeline = %d \n", global->pipeline);
-	if (ft_strncmp(global->tokens[0].command, "export", 7) == 0 && global->pipeline == 1)
-	{
-		if (global->tokens[0].arg[0] != NULL)
-		{
-			action_export(global, 0, 0);
-			return (0);
-		}
-	}
-	if (ft_strncmp(global->tokens[0].command, "unset", 6) == 0 && global->pipeline == 1)
-	{
-		if (global->tokens[0].arg[0] != NULL)
-		{
-			ft_unset(global, 0);
-			return (0);
-		}
-	}
-	if (ft_strncmp(global->tokens[0].command, "cd", 3) == 0 && global->pipeline == 1)
-	{
-		ft_cd(global, 0);
-		return (0);
-	}
-	if (process_heredocs(global) == 1)
-		return (1);
-	if (create_pipes_and_pid(global) == 1)
+	if (check_edge_builtins(global) == 1 || process_heredocs(global) == 1
+		|| create_pipes_and_pid(global) == 1)
 		return (1);
 	n = 0;
 	while (n < global->pipeline)

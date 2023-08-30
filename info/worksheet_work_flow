@@ -38,3 +38,14 @@
 // Ver con Isma el tema de la ejecucion de los builtins
 
 // Se han jodido las variables locales se esta liberando en algun sitio guarda mierda
+
+// ls -la | cd -
+// Muestra en la pantalla el directorio anterior pero no te mueve del pwd
+
+//quitar perror de la función cd
+
+//gestionar los leaks de cd
+
+//violación de segmento cunado se le pasa un input como >outfile
+
+//cambiar la ruta de los archivos .bash_history y heredoc
