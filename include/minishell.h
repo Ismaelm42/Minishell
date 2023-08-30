@@ -225,7 +225,9 @@ void		print_error(char *message, int code_error);
 void		write_on_fd(int fd_in, int fd_out);
 
 //build_in
-void		ft_pwd(int newline, int colour);
+
+char		*get_home_dir(char *dir);
+void		ft_pwd(int newline_flag, int colour_flag, int home_flag);
 void		ft_env(t_global *g);
 void		ft_export(t_global *g, int n);
 void		ft_echo(t_global *g, int n);
