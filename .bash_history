@@ -73,3 +73,48 @@ cd
 cd
 cd libft/
 cd
+HOME=MyHOME
+echo $HOME
+ARG= pepe
+ARG=PEPE
+echo $ARG
+ARG=pepe
+echo $ARG
+ARG=PEPE
+ARG=PEPITA
+echo $HOME
+ARG=pepe
+ARG=PEPE
+ARG=PEPE
+ARG=PEPE
+ARG=PEPE
+ARG=PEPE
+echo $ARG
+ARG=PEPE
+ARG=PEPE"SE FUE por "pam
+ARG=PEPE
+echo $ARG
+ARG=PEPE"SEFUE"
+ARG=pepe
+echo $ARGç
+echo $ARG
+ARG=PEPE"SE FUE"
+ARG=PEPE
+echo $ARG
+export AAA=
+export
+export AAA=PEPILLOGRILLO
+export
+ARG=pepe
+ARG=JUAN
+ARG=PEPE
+ARP=Juan
+echo $ARG $JUAN
+echo $ARG" $JUAN"
+echo $JUAN
+echo $ARG $ARP
+ARG=HOLA
+ARG=PEPE
+ARG=JUAN
+ARG=FIRULAIS
+echo $ARG

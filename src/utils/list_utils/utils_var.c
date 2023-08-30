@@ -68,7 +68,7 @@ int	search_key_and_replace(t_node *lst, char *key, char *val)
 	{
 		if (ft_strncmp(key, aux->key, (size_t)ft_strlen(key) + 1) == 0)
 		{
-			free_mem((void **)&key);
+			//free_mem((void **)&key);
 			free_mem((void **)&aux->value);
 			aux->value = val;
 			return (0);
@@ -76,8 +76,8 @@ int	search_key_and_replace(t_node *lst, char *key, char *val)
 		else
 			aux = aux->next;
 	}
-	free_mem((void **)&key);
-	free_mem((void **)&val);
+	// free_mem((void **)&key);
+	// free_mem((void **)&val);
 	return (-1);
 }
 

@@ -69,6 +69,9 @@ static int	get_var_local(t_global *g)
 	}
 	build_var_local(&nv, d);
 	free_matrix((void ***)&d, 0);
+	
+
+	printf("Nv = %s\n", nv);
 	if (nv != NULL)
 		return (put_dictionary_local(nv, g), 0);
 	else
@@ -92,7 +95,7 @@ int	local_var(t_global *g, char *input)
 		{
 			if (get_var_local(g) == 0)
 			{
-				// print_stack(g->lst_local, );
+				//print_stack(g->lst_local); AQUI LLEGA MIERDA YA
 				return (0);
 			}
 		}
