@@ -29,6 +29,7 @@
 
 // ARREGLAR lo de las comillas en var locals variable locales y expansión, testear 'holaaa'hola || hola'holaaa'
 
+// mirar si en export al usar searcH_key_and_replace hay leaks se ha modificado los free pq se jodia var locales
 
 // builtins exit
 
