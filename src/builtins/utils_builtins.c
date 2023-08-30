@@ -13,7 +13,9 @@ int	check_builtins(t_global *g, int n)
 		|| (ft_strncmp(g->tokens[n].command, "env", 4) == 0)
 		|| (ft_strncmp(g->tokens[n].command, "export", 7) == 0)
 		|| (ft_strncmp(g->tokens[n].command, "unset", 6) == 0)
-		|| (ft_strncmp(g->tokens[n].command, "echo", 5) == 0))
+		|| (ft_strncmp(g->tokens[n].command, "echo", 5) == 0)
+		|| (ft_strncmp(g->tokens[n].command, "cd", 3) == 0))
+
 		return (0);
 	else
 		return (1);
@@ -31,6 +33,8 @@ void	builtins(t_global *g, int n)
 		ft_unset(g, n);
 	else if (ft_strncmp(g->tokens[n].command, "echo", 5) == 0)
 		ft_echo(g, n);
+	else if (ft_strncmp(g->tokens[n].command, "cd", 3) == 0)
+		ft_cd(g, n);
 	free_global(g, 0);
 	exit(1);
 }

@@ -30,7 +30,7 @@ int	child_process(t_global *global, int n)
 {
 	char	**command_line;
 
-	// if (check_builtins(global, n) == 1)
+	if (check_builtins(global, n) == 1)
 		command_line = get_exec_command(global, n);
 	fd_closer(global->fd, global->pipeline, n);
 	if (fd_in_handler(global, n) != 0)
@@ -77,23 +77,31 @@ int	execute_commands(t_global *global)
 
 	// export ARG=PEPE
 	// Si global->pipeline es == 1, se realiza el export y se hace return para que no entre ni cree pipes/procesos hijos
-	//n = 0;
-	// if (ft_strncmp(global->tokens[0].command, "export", 7) == 0)
-	// {
-	// 	if (global->tokens[0].arg[0] != NULL)
-	// 	{
-	// 		action_export(global, 0, 0);
-	// 		return (0);
-	// 	}
-	// }
-	// if (ft_strncmp(global->tokens[0].command, "unset", 6) == 0)
-	// {
-	// 	if (global->tokens[0].arg[0] != NULL)
-	// 	{
-	// 		ft_unset(global, 0);
-	// 		return (0);
-	// 	}
-	// }
+	if (global->tokens == NULL)
+		return (1);
+
+	//dprintf(1, "global ->pipeline = %d \n", global->pipeline);
+	if (ft_strncmp(global->tokens[0].command, "export", 7) == 0 && global->pipeline == 1)
+	{
+		if (global->tokens[0].arg[0] != NULL)
+		{
+			action_export(global, 0, 0);
+			return (0);
+		}
+	}
+	if (ft_strncmp(global->tokens[0].command, "unset", 6) == 0 && global->pipeline == 1)
+	{
+		if (global->tokens[0].arg[0] != NULL)
+		{
+			ft_unset(global, 0);
+			return (0);
+		}
+	}
+	if (ft_strncmp(global->tokens[0].command, "cd", 3) == 0 && global->pipeline == 1)
+	{
+		ft_cd(global, 0);
+		return (0);
+	}
 	if (process_heredocs(global) == 1)
 		return (1);
 	if (create_pipes_and_pid(global) == 1)

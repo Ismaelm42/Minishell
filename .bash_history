@@ -68,3 +68,8 @@ ls -la
 echo hola | ls -la
 echo hola
 clear
+ls
+cd
+cd
+cd libft/
+cd

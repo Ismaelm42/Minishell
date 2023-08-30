@@ -16,6 +16,8 @@
 # include <sys/wait.h>
 # include <termios.h>
 # include <unistd.h>
+# include <limits.h>
+
 
 typedef struct s_lexer
 {
@@ -228,6 +230,7 @@ void		ft_pwd(void);
 void		ft_env(t_global *g);
 void		ft_export(t_global *g, int n);
 void		ft_echo(t_global *g, int n);
+int			ft_cd(t_global *g, int n);
 void		action_export(t_global *g, int n, int i);
 void		ft_unset(t_global *g, int n);
 int			check_builtins(t_global *g, int n);
