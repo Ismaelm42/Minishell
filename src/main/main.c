@@ -12,8 +12,8 @@ int	main(int argc, char **argv, char **env)
 	// {
 	// 	rl_on_new_line();
 	// 	ft_putstr_fd("\033[0;31mminishell:\x1b[0m", 1);
-	// 	ft_pwd(0, 1);
-	// 	input = readline("$");
+	// 	ft_pwd(0, 1, 1);
+	// 	input = readline("$ ");
 		input = ft_strdup("export AA=PEPE");
 		add_and_store_history(input);
 		get_struct_data(global, input);
