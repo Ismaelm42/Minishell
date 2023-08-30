@@ -69,9 +69,6 @@ static int	get_var_local(t_global *g)
 	}
 	build_var_local(&nv, d);
 	free_matrix((void ***)&d, 0);
-	
-
-	printf("Nv = %s\n", nv);
 	if (nv != NULL)
 		return (put_dictionary_local(nv, g), 0);
 	else

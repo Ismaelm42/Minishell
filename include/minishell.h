@@ -152,7 +152,7 @@ int			local_var(t_global *g, char *input);
 char		*extract_clue(char *c);
 char		*extract_value(char *c);
 char		*search_key(t_node *lst, char *key);
-int			search_key_and_replace(t_node *lst, char *key, char *val);
+int			search_key_and_replace(t_node *lst, char *key, char *val, int wall);
 int			search_key_and_delete(t_node **lst, char *key);
 void		var_quoted_lexer_splitter(int *n, char **s, char ***lexer);
 void		var_quoted_lexer_counter(int *counter, char **s);

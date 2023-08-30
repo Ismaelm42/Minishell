@@ -59,7 +59,7 @@ locales si recibimos por input una nueva asignacion $ARG=pepito
 y mas tarde $ARG=Juan x ejemplo.
 */
 
-int	search_key_and_replace(t_node *lst, char *key, char *val)
+int	search_key_and_replace(t_node *lst, char *key, char *val, int wall)
 {
 	t_node	*aux;
 
@@ -68,7 +68,8 @@ int	search_key_and_replace(t_node *lst, char *key, char *val)
 	{
 		if (ft_strncmp(key, aux->key, (size_t)ft_strlen(key) + 1) == 0)
 		{
-			//free_mem((void **)&key);
+			if (wall == 1)
+				free_mem((void **)&key);
 			free_mem((void **)&aux->value);
 			aux->value = val;
 			return (0);
@@ -76,8 +77,11 @@ int	search_key_and_replace(t_node *lst, char *key, char *val)
 		else
 			aux = aux->next;
 	}
-	// free_mem((void **)&key);
-	// free_mem((void **)&val);
+	if (wall == 1)
+	{
+		free_mem((void **)&key);
+		free_mem((void **)&val);
+	}
 	return (-1);
 }
 
@@ -91,7 +95,7 @@ void	put_dictionary_local(char *nv, t_global *g)
 	t_node	*aux;
 
 	key = extract_clue(g->input);
-	if (search_key_and_replace(g->lst_local, key, nv) != 0)
+	if (search_key_and_replace(g->lst_local, key, nv, 0) != 0)
 	{
 		aux = create_nodo(key, nv);
 		insert_last(&(g)->lst_local, aux);
