@@ -61,8 +61,9 @@ int	fd_out_handler(t_global *global, int n)
 	}
 	else
 	{
-		if (dup2(global->fd[n + 1][1], STDOUT_FILENO) == -1)
-			return (print_error("Pipeline error", errno), 1);
+		if (global->pipeline > 1)
+			if (dup2(global->fd[n + 1][1], STDOUT_FILENO) == -1)
+				return (print_error("Pipeline error", errno), 1);
 	}
 	close(global->fd[n + 1][1]);
 	return (0);

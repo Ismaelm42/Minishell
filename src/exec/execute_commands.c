@@ -23,9 +23,9 @@ int	child_process(t_global *global, int n)
 {
 	char	**command_line;
 
+	fd_closer(global->fd, global->pipeline, n);
 	if (check_builtins(global, n) != 0)
 		command_line = get_exec_command(global, n);
-	fd_closer(global->fd, global->pipeline, n);
 	if (fd_in_handler(global, n) != 0)
 		return (1);
 	if (fd_out_handler(global, n) != 0)
