@@ -21,8 +21,8 @@ static void	update_path(t_global *g, char *pwd, char *oldpwd)
 	search_key_and_replace(g->lst_env, ft_strdup("PWD"), path_pwd_export, 1);
 	search_key_and_replace(g->lst_env, ft_strdup("OLDPWD"), 
 	path_old_pwd_export, 1);
-	search_env_replace(ft_strdup("PWD"), pwd, g->env);
-	search_env_replace(ft_strdup("OLDPWD"), oldpwd, g->env);
+	search_env_replace(ft_strdup("PWD"), pwd, g->env, 0);
+	search_env_replace(ft_strdup("OLDPWD"), oldpwd, g->env, 0);
 }
 
 

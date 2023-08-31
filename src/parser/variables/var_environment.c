@@ -52,7 +52,7 @@ char	*search_env_expand(char *var, char **env)
 	return (var);
 }
 
-int	search_env_replace(char *var, char *val, char **env)
+int	search_env_replace(char *var, char *val, char **env, int wall)
 {
 	int		len;
 	int		i;
@@ -74,8 +74,8 @@ int	search_env_replace(char *var, char *val, char **env)
 	free_mem((void **)&var);
 	free_mem((void **)&env[i]);
 	env[i] = ft_strjoin(str, val, 1);
-	free_mem((void **)&val);
-
+	if (wall == 1)
+		free_mem((void **)&val);
 	return (0);
 }
 

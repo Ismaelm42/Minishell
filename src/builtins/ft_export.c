@@ -51,7 +51,7 @@ void	action_export(t_global *g, int n, int i)
 					insert_last(&g->lst_env, create_nodo(extract_clue \
 					(g->tokens[n].arg[i]), extract_value(g->tokens[n].arg[i])));
 				if (search_env_replace(extract_clue(g->tokens[n].arg[i]), \
-				extract_value(g->tokens[n].arg[i]), g->env))
+				extract_value(g->tokens[n].arg[i]), g->env, 1))
 					add_env(&g->env, g->tokens[n].arg[i]);
 			}
 		}

@@ -143,7 +143,7 @@ void		token_maker(t_token *tokens, char **lexer);
 char		**copy_environment(char **env);
 int			search_env(char *var, char **env);
 char		*search_env_expand(char *var, char **envp);
-int			search_env_replace(char *var, char *val, char **envp);
+int			search_env_replace(char *var, char *val, char **envp, int wall);
 void		add_env(char ***env, char *argv);
 void		delete_var_env(char ***env, char *key);
 
