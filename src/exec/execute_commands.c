@@ -39,7 +39,7 @@ int	child_process(t_global *global, int n)
 	}
 	execve(command_line[0], command_line, global->env);
 	print_error(command_line[0], errno);
-	return (free_matrix((void **)&command_line, 0), errno);
+	return (free_matrix((void ***)&command_line, 0), errno);
 }
 
 int	parent_process(t_global *global, int n)

@@ -43,7 +43,7 @@ void	var_words_counter(int *counter, char **s)
 {
 	if (**s != '\0')
 	{
-		if (**s != ' ' && ((*s)[1] == ' '
+		if (**s != ' ' && ((*s)[1] == '\''
 			|| (*s)[1] == '"' || (*s)[1] == '\0' ))
 			*counter += 1;
 		(*s)++;
@@ -84,4 +84,3 @@ void	var_words_splitter(int *n, char **s, char ***lexer)
 			(*s)++;
 	}
 }
-
