@@ -13,7 +13,7 @@ int	check_key(char *key, int wall)
 		while (key[i] != '\0' && ft_isalnum(key[i]))
 			i++;
 	}
-	if (key[i] != '\0')
+	if (key[i] != '\0' || key[i] == ' ')
 	{
 		if (wall == 1)
 			free_mem((void **)&key);

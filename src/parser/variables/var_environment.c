@@ -73,7 +73,9 @@ int	search_env_replace(char *var, char *val, char **env)
 	}
 	free_mem((void **)&var);
 	free_mem((void **)&env[i]);
-	env[i] = ft_strjoin(str, val, 3);
+	env[i] = ft_strjoin(str, val, 1);
+	free_mem((void **)&val);
+
 	return (0);
 }
 

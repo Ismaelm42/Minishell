@@ -4,13 +4,16 @@ int	check_edge_builtins(t_global *global)
 {
 	if (global->tokens[0].command == NULL)
 		return (0);
-	if (ft_strncmp(global->tokens[0].command, "export", 7) == 0 && global->pipeline == 1)
+	if (ft_strncmp(global->tokens[0].command, "export", 7) == 0
+		&& global->pipeline == 1)
 		if (global->tokens[0].arg[0] != NULL)
 			return (action_export(global, 0, 0), 1);
-	if (ft_strncmp(global->tokens[0].command, "unset", 6) == 0 && global->pipeline == 1)
+	if (ft_strncmp(global->tokens[0].command, "unset", 6) == 0
+		&& global->pipeline == 1)
 		if (global->tokens[0].arg[0] != NULL)
 			return (ft_unset(global, 0), 1);
-	if (ft_strncmp(global->tokens[0].command, "cd", 3) == 0 && global->pipeline == 1)
+	if (ft_strncmp(global->tokens[0].command, "cd", 3) == 0
+		&& global->pipeline == 1)
 		return (ft_cd(global, 0), 1);
 	return (0);
 }
@@ -49,4 +52,3 @@ void	builtins(t_global *g, int n)
 	free_global(g, 1);
 	exit(1);
 }
-	

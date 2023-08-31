@@ -8,25 +8,23 @@ int	main(int argc, char **argv, char **env)
 	(void)argc;
 	(void)argv;
 	global = init_struct(env);
-	// while (1)
-	// {
-	// 	rl_on_new_line();
-	// 	ft_putstr_fd("\033[0;31mminishell:\x1b[0m", 1);
-	// 	ft_pwd(0, 1, 1);
-	// 	input = readline("$ ");
-		input = ft_strdup("export AA=PEPE");
+	while (1)
+	{
+		rl_on_new_line();
+		input = readline("$ ");
+		//input = ft_strdup("cd");
 		add_and_store_history(input);
 		get_struct_data(global, input);
 		if (global->input != NULL)
 			execute_commands(global);
 		free_global(global, 0);
 
-		input = ft_strdup("export AAA");
-		add_and_store_history(input);
-		get_struct_data(global, input);
-		if (global->input != NULL)
-			execute_commands(global);
-		free_global(global, 1);
+		// input = ft_strdup("export AAA");
+		// add_and_store_history(input);
+		// get_struct_data(global, input);
+		// if (global->input != NULL)
+		// 	execute_commands(global);
+		// free_global(global, 1);
 
 		// input = ft_strdup("echo $A");
 		// add_and_store_history(input);
@@ -35,7 +33,7 @@ int	main(int argc, char **argv, char **env)
 		// 	execute_commands(global);
 		// free_global(global, 1);
 
-	// }
+	}
 	return (0);
 }
 

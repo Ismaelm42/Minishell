@@ -32,6 +32,11 @@ int	child_process(t_global *global, int n)
 		return (1);
 	if (check_builtins(global, n) == 0)
 		builtins(global, n);
+	if (command_line == NULL)
+	{
+		free_global(global, 1);
+		exit(1);
+	}
 	execve(command_line[0], command_line, global->env);
 	print_error(command_line[0], errno);
 	return (errno);
