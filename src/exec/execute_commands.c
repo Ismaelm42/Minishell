@@ -23,8 +23,6 @@ int	child_process(t_global *global, int n)
 {
 	char	**command_line;
 
-	(void)global;
-	(void)n;
 	fd_closer(global->fd, global->pipeline, n);
 	if (fd_in_handler(global, n) != 0)
 		return (1);
