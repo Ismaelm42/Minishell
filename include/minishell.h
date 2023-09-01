@@ -184,6 +184,10 @@ void		ft_free_lst(t_node *lst);
 int			ft_size_lst(t_node *lst);
 void		error(void);
 
+//prompt/readline_prompt
+char		*get_home_dir(char *dir);
+char		*readline_prompt(void);
+
 //signals/signals
 void		ft_sigint_handler(int sig);
 void		ft_sigquit_handler(int sig);
@@ -227,7 +231,7 @@ void		write_on_fd(int fd_in, int fd_out);
 //build_in
 
 char		*get_home_dir(char *dir);
-void		ft_pwd(int newline_flag, int colour_flag, int home_flag);
+void		ft_pwd(void);
 void		ft_env(t_global *g);
 void		ft_export(t_global *g, int n);
 void		ft_echo(t_global *g, int n);

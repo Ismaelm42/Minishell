@@ -32,6 +32,7 @@ SRC =	src/builtins/ft_env.c									\
 		src/parser/variables/lexer_var_local.c					\
 		src/parser/variables/var_environment.c					\
 		src/parser/variables/var_local.c						\
+		src/prompt/readline_prompt.c							\
 		src/signals/signal.c									\
 		src/utils/clean_utils/free_and_unlink.c					\
 		src/utils/get_next_line/gnl.c							\
