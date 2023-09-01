@@ -23,20 +23,14 @@ int	child_process(t_global *global, int n)
 {
 	char	**command_line;
 
+	(void)global;
+	(void)n;
 	fd_closer(global->fd, global->pipeline, n);
-	if (check_builtins(global, n) != 0)
-		command_line = get_exec_command(global, n);
 	if (fd_in_handler(global, n) != 0)
 		return (1);
 	if (fd_out_handler(global, n) != 0)
 		return (1);
-	if (check_builtins(global, n) == 0)
-		builtins(global, n);
-	if (command_line == NULL)
-	{
-		free_global(global, 1);
-		exit(1);
-	}
+	command_line = check_builtins(global, n);
 	execve(command_line[0], command_line, global->env);
 	print_error(command_line[0], errno);
 	return (free_matrix((void ***)&command_line, 0), errno);
@@ -45,12 +39,15 @@ int	child_process(t_global *global, int n)
 int	parent_process(t_global *global, int n)
 {
 	int		i;
-	int		status;
 
 	i = 0;
 	fd_closer(global->fd, global->pipeline, n);
 	while (i < global->pipeline)
-		waitpid(global->pid[i++], &status, 0);
+	{
+		waitpid(global->pid[i], &global->exit_status, 0);
+		printf("exit_status = %d\n", global->exit_status);
+		i++;
+	}
 	if (dup2(global->fd[n][0], STDIN_FILENO) == -1)
 		return (print_error("Pipeline error", errno), 1);
 	write_on_fd(global->fd[n][0], STDOUT_FILENO);

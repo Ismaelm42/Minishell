@@ -18,7 +18,7 @@ int	check_edge_builtins(t_global *global)
 	return (0);
 }
 
-int	check_builtins(t_global *g, int n)
+char	**check_builtins(t_global *g, int n)
 {
 	if (g->tokens[n].command == NULL
 		|| (ft_strncmp(g->tokens[n].command, "pwd", 4) == 0)
@@ -27,9 +27,10 @@ int	check_builtins(t_global *g, int n)
 		|| (ft_strncmp(g->tokens[n].command, "unset", 6) == 0)
 		|| (ft_strncmp(g->tokens[n].command, "echo", 5) == 0)
 		|| (ft_strncmp(g->tokens[n].command, "cd", 3) == 0))
-		return (0);
+		builtins(g, n);
 	else
-		return (1);
+		return (get_exec_command(g, n));
+	return (0);
 }
 
 void	builtins(t_global *g, int n)
@@ -50,5 +51,5 @@ void	builtins(t_global *g, int n)
 			ft_cd(g, n);
 	}
 	free_global(g, 1);
-	exit(1);
+	exit(0);
 }

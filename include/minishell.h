@@ -239,7 +239,7 @@ int			ft_cd(t_global *g, int n);
 void		action_export(t_global *g, int n, int i);
 void		ft_unset(t_global *g, int n);
 int			check_edge_builtins(t_global *global);
-int			check_builtins(t_global *g, int n);
+char		**check_builtins(t_global *g, int n);
 void		builtins(t_global *g, int n);
 
 #endif

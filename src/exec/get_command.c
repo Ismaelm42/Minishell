@@ -69,6 +69,7 @@ char	**get_exec_command(t_global *global, int n)
 	cmd_path = get_command_path(global, n);
 	if (cmd_path == NULL)
 		return (NULL);
+	//AQUI ESTO OCURRE CUANDO NO HAY COMANDO. HAY QUE VER CÓMO TRATARLO PARA EXIT_STATUS
 	length = 0;
 	while (global->tokens[n].arg[length] != NULL)
 		length++;
