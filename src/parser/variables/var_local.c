@@ -57,20 +57,25 @@ static int	get_var_local(t_global *g)
 	char	**d;
 	char	*nv;
 	char	*val;
+	char	*key;
 
+	key = extract_clue(g->input);
 	nv = ft_strdup("");
 	val = extract_value(g->input);
 	d = var_lexer_maker(val);
 	free(val);
 	if (*d == NULL)
-	{
-		free(nv);
-		nv = NULL;
-	}
+		free_mem((void **)&nv);
 	build_var_local(&nv, d);
 	free_matrix((void ***)&d, 0);
 	if (nv != NULL)
-		return (put_dictionary_local(nv, g), 0);
+	{	
+		if (search_env_replace(ft_strdup(key), ft_strdup(nv), g->env, 1) == 1)
+			return (free_mem((void **)&key),put_dictionary_local(nv, g), 0);
+		else
+			return (search_key_and_replace(g->lst_env, key, nv, 2), \
+			free_mem((void **)&key), 0);
+	}
 	else
 		return (1);
 }
