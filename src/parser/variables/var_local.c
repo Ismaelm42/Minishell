@@ -77,7 +77,7 @@ static int	get_var_local(t_global *g)
 			free_mem((void **)&key), 0);
 	}
 	else
-		return (1);
+		return (free_mem((void **)&key), 1);
 }
 
 //Funcion que sera llamada desde la principal si encuentra un = en el
