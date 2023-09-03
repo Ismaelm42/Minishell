@@ -7,10 +7,15 @@ int	main(int argc, char **argv, char **env)
 
 	(void)argc;
 	(void)argv;
+	rl_catch_signals = 0;
 	global = init_struct(env);
 	while (1)
 	{
+		signal(SIGINT, ft_sigint_handler);
+		ssignal(SIGQUIT, SIG_IGN);
 		input = readline_prompt();
+		if (!input)
+			control_d(input);
 		add_and_store_history(input);
 		get_struct_data(global, input);
 		if (global->input != NULL)
