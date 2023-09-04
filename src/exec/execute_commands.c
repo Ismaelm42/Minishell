@@ -39,6 +39,7 @@ int	parent_process(t_global *global, int n)
 	int	i;
 
 	i = 0;
+	//signal(SIGINT, ft_sigint_handler);
 	fd_closer(global->fd, global->pipeline, n);
 	while (i < global->pipeline)
 	{

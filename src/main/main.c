@@ -13,7 +13,8 @@ int	main(int argc, char **argv, char **env)
 	{
 		signal(SIGINT, ft_sigint_handler);
 		ssignal(SIGQUIT, SIG_IGN);
-		input = readline_prompt();
+		input = readline(">");//readline_prompt();
+		//rl_on_new_line(); // no estaba
 		if (!input)
 			control_d(input);
 		add_and_store_history(input);
@@ -22,7 +23,7 @@ int	main(int argc, char **argv, char **env)
 			execute_commands(global);
 		free_global(global, 0);
 	}
-	return (0);
+	return (0);//(global->exit_status);
 }
 
 // int	main(int argc, char **argv, char **env)

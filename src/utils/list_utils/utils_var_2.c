@@ -22,9 +22,9 @@ int	check_key(char *key, int wall)
 	else
 	{
 		if (wall == 1)
-			free_mem((void **)&key);
-		return (0);
+			free_mem((void **)&key);	
 	}
+	return (0);
 }
 
 int	search_key_and_delete(t_node **lst, char *key)
