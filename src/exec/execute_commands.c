@@ -36,14 +36,16 @@ int	child_process(t_global *global, int n)
 
 int	parent_process(t_global *global, int n)
 {
-	int		i;
+	int	i;
 
 	i = 0;
 	fd_closer(global->fd, global->pipeline, n);
 	while (i < global->pipeline)
 	{
 		waitpid(global->pid[i], &global->exit_status, 0);
-		printf("exit_status = %d\n", global->exit_status);
+		if (WIFEXITED(global->exit_status))
+			printf("exit_status1 = %d\n", WEXITSTATUS(global->exit_status));
+		printf("exit_status2 = %d\n", global->exit_status);
 		i++;
 	}
 	if (dup2(global->fd[n][0], STDIN_FILENO) == -1)
@@ -59,7 +61,7 @@ int	parent_process(t_global *global, int n)
 
 int	execute_commands(t_global *global)
 {
-	int		n;
+	int	n;
 
 	if (check_edge_builtins(global) == 1 || process_heredocs(global) == 1
 		|| create_pipes_and_pid(global) == 1)

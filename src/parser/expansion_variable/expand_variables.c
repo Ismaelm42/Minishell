@@ -58,8 +58,8 @@ void	get_expansion_value(int n, t_lexer *lexer, t_global *global)
 	lex = lexer[n].variable;
 	if (ft_strlen(lex) == 1)
 		lexer[n].expanded = ft_strdup("'$'");
-	// else if (ft_strncmp(lex, "$?", ft_strlen(lex)) == 0)
-	// 	get_exit_status_variable();
+	else if (ft_strncmp(lex, "$?", ft_strlen(lex)) == 0)
+		lexer[n].expanded = ft_strdup(ft_itoa(global->exit_status));
 	else if (get_variable_from_env(n, lexer, global) == 1)
 		if (get_variable_from_local_var(n, lexer, global) == 1)
 			lexer[n].expanded = ft_strdup("");
