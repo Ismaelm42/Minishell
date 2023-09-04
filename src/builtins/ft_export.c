@@ -7,7 +7,13 @@ static int	parse_arg(t_global *g, int n, int i)
 	if (ft_strrchr(g->tokens[n].arg[i], '=') == NULL)
 	{	
 		if (check_key(g->tokens[n].arg[i], 0) != 0)
+		{
+			// ft_putstr_fd("minishell: export: ", 2);
+			// ft_putstr_fd(g->tokens[n].arg[i], 2);
+			// ft_putstr_fd(": not a valid identifier\n", 2);
+			// g->exit_status = 1;
 			return (1);
+		}
 	}	
 	else
 	{
@@ -54,6 +60,12 @@ void	action_export(t_global *g, int n, int i)
 				extract_value(g->tokens[n].arg[i]), g->env, 1))
 					add_env(&g->env, g->tokens[n].arg[i]);
 			}
+		}
+		else
+		{
+			ft_putstr_fd(": not a valid identifier\n", 2);
+			//exit (1);
+			g->exit_status = 1;
 		}
 		i++;
 	}

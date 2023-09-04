@@ -9,7 +9,7 @@ void	ft_echo(t_global *g, int n)
 	{
 		ft_putstr_fd("\n", STDOUT_FILENO);
 		free_global(g, 1);
-		exit(1);
+		exit(0);
 	}
 	else if (ft_strncmp(g->tokens[n].arg[0], "-n", 3) == 0)
 		i++;
