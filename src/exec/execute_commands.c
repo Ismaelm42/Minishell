@@ -44,8 +44,7 @@ int	parent_process(t_global *global, int n)
 	{
 		waitpid(global->pid[i], &global->exit_status, 0);
 		if (WIFEXITED(global->exit_status))
-			printf("exit_status1 = %d\n", WEXITSTATUS(global->exit_status));
-		printf("exit_status2 = %d\n", global->exit_status);
+			global->exit_status = WEXITSTATUS(global->exit_status);
 		i++;
 	}
 	if (dup2(global->fd[n][0], STDIN_FILENO) == -1)
