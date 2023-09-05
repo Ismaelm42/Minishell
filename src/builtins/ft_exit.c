@@ -46,14 +46,17 @@ void	ft_exit_more_params(t_global *g, int n)
 
 void	ft_exit(t_global *g, int n)
 {
+	int	arg;
+
 	if (g->tokens[n].arg[0] != NULL && g->tokens[n].arg[1] != NULL)
 		ft_exit_more_params(g, n);
 	else if (g->tokens[n].arg[0] != NULL)
 	{
 		if (is_param_digit(g, n, 0) == 0)
 		{
+			arg = ft_atoi(g->tokens[n].arg[0]);
 			free_global(g, 1);
-			exit(ft_atoi(g->tokens[n].arg[0]));
+			exit(arg);
 		}
 		else
 		{
