@@ -195,7 +195,7 @@ int			control_d(char *input);
 
 //exec/execute_commands
 int			create_pipes_and_pid(t_global *global);
-int			child_process(t_global *global, int n);
+void		child_process(t_global *global, int n);
 int			parent_process(t_global *global, int n);
 int			execute_commands(t_global *global);
 
@@ -204,26 +204,27 @@ void		get_heredocs(char **heredoc, int fd);
 int			process_heredocs(t_global *global);
 
 //exec/infiles
-int			handle_heredocs(int n);
-int			handle_infiles(char ***infiles, int fd_type);
-int			get_input_file(t_global *global, int n);
-int			fd_in_handler(t_global *global, int n);
+void		handle_heredocs(t_global *global, int n);
+void		handle_infiles(t_global *global, char ***infiles, int fd_type);
+void		get_input_file(t_global *global, int n);
+void		fd_in_handler(t_global *global, int n);
 
 //exec/outfiles
-int			handle_outfiles(char *outfile, int write_flag, int infile_type);
-int			detect_output_file(char **outfiles, int infile_type, int fd_type);
-int			get_output_file(t_global *global, int n);
-int			fd_out_handler(t_global *global, int n);
+void		handle_outfiles(t_global *global, char *outfile, int write_flag, int infile_type);
+void		detect_output_file(t_global *global, char **outfiles, int infile_type, int fd_type);
+void		get_output_file(t_global *global, int n);
+void		fd_out_handler(t_global *global, int n);
 
 //exec/get_command
 char		**get_path(char **env);
+char		*search_path(t_global *global, int n, char **path, char *cmd_path);
 int			check_cmd_path(char *cmd, char *cmd_path, char *path, int flag);
 char		*get_command_path(t_global *global, int n);
 char		**get_exec_command(t_global *global, int n);
 
 //exec/utils
 void		access_error_message(char *error, char *message);
-char		*search_path(t_global *global, int n, char **path, char *cmd_path);
+void		exit_child_process(t_global *global, char **array, char *str, int stat);
 void		fd_closer(int **fd, int pipeline, int n);
 void		print_error(char *message, int code_error);
 void		write_on_fd(int fd_in, int fd_out);

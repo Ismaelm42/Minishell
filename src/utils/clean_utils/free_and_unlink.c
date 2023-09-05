@@ -31,7 +31,7 @@ char	**free_matrix(void ***matrix, int size)
 	int	n;
 
 	n = 0;
-	if ((*matrix) != 0)
+	if ((**matrix) != NULL)
 	{
 		if (size != 0)
 			while (n < size)
@@ -49,7 +49,6 @@ Elimina la estructura global por completo.
 */
 void	destroy_global(t_global *global)
 {
-	unlink(".bash_history");
 	free_matrix((void ***)&global->env, 0);
 	ft_free_lst(global->lst_local);
 	ft_free_lst(global->lst_env);
@@ -76,7 +75,8 @@ void	free_global(t_global *global, int flag)
 	}
 	free_mem((void **)&global->tokens);
 	free_mem((void **)&global->input);
-	free_matrix((void ***)&global->fd, global->pipeline + 1);
+	if (global->fd != NULL)
+		free_matrix((void ***)&global->fd, global->pipeline + 1);
 	free_mem((void **)&global->pid);
 	unlink_files(global->pipeline);
 	global->pipeline = 0;

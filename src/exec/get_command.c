@@ -17,23 +17,50 @@ char	**get_path(char **env)
 	return (path);
 }
 
+char	*search_path(t_global *global, int n, char **path, char *cmd_path)
+{
+	int	ret;
+	int	i;
+
+	i = 0;
+	free_mem((void **)&cmd_path);
+	cmd_path = ft_strjoin(path[i], "/", 0);
+	cmd_path = ft_strjoin(cmd_path, global->tokens[n].command, 1);
+	while (1)
+	{
+		ret = check_cmd_path(global->tokens[n].command, cmd_path, path[i], 1);
+		if (ret != 0 && ret != -1)
+			exit_child_process(global, path, cmd_path, ret);
+		else if (ret == 0)
+			return (free_matrix((void ***)&path, 0), cmd_path);
+		free_mem((void **)&cmd_path);
+		cmd_path = ft_strjoin(path[i], "/", 0);
+		cmd_path = ft_strjoin(cmd_path, global->tokens[n].command, 1);
+		i++;
+	}
+	return (NULL);
+}
+
 int	check_cmd_path(char *cmd, char *cmd_path, char *path, int flag)
 {
 	if (path == NULL)
 	{
-		access_error_message(cmd, ": command not found\n");
-		return (-1);
+		access_error_message(cmd, ": Command not found\n");
+		return (127);
 	}
 	else if (access(cmd_path, F_OK) != 0)
 	{
 		if (flag == 0)
+		{
 			access_error_message(cmd_path, ": No such file or directory\n");
-		return (1);
+			return (1);
+		}
+		return (-1);
 	}
 	else if (access(cmd_path, F_OK) == 0 && access(cmd_path, X_OK) != 0)
 	{
 		access_error_message(cmd_path, ": Permission denied\n");
-		return (-2);
+		return (1);
 	}
 	else if (access(cmd_path, F_OK | X_OK) == 0)
 		return (0);
@@ -44,6 +71,7 @@ char	*get_command_path(t_global *global, int n)
 {
 	char	*cmd_path;
 	char	**path;
+	int		ret;
 
 	if (global->tokens[n].command == NULL)
 		return (NULL);
@@ -51,8 +79,9 @@ char	*get_command_path(t_global *global, int n)
 	cmd_path = ft_strdup(global->tokens[n].command);
 	if (ft_strchr(cmd_path, '/') != NULL)
 	{
-		if (check_cmd_path(NULL, cmd_path, *path, 0) != 0)
-			return (free(cmd_path), free_matrix((void ***)&path, 0), NULL);
+		ret = check_cmd_path(NULL, cmd_path, *path, 0);
+		if (ret != 0)
+			exit_child_process(global, path, cmd_path, ret);
 		else
 			return (free_matrix((void ***)&path, 0), cmd_path);
 	}
@@ -68,8 +97,7 @@ char	**get_exec_command(t_global *global, int n)
 
 	cmd_path = get_command_path(global, n);
 	if (cmd_path == NULL)
-		return (NULL);
-	//AQUI ESTO OCURRE CUANDO NO HAY COMANDO. HAY QUE VER CÓMO TRATARLO PARA EXIT_STATUS
+		exit_child_process(global, NULL, NULL, 0);
 	length = 0;
 	while (global->tokens[n].arg[length] != NULL)
 		length++;

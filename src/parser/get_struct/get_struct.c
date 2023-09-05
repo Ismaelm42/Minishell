@@ -11,6 +11,8 @@ t_global	*init_struct(char **env)
 	global->env = copy_environment(env);
 	global->lst_env = init_list();
 	global->exit_status = 0;
+	global->pid = NULL;
+	global->fd = NULL;
 	global->fd_stdin = dup(STDIN_FILENO);
 	if (global->fd_stdin == -1)
 		return (free_global(global, 1), NULL);
@@ -44,8 +46,5 @@ void	get_struct_data(t_global *global, char *input)
 		global->input = ft_strdup(input);
 	}
 	if (token_return != 0)
-	{
-		global->exit_status = 2;
 		free_global(global, 0);
-	}
 }

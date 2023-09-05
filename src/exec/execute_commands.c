@@ -10,28 +10,28 @@ int	create_pipes_and_pid(t_global *global)
 	{
 		global->fd[n] = (int *)ft_calloc(sizeof(int), 2);
 		if (pipe(global->fd[n]) == -1)
+		{
+			global->exit_status = -1;
 			return (print_error("Pipeline error", errno), 1);
+		}
 		n++;
 	}
 	global->pid = (pid_t *)ft_calloc(sizeof(pid_t), global->pipeline);
-	if (global->pid == NULL)
-		return (1);
 	return (0);
 }
 
-int	child_process(t_global *global, int n)
+void	child_process(t_global *global, int n)
 {
 	char	**command_line;
 
 	fd_closer(global->fd, global->pipeline, n);
-	if (fd_in_handler(global, n) != 0)
-		return (1);
-	if (fd_out_handler(global, n) != 0)
-		return (1);
+	fd_in_handler(global, n);
+	fd_out_handler(global, n);
 	command_line = check_builtins(global, n);
 	execve(command_line[0], command_line, global->env);
+	free_matrix((void ***)&command_line, 0);
 	print_error(command_line[0], errno);
-	return (free_matrix((void ***)&command_line, 0), errno);
+	exit(errno);
 }
 
 int	parent_process(t_global *global, int n)
@@ -49,13 +49,13 @@ int	parent_process(t_global *global, int n)
 		i++;
 	}
 	if (dup2(global->fd[n][0], STDIN_FILENO) == -1)
-		return (print_error("Pipeline error", errno), 1);
+		return (print_error("Pipeline error", errno), -1);
 	write_on_fd(global->fd[n][0], STDOUT_FILENO);
 	close(global->fd[n][0]);
 	if (dup2(global->fd_stdin, STDIN_FILENO) == -1)
-		return (print_error("Pipeline error", errno), 1);
+		return (print_error("Pipeline error", errno), -1);
 	if (dup2(global->fd_stdout, STDOUT_FILENO) == -1)
-		return (print_error("Pipeline error", errno), 1);
+		return (print_error("Pipeline error", errno), -1);
 	return (0);
 }
 
@@ -71,13 +71,13 @@ int	execute_commands(t_global *global)
 	{
 		global->pid[n] = fork();
 		if (global->pid[n] == -1)
+		{
+			global->exit_status = -1;
 			return (print_error("Fork error", errno), 1);
+		}
 		if (global->pid[n] == 0)
-			if (child_process(global, n) != 0)
-				return (1);
+			child_process(global, n);
 		n++;
 	}
-	if (parent_process(global, n) != 0)
-		return (1);
-	return (0);
+	return (parent_process(global, n));
 }

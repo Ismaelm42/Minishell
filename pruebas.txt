@@ -56,3 +56,219 @@ echo ''>infile1
 
 No crea el archivo
 >outfile
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+———————————— builtins
+Test   9: ❌ echo "aspas ->'" 
+mini output = ()
+bash output = (aspas ->')
+mini exit code = 139
+bash exit code = 0
+mini error = ( Syntax error unexpected EOF)
+bash error = ()
+Test  10: ❌ echo "aspas -> ' " 
+mini output = ()
+bash output = (aspas -> ' )
+mini exit code = 139
+bash exit code = 0
+mini error = ( Syntax error unexpected EOF)
+bash error = ()
+Test  11: ❌ echo 'aspas ->"' 
+mini output = ()
+bash output = (aspas ->")
+mini exit code = 139
+bash exit code = 0
+mini error = ( Syntax error unexpected EOF)
+bash error = ()
+Test  12: ❌ echo 'aspas -> " ' 
+mini output = ()
+bash output = (aspas -> " )
+mini exit code = 139
+bash exit code = 0
+mini error = ( Syntax error unexpected EOF)
+bash error = ()
+Test  13: ❌ echo "> >> < * ? [ ] | ; [ ] || && ( ) & # $  <<" 
+mini output = ()
+bash output = (> >> < bash_outfiles bash.supp bonus bonus_bonus builtins extras local.supp loop.out manual_tests mini_outfiles os_specific outfiles pipes README.md redirects syntax tester test_files wildcards ? [ ] | ; [ ] || && ( ) & # $ <<)
+mini exit code = 139
+bash exit code = 0
+mini error = ( Syntax error near unexpected token '>')
+bash error = ()
+Test  14: ❌ echo '> >> < * ? [ ] | ; [ ] || && ( ) & # $  <<' 
+mini output = ()
+bash output = (> >> < bash_outfiles bash.supp bonus bonus_bonus builtins extras local.supp loop.out manual_tests mini_outfiles os_specific outfiles pipes README.md redirects syntax tester test_files wildcards ? [ ] | ; [ ] || && ( ) & # $ <<)
+mini exit code = 139
+bash exit code = 0
+mini error = ( Syntax error near unexpected token '>')
+bash error = ()
+Test  24: ❌ export hello 
+mini exit code = 139
+bash exit code = 0
+Test  25: ❌ export HELLO=123 
+mini exit code = 139
+bash exit code = 0
+Test  26: ❌ export A- 
+mini exit code = 139
+bash exit code = 1
+mini error = ( not a valid identifier)
+bash error = ( no es un identificador válido)
+Test  27: ❌ export HELLO=123 A 
+mini exit code = 139
+bash exit code = 0
+Test  28: ❌ export HELLO="123 A-" 
+mini exit code = 139
+bash exit code = 0
+Test  29: ❌ export hello world 
+mini exit code = 139
+bash exit code = 0
+Test  30: ❌ export HELLO-=123 
+mini exit code = 139
+bash exit code = 1
+mini error = ( not a valid identifier)
+bash error = ( no es un identificador válido)
+Test  31: ❌ export = 
+mini exit code = 139
+bash exit code = 1
+mini error = ( not a valid identifier)
+bash error = ( no es un identificador válido)
+Test  32: ❌ export 123 
+mini exit code = 139
+bash exit code = 1
+mini error = ( not a valid identifier)
+bash error = ( no es un identificador válido)
+Test  34: ❌ unset HELLO 
+mini exit code = 139
+bash exit code = 0
+Test  35: ❌ unset HELLO1 HELLO2 
+mini exit code = 139
+bash exit code = 0
+Test  36: ❌ unset HOME 
+mini exit code = 139
+bash exit code = 0
+Test  37: ❌ unset PATH 
+mini exit code = 139
+bash exit code = 0
+Test  38: ❌ unset SHELL 
+mini exit code = 139
+bash exit code = 0
+Test  39: ❌ cd $PWD 
+mini exit code = 139
+bash exit code = 0
+Test  40: ❌ cd $PWD hi 
+mini exit code = 139
+bash exit code = 1
+mini error = ( too many arguments)
+bash error = ( demasiados argumentos)
+Test  41: ❌ cd 123123 
+mini exit code = 139
+bash exit code = 1
+mini error = ( No such file or directory)
+bash error = ( No existe el archivo o el directorio)
+Test  52: ❌  
+mini exit code = 139
+bash exit code = 0
+———————————— pipes
+Test  58: ❌ grep hi "<infile" <         ./test_files/infile 
+mini exit code = 139
+bash exit code = 2
+mini error = ( Syntax error near unexpected token '<')
+bash error = ( No existe el archivo o el directorio)
+Test  65: ❌ echo <"./test_files/infile" <missing <"./test_files/infile" 
+mini exit code = 134
+bash exit code = 1
+mini error = ( No such file or directory invalid pointer)
+bash error = ( No existe el archivo o el directorio)
+Test 105: ❌ cat >./outfiles/outfile01 <missing 
+Sólo en ./bash_outfiles: outfile01
+mini outfiles:
+cat: './mini_outfiles/*': No existe el archivo o el directorio
+bash outfiles:
+mini error = ( No such file or directory)
+bash error = ( No existe el archivo o el directorio)
+Test 108: ❌ cat >./outfiles/outfile01 <missing >./test_files/invalid_permission 
+Sólo en ./bash_outfiles: outfile01
+mini outfiles:
+cat: './mini_outfiles/*': No existe el archivo o el directorio
+bash outfiles:
+mini error = ( No such file or directory)
+bash error = ( No existe el archivo o el directorio)
+Test 118: ❌ ls >./outfiles/outfile01 >>./test_files/invalid_permission >>./outfiles/outfile02 
+Sólo en ./bash_outfiles: outfile01
+mini outfiles:
+cat: './mini_outfiles/*': No existe el archivo o el directorio
+bash outfiles:
+mini error = ( No such file or directory)
+bash error = ( Permiso denegado)
+———————————— extras
+Test 132: ❌  
+mini exit code = 139
+bash exit code = 0
+Test 133: ❌ $PWD 
+mini exit code = 139
+bash exit code = 126
+mini error = ()
+bash error = ( Es un directorio)
+Test 134: ❌ $EMPTY 
+mini exit code = 139
+bash exit code = 0
+Test 136: ❌ ./test_files/invalid_permission 
+mini exit code = 1
+bash exit code = 126
+mini error = ( Permission denied)
+bash error = ( Permiso denegado)
+Test 137: ❌ ./missing.out 
+mini exit code = 1
+bash exit code = 127
+mini error = ( No such file or directory)
+bash error = ( No existe el archivo o el directorio)
+Test 141: ❌ ./test_files 
+mini exit code = 139
+bash exit code = 126
+mini error = ()
+bash error = ( Es un directorio)
+Test 142: ❌ /test_files 
+mini exit code = 1
+bash exit code = 127
+mini error = ( No such file or directory)
+bash error = ( No existe el archivo o el directorio)
