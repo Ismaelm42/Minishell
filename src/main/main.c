@@ -13,7 +13,7 @@ int	main(int argc, char **argv, char **env)
 	{
 		signal(SIGINT, ft_sigint_handler);
 		ssignal(SIGQUIT, SIG_IGN);
-		input = readline(">");//readline_prompt();
+		input = readline_prompt();
 		//rl_on_new_line(); // no estaba
 		if (!input)
 			control_d(input);

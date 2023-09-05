@@ -16,36 +16,38 @@ static void	update_path(t_global *g, char *pwd, char *oldpwd)
 	char	*path_pwd_export;
 	char	*path_old_pwd_export;
 
-	path_pwd_export = ft_strdup(pwd);
-	path_old_pwd_export = ft_strdup(oldpwd);
-	search_key_and_replace(g->lst_env, ft_strdup("PWD"), path_pwd_export, 1);
-	search_key_and_replace(g->lst_env, ft_strdup("OLDPWD"), \
-	path_old_pwd_export, 1);
-	search_env_replace(ft_strdup("PWD"), pwd, g->env, 0);
-	search_env_replace(ft_strdup("OLDPWD"), oldpwd, g->env, 0);
+	if (ft_strncmp(pwd, oldpwd, ft_strlen(pwd) + 1) != 0)
+	{
+		path_pwd_export = ft_strdup(pwd);
+		path_old_pwd_export = ft_strdup(oldpwd);
+		search_key_and_replace(g->lst_env, ft_strdup("PWD"), \
+		path_pwd_export, 1);
+		search_key_and_replace(g->lst_env, ft_strdup("OLDPWD"), \
+		path_old_pwd_export, 1);
+		search_env_replace(ft_strdup("PWD"), pwd, g->env, 0);
+		search_env_replace(ft_strdup("OLDPWD"), oldpwd, g->env, 0);
+	}
 }
-
 
 void	ft_cd(t_global *g, int n)
 {
 	char	buffer[PATH_MAX];
 	char	*path_pwd;
 	char	*path_old_pwd;
-	char *expand;
+	char	*expand;
 
-	path_old_pwd = getcwd(buffer, PATH_MAX);
-
+	path_old_pwd = search_env_expand("PWD", g->env);
 	if (g->tokens[n].arg[0] != NULL && g->tokens[n].arg[1] != NULL)
 	{
 		ft_putstr_fd("minishell: cd: too many arguments\n", 2);
 		g->exit_status = 1;
 	}	
-	if (!g->tokens[n].arg[0] || \
+	else if (!g->tokens[n].arg[0] || \
 			ft_strncmp(g->tokens[n].arg[0], "~", 2) == 0)
 	{
 		expand = search_env_expand("HOME", g->env);
 		chdir(expand);
-		free_mem((void**)&expand);
+		free_mem((void **)&expand);
 	}
 	else if (ft_strncmp(g->tokens[n].arg[0], "-", 2) == 0)
 	{
@@ -53,14 +55,13 @@ void	ft_cd(t_global *g, int n)
 		ft_putstr_fd(expand, STDOUT_FILENO);
 		ft_putchar_fd('\n', STDOUT_FILENO);
 		chdir(expand);
-		free_mem((void**)&expand);
-
+		free_mem((void **)&expand);
 	}
 	else if (chdir(g->tokens[n].arg[0]) < 0)
 	{
-		ft_putstr_fd("minishell: cd: No such file or directory", 2);
+		ft_putstr_fd("minishell: cd: No such file or directory\n", 2);
 		g->exit_status = chdir(g->tokens[n].arg[0]) * -1;
-	}	
+	}
 	path_pwd = getcwd(buffer, PATH_MAX);
 	update_path(g, path_pwd, path_old_pwd);
 }
