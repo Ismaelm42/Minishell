@@ -29,20 +29,19 @@ char	*readline_prompt(void)
 	char	*dir;
 
 	rl_on_new_line();
-	prompt = ft_strdup("\033[0;31mminishell:\x1b[0m");
+	prompt = ft_strdup("\001\033[0;31m\002minishell:");
 	dir = NULL;
 	dir = getcwd(dir, 0);
 	if (dir == NULL)
 	{
 		free_mem((void **)&prompt);
-		ft_putstr_fd("minishell: pwd error\n", 2);
+		ft_putstr_fd("\001\x1b[0m\002minishell: pwd error\n", 2);
 		return (NULL);
 	}
 	dir = get_home_dir(dir);
-	prompt = ft_strjoin(prompt, "\033[0;36m", 1);
+	prompt = ft_strjoin(prompt, "\001\033[0;36m\002", 1);
 	prompt = ft_strjoin(prompt, dir, 3);
-	prompt = ft_strjoin(prompt, "\x1b[0m", 1);
-	prompt = ft_strjoin(prompt, "$ ", 1);
+	prompt = ft_strjoin(prompt, "\001\x1b[0m\002$ ", 1);
 	input = readline(prompt);
 	free_mem((void **)&prompt);
 	return (input);
