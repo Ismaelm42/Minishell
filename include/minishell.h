@@ -205,7 +205,7 @@ int			process_heredocs(t_global *global);
 
 //exec/infiles
 void		handle_heredocs(t_global *global, int n);
-void		handle_infiles(t_global *global, char ***infiles, int fd_type);
+void		handle_infiles(t_global *global, char **infiles, int i, int fd_type);
 void		get_input_file(t_global *global, int n);
 void		fd_in_handler(t_global *global, int n);
 

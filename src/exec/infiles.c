@@ -25,18 +25,18 @@ void	handle_heredocs(t_global *global, int n)
 	free_mem((void **)&heredoc);
 }
 
-void	handle_infiles(t_global *global, char ***infiles, int fd_type)
+void	handle_infiles(t_global *global, char **infiles, int i, int fd_type)
 {
 	int	fd_file;
 
-	fd_file = open(**infiles, O_RDONLY, 0666);
+	fd_file = open(infiles[i], O_RDONLY, 0666);
 	if (fd_file == -1)
 	{
-		print_error(**infiles, errno);
+		print_error(infiles[i], errno);
 		free_global(global, 1);
 		exit (1);
 	}
-	if ((*infiles)[1] == NULL && fd_type == 1)
+	if (infiles[i + 1] == NULL && fd_type == 1)
 	{
 		if (dup2(fd_file, STDIN_FILENO) == -1)
 		{
@@ -51,13 +51,12 @@ void	handle_infiles(t_global *global, char ***infiles, int fd_type)
 void	get_input_file(t_global *global, int n)
 {
 	int		fd_type;
+	int		i;
 
+	i = 0;
 	fd_type = global->tokens[n].fd_in;
-	while (*global->tokens[n].infile != NULL)
-	{
-		handle_infiles(global, &global->tokens[n].infile, fd_type);
-		global->tokens[n].infile++;
-	}
+	while (global->tokens[n].infile[i] != NULL)
+		handle_infiles(global, global->tokens[n].infile, i++, fd_type);
 	if (fd_type < 0)
 		handle_heredocs(global, n);
 }

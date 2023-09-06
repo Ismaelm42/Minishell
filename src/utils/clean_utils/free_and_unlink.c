@@ -31,7 +31,7 @@ char	**free_matrix(void ***matrix, int size)
 	int	n;
 
 	n = 0;
-	if ((**matrix) != NULL)
+	if ((*matrix) != NULL)
 	{
 		if (size != 0)
 			while (n < size)
@@ -75,8 +75,7 @@ void	free_global(t_global *global, int flag)
 	}
 	free_mem((void **)&global->tokens);
 	free_mem((void **)&global->input);
-	if (global->fd != NULL)
-		free_matrix((void ***)&global->fd, global->pipeline + 1);
+	free_matrix((void ***)&global->fd, global->pipeline + 1);
 	free_mem((void **)&global->pid);
 	unlink_files(global->pipeline);
 	global->pipeline = 0;
