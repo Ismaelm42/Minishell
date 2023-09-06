@@ -1,5 +1,14 @@
 #include "../../include/minishell.h"
+/*
+ctrl C && ctrl D & ctrl \ (linux ctrl + } usar en terminal en la de 
+Visual no va demasiado bien) -> DEBERAN DE FUNCIONAR COMO EN BASH
 
+CUANDO SEA INTERACTIVO:( prompt a la espera de commandosn )
+
+ctrl-C imprime una nueva entrada en una línea nueva.
+ctrl-D termina el shell.
+ctrl-\ no hace nada.
+*/
 int	control_d(t_global *g, char *input)
 {
 	if (!input)
@@ -11,10 +20,12 @@ int	control_d(t_global *g, char *input)
 	return (1);
 }
 
+/*
+Manejador de señal SIGINT de forma interactiva
+*/
 void	ft_sigint_handler(int sig)
 {
 	(void)sig;
-
 	ft_putchar_fd('\n', 1);
 	rl_replace_line("", 1);
 	rl_on_new_line();
@@ -22,11 +33,21 @@ void	ft_sigint_handler(int sig)
 	signal(SIGINT, ft_sigint_handler);
 }
 
+/*
+Manejador de señales para procesos trata la señal recibida 
+y dependiendo de la que reciba actua de una forma u otra
+*/
 void	ft_sigint_proc(int sig)
 {
 	if (sig == SIGINT)
 	{
-		printf("\n");
+		ft_putstr_fd("\n", STDOUT_FILENO);
 		signal(SIGINT, ft_sigint_proc);
+	}
+	else if (sig == SIGQUIT)
+	{
+		ft_putstr_fd("Quit (core dumped)", STDOUT_FILENO);
+		ft_putchar_fd('\n', STDOUT_FILENO);
+		signal(SIGQUIT, ft_sigint_proc);
 	}
 }

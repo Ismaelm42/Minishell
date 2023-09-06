@@ -66,6 +66,7 @@ int	execute_commands(t_global *global)
 	while (n < global->pipeline)
 	{
 		signal(SIGINT, ft_sigint_proc);
+		signal(SIGQUIT, ft_sigint_proc);
 		global->pid[n] = fork();
 		if (global->pid[n] == -1)
 		{
