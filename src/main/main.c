@@ -16,7 +16,7 @@ int	main(int argc, char **argv, char **env)
 		input = readline_prompt();
 		//rl_on_new_line(); // no estaba
 		if (!input)
-			control_d(input);
+			control_d(global, input);
 		add_and_store_history(input);
 		get_struct_data(global, input);
 		if (global->input != NULL)

@@ -39,7 +39,6 @@ int	parent_process(t_global *global, int n)
 	int	i;
 
 	i = 0;
-	//signal(SIGINT, ft_sigint_handler);
 	fd_closer(global->fd, global->pipeline, n);
 	close(global->fd[n][0]);
 	while (i < global->pipeline)
@@ -66,6 +65,7 @@ int	execute_commands(t_global *global)
 	n = 0;
 	while (n < global->pipeline)
 	{
+		signal(SIGINT, ft_sigint_proc);
 		global->pid[n] = fork();
 		if (global->pid[n] == -1)
 		{

@@ -191,7 +191,8 @@ char		*readline_prompt(void);
 //signals/signals
 void		ft_sigint_handler(int sig);
 void		ft_sigquit_handler(int sig);
-int			control_d(char *input);
+void		ft_sigint_proc(int sig);
+int			control_d(t_global *g, char *input);
 
 //exec/execute_commands
 int			create_pipes_and_pid(t_global *global);
