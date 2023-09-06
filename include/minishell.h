@@ -227,7 +227,6 @@ void		access_error_message(char *error, char *message);
 void		exit_child_process(t_global *global, char **array, char *str, int stat);
 void		fd_closer(int **fd, int pipeline, int n);
 void		print_error(char *message, int code_error);
-void		write_on_fd(int fd_in, int fd_out);
 
 //build_in
 

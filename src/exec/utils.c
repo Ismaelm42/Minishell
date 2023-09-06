@@ -38,17 +38,3 @@ void	print_error(char *message, int code_error)
 	ft_putstr_fd(strerror(code_error), 2);
 	ft_putstr_fd("\n", 2);
 }
-
-void	write_on_fd(int fd_in, int fd_out)
-{
-	char	*buffer;
-
-	while (1)
-	{
-		buffer = gnl(fd_in);
-		if (buffer == NULL)
-			break ;
-		ft_putstr_fd(buffer, fd_out);
-		free_mem((void **)&buffer);
-	}
-}

@@ -57,7 +57,7 @@ void	fd_out_handler(t_global *global, int n)
 		get_output_file(global, n);
 	else
 	{
-		if (global->pipeline > 1)
+		if (global->pipeline > 1 && n != (global->pipeline - 1))
 		{
 			if (dup2(global->fd[n + 1][1], STDOUT_FILENO) == -1)
 			{

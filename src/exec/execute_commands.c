@@ -48,10 +48,6 @@ int	parent_process(t_global *global, int n)
 			global->exit_status = WEXITSTATUS(global->exit_status);
 		i++;
 	}
-	if (dup2(global->fd[n][0], STDIN_FILENO) == -1)
-		return (print_error("Pipeline error", errno), -1);
-	write_on_fd(global->fd[n][0], STDOUT_FILENO);
-	close(global->fd[n][0]);
 	if (dup2(global->fd_stdin, STDIN_FILENO) == -1)
 		return (print_error("Pipeline error", errno), -1);
 	if (dup2(global->fd_stdout, STDOUT_FILENO) == -1)
