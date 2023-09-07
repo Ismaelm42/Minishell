@@ -53,13 +53,15 @@ int	check_cmd_path(char *cmd, char *cmd_path, char *path, int flag)
 		if (flag == 0)
 		{
 			access_error_message(cmd_path, ": No such file or directory\n");
-			return (1);
+			return (127);
 		}
 		return (-1);
 	}
 	else if (access(cmd_path, F_OK) == 0 && access(cmd_path, X_OK) != 0)
 	{
 		access_error_message(cmd_path, ": Permission denied\n");
+		if (flag == 0)
+			return (126);
 		return (1);
 	}
 	else if (access(cmd_path, F_OK | X_OK) == 0)
