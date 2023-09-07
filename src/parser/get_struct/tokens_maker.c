@@ -1,5 +1,27 @@
 #include "../../../include/minishell.h"
 
+char	*handle_quoted_substr(char *s)
+{
+	char	*substr;
+	int		c;
+	int		i;
+	int		j;
+
+	i = 0;
+	j = 0;
+	c = 0;
+	substr = (char *) ft_calloc(sizeof(char), ft_strlen(s) + 1);
+	while (s[j] != '\0')
+	{
+		while (s[j] != '\'' && s[j] != '\"' && s[j] != '\0')
+			substr[i++] = s[j++];
+		c = reject_quotes(s, substr, &i, &j);
+	}
+	if (c != 0)
+		return (free_mem((void **)&substr), s);
+	return (free_mem((void **)&s), substr);
+}
+
 /*
 Reserva la memoria necesaria para cada campo de la estructura tokens.
 */
@@ -21,27 +43,27 @@ void	check_token_type(t_token *tokens, char ***lexer, int **i)
 	if (ft_strncmp(**lexer, "<", ft_strlen(**lexer)) == 0)
 	{
 		(*lexer)++;
-		tokens->infile[(*i)[0]++] = ft_strdup(**lexer);
+		tokens->infile[(*i)[0]++] = handle_quoted_substr(ft_strdup(**lexer));
 	}
 	else if (ft_strncmp(**lexer, ">", ft_strlen(**lexer)) == 0)
 	{
 		(*lexer)++;
-		tokens->outfile[(*i)[1]++] = ft_strdup(**lexer);
+		tokens->outfile[(*i)[1]++] = handle_quoted_substr(ft_strdup(**lexer));
 	}
 	else if (ft_strncmp(**lexer, "<<", ft_strlen(**lexer)) == 0)
 	{
 		(*lexer)++;
-		tokens->heredoc[(*i)[2]++] = ft_strdup(**lexer);
+		tokens->heredoc[(*i)[2]++] = handle_quoted_substr(ft_strdup(**lexer));
 	}
 	else if (ft_strncmp(**lexer, ">>", ft_strlen(**lexer)) == 0)
 	{
 		(*lexer)++;
-		tokens->append[(*i)[3]++] = ft_strdup(**lexer);
+		tokens->append[(*i)[3]++] = handle_quoted_substr(ft_strdup(**lexer));
 	}
 	else if (tokens->command == NULL)
-		tokens->command = ft_strdup(**lexer);
+		tokens->command = handle_quoted_substr(ft_strdup(**lexer));
 	else
-		tokens->arg[(*i)[5]++] = ft_strdup(**lexer);
+		tokens->arg[(*i)[5]++] = handle_quoted_substr(ft_strdup(**lexer));
 }
 
 /*
@@ -71,18 +93,5 @@ void	advance_lexer_tokens(char ***lexer, t_token **tokens)
 	{
 		(*lexer)++;
 		(*tokens)++;
-	}
-}
-
-void	token_maker(t_token *tokens, char **lexer)
-{
-	int	*size;
-
-	while (*lexer != NULL)
-	{
-		size = token_counter(lexer);
-		allocate_token_memory(tokens, size);
-		token_filler(tokens, lexer);
-		advance_lexer_tokens(&lexer, &tokens);
 	}
 }

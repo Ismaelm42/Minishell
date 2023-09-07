@@ -1,27 +1,5 @@
 #include "../../../include/minishell.h"
 
-char	*handle_quoted_substr(char *s)
-{
-	char	*substr;
-	int		c;
-	int		i;
-	int		j;
-
-	i = 0;
-	j = 0;
-	c = 0;
-	substr = (char *) ft_calloc(sizeof(char), ft_strlen(s) + 1);
-	while (s[j] != '\0')
-	{
-		while (s[j] != '\'' && s[j] != '\"' && s[j] != '\0')
-			substr[i++] = s[j++];
-		c = reject_quotes(s, substr, &i, &j);
-	}
-	if (c != 0)
-		return (free_mem((void **)&substr), s);
-	return (free_mem((void **)&s), substr);
-}
-
 /*
 Aquí se separará cualquiera de estos metacaracteres: |, <, <<, >, >>.
 */
@@ -64,7 +42,7 @@ void	words_splitter(int *n, char **s, char ***lexer)
 			|| (*s)[length] == '<' || (*s)[length] == '>')
 			break ;
 	}
-	(*lexer)[*n] = handle_quoted_substr(ft_substr(*s, 0, length, 0));
+	(*lexer)[*n] = ft_substr(*s, 0, length, 0);
 	*n += 1;
 	while (length -- > 0)
 	(*s)++;

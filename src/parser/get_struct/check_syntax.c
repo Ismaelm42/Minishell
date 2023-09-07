@@ -1,8 +1,5 @@
 #include "../../../include/minishell.h"
 
-/*
-Controla los errores de comillas no cerradas
-*/
 int	quotes_check(char *lexer)
 {
 	char	c;
@@ -14,7 +11,7 @@ int	quotes_check(char *lexer)
 	{
 		while (lexer[i] != '\'' && lexer[i] != '\"' && lexer[i] != '\0')
 			i++;
-		if (lexer[i] == '\'' || lexer[i])
+		if (lexer[i] == '\'' || lexer[i] == '\"')
 		{
 			c = lexer[i++];
 			while (lexer[i] != c && lexer[i] != '\0')
@@ -31,10 +28,6 @@ int	quotes_check(char *lexer)
 	return (0);
 }
 
-/*
-Controla que los lexer en los que hay pipes y redirecciones sean correctos.
-Es decir que verifica que no haya más de dos redirecciones, por ejemplo, etc.
-*/
 int	pipes_and_redirections_check(char **lexer, int n)
 {
 	if ((lexer[n][0] == '|' && (ft_strlen(lexer[n]) > 1 || n == 0))
@@ -52,10 +45,6 @@ int	pipes_and_redirections_check(char **lexer, int n)
 	return (0);
 }
 
-/*
-Checkea los casos particulares cuando se encuentra por ejemplo un pipe al final del input
-y cuando se encuentra una redirección seguida de un pipe.
-*/
 int	next_lexer_check(char **lexer, int n)
 {
 	if (lexer[n][0] == '|' && lexer[n + 1] == NULL)

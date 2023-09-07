@@ -1,5 +1,18 @@
 #include "../../../include/minishell.h"
 
+void	token_maker(t_token *tokens, char **lexer)
+{
+	int	*size;
+
+	while (*lexer != NULL)
+	{
+		size = token_counter(lexer);
+		allocate_token_memory(tokens, size);
+		token_filler(tokens, lexer);
+		advance_lexer_tokens(&lexer, &tokens);
+	}
+}
+
 /*
 Llama a la función get_lexer, y una vez obtenido el lexer, se utiliza para
 reservar la memoria y guardar la información en la estructura tokens.

@@ -70,7 +70,6 @@ void		words_counter(int *counter, char **s);
 int			lexer_counter(char *s);
 
 //parser/get_lexer/lexer_maker
-char		*handle_quoted_substr(char *s);
 void		redirection_lexer_splitter(int *n, char **s, char ***lexer);
 void		words_splitter(int *n, char **s, char ***lexer);
 char		**lexer_maker(char *s);
@@ -123,21 +122,22 @@ t_global	*init_struct(char **env);
 void		get_struct_data(t_global *global, char *input);
 
 //src/parser/get_struct/get_tokens
-int			lexer_pipes_counter(char **lexer);
+void		token_maker(t_token *tokens, char **lexer);
 int			get_tokens(char *input, t_global *global);
 
 //src/parser/get_struct/tokens_counter
+int			lexer_pipes_counter(char **lexer);
 void		redirection_and_command_token_counter(char ***lexer, int **size);
 int			*token_counter(char **lexer);
 void		check_last_token_file_fd(t_token *tokens, char **lexer, int n);
 void		get_token_fd(t_token *tokens, char **lexer);
 
 //src/parser/get_struct/tokens_maker
+char		*handle_quoted_substr(char *s);
 void		allocate_token_memory(t_token *tokens, int *size);
 void		check_token_type(t_token *tokens, char ***lexer, int **i);
 void		token_filler(t_token *tokens, char **lexer);
 void		advance_lexer_tokens(char ***lexer, t_token **tokens);
-void		token_maker(t_token *tokens, char **lexer);
 
 //parser/var_environment
 char		**copy_environment(char **env);
