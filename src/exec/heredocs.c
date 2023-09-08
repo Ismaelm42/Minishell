@@ -28,29 +28,50 @@ void	get_heredocs(char **heredoc, int fd)
 	}
 }
 
-int	process_heredocs(t_global *global)
+void	heredoc_child_process(t_global *global, int n)
 {
 	char	*heredoc;
 	int		fd;
+
+	if (global->tokens[n].heredoc[0] != NULL)
+	{
+		heredoc = ft_strjoin("/tmp/.heredoc", ft_itoa(n), 2);
+		fd = open(heredoc, O_RDWR | O_CREAT | O_TRUNC, 0666);
+		free_mem((void **)&heredoc);
+		if (fd == -1)
+		{
+			print_error(heredoc, errno);
+			free_mem((void **)&heredoc);
+			free_global(global, 1);
+			exit(1);
+		}
+		get_heredocs(global->tokens[n].heredoc, fd);
+		close(fd);
+	}
+	free_mem((void **)&global->pid);
+	free_global(global, 1);
+	exit(0);
+}
+
+int	process_heredocs(t_global *global)
+{
 	int		n;
 
 	n = 0;
+	global->pid = (pid_t *)ft_calloc(sizeof(pid_t), global->pipeline);
 	while (n < global->pipeline)
 	{
-		if (global->tokens[n].heredoc[0] != NULL)
+		global->pid[n] = fork();
+		if (global->pid[n] == -1)
 		{
-			heredoc = ft_strjoin("/tmp/.heredoc", ft_itoa(n), 2);
-			fd = open(heredoc, O_RDWR | O_CREAT | O_TRUNC, 0666);
-			free_mem((void **)&heredoc);
-			if (fd == -1)
-			{
-				global->exit_status = 1;
-				return (print_error("heredoc", errno), 1);
-			}
-			get_heredocs(global->tokens[n].heredoc, fd);
-			close(fd);
+			global->exit_status = -1;
+			return (print_error("Fork error", errno), 1);
 		}
+		if (global->pid[n] == 0)
+			heredoc_child_process(global, n);
+		waitpid(global->pid[n], &global->exit_status, 0);
 		n++;
 	}
+	free_mem((void **)&global->pid);
 	return (0);
 }

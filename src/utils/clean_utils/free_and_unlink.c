@@ -1,21 +1,5 @@
 #include "../../../include/minishell.h"
 
-void	unlink_files(int pipeline)
-{
-	char	*heredoc;
-	int		n;
-
-	n = 0;
-	while (n < pipeline)
-	{
-		heredoc = ft_strjoin(".heredoc", ft_itoa(n), 2);
-		if (access(heredoc, F_OK) == 0)
-			unlink(heredoc);
-		free_mem((void **)&heredoc);
-		n++;
-	}
-}
-
 void	free_mem(void **mem)
 {
 	if (*mem != 0)
@@ -77,7 +61,6 @@ void	free_global(t_global *global, int flag)
 	free_mem((void **)&global->input);
 	free_matrix((void ***)&global->fd, global->pipeline + 1);
 	free_mem((void **)&global->pid);
-	unlink_files(global->pipeline);
 	global->pipeline = 0;
 	if (flag == 1)
 		destroy_global(global);

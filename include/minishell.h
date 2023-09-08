@@ -202,6 +202,7 @@ int			execute_commands(t_global *global);
 
 //exec/heredocs
 void		get_heredocs(char **heredoc, int fd);
+void		heredoc_child_process(t_global *global, int n);
 int			process_heredocs(t_global *global);
 
 //exec/infiles
