@@ -24,6 +24,8 @@ void	child_process(t_global *global, int n)
 {
 	char	**command_line;
 
+	signal(SIGINT, SIG_DFL);
+	signal(SIGQUIT, SIG_DFL);
 	fd_closer(global->fd, global->pipeline, n);
 	fd_in_handler(global, n);
 	fd_out_handler(global, n);
@@ -52,6 +54,12 @@ int	parent_process(t_global *global, int n)
 	if (dup2(global->fd_stdout, STDOUT_FILENO) == -1)
 		return (print_error("Pipeline error", errno), -1);
 	return (0);
+}
+
+void	handler_prueba(int signal)
+{
+	if (signal == SIGINT || signal == SIGQUIT)
+		ft_putchar_fd('\n', STDOUT_FILENO);
 }
 
 int	execute_commands(t_global *global)

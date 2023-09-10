@@ -1,16 +1,5 @@
 #include "../../include/minishell.h"
 
-/*
-solo funcionara con el primer argumento si recibe mas de un argumento
-error bash: cd: too many arguments
- POSIBLES ARGUMENTOS:
-	. -> cd . no hace nada pq indica que se quede en el directorio actual lo mismo sin argumentos
-	.. -> retrocede un directotio atras, direcciones relativas.
-	- -> cd - , printea por pantalla el directorio de trabajo anterior y se ubica en el.
-	~ -> se ubica en el directorio HOME del usuario actual
-	~/USER -> se ubica en el directorio Home del usuario indicado
-*/
-
 static void	update_path(t_global *g, char *pwd, char *oldpwd)
 {
 	char	*path_pwd_export;
@@ -22,10 +11,62 @@ static void	update_path(t_global *g, char *pwd, char *oldpwd)
 		path_old_pwd_export = ft_strdup(oldpwd);
 		search_key_and_replace(g->lst_env, ft_strdup("PWD"), \
 		path_pwd_export, 1);
+		if (search_env("OLDPWD", g->env) == 1)
+			add_env(&g->env, "OLDPWD=");
 		search_key_and_replace(g->lst_env, ft_strdup("OLDPWD"), \
 		path_old_pwd_export, 1);
 		search_env_replace(ft_strdup("PWD"), pwd, g->env, 0);
 		search_env_replace(ft_strdup("OLDPWD"), oldpwd, g->env, 0);
+	}
+}
+
+static int	special_cases(t_global *g, int n, int wall)
+{
+	char	*expand;
+
+	if (!g->tokens[n].arg[0] || \
+			ft_strncmp(g->tokens[n].arg[0], "~", 2) == 0)
+	{
+		expand = search_env_expand("HOME", g->env);
+		g->exit_status = chdir(expand);
+		wall = 1;
+		free_mem((void **)&expand);
+	}
+	else if (ft_strncmp(g->tokens[n].arg[0], "-", 2) == 0)
+	{
+		wall = 1;
+		if (search_env("OLDPWD", g->env) == 1)
+			ft_putstr_fd("bash: cd: OLDPWD not set\n", 2);
+		else
+		{
+			expand = search_env_expand("OLDPWD", g->env);
+			ft_putstr_fd(expand, STDOUT_FILENO);
+			ft_putchar_fd('\n', STDOUT_FILENO);
+			g->exit_status = chdir(expand);
+			free_mem((void **)&expand);
+		}
+	}
+	return (wall);
+}
+
+static void	cd_work_with_addresses(t_global *g, int n)
+{
+	if (g->tokens[n].arg[0][0] == '~' && g->tokens[n].arg[0][1] != '\0')
+	{
+		g->tokens[n].arg[0] = ft_substr(g->tokens[n].arg[0], 1, \
+		ft_strlen(g->tokens[n].arg[0]), 1);
+		g->tokens[n].arg[0] = ft_strjoin(search_env_expand("HOME", g->env), \
+		g->tokens[n].arg[0], 3);
+		if (chdir(g->tokens[n].arg[0]) < 0)
+		{
+			ft_putstr_fd("minishell: cd: No such file or directory\n", 2);
+			g->exit_status = chdir(g->tokens[n].arg[0]) * -1;
+		}
+	}
+	else if (chdir(g->tokens[n].arg[0]) < 0)
+	{
+		ft_putstr_fd("minishell: cd: No such file or directory\n", 2);
+		g->exit_status = chdir(g->tokens[n].arg[0]) * -1;
 	}
 }
 
@@ -34,34 +75,20 @@ void	ft_cd(t_global *g, int n)
 	char	buffer[PATH_MAX];
 	char	*path_pwd;
 	char	*path_old_pwd;
-	char	*expand;
+	int		wall;
 
+	wall = 0;
 	path_old_pwd = search_env_expand("PWD", g->env);
 	if (g->tokens[n].arg[0] != NULL && g->tokens[n].arg[1] != NULL)
 	{
 		ft_putstr_fd("minishell: cd: too many arguments\n", 2);
+		wall = 1;
 		g->exit_status = 1;
 	}	
-	else if (!g->tokens[n].arg[0] || \
-			ft_strncmp(g->tokens[n].arg[0], "~", 2) == 0)
-	{
-		expand = search_env_expand("HOME", g->env);
-		chdir(expand);
-		free_mem((void **)&expand);
-	}
-	else if (ft_strncmp(g->tokens[n].arg[0], "-", 2) == 0)
-	{
-		expand = search_env_expand("OLDPWD", g->env);
-		ft_putstr_fd(expand, STDOUT_FILENO);
-		ft_putchar_fd('\n', STDOUT_FILENO);
-		chdir(expand);
-		free_mem((void **)&expand);
-	}
-	else if (chdir(g->tokens[n].arg[0]) < 0)
-	{
-		ft_putstr_fd("minishell: cd: No such file or directory\n", 2);
-		g->exit_status = chdir(g->tokens[n].arg[0]) * -1;
-	}
+	wall = special_cases(g, n, wall);
+	if (wall == 0)
+		cd_work_with_addresses(g, n);
 	path_pwd = getcwd(buffer, PATH_MAX);
 	update_path(g, path_pwd, path_old_pwd);
+	free_mem((void **)&path_old_pwd);
 }
