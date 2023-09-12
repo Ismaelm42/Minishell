@@ -1,24 +1,15 @@
 #include "../../include/minishell.h"
 
-
-// int	control_d_heredocs(char *buffer)
-// {
-// 	if (!buffer)
-// 	{
-// 		ft_putstr_fd("exit\n", 1);
-// 		//free_global(g, 1);
-// 		exit (11);
-// 	}
-// 	return (11);
-// }
-
-void	get_heredocs(char **heredoc, int fd)
+void	get_heredocs(t_global *global, char **heredoc, int fd)
 {
 	char	*buffer;
 
+	signal(SIGINT, ft_sigint_heredoc);
 	while (1)
 	{
 		buffer = readline("");
+		if (buffer == NULL)
+			control_d(global, buffer);
 		if (buffer != NULL)
 		{
 			if (ft_strncmp(buffer, *heredoc, ft_strlen(*heredoc) + 1) == 0
@@ -57,7 +48,8 @@ void	heredoc_child_process(t_global *global, int n)
 			exit(1);
 		}
 		free_mem((void **)&heredoc_name);
-		get_heredocs(search_next_file(global->tokens[n].file, "<<"), fd);
+		get_heredocs(global, \
+		search_next_file(global->tokens[n].file, "<<"), fd);
 		close(fd);
 	}
 	free_mem((void **)&global->pid);
@@ -73,6 +65,7 @@ int	process_heredocs(t_global *global)
 	n = 0;
 	while (n < global->pipeline)
 	{
+		signal(SIGINT, SIG_IGN);
 		global->pid[n] = fork();
 		if (global->pid[n] == -1)
 		{
@@ -82,6 +75,15 @@ int	process_heredocs(t_global *global)
 		if (global->pid[n] == 0)
 			heredoc_child_process(global, n);
 		waitpid(global->pid[n], &global->exit_status, 0);
+		if (global->exit_status != 0)
+		{
+			if (global->exit_status == 11)
+			{
+				global->exit_status = 0;
+				tcsetattr(STDIN_FILENO, ICANON, &global->prompt);
+			}
+			return (1);
+		}
 		n++;
 	}
 	free_mem((void **)&global->pid);

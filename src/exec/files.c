@@ -45,9 +45,9 @@ void	handle_outfile(t_global *global, int n, int i)
 	int	fd;
 
 	if (ft_strncmp(global->tokens[n].file[i - 1], ">", 2) == 0)
-		fd = open(global->tokens[n].file[i], O_RDWR | O_CREAT | O_TRUNC, 0666);
+		fd = open(global->tokens[n].file[i], O_RDWR | O_CREAT | O_TRUNC, 0644);
 	else
-		fd = open(global->tokens[n].file[i], O_RDWR | O_CREAT | O_APPEND, 0666);
+		fd = open(global->tokens[n].file[i], O_RDWR | O_CREAT | O_APPEND, 0644);
 	if (fd == -1)
 	{
 		print_error(global->tokens[n].file[i], errno);

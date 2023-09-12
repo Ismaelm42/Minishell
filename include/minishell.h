@@ -42,17 +42,18 @@ typedef struct s_node
 
 typedef struct s_global
 {
-	char		*input;
-	char		**env;
-	int			**fd;
-	int			pipeline;
-	int			fd_stdin;
-	int			fd_stdout;
-	int			exit_status;
-	pid_t		*pid;
-	t_node		*lst_env;
-	t_node		*lst_local;
-	t_token		*tokens;
+	char			*input;
+	char			**env;
+	int				**fd;
+	int				pipeline;
+	int				fd_stdin;
+	int				fd_stdout;
+	struct termios	prompt;
+	int				exit_status;
+	pid_t			*pid;
+	t_node			*lst_env;
+	t_node			*lst_local;
+	t_token			*tokens;
 }				t_global;
 
 //parser/history/bash_history
@@ -186,7 +187,7 @@ char		*readline_prompt(void);
 //signals/signals
 void		ft_sigint_handler(int sig);
 void		ft_sigquit_handler(int sig);
-void		ft_sigint_proc(int sig);ç
+void		ft_sigint_proc(int sig);
 void		ft_sigint_heredoc(int sig);
 int			control_d(t_global *g, char *input);
 
@@ -204,7 +205,7 @@ void		check_files(t_global *global, int n);
 void		handle_files(t_global *global, int n);
 
 //exec/heredoc
-void		get_heredocs(char **heredoc, int fd);
+void		get_heredocs(t_global *global, char **heredoc, int fd);
 void		heredoc_child_process(t_global *global, int n);
 int			process_heredocs(t_global *global);
 

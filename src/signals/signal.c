@@ -55,12 +55,12 @@ void	ft_sigint_proc(int sig)
 		signal(SIGQUIT, ft_sigint_proc);
 	}
 }
-// void	ft_sigint_heredoc(int sig)
-// {
-// 	//ioctl(0, TIOCSTI, "\n"); 
-// 	//ft_putstr_fd("CABEZA\n", STDOUT_FILENO);
-// 	ft_putstr_fd("\n", STDOUT_FILENO);
-// 	rl_on_new_line();
-// 	(void)sig;
-// 	//exit(11);
-// }
+void	ft_sigint_heredoc(int sig)
+{
+	//ioctl(0, TIOCSTI, "\n"); 
+	//ft_putstr_fd("CABEZA\n", STDOUT_FILENO);
+	// ft_putstr_fd("\n", STDOUT_FILENO);
+	// rl_on_new_line();
+	(void)sig;
+	exit(11);
+}
