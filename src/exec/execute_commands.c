@@ -50,10 +50,7 @@ int	parent_process(t_global *global, int n)
 		if (global->exit_status == 139)
 			global->exit_status = 126;
 	}
-	if (dup2(global->fd_stdin, STDIN_FILENO) == -1)
-		return (print_error("Pipeline error", errno), -1);
-	if (dup2(global->fd_stdout, STDOUT_FILENO) == -1)
-		return (print_error("Pipeline error", errno), -1);
+	tcsetattr(STDIN_FILENO, TCSANOW, &global->prompt);
 	return (0);
 }
 

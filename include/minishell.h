@@ -20,17 +20,17 @@
 
 typedef struct s_lexer
 {
-	char		*input;
-	char		*variable;
-	char		*expanded;
-	int			position;
+	char			*input;
+	char			*variable;
+	char			*expanded;
+	int				position;
 }				t_lexer;
 
 typedef struct s_token
 {
-	char		*command;
-	char		**arg;
-	char		**file;
+	char			*command;
+	char			**arg;
+	char			**file;
 }				t_token;
 
 typedef struct s_node
@@ -46,11 +46,9 @@ typedef struct s_global
 	char			**env;
 	int				**fd;
 	int				pipeline;
-	int				fd_stdin;
-	int				fd_stdout;
-	struct termios	prompt;
 	int				exit_status;
 	pid_t			*pid;
+	struct termios	prompt;
 	t_node			*lst_env;
 	t_node			*lst_local;
 	t_token			*tokens;

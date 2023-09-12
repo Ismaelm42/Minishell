@@ -13,12 +13,6 @@ t_global	*init_struct(char **env)
 	global->exit_status = 0;
 	global->pid = NULL;
 	global->fd = NULL;
-	global->fd_stdin = dup(STDIN_FILENO);
-	if (global->fd_stdin == -1)
-		return (free_global(global, 1), NULL);
-	global->fd_stdout = dup(STDOUT_FILENO);
-	if (global->fd_stdout == -1)
-		return (free_global(global, 1), NULL);
 	tcgetattr(STDIN_FILENO, &global->prompt);
 	copy_environment_list(&global->lst_env, env);
 	ft_envlst_short(&global->lst_env);
