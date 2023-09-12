@@ -15,7 +15,7 @@ char	**free_matrix(void ***matrix, int size)
 	int	n;
 
 	n = 0;
-	if ((*matrix) != NULL)
+	if (*matrix != NULL)
 	{
 		if (size != 0)
 			while (n < size)
@@ -49,10 +49,7 @@ void	free_global(t_global *global, int flag)
 	n = 0;
 	while (n < global->pipeline)
 	{
-		free_matrix((void ***)&global->tokens[n].infile, 0);
-		free_matrix((void ***)&global->tokens[n].outfile, 0);
-		free_matrix((void ***)&global->tokens[n].heredoc, 0);
-		free_matrix((void ***)&global->tokens[n].append, 0);
+		free_matrix((void ***)&global->tokens[n].file, 0);
 		free_mem((void **)&global->tokens[n].command);
 		free_matrix((void ***)&global->tokens[n].arg, 0);
 		n++;

@@ -27,8 +27,7 @@ void	child_process(t_global *global, int n)
 	signal(SIGINT, SIG_DFL);
 	signal(SIGQUIT, SIG_DFL);
 	fd_closer(global->fd, global->pipeline, n);
-	fd_in_handler(global, n);
-	fd_out_handler(global, n);
+	handle_files(global, n);
 	command_line = check_builtins(global, n);
 	execve(command_line[0], command_line, global->env);
 	free_matrix((void ***)&command_line, 0);
@@ -48,6 +47,8 @@ int	parent_process(t_global *global, int n)
 		waitpid(global->pid[i++], &global->exit_status, 0);
 		if (WIFEXITED(global->exit_status))
 			global->exit_status = WEXITSTATUS(global->exit_status);
+		if (global->exit_status == 139)
+			global->exit_status = 126;
 	}
 	if (dup2(global->fd_stdin, STDIN_FILENO) == -1)
 		return (print_error("Pipeline error", errno), -1);

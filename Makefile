@@ -10,9 +10,8 @@ SRC =	src/builtins/ft_env.c									\
 		src/builtins/utils_builtins.c							\
 		src/exec/execute_commands.c								\
 		src/exec/get_command.c									\
+		src/exec/files.c										\
 		src/exec/heredocs.c										\
-		src/exec/infiles.c										\
-		src/exec/outfiles.c										\
 		src/exec/utils.c										\
 		src/history/bash_history.c								\
 		src/main/main.c											\

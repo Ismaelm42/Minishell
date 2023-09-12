@@ -1,5 +1,18 @@
 #include "../../include/minishell.h"
 
+char	**search_next_file(char **files, char *redir)
+{
+	int	i;
+
+	i = 0;
+	while (files[i] != NULL
+		&& ft_strncmp(files[i], redir, ft_strlen(redir) + 1) != 0)
+		i++;
+	if (files[i] != NULL)
+		i++;
+	return (&files[i]);
+}
+
 void	access_error_message(char *error, char *message)
 {
 	ft_putstr_fd("minishell: ", 2);

@@ -30,12 +30,7 @@ typedef struct s_token
 {
 	char		*command;
 	char		**arg;
-	char		**infile;
-	char		**heredoc;
-	char		**outfile;
-	char		**append;
-	int			fd_in;
-	int			fd_out;
+	char		**file;
 }				t_token;
 
 typedef struct s_node
@@ -200,22 +195,17 @@ void		child_process(t_global *global, int n);
 int			parent_process(t_global *global, int n);
 int			execute_commands(t_global *global);
 
-//exec/heredocs
+//exec/files
+char		*extract_infile(t_global *global, int n, int i);
+void		handle_infile(t_global *global, int n, int i);
+void		handle_outfile(t_global *global, int n, int i);
+void		check_files(t_global *global, int n);
+void		handle_files(t_global *global, int n);
+
+//exec/heredoc
 void		get_heredocs(char **heredoc, int fd);
 void		heredoc_child_process(t_global *global, int n);
 int			process_heredocs(t_global *global);
-
-//exec/infiles
-void		handle_heredocs(t_global *global, int n);
-void		handle_infiles(t_global *global, char **infiles, int i, int fd_type);
-void		get_input_file(t_global *global, int n);
-void		fd_in_handler(t_global *global, int n);
-
-//exec/outfiles
-void		handle_outfiles(t_global *global, char *outfile, int write_flag, int infile_type);
-void		detect_output_file(t_global *global, char **outfiles, int infile_type, int fd_type);
-void		get_output_file(t_global *global, int n);
-void		fd_out_handler(t_global *global, int n);
 
 //exec/get_command
 char		**get_path(char **env);
@@ -225,6 +215,7 @@ char		*get_command_path(t_global *global, int n);
 char		**get_exec_command(t_global *global, int n);
 
 //exec/utils
+char		**search_next_file(char **files, char *redir);
 void		access_error_message(char *error, char *message);
 void		exit_child_process(t_global *global, char **array, char *str, int stat);
 void		fd_closer(int **fd, int pipeline, int n);

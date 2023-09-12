@@ -33,7 +33,6 @@ int	get_tokens(char *input, t_global *global)
 	n = lexer_pipes_counter(lexer);
 	tokens = (t_token *)ft_calloc(sizeof(t_token), n + 1);
 	token_maker(tokens, lexer);
-	get_token_fd(tokens, lexer);
 	global->pipeline = n;
 	global->tokens = tokens;
 	free_matrix((void ***)&lexer, 0);
