@@ -75,13 +75,12 @@ int	process_heredocs(t_global *global)
 		if (global->pid[n] == 0)
 			heredoc_child_process(global, n);
 		waitpid(global->pid[n], &global->exit_status, 0);
+		if (WIFEXITED(global->exit_status))
+			global->exit_status = WEXITSTATUS(global->exit_status);
 		if (global->exit_status != 0)
 		{
-			if (global->exit_status == 11)
-			{
-				global->exit_status = 0;
-				tcsetattr(STDIN_FILENO, ICANON, &global->prompt);
-			}
+			if (global->exit_status == 130)
+				tcsetattr(STDIN_FILENO, TCSANOW, &global->prompt);
 			return (1);
 		}
 		n++;

@@ -57,12 +57,6 @@ int	parent_process(t_global *global, int n)
 	return (0);
 }
 
-void	handler_prueba(int signal)
-{
-	if (signal == SIGINT || signal == SIGQUIT)
-		ft_putchar_fd('\n', STDOUT_FILENO);
-}
-
 int	execute_commands(t_global *global)
 {
 	int	n;

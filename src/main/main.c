@@ -14,7 +14,6 @@ int	main(int argc, char **argv, char **env)
 		signal(SIGINT, ft_sigint_handler);
 		signal(SIGQUIT, SIG_IGN);
 		input = readline_prompt();
-		//rl_on_new_line(); // no estaba
 		if (!input)
 			control_d(global, input);
 		add_and_store_history(input);
@@ -23,41 +22,4 @@ int	main(int argc, char **argv, char **env)
 			execute_commands(global);
 		free_global(global, 0);
 	}
-	return (0);//(global->exit_status);
 }
-
-// int	main(int argc, char **argv, char **env)
-// {
-// 	char	*input;
-// 	t_node	*lst_env;
-// 	t_node	*lst_locals;
-
-// 	(void)argc;
-// 	(void)argv;
-// 	lst_env = init_list();
-// 	lst_locals = init_list();
-// 	rl_catch_signals = 0;
-// 	copy_environment(lst_env, env);
-// 	print_stack(lst_env);
-// 	printf("Valor de LESSOPEN : %s\n", search_key(lst_env, "LESSOPEN"));
-// 	printf("Valor de _: %s\n", search_key(lst_env, "_"));
-// 	search_key_and_replace(lst_env, "_", "NIEBLA");
-// 	printf("Valor de _: %s\n", search_key(lst_env, "_"));
-
-// 	// while (1)
-// 	// {
-// 	// 	signal(SIGINT, ft_sigint_handler);
-// 	// 	signal(SIGQUIT, SIG_IGN);
-// 	// 	input = readline("> ");
-// 	// 	rl_on_new_line();
-// 	// 	if (!input)
-// 	// 		control_d(input);
-// 	// 	if (ft_strncmp(input, "exit", 4) == 0)
-// 	// 	{
-// 	// 		free (input);
-// 	// 		exit(0);
-// 	// 	}
-// 	// }
-// }
-
-

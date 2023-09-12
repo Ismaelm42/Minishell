@@ -62,5 +62,11 @@ void	ft_sigint_heredoc(int sig)
 	// ft_putstr_fd("\n", STDOUT_FILENO);
 	// rl_on_new_line();
 	(void)sig;
-	exit(11);
+	exit(130);
 }
+
+// void	handler_prueba(int signal)
+// {
+// 	if (signal == SIGINT || signal == SIGQUIT)
+// 		ft_putchar_fd('\n', STDOUT_FILENO);
+// }
