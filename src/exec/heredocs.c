@@ -1,5 +1,17 @@
 #include "../../include/minishell.h"
 
+
+// int	control_d_heredocs(char *buffer)
+// {
+// 	if (!buffer)
+// 	{
+// 		ft_putstr_fd("exit\n", 1);
+// 		//free_global(g, 1);
+// 		exit (11);
+// 	}
+// 	return (11);
+// }
+
 void	get_heredocs(char **heredoc, int fd)
 {
 	char	*buffer;

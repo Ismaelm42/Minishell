@@ -186,7 +186,8 @@ char		*readline_prompt(void);
 //signals/signals
 void		ft_sigint_handler(int sig);
 void		ft_sigquit_handler(int sig);
-void		ft_sigint_proc(int sig);
+void		ft_sigint_proc(int sig);ç
+void		ft_sigint_heredoc(int sig);
 int			control_d(t_global *g, char *input);
 
 //exec/execute_commands

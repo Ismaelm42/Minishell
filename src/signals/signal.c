@@ -50,8 +50,17 @@ void	ft_sigint_proc(int sig)
 	}
 	else if (sig == SIGQUIT)
 	{
-		ft_putstr_fd("Quit (core dumped)", STDOUT_FILENO);
+		//ft_putstr_fd("Quit (core dumped)", STDOUT_FILENO);
 		ft_putchar_fd('\n', STDOUT_FILENO);
 		signal(SIGQUIT, ft_sigint_proc);
 	}
 }
+// void	ft_sigint_heredoc(int sig)
+// {
+// 	//ioctl(0, TIOCSTI, "\n"); 
+// 	//ft_putstr_fd("CABEZA\n", STDOUT_FILENO);
+// 	ft_putstr_fd("\n", STDOUT_FILENO);
+// 	rl_on_new_line();
+// 	(void)sig;
+// 	//exit(11);
+// }
