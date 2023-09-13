@@ -42,9 +42,10 @@ void	ft_sigint_open_pipe(int sig)
 	if (sig == SIGINT)
 	{
 		ioctl(STDIN_FILENO, TIOCSTI, "\n");
+		ft_putchar_fd('\n', 1);
 		rl_replace_line("", 1);
 		rl_on_new_line();
-		*g_status = 1;
+		*g_status = -11;
 	}
 }
 

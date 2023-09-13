@@ -37,14 +37,17 @@ void	get_struct_data(t_global *global, char *input)
 	token_return = -1;
 	while (token_return == -1)
 	{
-		//global->exit_status = 0; entra siempre No nos vale
 		token_return = get_tokens(input, global);
 		if (token_return != -1)
 			break ;
 		input = readline("> ");
-		dprintf(2, "GLOBAL STATUS = %d\n", global->exit_status);
-		if (!input || global->exit_status == 1) 
+		if (!input)
 			break ;
+		if (global->exit_status == -11)
+		{
+			global->exit_status = 1;
+			break ;
+		}
 		input = ft_strjoin(global->input, input, 3);
 		global->input = ft_strdup(input);
 	}
