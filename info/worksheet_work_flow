@@ -1,51 +1,21 @@
-//verificar si error readline sigue saliendo como >> >> (parece que está ok)
+OBSERVACIONES MINISHELL bash MACOS
 
-//controlar cuando es un input vacío.
+-> CTRL D en Heredoc si hay mas de uno muestra el prompt cada vez que llamamos a control D y
+        hace el exit al hacerlo en numero de heredoc.
+        Ejemplo:
+                prompt> cat <<a <<z <<p 
+                >
+        ctrlD>  >>
+        ctrlD   >>>
+        ctrlD (hace el exit son salto de linea) > 
+   ( necesitamos un contador pra saber cuantos heredoc tenemos en la instruccion )
 
-//controlar cuando no tiene comando y solo hay un infile o outfile
-
-//variable_expansion eliminar $$ y etc.
-
-
-//ejecución de export
-
-
-                // ANOTACIONES JAVI FIN DE SEMANA
-                
-// SI en input es una asignacion de variable local (ARG=pepe), la ejecucion debe 
-// pasar a una nueva recogida de input (readline) no debe ejecutar comando ya
-// que no ha recogido tokens. Meto comprobacion en exec_command (pasa de líneas)
-
-//en exec_command se deben ejecutar ciertas builtins en el proceso padre ya que modifican variables de la global
-//hacer una funcion para limpiar código quitar lineas
-
-//main por normativa y legibilidad debe ir fuera de la carpeta src en el directorio principal del proyecto
+-> En heredocs bash de mac con la señal de ctrl \ (SIGQUIT) no hace nada , en linux si , SOLUCION quitar manejadores SIGQUIT en heredocs.
 
 
-        // TAREAS PENDIENTES JAVI
+ ARREGLAR SALIDA ctrl C  y ctrl \ : en funcion main y en childprocess 
+                        ctrl C-> exit status 130
+                        ctrl \-> exit status 131
 
-//Modificar en var local cuando entre un input de asignacion que compruebe primero si es una 
-//variable de entrono en tal caso cambie su valor donde corresponde y no la guarde en var locales
-
-// ARREGLAR lo de las comillas en var locals variable locales y expansión, testear 'holaaa'hola || hola'holaaa'
-
-// mirar si en export al usar searcH_key_and_replace hay leaks se ha modificado los free pq se jodia var locales
-
-// builtins exit
-
-// Terminar lo de las señales
-
-// Ver con Isma el tema de la ejecucion de los builtins
-
-// Se han jodido las variables locales se esta liberando en algun sitio guarda mierda
-
-// ls -la | cd -
-// Muestra en la pantalla el directorio anterior pero no te mueve del pwd
-
-//quitar perror de la función cd
-
-//gestionar los leaks de cd
-
-//violación de segmento cunado se le pasa un input como >outfile
-
-//cambiar la ruta de los archivos .bash_history y heredoc
+ARREGLAS segfaul pipe abierto : SOLUCION -> meter exit status como variable global y salir de while 
+con el exit status de la señal , esto nos servira tambien para sacar el 130 en la señal control c (SIGINT) del main
