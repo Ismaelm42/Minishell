@@ -187,6 +187,7 @@ void		ft_sigint_handler(int sig);
 void		ft_sigquit_handler(int sig);
 void		ft_sigint_proc(int sig);
 void		ft_sigint_heredoc(int sig);
+void		ft_sigint_open_pipe(int sig);
 int			control_d(t_global *g, char *input);
 
 //exec/execute_commands

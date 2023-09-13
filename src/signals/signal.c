@@ -9,6 +9,8 @@ ctrl-C imprime una nueva entrada en una línea nueva.
 ctrl-D termina el shell.
 ctrl-\ no hace nada.
 */
+extern int *g_status;
+
 int	control_d(t_global *g, char *input)
 {
 	if (!input)
@@ -31,14 +33,25 @@ void	ft_sigint_handler(int sig)
 		rl_replace_line("", 1);
 		rl_on_new_line();
 		rl_redisplay();
-		signal(SIGINT, ft_sigint_handler);
+		*g_status = 1;
 	}
 }
 
-/*
-Manejador de señales para procesos trata la señal recibida 
-y dependiendo de la que reciba actua de una forma u otra
-*/
+void	ft_sigint_open_pipe(int sig)
+{
+	if (sig == SIGINT)
+	{
+		ioctl(STDIN_FILENO, TIOCSTI, "\n");
+		rl_replace_line("", 1);
+		rl_on_new_line();
+		*g_status = 1;
+	}
+}
+
+
+
+
+
 void	ft_sigint_proc(int sig)
 {
 	if (sig == SIGINT)

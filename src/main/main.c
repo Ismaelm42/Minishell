@@ -1,5 +1,7 @@
 #include "../../include/minishell.h"
 
+ int	*g_status = 0;
+
 int	main(int argc, char **argv, char **env)
 {
 	char		*input;
@@ -9,6 +11,7 @@ int	main(int argc, char **argv, char **env)
 	(void)argv;
 	rl_catch_signals = 0;
 	global = init_struct(env);
+	g_status = &global->exit_status;
 	while (1)
 	{
 		signal(SIGINT, ft_sigint_handler);
