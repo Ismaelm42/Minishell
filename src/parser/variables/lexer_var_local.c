@@ -1,8 +1,16 @@
-#include "../../../include/minishell.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   lexer_var_local.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/14 15:47:25 by Jroldan-          #+#    #+#             */
+/*   Updated: 2023/09/14 15:47:26 by Jroldan-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-// Funcion que rercibira la clave del input realizara  el contao para la reserva
-// (en el conteo se analizara sintacticamente devolviendo 0 si algo no 
-//es correcto)
+#include "../../../include/minishell.h"
 
 char	**var_lexer_maker(char *s)
 {

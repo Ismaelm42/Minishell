@@ -1,10 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   tokens_counter.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/14 15:46:39 by Jroldan-          #+#    #+#             */
+/*   Updated: 2023/09/14 15:46:40 by Jroldan-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../../include/minishell.h"
 
-/*
-Cuenta el número de pipes que hay en el lexer para así saber cuánto memoria reservar.
-Se suma uno más ya que el número de pipes es siempre igual a uno menos de la memoria
-que se debe reservar. 
-*/
 int	lexer_pipes_counter(char **lexer)
 {
 	int	size;
@@ -19,9 +26,6 @@ int	lexer_pipes_counter(char **lexer)
 	return (size + 1);
 }
 
-/*
-Recorre lexer y avanza su puntero dependiendo del contenido.
-*/
 void	redirection_and_command_token_counter(char ***lexer, int **size)
 {
 	if (ft_strncmp(**lexer, "<", ft_strlen(**lexer)) == 0
@@ -38,9 +42,6 @@ void	redirection_and_command_token_counter(char ***lexer, int **size)
 		(*size)[2]++;
 }
 
-/*
-Se encarga de contar el número de tokens total para la reserva de memoria.
-*/
 int	*token_counter(char **lexer)
 {
 	int	*size;

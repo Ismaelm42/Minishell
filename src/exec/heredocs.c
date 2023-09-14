@@ -1,4 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   heredocs.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/14 15:42:00 by Jroldan-          #+#    #+#             */
+/*   Updated: 2023/09/14 16:12:19 by Jroldan-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../include/minishell.h"
+
+static void	print_on_heredoc(char *buffer, int fd)
+{
+	ft_putstr_fd(buffer, fd);
+	ft_putstr_fd("\n", fd);
+}
 
 void	get_heredocs(t_global *global, char **heredoc, int fd)
 {
@@ -22,10 +40,7 @@ void	get_heredocs(t_global *global, char **heredoc, int fd)
 				&& *(search_next_file(heredoc, "<<")) != NULL)
 					heredoc = search_next_file(heredoc, "<<");
 			else if (*(search_next_file(heredoc, "<<")) == NULL)
-			{
-				ft_putstr_fd(buffer, fd);
-				ft_putstr_fd("\n", fd);
-			}
+				print_on_heredoc(buffer, fd);
 		}
 		free_mem((void **)&buffer);
 	}
@@ -68,10 +83,8 @@ int	process_heredocs(t_global *global)
 		signal(SIGINT, SIG_IGN);
 		global->pid[n] = fork();
 		if (global->pid[n] == -1)
-		{
-			global->exit_status = -1;
-			return (print_error("Fork error", errno), 1);
-		}
+			return (global->exit_status = -1, \
+			print_error("Fork error", errno), 1);
 		if (global->pid[n] == 0)
 			heredoc_child_process(global, n);
 		waitpid(global->pid[n], &global->exit_status, 0);

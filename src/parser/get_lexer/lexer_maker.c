@@ -1,8 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   lexer_maker.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/14 15:45:42 by Jroldan-          #+#    #+#             */
+/*   Updated: 2023/09/14 15:45:43 by Jroldan-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../../include/minishell.h"
 
-/*
-Aquí se separará cualquiera de estos metacaracteres: |, <, <<, >, >>.
-*/
 void	redirection_lexer_splitter(int *n, char **s, char ***lexer)
 {
 	int	length;
@@ -20,10 +29,6 @@ void	redirection_lexer_splitter(int *n, char **s, char ***lexer)
 		(*s)++;
 }
 
-/*
-Gestiona todo los demás argumentos pasados a través del input mientras
-no coincida ningún caracter con los caracteres especiales.
-*/
 void	words_splitter(int *n, char **s, char ***lexer)
 {
 	int		length;
@@ -48,9 +53,6 @@ void	words_splitter(int *n, char **s, char ***lexer)
 	(*s)++;
 }
 
-/*
-Se encarga de dividir en varios strings los argumentos pasados por terminal.
-*/
 char	**lexer_maker(char *s)
 {
 	char	**lexer;

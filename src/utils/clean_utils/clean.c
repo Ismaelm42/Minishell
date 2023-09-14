@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   clean.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/14 15:48:51 by Jroldan-          #+#    #+#             */
+/*   Updated: 2023/09/14 15:48:52 by Jroldan-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../../include/minishell.h"
 
 void	free_mem(void **mem)
@@ -7,9 +19,6 @@ void	free_mem(void **mem)
 	*mem = 0;
 }
 
-/*
-Libera la memoria reservada en caso de fallo.
-*/
 char	**free_matrix(void ***matrix, int size)
 {
 	int	n;
@@ -28,9 +37,6 @@ char	**free_matrix(void ***matrix, int size)
 	return (NULL);
 }
 
-/*
-Elimina la estructura global por completo.
-*/
 void	destroy_global(t_global *global)
 {
 	free_matrix((void ***)&global->env, 0);
@@ -39,9 +45,6 @@ void	destroy_global(t_global *global)
 	free_mem((void **)&global);
 }
 
-/*
-Libera eñ contenido de la estructura global para una nueva línea.
-*/
 void	free_global(t_global *global, int flag)
 {
 	int	n;

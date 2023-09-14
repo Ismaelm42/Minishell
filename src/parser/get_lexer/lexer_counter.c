@@ -1,10 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   lexer_counter.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/14 15:45:30 by Jroldan-          #+#    #+#             */
+/*   Updated: 2023/09/14 15:45:31 by Jroldan-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../../include/minishell.h"
 
-/*
-Cuando el argumento esté entre comillas (simples o dobles), esta
-función lo contará como un string y avanzará el puntero hasta
-salir de las comillas.
-*/
 void	quoted_lexer_counter(int *counter, char **s)
 {
 	char	c;
@@ -33,10 +40,6 @@ void	quoted_lexer_counter(int *counter, char **s)
 	*counter += 1;
 }
 
-/*
-Hace lo mismo que la función anterior pero con los
-metacaracteres: |, <, <<, >, >>.
-*/
 void	redirection_lexer_counter(int *counter, char **s)
 {
 	if (**s == '|')
@@ -47,10 +50,6 @@ void	redirection_lexer_counter(int *counter, char **s)
 			(*s)++;
 	*counter += 1;
 }
-
-/*
-Se encarga de contar el resto de palabras.
-*/
 
 void	words_counter(int *counter, char **s)
 {
@@ -65,10 +64,6 @@ void	words_counter(int *counter, char **s)
 	}
 }
 
-/*
-Esta función calcula la memoria que hará falta para guardar
-los argumentos pasados por terminal en strings individuales.
-*/
 int	lexer_counter(char *s)
 {
 	int		counter;

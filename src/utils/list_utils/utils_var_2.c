@@ -1,8 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   utils_var_2.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/14 15:52:21 by Jroldan-          #+#    #+#             */
+/*   Updated: 2023/09/14 16:14:22 by Jroldan-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../../include/minishell.h"
 
-//Función que chequea sintacticamente la clave (ARG) 
-
-int	check_key(char *key, int wall)
+int	check_key(char *key, int flag)
 {
 	int	i;
 
@@ -15,14 +25,14 @@ int	check_key(char *key, int wall)
 	}
 	if (key[i] != '\0' || key[i] == ' ')
 	{
-		if (wall == 1)
+		if (flag == 1)
 			free_mem((void **)&key);
 		return (1);
 	}
 	else
 	{
-		if (wall == 1)
-			free_mem((void **)&key);	
+		if (flag == 1)
+			free_mem((void **)&key);
 	}
 	return (0);
 }

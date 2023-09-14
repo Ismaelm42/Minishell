@@ -1,8 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   utils_var.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/14 15:52:43 by Jroldan-          #+#    #+#             */
+/*   Updated: 2023/09/14 15:58:14 by Jroldan-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../../include/minishell.h"
 
-/*
-Función para extraer del string enviroments la clave 
-*/
 char	*extract_clue(char *c)
 {
 	char	*position;
@@ -19,9 +28,6 @@ char	*extract_clue(char *c)
 	}
 	return (ft_substr(c, 0, i, 0));
 }
-/*
-Función para extraer del string environments el valor de la variable de entorno
-*/
 
 char	*extract_value(char *c)
 {
@@ -33,11 +39,6 @@ char	*extract_value(char *c)
 	return (ft_substr(c, 1, ft_strlen(c), 0));
 }
 
-/*
-Función para buscar una clave en diccionario (lista) de variables locales,
-devolvera NULL si no lo encuentra y el valor asociado si se encuentra en 
-el diccionario.
-*/
 char	*search_key(t_node *lst, char *key)
 {
 	t_node	*aux;
@@ -53,13 +54,7 @@ char	*search_key(t_node *lst, char *key)
 	return (NULL);
 }
 
-/*
-Funcion para machacar el valor en el diccionario de variables
-locales si recibimos por input una nueva asignacion $ARG=pepito
-y mas tarde $ARG=Juan x ejemplo.
-*/
-
-int	search_key_and_replace(t_node *lst, char *key, char *val, int wall)
+int	search_key_and_replace(t_node *lst, char *key, char *val, int flag)
 {
 	t_node	*aux;
 
@@ -68,7 +63,7 @@ int	search_key_and_replace(t_node *lst, char *key, char *val, int wall)
 	{
 		if (ft_strncmp(key, aux->key, (size_t)ft_strlen(key) + 1) == 0)
 		{
-			if (wall == 1)
+			if (flag == 1)
 				free_mem((void **)&key);
 			free_mem((void **)&aux->value);
 			aux->value = val;
@@ -77,17 +72,13 @@ int	search_key_and_replace(t_node *lst, char *key, char *val, int wall)
 		else
 			aux = aux->next;
 	}
-	if (wall == 1)
+	if (flag == 1)
 	{
 		free_mem((void **)&key);
 		free_mem((void **)&val);
 	}
 	return (-1);
 }
-
-//Funcion que una vez comprobada la entrada primero busca si la variable 
-//ya esta metida en el diccionario, en tal caso reemplaza su valor y si 
-//no  esta la añade
 
 void	put_dictionary_local(char *nv, t_global *g)
 {

@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/09/14 15:52:51 by Jroldan-          #+#    #+#              #
+#    Updated: 2023/09/14 16:17:18 by Jroldan-         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = minishell
 
 SRC =	src/builtins/ft_env.c									\
@@ -34,7 +46,8 @@ SRC =	src/builtins/ft_env.c									\
 		src/parser/variables/var_local.c						\
 		src/prompt/readline_prompt.c							\
 		src/signals/signal.c									\
-		src/utils/clean_utils/clean.c					\
+		src/signals/utils_signal.c								\
+		src/utils/clean_utils/clean.c							\
 		src/utils/list_utils/list_utils_2.c						\
 		src/utils/list_utils/list_utils.c						\
 		src/utils/list_utils/utils_var_2.c						\

@@ -1,10 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_struct.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/14 15:46:15 by Jroldan-          #+#    #+#             */
+/*   Updated: 2023/09/14 15:46:16 by Jroldan-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../../include/minishell.h"
 
-extern int g_status;
-
-/*
-Inicio de la estructura al principio del programa.
-*/
 t_global	*init_struct(char **env)
 {
 	t_global	*global;
@@ -20,13 +27,6 @@ t_global	*init_struct(char **env)
 	ft_envlst_short(&global->lst_env);
 	return (global);
 }
-
-/*
-Función que recoge todo el procedimiento del parseo.
-Con esta función se generará la estructura apropiada para cada input
-y se liberará con la función free global y el parámetro 0 toda la información
-que ya no es necesaria (tokens) para seguir con una nueva linea.
-*/
 
 void	get_struct_data(t_global *global, char *input)
 {

@@ -1,6 +1,16 @@
-#include "../../../include/minishell.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   var_local.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/14 15:47:56 by Jroldan-          #+#    #+#             */
+/*   Updated: 2023/09/14 16:13:54 by Jroldan-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-//Funcion que concatena en nv los string que no vengan entre comillado
+#include "../../../include/minishell.h"
 
 static void	no_quotes(int j, char **d, char **nv)
 {
@@ -13,8 +23,6 @@ static void	no_quotes(int j, char **d, char **nv)
 	else
 		*nv = NULL;
 }
-
-//Funcion que concatena en nv los string que vengan entre comillado
 
 static void	quotes(int j, char **d, char **nv)
 {
@@ -48,10 +56,6 @@ static void	build_var_local(char **nv, char **d)
 	}
 }
 
-
-// Funcion que obtiene la clave de la asignación pasandola en primer lugar por
-// var_lexer_maker que no es mas que un split y el chequeo sintactico se hara 
-// en el cálculo del size en caso de que algo falle no reservara memoria
 static int	get_var_local(t_global *g)
 {
 	char	**d;
@@ -71,7 +75,7 @@ static int	get_var_local(t_global *g)
 	if (nv != NULL)
 	{	
 		if (search_env_replace(ft_strdup(key), ft_strdup(nv), g->env, 1) == 1)
-			return (free_mem((void **)&key),put_dictionary_local(nv, g), 0);
+			return (free_mem((void **)&key), put_dictionary_local(nv, g), 0);
 		else
 			return (search_key_and_replace(g->lst_env, key, nv, 2), \
 			free_mem((void **)&key), 0);
@@ -79,10 +83,6 @@ static int	get_var_local(t_global *g)
 	else
 		return (free_mem((void **)&key), 1);
 }
-
-//Funcion que sera llamada desde la principal si encuentra un = en el
-// input devolvera 0 y lo tratara como una entrada de variable local
-// si todo va bien lo introducira en el diccionario var_local
 
 int	local_var(t_global *g, char *input)
 {

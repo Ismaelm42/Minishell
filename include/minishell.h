@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   minishell.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/14 15:37:56 by Jroldan-          #+#    #+#             */
+/*   Updated: 2023/09/14 15:56:40 by Jroldan-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef MINISHELL_H
 # define MINISHELL_H
 # include "../libft/libft.h"
@@ -139,7 +151,7 @@ void		advance_lexer_tokens(char ***lexer, t_token **tokens);
 char		**copy_environment(char **env);
 int			search_env(char *var, char **env);
 char		*search_env_expand(char *var, char **envp);
-int			search_env_replace(char *var, char *val, char **envp, int wall);
+int			search_env_replace(char *var, char *val, char **envp, int flag);
 void		add_env(char ***env, char *argv);
 void		delete_var_env(char ***env, char *key);
 
@@ -148,7 +160,7 @@ int			local_var(t_global *g, char *input);
 char		*extract_clue(char *c);
 char		*extract_value(char *c);
 char		*search_key(t_node *lst, char *key);
-int			search_key_and_replace(t_node *lst, char *key, char *val, int wall);
+int			search_key_and_replace(t_node *lst, char *key, char *val, int flag);
 int			search_key_and_delete(t_node **lst, char *key);
 void		var_quoted_lexer_splitter(int *n, char **s, char ***lexer);
 void		var_quoted_lexer_counter(int *counter, char **s);
@@ -157,7 +169,7 @@ int			var_lexer_counter(char *s);
 void		var_words_splitter(int *n, char **s, char ***lexer);
 char		**var_lexer_maker(char *s);
 void		put_dictionary_local(char *nv, t_global *g);
-int			check_key(char *key, int wall);
+int			check_key(char *key, int flag);
 
 //parser/utils
 void		unlink_files(int pipeline);
@@ -177,8 +189,6 @@ void		ft_envlst_short(t_node **lst);
 
 //parser/utils/list_utils_2
 void		ft_free_lst(t_node *lst);
-int			ft_size_lst(t_node *lst);
-void		error(void);
 
 //prompt/readline_prompt
 char		*get_home_dir(char *dir);
@@ -221,7 +231,8 @@ char		**get_exec_command(t_global *global, int n);
 //exec/utils
 char		**search_next_file(char **files, char *redir);
 void		access_error_message(char *error, char *message);
-void		exit_child_process(t_global *global, char **array, char *str, int stat);
+void		exit_child_process(t_global *global, char **array, \
+			char *str, int stat);
 void		fd_closer(int **fd, int pipeline, int n);
 void		print_error(char *message, int code_error);
 

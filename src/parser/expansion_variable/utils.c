@@ -1,10 +1,16 @@
-#include "../../../include/minishell.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   utils.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/14 15:45:05 by Jroldan-          #+#    #+#             */
+/*   Updated: 2023/09/14 15:45:06 by Jroldan-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-/*
-Creación de la estructura en la cual se reenvía a cada campo lexer->input
-del array el puntero input para poder tener acceso a éste y poder
-calcular la posición de cada variable de expansión.
-*/
+#include "../../../include/minishell.h"
 
 t_lexer	*create_expansion_lexer_struct(char *input, int size)
 {
@@ -21,12 +27,6 @@ t_lexer	*create_expansion_lexer_struct(char *input, int size)
 	return (lexer);
 }
 
-/*
-Toma en cuenta los casos complicados con la variable de expansión.
-Si hay un espacio tras esta no se considera variable de expansión sino
-como un signo literal. Si se encuentra otro $ lo cuenta como uno y
-si encuentra unos corchetes abiertos lo protege y lo toma como variable.
-*/
 void	handle_edge_cases(char **input, int *counter)
 {
 	if ((*input)[1] == '\0')
@@ -47,11 +47,6 @@ void	handle_edge_cases(char **input, int *counter)
 	*counter += 1;
 }
 
-/*
-Permite avanzar el puntero cuando se encuentre unas comillas simples
-y establece un lock cuando la comilla es doble de forma que pueda
-realizar las expansiones.
-*/
 void	skip_quotes(char **s, int *lock)
 {
 	if (**s == '\'' && *lock == 0)
@@ -82,11 +77,6 @@ int	check_edge_cases(char *s)
 		return (1);
 }
 
-/*
-Función para liberar la memoria. La liberación se realiza dependiendo del flag.
-Si el flag es 1, eso quiere decir que la estructura también tiene completado el campo
-lexer->expanded.
-*/
 t_lexer	*free_expansion_lexer(t_lexer *lexer, int flag)
 {
 	int	n;

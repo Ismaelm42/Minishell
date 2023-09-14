@@ -1,13 +1,16 @@
-#include "../../include/minishell.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   signal.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/14 15:48:10 by Jroldan-          #+#    #+#             */
+/*   Updated: 2023/09/14 16:16:13 by Jroldan-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void	exit_status_flag(t_global *global)
-{
-	if (g_flag_exit_status == 1)
-		global->exit_status = 1;
-	else if (g_flag_exit_status == 2)
-		global->exit_status = 131;
-	g_flag_exit_status = 0;
-}
+#include "../../include/minishell.h"
 
 int	control_d(t_global *g, char *input)
 {

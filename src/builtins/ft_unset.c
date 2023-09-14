@@ -1,10 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_unset.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/14 15:41:13 by Jroldan-          #+#    #+#             */
+/*   Updated: 2023/09/14 15:41:14 by Jroldan-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../include/minishell.h"
 
-/*
-El comando unset eliminara una variable global o varias recibidas como
-de argumento de char ** env 
-y de lst_env. Puede recibir varias variables como Argumentos 
-*/
 void	delete_var_env(char ***env, char *key)
 {
 	char	**env_cp;

@@ -1,18 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_exit.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/14 15:40:44 by Jroldan-          #+#    #+#             */
+/*   Updated: 2023/09/14 15:40:47 by Jroldan-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../include/minishell.h"
-
-/*
--BASH-
-exit 123 123 -> cierra con error en salida standar too many argumets ,exit status  1;
-exit -> cierra con exit status 0;
-******
-exit 42 WORLD -> no cierra muestra un exit /n too many arguments, exit status 1
-exit WOLD 42 -> cierra , exit status 1 (mirar en test si saca tb mnsaje too many arguments)
-exit WORLD WORLD -> cierra 
-
-RESUMIENDO no cierra solo si el primer argumento es numerico
-*****
-exit 123 -> ciera con exit status 123 ( va del 0 al 254 )
-*/
 
 static int	is_param_digit(t_global *g, int n, int j)
 {
@@ -42,7 +40,6 @@ void	ft_exit_more_params(t_global *g, int n)
 		exit (1);
 	}	
 }
-
 
 void	ft_exit(t_global *g, int n)
 {

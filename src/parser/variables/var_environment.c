@@ -1,9 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   var_environment.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/14 15:47:37 by Jroldan-          #+#    #+#             */
+/*   Updated: 2023/09/14 16:13:31 by Jroldan-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../../include/minishell.h"
 
-/*
-Funcion modificada para hacer copia de environment char **env
-guardando una copa excacta.
-*/
 char	**copy_environment(char **env)
 {
 	char	**env_copy;
@@ -24,11 +32,6 @@ char	**copy_environment(char **env)
 	}
 	return (env_copy);
 }
-
-/*
-Funcion para buscar en global->env una variable de entorno key= y 
-devolver su valor para la expansion del lexer 
-*/
 
 char	*search_env_expand(char *var, char **env)
 {
@@ -52,7 +55,7 @@ char	*search_env_expand(char *var, char **env)
 	return (var);
 }
 
-int	search_env_replace(char *var, char *val, char **env, int wall)
+int	search_env_replace(char *var, char *val, char **env, int flag)
 {
 	int		len;
 	int		i;
@@ -74,7 +77,7 @@ int	search_env_replace(char *var, char *val, char **env, int wall)
 	free_mem((void **)&var);
 	free_mem((void **)&env[i]);
 	env[i] = ft_strjoin(str, val, 1);
-	if (wall == 1)
+	if (flag == 1)
 		free_mem((void **)&val);
 	return (0);
 }
@@ -112,4 +115,3 @@ int	search_env(char *var, char **env)
 	free(str);
 	return (0);
 }
-

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_cd.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/14 16:00:34 by Jroldan-          #+#    #+#             */
+/*   Updated: 2023/09/14 16:00:34 by Jroldan-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../include/minishell.h"
 
 static void	update_path(t_global *g, char *pwd, char *oldpwd)
@@ -81,7 +93,6 @@ void	ft_cd(t_global *g, int n)
 	path_old_pwd = search_env_expand("PWD", g->env);
 	if (g->tokens[n].arg[0] != NULL && g->tokens[n].arg[1] != NULL)
 	{
-		// ft_putstr_fd("minishell: cd: too many arguments\n", 2);
 		wall = 1;
 		g->exit_status = 0;
 	}	

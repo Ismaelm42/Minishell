@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   lexer_var_local_2.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/14 15:47:13 by Jroldan-          #+#    #+#             */
+/*   Updated: 2023/09/14 15:47:14 by Jroldan-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../../include/minishell.h"
 
 void	var_quoted_lexer_splitter(int *n, char **s, char ***lexer)
@@ -16,9 +28,6 @@ void	var_quoted_lexer_splitter(int *n, char **s, char ***lexer)
 		(*s)++;
 }
 
-// Función quee cuenta string entre comillados si estas no estan cerradas
-//  pondra contador a 0 y mostrara error
-
 void	var_quoted_lexer_counter(int *counter, char **s)
 {
 	char	c;
@@ -36,9 +45,6 @@ void	var_quoted_lexer_counter(int *counter, char **s)
 		*counter = 0;
 }
 
-// Función quee cuenta string sin comillas si contiene caracteres
-// no válidos pondrá contador a 0 y mostrar error
-
 void	var_words_counter(int *counter, char **s)
 {
 	if (**s != '\0')
@@ -49,8 +55,6 @@ void	var_words_counter(int *counter, char **s)
 		(*s)++;
 	}
 }
-
-// Funcion que realiza el conteo de "subcadenas" para la reserva de memoria
 
 int	var_lexer_counter(char *s)
 {

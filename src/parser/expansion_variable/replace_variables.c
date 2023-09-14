@@ -1,11 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   replace_variables.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/14 15:44:46 by Jroldan-          #+#    #+#             */
+/*   Updated: 2023/09/14 15:44:48 by Jroldan-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../../include/minishell.h"
 
-/*
-Función que permite conseguir la posición exacta en el input de todas las variables $.
-lexer_ptr es un puntero a input que permite avanzar el puntero para que, si tenemos
-dos veces la misma variable ($$ $$, por ejemplo), podamos conseguir la posición de
-la segunda variable y la función ft_strnstr no devuelva de nuevo la anterior a esta.
-*/
 void	get_size_variables(int *var, int *exp, t_lexer *lexer)
 {
 	int		i;
@@ -21,10 +27,6 @@ void	get_size_variables(int *var, int *exp, t_lexer *lexer)
 	}
 }
 
-/*
-Se encarga de escribir el nuevo input modificado con los valores de las variables
- de expansión.
-*/
 void	replace_function(char *new_input, char *input, t_lexer *lexer)
 {
 	int	i;
@@ -49,10 +51,6 @@ void	replace_function(char *new_input, char *input, t_lexer *lexer)
 	}
 }
 
-/*
-Se encarga de realizar la sustitución del input que obtenemos por la terminal
-a la versión final en la cual sustituimos todas las variables $ por su valor.
-*/
 char	*replace_variables(char *input, t_lexer *lexer)
 {
 	char	*new_input;

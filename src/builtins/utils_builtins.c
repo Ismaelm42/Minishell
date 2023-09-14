@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   utils_builtins.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/14 15:41:20 by Jroldan-          #+#    #+#             */
+/*   Updated: 2023/09/14 16:10:39 by Jroldan-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../include/minishell.h"
 
 int	check_edge_builtins(t_global *global)
@@ -54,10 +66,7 @@ void	builtins(t_global *g, int n)
 		else if (ft_strncmp(g->tokens[n].command, "cd", 3) == 0)
 			ft_cd(g, n);
 		else if (ft_strncmp(g->tokens[n].command, "exit", 5) == 0)
-		{
-			printf("entra en exit\n");
 			ft_exit(g, n);
-		}	
 	}
 	free_global(g, 1);
 	exit(0);

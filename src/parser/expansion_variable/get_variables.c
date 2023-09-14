@@ -1,9 +1,16 @@
-#include "../../../include/minishell.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_variables.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/14 15:44:33 by Jroldan-          #+#    #+#             */
+/*   Updated: 2023/09/14 15:44:34 by Jroldan-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-/*
-Función para contar el número de símbolos $ que hay que tener en cuenta.
-Contempla todos los casos problemáticos por ahora.
-*/
+#include "../../../include/minishell.h"
 
 int	variable_expansion_counter(char *input)
 {
@@ -32,11 +39,6 @@ int	variable_expansion_counter(char *input)
 	return (counter);
 }
 
-/*
-Utiliza substring para crear la subcadena correspondiente, avanza el puntero de s
-y suma uno más a n. Además también recoge la posición exacta del comienzo de la variable
-de expansión.
-*/
 void	variable_lexer_filler(int *n, int length, char **s, t_lexer *lexer)
 {
 	lexer[*n].variable = ft_substr(*s, 0, length, 0);
@@ -46,10 +48,6 @@ void	variable_lexer_filler(int *n, int length, char **s, t_lexer *lexer)
 		(*s)++;
 }
 
-/*
-Permite guardar como lexer todos los símbolos $ teniendo en cuenta
-los casos particulares como $, $123, $$, $?, $$$ARG, etc...
-*/
 void	check_expansion_and_delimiters(int *n, char **s, t_lexer *lexer)
 {
 	int	length;
@@ -79,14 +77,6 @@ void	check_expansion_and_delimiters(int *n, char **s, t_lexer *lexer)
 	variable_lexer_filler(n, length, s, lexer);
 }
 
-/*
-Guarda en un struct todos los posibles símbolos $ para sustituirlos en
-el char *input antes de pasar por el lexer_counter/lexer_maker, de forma
-que si esa variable tiene a su vez metacaracteres, éstos puedan ser
-interpretados.
-Casos tenidos en cuenta: $$, $?, $$$ARG, $012345, $ARG, $ARG|<<<>>>...
-En principio cubre todos los casos existentes.
-*/
 t_lexer	*get_variable_expansion_lexer(char *input)
 {
 	t_lexer		*lexer;

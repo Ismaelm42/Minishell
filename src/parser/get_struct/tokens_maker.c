@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   tokens_maker.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/14 15:46:52 by Jroldan-          #+#    #+#             */
+/*   Updated: 2023/09/14 15:46:53 by Jroldan-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../../include/minishell.h"
 
 char	*handle_quoted_substr(char *s)
@@ -22,9 +34,6 @@ char	*handle_quoted_substr(char *s)
 	return (free_mem((void **)&s), substr);
 }
 
-/*
-Reserva la memoria necesaria para cada campo de la estructura tokens.
-*/
 void	allocate_token_memory(t_token *tokens, int *size)
 {
 	tokens->file = (char **)ft_calloc(sizeof(char *), (size[0] * 2) + 1);
@@ -32,9 +41,6 @@ void	allocate_token_memory(t_token *tokens, int *size)
 	free_mem((void **)&size);
 }
 
-/*
-Identifica el tipo de token.
-*/
 void	check_token_type(t_token *tokens, char ***lexer, int **i)
 {
 	if (ft_strncmp(**lexer, "<", ft_strlen(**lexer)) == 0
@@ -52,9 +58,6 @@ void	check_token_type(t_token *tokens, char ***lexer, int **i)
 		tokens->arg[(*i)[1]++] = handle_quoted_substr(ft_strdup(**lexer));
 }
 
-/*
-Rellena el campo del token específico haciendo una copia del lexer.
-*/
 void	token_filler(t_token *tokens, char **lexer)
 {
 	int	*i;
@@ -68,9 +71,6 @@ void	token_filler(t_token *tokens, char **lexer)
 	free_mem((void **)&i);
 }
 
-/*
-Avanza el lexer para el nuevo bucle.
-*/
 void	advance_lexer_tokens(char ***lexer, t_token **tokens)
 {
 	while (**lexer != NULL && ft_strncmp(**lexer, "|", ft_strlen(**lexer)) != 0)

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_tokens.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/14 15:46:24 by Jroldan-          #+#    #+#             */
+/*   Updated: 2023/09/14 15:46:25 by Jroldan-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../../include/minishell.h"
 
 void	token_maker(t_token *tokens, char **lexer)
@@ -13,10 +25,6 @@ void	token_maker(t_token *tokens, char **lexer)
 	}
 }
 
-/*
-Llama a la función get_lexer, y una vez obtenido el lexer, se utiliza para
-reservar la memoria y guardar la información en la estructura tokens.
-*/
 int	get_tokens(char *input, t_global *global)
 {
 	t_token	*tokens;

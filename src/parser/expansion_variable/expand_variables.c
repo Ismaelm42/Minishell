@@ -1,9 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   expand_variables.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/14 15:44:15 by Jroldan-          #+#    #+#             */
+/*   Updated: 2023/09/14 15:44:16 by Jroldan-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../../include/minishell.h"
 
-/*
-Obtiene la variable a través del Path. También controla en caso de que la variable
-haya sido enviada entre paréntesis: ${HOME}
-*/
 int	get_variable_from_env(int n, t_lexer *lexer, t_global *global)
 {
 	char	*copy;
@@ -43,14 +51,6 @@ int	get_variable_from_local_var(int n, t_lexer *lexer, t_global *global)
 	return (0);
 }
 
-/*
-Esta función establece los posibles parametros de la variable $.
-Para obtener el PID, simplemente cambiamos el lex $$ por un comando que
-mostrará el número del PID en ejecución. Si no encuentra ningún valor de
-sustitución lo reemplazará por "". La función get_exit_status_variable
-en principio debería recoger la variable global que se iría actualizando
-cada vez que ejecutara un proceso con la salida de éste.
-*/
 void	get_expansion_value(int n, t_lexer *lexer, t_global *global)
 {
 	char	*lex;
@@ -65,12 +65,6 @@ void	get_expansion_value(int n, t_lexer *lexer, t_global *global)
 			lexer[n].expanded = ft_strdup("");
 }
 
-/*
-Se encarga de realizar todo el procedimiento para expandir la variable $.
-En esta función, se realizan todas las demás de la carpeta src/expand_variables.
-Una vez realizada la llamada a esta función, obtenemos un nuevo input modificado
-con los valores reales de $.
-*/
 char	*expansion_variable(char *input, t_global *global)
 {
 	t_lexer		*lexer;
