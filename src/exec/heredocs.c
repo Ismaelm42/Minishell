@@ -6,11 +6,15 @@
 /*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 15:42:00 by Jroldan-          #+#    #+#             */
-/*   Updated: 2023/09/14 16:12:19 by Jroldan-         ###   ########.fr       */
+/*   Updated: 2023/09/14 16:48:36 by Jroldan-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/minishell.h"
+
+static void		print_on_heredoc(char *buffer, int fd);
+static void		get_heredocs(t_global *global, char **heredoc, int fd);
+static void		heredoc_child_process(t_global *global, int n);
 
 static void	print_on_heredoc(char *buffer, int fd)
 {
@@ -18,7 +22,7 @@ static void	print_on_heredoc(char *buffer, int fd)
 	ft_putstr_fd("\n", fd);
 }
 
-void	get_heredocs(t_global *global, char **heredoc, int fd)
+static void	get_heredocs(t_global *global, char **heredoc, int fd)
 {
 	char	*buffer;
 
@@ -46,7 +50,7 @@ void	get_heredocs(t_global *global, char **heredoc, int fd)
 	}
 }
 
-void	heredoc_child_process(t_global *global, int n)
+static void	heredoc_child_process(t_global *global, int n)
 {
 	char	*heredoc_name;
 	int		fd;

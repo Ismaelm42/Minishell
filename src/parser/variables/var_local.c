@@ -6,11 +6,16 @@
 /*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 15:47:56 by Jroldan-          #+#    #+#             */
-/*   Updated: 2023/09/14 16:13:54 by Jroldan-         ###   ########.fr       */
+/*   Updated: 2023/09/14 17:02:48 by Jroldan-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../include/minishell.h"
+
+static void		no_quotes(int j, char **d, char **nv);
+static void		quotes(int j, char **d, char **nv);
+static void		build_var_local(char **nv, char **d);
+static int		get_var_local(t_global *g);
 
 static void	no_quotes(int j, char **d, char **nv)
 {

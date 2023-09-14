@@ -6,11 +6,21 @@
 /*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 15:48:51 by Jroldan-          #+#    #+#             */
-/*   Updated: 2023/09/14 15:48:52 by Jroldan-         ###   ########.fr       */
+/*   Updated: 2023/09/14 17:04:30 by Jroldan-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../include/minishell.h"
+
+static void		destroy_global(t_global *global);
+
+static void	destroy_global(t_global *global)
+{
+	free_matrix((void ***)&global->env, 0);
+	ft_free_lst(global->lst_local);
+	ft_free_lst(global->lst_env);
+	free_mem((void **)&global);
+}
 
 void	free_mem(void **mem)
 {
@@ -35,14 +45,6 @@ char	**free_matrix(void ***matrix, int size)
 		free_mem((void **)&*matrix);
 	}
 	return (NULL);
-}
-
-void	destroy_global(t_global *global)
-{
-	free_matrix((void ***)&global->env, 0);
-	ft_free_lst(global->lst_local);
-	ft_free_lst(global->lst_env);
-	free_mem((void **)&global);
 }
 
 void	free_global(t_global *global, int flag)

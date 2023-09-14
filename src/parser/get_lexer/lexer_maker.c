@@ -6,13 +6,16 @@
 /*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 15:45:42 by Jroldan-          #+#    #+#             */
-/*   Updated: 2023/09/14 15:45:43 by Jroldan-         ###   ########.fr       */
+/*   Updated: 2023/09/14 16:53:13 by Jroldan-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../include/minishell.h"
 
-void	redirection_lexer_splitter(int *n, char **s, char ***lexer)
+static void		redirection_lexer_splitter(int *n, char **s, char ***lexer);
+static void		words_splitter(int *n, char **s, char ***lexer);
+
+static void	redirection_lexer_splitter(int *n, char **s, char ***lexer)
 {
 	int	length;
 
@@ -29,7 +32,7 @@ void	redirection_lexer_splitter(int *n, char **s, char ***lexer)
 		(*s)++;
 }
 
-void	words_splitter(int *n, char **s, char ***lexer)
+static void	words_splitter(int *n, char **s, char ***lexer)
 {
 	int		length;
 

@@ -6,13 +6,17 @@
 /*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 15:41:31 by Jroldan-          #+#    #+#             */
-/*   Updated: 2023/09/14 15:41:32 by Jroldan-         ###   ########.fr       */
+/*   Updated: 2023/09/14 17:13:22 by Jroldan-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/minishell.h"
 
-int	create_pipes_and_pid(t_global *global)
+static int		create_pipes_and_pid(t_global *global);
+static void		child_process(t_global *global, int n);
+static int		parent_process(t_global *global, int n);
+
+static int	create_pipes_and_pid(t_global *global)
 {
 	int	n;
 
@@ -32,7 +36,7 @@ int	create_pipes_and_pid(t_global *global)
 	return (0);
 }
 
-void	child_process(t_global *global, int n)
+static void	child_process(t_global *global, int n)
 {
 	char	**command_line;
 
@@ -47,7 +51,7 @@ void	child_process(t_global *global, int n)
 	exit(errno);
 }
 
-int	parent_process(t_global *global, int n)
+static int	parent_process(t_global *global, int n)
 {
 	int	i;
 
@@ -76,8 +80,8 @@ int	execute_commands(t_global *global)
 	n = 0;
 	while (n < global->pipeline)
 	{
-		signal(SIGINT, ft_sigint_proc);
-		signal(SIGQUIT, ft_sigint_proc);
+		signal(SIGINT, ft_sig_proc);
+		signal(SIGQUIT, ft_sig_proc);
 		global->pid[n] = fork();
 		if (global->pid[n] == -1)
 		{

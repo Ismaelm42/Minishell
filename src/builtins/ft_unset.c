@@ -6,13 +6,15 @@
 /*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 15:41:13 by Jroldan-          #+#    #+#             */
-/*   Updated: 2023/09/14 15:41:14 by Jroldan-         ###   ########.fr       */
+/*   Updated: 2023/09/14 16:40:44 by Jroldan-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/minishell.h"
 
-void	delete_var_env(char ***env, char *key)
+static void	delete_var_env(char ***env, char *key);
+
+static void	delete_var_env(char ***env, char *key)
 {
 	char	**env_cp;
 	int		i;

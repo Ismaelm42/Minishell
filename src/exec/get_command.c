@@ -6,13 +6,18 @@
 /*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 15:41:45 by Jroldan-          #+#    #+#             */
-/*   Updated: 2023/09/14 15:41:46 by Jroldan-         ###   ########.fr       */
+/*   Updated: 2023/09/14 16:47:42 by Jroldan-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/minishell.h"
 
-char	**get_path(char **env)
+static char		**get_path(char **env);
+static char		*search_path(t_global *global, int n, char **path, char *cmd_path);
+static int		check_cmd_path(char *cmd, char *cmd_path, char *path, int flag);
+static char		*get_command_path(t_global *global, int n);
+
+static char	**get_path(char **env)
 {
 	char	**path;
 	char	*path_substr;
@@ -29,7 +34,7 @@ char	**get_path(char **env)
 	return (path);
 }
 
-char	*search_path(t_global *global, int n, char **path, char *cmd_path)
+static char	*search_path(t_global *global, int n, char **path, char *cmd_path)
 {
 	int	ret;
 	int	i;
@@ -53,7 +58,7 @@ char	*search_path(t_global *global, int n, char **path, char *cmd_path)
 	return (NULL);
 }
 
-int	check_cmd_path(char *cmd, char *cmd_path, char *path, int flag)
+static int	check_cmd_path(char *cmd, char *cmd_path, char *path, int flag)
 {
 	if (path == NULL)
 	{
@@ -81,7 +86,7 @@ int	check_cmd_path(char *cmd, char *cmd_path, char *path, int flag)
 	return (1);
 }
 
-char	*get_command_path(t_global *global, int n)
+static char	*get_command_path(t_global *global, int n)
 {
 	char	*cmd_path;
 	char	**path;

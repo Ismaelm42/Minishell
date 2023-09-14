@@ -6,11 +6,15 @@
 /*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 16:00:34 by Jroldan-          #+#    #+#             */
-/*   Updated: 2023/09/14 16:00:34 by Jroldan-         ###   ########.fr       */
+/*   Updated: 2023/09/14 16:35:19 by Jroldan-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/minishell.h"
+
+static void		update_path(t_global *g, char *pwd, char *oldpwd);
+static int		special_cases(t_global *g, int n, int wall);
+static void		cd_work_with_addresses(t_global *g, int n);
 
 static void	update_path(t_global *g, char *pwd, char *oldpwd)
 {

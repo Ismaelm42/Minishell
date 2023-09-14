@@ -1,21 +1,4 @@
-OBSERVACIONES MINISHELL bash MACOS
 
--> CTRL D en Heredoc si hay mas de uno muestra el prompt cada vez que llamamos a control D y
-        hace el exit al hacerlo en numero de heredoc.
-        Ejemplo:
-                prompt> cat <<a <<z <<p 
-                >
-        ctrlD>  >>
-        ctrlD   >>>
-        ctrlD (hace el exit son salto de linea) > 
-   ( necesitamos un contador pra saber cuantos heredoc tenemos en la instruccion )
-
--> En heredocs bash de mac con la señal de ctrl \ (SIGQUIT) no hace nada , en linux si , SOLUCION quitar manejadores SIGQUIT en heredocs.
-
-
- ARREGLAR SALIDA ctrl C  y ctrl \ : en funcion main y en childprocess 
-                        ctrl C-> exit status 130
-                        ctrl \-> exit status 131
-
-ARREGLAS segfaul pipe abierto : SOLUCION -> meter exit status como variable global y salir de while 
-con el exit status de la señal , esto nos servira tambien para sacar el 130 en la señal control c (SIGINT) del main
+Varios pipe abiertos con espacios entre medio debe dar error de sintaxis
+Comprobar en cd al cambiar variables de entorno PWD y OLDPWD existen, SEFGAULT
+Cambiar Variable de entorno  _  cada vez que ejecuta un comando guarda ultimo argumento si Existen ARG si no el comando 

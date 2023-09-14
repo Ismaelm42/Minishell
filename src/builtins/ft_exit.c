@@ -6,11 +6,14 @@
 /*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 15:40:44 by Jroldan-          #+#    #+#             */
-/*   Updated: 2023/09/14 15:40:47 by Jroldan-         ###   ########.fr       */
+/*   Updated: 2023/09/14 16:36:07 by Jroldan-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/minishell.h"
+
+static int		is_param_digit(t_global *g, int n, int j);
+static void		ft_exit_more_params(t_global *g, int n);
 
 static int	is_param_digit(t_global *g, int n, int j)
 {
@@ -27,7 +30,7 @@ static int	is_param_digit(t_global *g, int n, int j)
 	return (1);
 }
 
-void	ft_exit_more_params(t_global *g, int n)
+static void	ft_exit_more_params(t_global *g, int n)
 {
 	if (is_param_digit(g, n, 0) == 0)
 	{

@@ -6,13 +6,17 @@
 /*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 15:45:58 by Jroldan-          #+#    #+#             */
-/*   Updated: 2023/09/14 15:45:59 by Jroldan-         ###   ########.fr       */
+/*   Updated: 2023/09/14 17:56:06 by Jroldan-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../include/minishell.h"
 
-int	quotes_check(char *lexer)
+static int		quotes_check(char *lexer);
+static int		pipes_and_redirections_check(char **lexer, int n);
+static int		next_lexer_check(char **lexer, int n);
+
+static int	quotes_check(char *lexer)
 {
 	char	c;
 	int		i;
@@ -40,7 +44,7 @@ int	quotes_check(char *lexer)
 	return (0);
 }
 
-int	pipes_and_redirections_check(char **lexer, int n)
+static int	pipes_and_redirections_check(char **lexer, int n)
 {
 	if ((lexer[n][0] == '|' && (ft_strlen(lexer[n]) > 1 || n == 0))
 		|| (lexer[n][0] == '<' && (lexer[n][1] != '<' && lexer[n][1] != '\0'))
@@ -57,7 +61,7 @@ int	pipes_and_redirections_check(char **lexer, int n)
 	return (0);
 }
 
-int	next_lexer_check(char **lexer, int n)
+static int	next_lexer_check(char **lexer, int n)
 {
 	if (lexer[n][0] == '|' && lexer[n + 1] == NULL)
 		return (-1);

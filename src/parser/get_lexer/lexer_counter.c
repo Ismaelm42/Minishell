@@ -6,13 +6,17 @@
 /*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 15:45:30 by Jroldan-          #+#    #+#             */
-/*   Updated: 2023/09/14 15:45:31 by Jroldan-         ###   ########.fr       */
+/*   Updated: 2023/09/14 16:52:48 by Jroldan-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../include/minishell.h"
 
-void	quoted_lexer_counter(int *counter, char **s)
+static void		quoted_lexer_counter(int *counter, char **s);
+static void		redirection_lexer_counter(int *counter, char **s);
+static void		words_counter(int *counter, char **s);
+
+static void	quoted_lexer_counter(int *counter, char **s)
 {
 	char	c;
 
@@ -40,7 +44,7 @@ void	quoted_lexer_counter(int *counter, char **s)
 	*counter += 1;
 }
 
-void	redirection_lexer_counter(int *counter, char **s)
+static void	redirection_lexer_counter(int *counter, char **s)
 {
 	if (**s == '|')
 		while (**s == '|')
@@ -51,7 +55,7 @@ void	redirection_lexer_counter(int *counter, char **s)
 	*counter += 1;
 }
 
-void	words_counter(int *counter, char **s)
+static void	words_counter(int *counter, char **s)
 {
 	if (**s != '\0')
 	{

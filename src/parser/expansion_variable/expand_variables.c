@@ -6,13 +6,17 @@
 /*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 15:44:15 by Jroldan-          #+#    #+#             */
-/*   Updated: 2023/09/14 15:44:16 by Jroldan-         ###   ########.fr       */
+/*   Updated: 2023/09/14 16:50:06 by Jroldan-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../include/minishell.h"
 
-int	get_variable_from_env(int n, t_lexer *lexer, t_global *global)
+static int		get_variable_from_env(int n, t_lexer *lexer, t_global *global);
+static int		get_variable_from_local_var(int n, t_lexer *lexer, t_global *global);
+static void		get_expansion_value(int n, t_lexer *lexer, t_global *global);
+
+static int	get_variable_from_env(int n, t_lexer *lexer, t_global *global)
 {
 	char	*copy;
 	char	*environment;
@@ -32,7 +36,7 @@ int	get_variable_from_env(int n, t_lexer *lexer, t_global *global)
 	return (0);
 }
 
-int	get_variable_from_local_var(int n, t_lexer *lexer, t_global *global)
+static int	get_variable_from_local_var(int n, t_lexer *lexer, t_global *global)
 {
 	char	*copy;
 	char	*var;
@@ -51,7 +55,7 @@ int	get_variable_from_local_var(int n, t_lexer *lexer, t_global *global)
 	return (0);
 }
 
-void	get_expansion_value(int n, t_lexer *lexer, t_global *global)
+static void	get_expansion_value(int n, t_lexer *lexer, t_global *global)
 {
 	char	*lex;
 

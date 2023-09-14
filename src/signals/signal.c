@@ -6,7 +6,7 @@
 /*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 15:48:10 by Jroldan-          #+#    #+#             */
-/*   Updated: 2023/09/14 16:16:13 by Jroldan-         ###   ########.fr       */
+/*   Updated: 2023/09/14 17:12:35 by Jroldan-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,19 +47,19 @@ void	ft_sigint_open_pipe(int sig)
 	}
 }
 
-void	ft_sigint_proc(int sig)
+void	ft_sig_proc(int sig)
 {
 	if (sig == SIGINT)
 	{
 		ft_putstr_fd("\n", STDOUT_FILENO);
-		signal(SIGINT, ft_sigint_proc);
+		//signal(SIGINT, ft_sig_proc);
 		g_flag_exit_status = 1;
 	}
 	else if (sig == SIGQUIT)
 	{
 		ft_putstr_fd("Quit: 3", STDOUT_FILENO);
 		ft_putchar_fd('\n', STDOUT_FILENO);
-		signal(SIGQUIT, ft_sigint_proc);
+		//signal(SIGQUIT, ft_sig_proc);
 		g_flag_exit_status = 2;
 	}
 }

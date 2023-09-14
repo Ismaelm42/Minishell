@@ -6,13 +6,16 @@
 /*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 15:46:52 by Jroldan-          #+#    #+#             */
-/*   Updated: 2023/09/14 15:46:53 by Jroldan-         ###   ########.fr       */
+/*   Updated: 2023/09/14 16:57:17 by Jroldan-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../include/minishell.h"
 
-char	*handle_quoted_substr(char *s)
+static char		*handle_quoted_substr(char *s);
+static void		check_token_type(t_token *tokens, char ***lexer, int **i);
+
+static char	*handle_quoted_substr(char *s)
 {
 	char	*substr;
 	int		c;
@@ -34,14 +37,7 @@ char	*handle_quoted_substr(char *s)
 	return (free_mem((void **)&s), substr);
 }
 
-void	allocate_token_memory(t_token *tokens, int *size)
-{
-	tokens->file = (char **)ft_calloc(sizeof(char *), (size[0] * 2) + 1);
-	tokens->arg = (char **)ft_calloc(sizeof(char *), size[2] + 1);
-	free_mem((void **)&size);
-}
-
-void	check_token_type(t_token *tokens, char ***lexer, int **i)
+static void	check_token_type(t_token *tokens, char ***lexer, int **i)
 {
 	if (ft_strncmp(**lexer, "<", ft_strlen(**lexer)) == 0
 		|| ft_strncmp(**lexer, ">", ft_strlen(**lexer)) == 0
@@ -56,6 +52,13 @@ void	check_token_type(t_token *tokens, char ***lexer, int **i)
 		tokens->command = handle_quoted_substr(ft_strdup(**lexer));
 	else
 		tokens->arg[(*i)[1]++] = handle_quoted_substr(ft_strdup(**lexer));
+}
+
+void	allocate_token_memory(t_token *tokens, int *size)
+{
+	tokens->file = (char **)ft_calloc(sizeof(char *), (size[0] * 2) + 1);
+	tokens->arg = (char **)ft_calloc(sizeof(char *), size[2] + 1);
+	free_mem((void **)&size);
 }
 
 void	token_filler(t_token *tokens, char **lexer)

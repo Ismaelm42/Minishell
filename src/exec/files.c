@@ -6,13 +6,18 @@
 /*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 15:41:39 by Jroldan-          #+#    #+#             */
-/*   Updated: 2023/09/14 15:41:40 by Jroldan-         ###   ########.fr       */
+/*   Updated: 2023/09/14 16:43:38 by Jroldan-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/minishell.h"
 
-char	*extract_infile(t_global *global, int n, int i)
+static char		*extract_infile(t_global *global, int n, int i);
+static void		handle_infile(t_global *global, int n, int i);
+static void		handle_outfile(t_global *global, int n, int i);
+static void		check_files(t_global *global, int n);
+
+static char	*extract_infile(t_global *global, int n, int i)
 {
 	char	*file;
 
@@ -23,7 +28,7 @@ char	*extract_infile(t_global *global, int n, int i)
 	return (file);
 }
 
-void	handle_infile(t_global *global, int n, int i)
+static void	handle_infile(t_global *global, int n, int i)
 {
 	char	*file;
 	int		fd_file;
@@ -52,7 +57,7 @@ void	handle_infile(t_global *global, int n, int i)
 	close(fd_file);
 }
 
-void	handle_outfile(t_global *global, int n, int i)
+static void	handle_outfile(t_global *global, int n, int i)
 {
 	int	fd;
 
@@ -79,7 +84,7 @@ void	handle_outfile(t_global *global, int n, int i)
 	close(fd);
 }
 
-void	check_files(t_global *global, int n)
+static void	check_files(t_global *global, int n)
 {
 	int	ret_dup2_infile;
 	int	ret_dup2_outfile;

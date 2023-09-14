@@ -6,13 +6,15 @@
 /*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 15:48:02 by Jroldan-          #+#    #+#             */
-/*   Updated: 2023/09/14 15:48:03 by Jroldan-         ###   ########.fr       */
+/*   Updated: 2023/09/14 17:03:27 by Jroldan-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/minishell.h"
 
-char	*get_home_dir(char *dir)
+static char		*get_home_dir(char *dir);
+
+static char	*get_home_dir(char *dir)
 {
 	char	*home;
 

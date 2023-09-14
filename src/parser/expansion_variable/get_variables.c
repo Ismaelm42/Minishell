@@ -6,40 +6,17 @@
 /*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 15:44:33 by Jroldan-          #+#    #+#             */
-/*   Updated: 2023/09/14 15:44:34 by Jroldan-         ###   ########.fr       */
+/*   Updated: 2023/09/14 17:19:33 by Jroldan-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../include/minishell.h"
 
-int	variable_expansion_counter(char *input)
-{
-	int		counter;
-	char	c;
+int		variable_expansion_counter(char *input);
+static void		variable_lexer_filler(int *n, int length, char **s, t_lexer *lexer);
+static void		check_expansion_and_delimiters(int *n, char **s, t_lexer *lexer);
 
-	counter = 0;
-	while (*input != '\0')
-	{
-		if (*input == '\'' || *input == '\"')
-		{
-			c = *input;
-			input++;
-			while (*input != c && *input != '\0')
-			{
-				if (*input == '$' && c == '\"')
-					handle_edge_cases(&input, &counter);
-				input++;
-			}
-		}
-		else if (*input == '$')
-			handle_edge_cases(&input, &counter);
-		if (*input != '\0')
-			input++;
-	}
-	return (counter);
-}
-
-void	variable_lexer_filler(int *n, int length, char **s, t_lexer *lexer)
+static void	variable_lexer_filler(int *n, int length, char **s, t_lexer *lexer)
 {
 	lexer[*n].variable = ft_substr(*s, 0, length, 0);
 	lexer[*n].position = ft_strlen(lexer[*n].input) - ft_strlen(*s);
@@ -48,7 +25,7 @@ void	variable_lexer_filler(int *n, int length, char **s, t_lexer *lexer)
 		(*s)++;
 }
 
-void	check_expansion_and_delimiters(int *n, char **s, t_lexer *lexer)
+static void	check_expansion_and_delimiters(int *n, char **s, t_lexer *lexer)
 {
 	int	length;
 
@@ -75,6 +52,33 @@ void	check_expansion_and_delimiters(int *n, char **s, t_lexer *lexer)
 		}
 	}
 	variable_lexer_filler(n, length, s, lexer);
+}
+
+int	variable_expansion_counter(char *input)
+{
+	int		counter;
+	char	c;
+
+	counter = 0;
+	while (*input != '\0')
+	{
+		if (*input == '\'' || *input == '\"')
+		{
+			c = *input;
+			input++;
+			while (*input != c && *input != '\0')
+			{
+				if (*input == '$' && c == '\"')
+					handle_edge_cases(&input, &counter);
+				input++;
+			}
+		}
+		else if (*input == '$')
+			handle_edge_cases(&input, &counter);
+		if (*input != '\0')
+			input++;
+	}
+	return (counter);
 }
 
 t_lexer	*get_variable_expansion_lexer(char *input)

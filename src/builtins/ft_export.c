@@ -6,11 +6,14 @@
 /*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 15:40:55 by Jroldan-          #+#    #+#             */
-/*   Updated: 2023/09/14 16:07:48 by Jroldan-         ###   ########.fr       */
+/*   Updated: 2023/09/14 16:36:41 by Jroldan-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/minishell.h"
+
+static int		parse_arg(t_global *g, int n, int i);
+static void		export_parse_validated(t_global *g, int n, int i);
 
 static int	parse_arg(t_global *g, int n, int i)
 {

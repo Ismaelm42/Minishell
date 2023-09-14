@@ -6,27 +6,15 @@
 /*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 15:46:39 by Jroldan-          #+#    #+#             */
-/*   Updated: 2023/09/14 15:46:40 by Jroldan-         ###   ########.fr       */
+/*   Updated: 2023/09/14 17:20:40 by Jroldan-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../include/minishell.h"
 
-int	lexer_pipes_counter(char **lexer)
-{
-	int	size;
+static void		redirection_and_command_token_counter(char ***lexer, int **size);
 
-	size = 0;
-	while (*lexer != NULL)
-	{
-		if (*lexer[0] == '|')
-			size++;
-		lexer++;
-	}
-	return (size + 1);
-}
-
-void	redirection_and_command_token_counter(char ***lexer, int **size)
+static void	redirection_and_command_token_counter(char ***lexer, int **size)
 {
 	if (ft_strncmp(**lexer, "<", ft_strlen(**lexer)) == 0
 		|| ft_strncmp(**lexer, ">", ft_strlen(**lexer)) == 0
@@ -40,6 +28,20 @@ void	redirection_and_command_token_counter(char ***lexer, int **size)
 		(*size)[1]++;
 	else
 		(*size)[2]++;
+}
+
+int	lexer_pipes_counter(char **lexer)
+{
+	int	size;
+
+	size = 0;
+	while (*lexer != NULL)
+	{
+		if (*lexer[0] == '|')
+			size++;
+		lexer++;
+	}
+	return (size + 1);
 }
 
 int	*token_counter(char **lexer)

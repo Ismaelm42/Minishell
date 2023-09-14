@@ -6,13 +6,15 @@
 /*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 15:46:24 by Jroldan-          #+#    #+#             */
-/*   Updated: 2023/09/14 15:46:25 by Jroldan-         ###   ########.fr       */
+/*   Updated: 2023/09/14 16:55:17 by Jroldan-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../include/minishell.h"
 
-void	token_maker(t_token *tokens, char **lexer)
+static void	token_maker(t_token *tokens, char **lexer);
+
+static void	token_maker(t_token *tokens, char **lexer)
 {
 	int	*size;
 

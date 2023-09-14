@@ -6,13 +6,16 @@
 /*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 15:44:46 by Jroldan-          #+#    #+#             */
-/*   Updated: 2023/09/14 15:44:48 by Jroldan-         ###   ########.fr       */
+/*   Updated: 2023/09/14 16:52:06 by Jroldan-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../include/minishell.h"
 
-void	get_size_variables(int *var, int *exp, t_lexer *lexer)
+static void		get_size_variables(int *var, int *exp, t_lexer *lexer);
+static void		replace_function(char *new_input, char *input, t_lexer *lexer);
+
+static void	get_size_variables(int *var, int *exp, t_lexer *lexer)
 {
 	int		i;
 
@@ -27,7 +30,7 @@ void	get_size_variables(int *var, int *exp, t_lexer *lexer)
 	}
 }
 
-void	replace_function(char *new_input, char *input, t_lexer *lexer)
+static void	replace_function(char *new_input, char *input, t_lexer *lexer)
 {
 	int	i;
 	int	j;
