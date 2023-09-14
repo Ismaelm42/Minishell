@@ -54,6 +54,8 @@ typedef struct s_global
 	t_token			*tokens;
 }				t_global;
 
+int			g_flag_exit_status;
+
 //parser/history/bash_history
 void		add_and_store_history(char *input);
 
@@ -183,6 +185,7 @@ char		*get_home_dir(char *dir);
 char		*readline_prompt(void);
 
 //signals/signals
+void		exit_status_flag(t_global *global);
 void		ft_sigint_handler(int sig);
 void		ft_sigquit_handler(int sig);
 void		ft_sigint_proc(int sig);

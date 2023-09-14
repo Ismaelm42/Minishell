@@ -33,7 +33,7 @@ void	ft_exit_more_params(t_global *g, int n)
 {
 	if (is_param_digit(g, n, 0) == 0)
 	{
-		ft_putstr_fd("exit\nminishell: too many arguments\n", 2);
+		ft_putstr_fd("minishell: too many arguments\n", 2);
 		g->exit_status = 1;
 	}
 	else
@@ -62,7 +62,7 @@ void	ft_exit(t_global *g, int n)
 		{
 			ft_putstr_fd("minishell: numeric argument required\n", 2);
 			free_global(g, 1);
-			exit (2);
+			exit (255);
 		}
 	}
 	else

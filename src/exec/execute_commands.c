@@ -47,7 +47,7 @@ int	parent_process(t_global *global, int n)
 		waitpid(global->pid[i++], &global->exit_status, 0);
 		if (WIFEXITED(global->exit_status))
 			global->exit_status = WEXITSTATUS(global->exit_status);
-		if (global->exit_status == 139)
+		if (global->exit_status == 11)
 			global->exit_status = 126;
 	}
 	tcsetattr(STDIN_FILENO, TCSANOW, &global->prompt);

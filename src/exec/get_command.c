@@ -45,7 +45,7 @@ int	check_cmd_path(char *cmd, char *cmd_path, char *path, int flag)
 {
 	if (path == NULL)
 	{
-		access_error_message(cmd, ": Command not found\n");
+		access_error_message(cmd, ": command not found\n");
 		return (127);
 	}
 	else if (access(cmd_path, F_OK) != 0)

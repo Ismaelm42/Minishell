@@ -1,15 +1,13 @@
 #include "../../include/minishell.h"
-/*
-ctrl C && ctrl D & ctrl \ (linux ctrl + } usar en terminal en la de 
-Visual no va demasiado bien) -> DEBERAN DE FUNCIONAR COMO EN BASH
 
-CUANDO SEA INTERACTIVO:( prompt a la espera de commandosn )
-
-ctrl-C imprime una nueva entrada en una línea nueva.
-ctrl-D termina el shell.
-ctrl-\ no hace nada.
-*/
-extern int *g_status;
+void	exit_status_flag(t_global *global)
+{
+	if (g_flag_exit_status == 1)
+		global->exit_status = 1;
+	else if (g_flag_exit_status == 2)
+		global->exit_status = 131;
+	g_flag_exit_status = 0;
+}
 
 int	control_d(t_global *g, char *input)
 {
@@ -22,9 +20,6 @@ int	control_d(t_global *g, char *input)
 	return (1);
 }
 
-/*
-Manejador de señal SIGINT de forma interactiva
-*/
 void	ft_sigint_handler(int sig)
 {
 	if (sig == SIGINT)
@@ -33,7 +28,7 @@ void	ft_sigint_handler(int sig)
 		rl_replace_line("", 1);
 		rl_on_new_line();
 		rl_redisplay();
-		*g_status = 1;
+		g_flag_exit_status = 1;
 	}
 }
 
@@ -45,42 +40,29 @@ void	ft_sigint_open_pipe(int sig)
 		ft_putchar_fd('\n', 1);
 		rl_replace_line("", 1);
 		rl_on_new_line();
-		*g_status = -11;
+		g_flag_exit_status = 1;
 	}
 }
-
-
-
-
 
 void	ft_sigint_proc(int sig)
 {
 	if (sig == SIGINT)
 	{
-		rl_catch_signals = 0;
-
 		ft_putstr_fd("\n", STDOUT_FILENO);
 		signal(SIGINT, ft_sigint_proc);
+		g_flag_exit_status = 1;
 	}
 	else if (sig == SIGQUIT)
 	{
-		//ft_putstr_fd("Quit (core dumped)", STDOUT_FILENO);
+		ft_putstr_fd("Quit: 3", STDOUT_FILENO);
 		ft_putchar_fd('\n', STDOUT_FILENO);
 		signal(SIGQUIT, ft_sigint_proc);
+		g_flag_exit_status = 2;
 	}
 }
+
 void	ft_sigint_heredoc(int sig)
 {
-	//ioctl(0, TIOCSTI, "\n"); 
-	//ft_putstr_fd("CABEZA\n", STDOUT_FILENO);
-	// ft_putstr_fd("\n", STDOUT_FILENO);
-	// rl_on_new_line();
 	(void)sig;
-	exit(130);
+	exit(1);
 }
-
-// void	handler_prueba(int signal)
-// {
-// 	if (signal == SIGINT || signal == SIGQUIT)
-// 		ft_putchar_fd('\n', STDOUT_FILENO);
-// }

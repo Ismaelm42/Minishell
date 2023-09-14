@@ -41,11 +41,12 @@ void	get_struct_data(t_global *global, char *input)
 		if (token_return != -1)
 			break ;
 		input = readline("> ");
-		if (!input)
-			break ;
-		if (global->exit_status == -11)
+		if (!input || g_flag_exit_status == 1)
 		{
-			global->exit_status = 1;
+			if (!input)
+				global->exit_status = 258;
+			else if (g_flag_exit_status == 1)
+				global->exit_status = 1;
 			break ;
 		}
 		input = ft_strjoin(global->input, input, 3);

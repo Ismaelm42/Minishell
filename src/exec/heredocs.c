@@ -79,12 +79,11 @@ int	process_heredocs(t_global *global)
 			global->exit_status = WEXITSTATUS(global->exit_status);
 		if (global->exit_status != 0)
 		{
-			if (global->exit_status == 130)
+			if (global->exit_status == 1)
 				tcsetattr(STDIN_FILENO, TCSANOW, &global->prompt);
 			return (1);
 		}
 		n++;
 	}
-	free_mem((void **)&global->pid);
-	return (0);
+	return (free_mem((void **)&global->pid), 0);
 }

@@ -81,9 +81,9 @@ void	ft_cd(t_global *g, int n)
 	path_old_pwd = search_env_expand("PWD", g->env);
 	if (g->tokens[n].arg[0] != NULL && g->tokens[n].arg[1] != NULL)
 	{
-		ft_putstr_fd("minishell: cd: too many arguments\n", 2);
+		// ft_putstr_fd("minishell: cd: too many arguments\n", 2);
 		wall = 1;
-		g->exit_status = 1;
+		g->exit_status = 0;
 	}	
 	wall = special_cases(g, n, wall);
 	if (wall == 0)
