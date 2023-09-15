@@ -12,11 +12,10 @@
 
 #include "../../include/minishell.h"
 
-static int		create_pipes_and_pid(t_global *global);
 static void		child_process(t_global *global, int n);
 static int		parent_process(t_global *global, int n);
 
-static int	create_pipes_and_pid(t_global *global)
+int	create_pipes_and_pid(t_global *global)
 {
 	int	n;
 
@@ -48,7 +47,7 @@ static void	child_process(t_global *global, int n)
 	execve(command_line[0], command_line, global->env);
 	free_matrix((void ***)&command_line, 0);
 	print_error(command_line[0], errno);
-	exit(errno);
+	exit(1);
 }
 
 static int	parent_process(t_global *global, int n)

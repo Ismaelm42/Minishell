@@ -29,6 +29,7 @@ SRC =	src/builtins/ft_env.c									\
 		src/main/main.c											\
 		src/parser/expansion_variable/expand_variables.c		\
 		src/parser/expansion_variable/get_variables.c			\
+		src/parser/expansion_variable/pid_variable.c			\
 		src/parser/expansion_variable/replace_variables.c		\
 		src/parser/expansion_variable/utils.c					\
 		src/parser/get_lexer/get_lexer.c						\

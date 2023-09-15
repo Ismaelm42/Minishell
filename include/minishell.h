@@ -101,6 +101,21 @@ void		skip_quotes(char **s, int *lock);
 int			check_edge_cases(char *s);
 t_lexer		*free_expansion_lexer(t_lexer *lexer, int flag);
 
+
+
+
+/////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
+//parser/expansion_variable/pid_variable
+void		pid_child_process(t_global *pid_global, int n);
+char		*pid_parent_process(t_global *pid_global, int n);
+char		*get_pid_process(t_global *global);
+/////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
+
+
+
+
 //parser/get_struct/check_syntax
 int			syntax_error_check(char **lexer);
 
@@ -172,6 +187,7 @@ int			control_d(t_global *g, char *input);
 void		exit_status_flag(t_global *global);
 
 //exec/execute_commands
+int			create_pipes_and_pid(t_global *global);
 int			execute_commands(t_global *global);
 
 //exec/files
