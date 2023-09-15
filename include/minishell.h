@@ -66,7 +66,7 @@ typedef struct s_global
 	t_token			*tokens;
 }				t_global;
 
-int			g_flag_exit_status;
+extern int			g_flag_exit_status;
 
 //parser/history/bash_history
 void		add_and_store_history(char *input);

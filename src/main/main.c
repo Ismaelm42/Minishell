@@ -12,6 +12,8 @@
 
 #include "../../include/minishell.h"
 
+int	g_flag_exit_status;
+
 int	main(int argc, char **argv, char **env)
 {
 	char		*input;

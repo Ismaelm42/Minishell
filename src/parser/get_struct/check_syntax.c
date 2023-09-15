@@ -46,7 +46,8 @@ static int	quotes_check(char *lexer)
 
 static int	pipes_and_redirections_check(char **lexer, int n)
 {
-	if ((lexer[n][0] == '|' && (ft_strlen(lexer[n]) > 1 || n == 0))
+	if ((lexer[n][0] == '|'
+		&& (ft_strlen(lexer[n]) > 1 || n == 0 || lexer[n + 1][0] == '|'))
 		|| (lexer[n][0] == '<' && (lexer[n][1] != '<' && lexer[n][1] != '\0'))
 		|| (lexer[n][0] == '>' && (lexer[n][1] != '>' && lexer[n][1] != '\0'))
 		|| ((lexer[n][0] == '>' || lexer[n][0] == '<')
