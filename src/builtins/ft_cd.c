@@ -6,7 +6,7 @@
 /*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 16:00:34 by Jroldan-          #+#    #+#             */
-/*   Updated: 2023/09/14 16:35:19 by Jroldan-         ###   ########.fr       */
+/*   Updated: 2023/09/15 14:23:37 by Jroldan-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static void	update_path(t_global *g, char *pwd, char *oldpwd)
 	char	*path_old_pwd_export;
 
 	if (ft_strncmp(pwd, oldpwd, ft_strlen(pwd) + 1) != 0)
-	{
+	{	
 		path_pwd_export = ft_strdup(pwd);
 		path_old_pwd_export = ft_strdup(oldpwd);
 		search_key_and_replace(g->lst_env, ft_strdup("PWD"), \
@@ -94,7 +94,22 @@ void	ft_cd(t_global *g, int n)
 	int		wall;
 
 	wall = 0;
+	if (search_env("PWD", g->env) == 1)
+	{
+		if (getcwd(buffer, PATH_MAX) != NULL)
+		{
+			path_old_pwd = ft_strjoin(ft_strdup("PWD="), buffer, 1);
+			add_env(&g->env, path_old_pwd);
+			insert_last(&g->lst_env, create_nodo(ft_strdup("PWD"), ft_strdup(buffer)));
+			free_mem((void **)&path_old_pwd);
+		}
+	}
 	path_old_pwd = search_env_expand("PWD", g->env);
+	if (search_env("OLDPWD", g->env) == 1)
+	{
+		insert_last(&g->lst_env, create_nodo(ft_strdup("OLDPWD"), ft_strdup("")));
+		add_env(&g->env, "OLDPWD=");
+	}
 	if (g->tokens[n].arg[0] != NULL && g->tokens[n].arg[1] != NULL)
 	{
 		wall = 1;
