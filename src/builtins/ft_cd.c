@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_cd.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: javier <javier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 16:00:34 by Jroldan-          #+#    #+#             */
-/*   Updated: 2023/09/15 14:23:37 by Jroldan-         ###   ########.fr       */
+/*   Updated: 2023/09/16 21:20:22 by javier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 static void		update_path(t_global *g, char *pwd, char *oldpwd);
 static int		special_cases(t_global *g, int n, int wall);
 static void		cd_work_with_addresses(t_global *g, int n);
+static char		*check_pwd_oldpwd(t_global *g);
+
 
 static void	update_path(t_global *g, char *pwd, char *oldpwd)
 {
@@ -86,6 +88,31 @@ static void	cd_work_with_addresses(t_global *g, int n)
 	}
 }
 
+static char	*check_pwd_oldpwd(t_global *g)
+{
+	char	buffer[PATH_MAX];
+	char	*path_old;
+
+	if (search_env("PWD", g->env) == 1)
+	{
+		if (getcwd(buffer, PATH_MAX) != NULL)
+		{
+			path_old = ft_strjoin(ft_strdup("PWD="), buffer, 1);
+			add_env(&g->env, path_old);
+			insert_last(&g->lst_env, create_nodo(ft_strdup("PWD"), \
+			ft_strdup(buffer)));
+			free_mem((void **)&path_old);
+		}
+	}
+	if (search_env("OLDPWD", g->env) == 1)
+	{
+		insert_last(&g->lst_env, create_nodo(ft_strdup("OLDPWD"), \
+		ft_strdup("")));
+		add_env(&g->env, "OLDPWD=");
+	}
+	return (path_old = search_env_expand("PWD", g->env));
+}
+
 void	ft_cd(t_global *g, int n)
 {
 	char	buffer[PATH_MAX];
@@ -94,22 +121,7 @@ void	ft_cd(t_global *g, int n)
 	int		wall;
 
 	wall = 0;
-	if (search_env("PWD", g->env) == 1)
-	{
-		if (getcwd(buffer, PATH_MAX) != NULL)
-		{
-			path_old_pwd = ft_strjoin(ft_strdup("PWD="), buffer, 1);
-			add_env(&g->env, path_old_pwd);
-			insert_last(&g->lst_env, create_nodo(ft_strdup("PWD"), ft_strdup(buffer)));
-			free_mem((void **)&path_old_pwd);
-		}
-	}
-	path_old_pwd = search_env_expand("PWD", g->env);
-	if (search_env("OLDPWD", g->env) == 1)
-	{
-		insert_last(&g->lst_env, create_nodo(ft_strdup("OLDPWD"), ft_strdup("")));
-		add_env(&g->env, "OLDPWD=");
-	}
+	path_old_pwd = check_pwd_oldpwd(g);
 	if (g->tokens[n].arg[0] != NULL && g->tokens[n].arg[1] != NULL)
 	{
 		wall = 1;
