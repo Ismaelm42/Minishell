@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   get_command.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: javier <javier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 15:41:45 by Jroldan-          #+#    #+#             */
-/*   Updated: 2023/09/14 16:47:42 by Jroldan-         ###   ########.fr       */
+/*   Updated: 2023/09/17 00:31:11 by javier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/minishell.h"
 
-static char		**get_path(char **env);
-static char		*search_path(t_global *global, int n, char **path, char *cmd_path);
-static int		check_cmd_path(char *cmd, char *cmd_path, char *path, int flag);
-static char		*get_command_path(t_global *global, int n);
+static char	**get_path(char **env);
+static char	*search_path(t_global *global, int n, char **path, char *cmd_path);
+static int	check_cmd_path(char *cmd, char *cmd_path, char *path, int flag);
+static char	*get_command_path(t_global *global, int n);
 
 static char	**get_path(char **env)
 {

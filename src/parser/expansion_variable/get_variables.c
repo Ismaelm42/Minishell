@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   get_variables.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: javier <javier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 15:44:33 by Jroldan-          #+#    #+#             */
-/*   Updated: 2023/09/14 17:19:33 by Jroldan-         ###   ########.fr       */
+/*   Updated: 2023/09/17 00:31:56 by javier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../include/minishell.h"
 
-int		variable_expansion_counter(char *input);
-static void		variable_lexer_filler(int *n, int length, char **s, t_lexer *lexer);
-static void		check_expansion_and_delimiters(int *n, char **s, t_lexer *lexer);
+int			variable_expansion_counter(char *input);
+static void	variable_lexer_filler(int *n, int length, char **s, t_lexer *lexer);
+static void	check_expansion_and_delimiters(int *n, char **s, t_lexer *lexer);
 
 static void	variable_lexer_filler(int *n, int length, char **s, t_lexer *lexer)
 {

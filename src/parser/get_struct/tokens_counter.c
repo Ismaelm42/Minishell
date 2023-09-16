@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   tokens_counter.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: javier <javier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 15:46:39 by Jroldan-          #+#    #+#             */
-/*   Updated: 2023/09/14 17:20:40 by Jroldan-         ###   ########.fr       */
+/*   Updated: 2023/09/17 00:30:02 by javier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../include/minishell.h"
 
-static void		redirection_and_command_token_counter(char ***lexer, int **size);
+static void	redirection_and_command_token_counter(char ***lexer, int **size);
 
 static void	redirection_and_command_token_counter(char ***lexer, int **size)
 {

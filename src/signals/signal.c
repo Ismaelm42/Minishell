@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   signal.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: javier <javier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 15:48:10 by Jroldan-          #+#    #+#             */
-/*   Updated: 2023/09/14 17:12:35 by Jroldan-         ###   ########.fr       */
+/*   Updated: 2023/09/17 00:26:46 by javier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,14 +52,12 @@ void	ft_sig_proc(int sig)
 	if (sig == SIGINT)
 	{
 		ft_putstr_fd("\n", STDOUT_FILENO);
-		//signal(SIGINT, ft_sig_proc);
 		g_flag_exit_status = 1;
 	}
 	else if (sig == SIGQUIT)
 	{
 		ft_putstr_fd("Quit: 3", STDOUT_FILENO);
 		ft_putchar_fd('\n', STDOUT_FILENO);
-		//signal(SIGQUIT, ft_sig_proc);
 		g_flag_exit_status = 2;
 	}
 }

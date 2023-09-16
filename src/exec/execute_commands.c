@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   execute_commands.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: javier <javier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 15:41:31 by Jroldan-          #+#    #+#             */
-/*   Updated: 2023/09/14 17:13:22 by Jroldan-         ###   ########.fr       */
+/*   Updated: 2023/09/17 00:30:40 by javier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 static void		child_process(t_global *global, int n);
 static int		parent_process(t_global *global, int n);
+static void		update_environment_(t_global *g);
 
 int	create_pipes_and_pid(t_global *global)
 {
@@ -69,6 +70,35 @@ static int	parent_process(t_global *global, int n)
 	return (0);
 }
 
+static void	update_environment_(t_global *g)
+{
+	int	i;
+
+	i = 0;
+	if (g->pipeline == 1)
+	{
+		if (search_env("_", g->env) == 1)
+		{
+			add_env(&g->env, "_=");
+			insert_last(&g->lst_env, create_nodo(ft_strdup("_"), strdup("")));
+		}
+		if (g->tokens->arg[0] == NULL)
+		{
+			search_key_and_replace(g->lst_env, "_", \
+			ft_strdup(g->tokens->command), 0);
+			search_env_replace(ft_strdup("_"), g->tokens->command, g->env, 0);
+		}
+		else
+		{
+			while (g->tokens->arg[i] != NULL)
+				i++;
+			search_key_and_replace(g->lst_env, "_", \
+			ft_strdup(g->tokens->arg[--i]), 0);
+			search_env_replace(ft_strdup("_"), g->tokens->arg[i], g->env, 0);
+		}
+	}
+}
+
 int	execute_commands(t_global *global)
 {
 	int	n;
@@ -77,6 +107,7 @@ int	execute_commands(t_global *global)
 		|| create_pipes_and_pid(global) == 1)
 		return (1);
 	n = 0;
+	update_environment_(global);
 	while (n < global->pipeline)
 	{
 		signal(SIGINT, ft_sig_proc);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   list_utils.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: javier <javier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 15:52:03 by Jroldan-          #+#    #+#             */
-/*   Updated: 2023/09/14 16:14:15 by Jroldan-         ###   ########.fr       */
+/*   Updated: 2023/09/17 00:21:06 by javier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,10 @@ void	print_stack(t_node *list)
 		ft_putstr_fd(aux->key, STDOUT_FILENO);
 		ft_putchar_fd('=', STDOUT_FILENO);
 		ft_putchar_fd('\"', STDOUT_FILENO);
-		ft_putstr_fd(aux->value, STDOUT_FILENO);
+		if (strncmp(aux->key, "_", 2) == 0)
+			ft_putstr_fd("/usr/bin/export", STDOUT_FILENO);
+		else
+			ft_putstr_fd(aux->value, STDOUT_FILENO);
 		ft_putchar_fd('\"', STDOUT_FILENO);
 		ft_putchar_fd('\n', STDOUT_FILENO);
 		aux = aux -> next;

@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   expand_variables.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: javier <javier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 15:44:15 by Jroldan-          #+#    #+#             */
-/*   Updated: 2023/09/14 16:50:06 by Jroldan-         ###   ########.fr       */
+/*   Updated: 2023/09/17 00:33:50 by javier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../include/minishell.h"
 
-static int		get_variable_from_env(int n, t_lexer *lexer, t_global *global);
-static int		get_variable_from_local_var(int n, t_lexer *lexer, t_global *global);
-static void		get_expansion_value(int n, t_lexer *lexer, t_global *global);
+static int	get_variable_from_env(int n, t_lexer *lexer, t_global *global);
+static int	get_variable_from_local_var(int n, t_lexer *lexer, t_global *g);
+static void	get_expansion_value(int n, t_lexer *lexer, t_global *global);
 
 static int	get_variable_from_env(int n, t_lexer *lexer, t_global *global)
 {
