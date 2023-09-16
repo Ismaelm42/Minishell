@@ -68,79 +68,64 @@ typedef struct s_global
 
 extern int			g_flag_exit_status;
 
-//parser/history/bash_history
+//builtins
+void		ft_pwd(void);
+void		ft_env(t_global *g);
+void		ft_export(t_global *g, int n);
+void		ft_echo(t_global *g, int n);
+void		ft_cd(t_global *g, int n);
+void		action_export(t_global *g, int n, int i);
+void		ft_unset(t_global *g, int n);
+void		ft_exit(t_global *g, int n);
+int			check_edge_builtins(t_global *global);
+char		**check_builtins(t_global *g, int n);
+void		builtins(t_global *g, int n);
+
+//exec
+int			create_pipes_and_pid(t_global *global);
+int			execute_commands(t_global *global);
+void		handle_files(t_global *global, int n);
+int			process_heredocs(t_global *global);
+char		**get_exec_command(t_global *global, int n);
+char		**search_next_file(char **files, char *redir);
+void		access_error_message(char *error, char *message);
+void		exit_child_process(t_global *global, char **array, \
+			char *str, int stat);
+void		fd_closer(int **fd, int pipeline, int n);
+void		print_error(char *message, int code_error);
+
+//history
 void		add_and_store_history(char *input);
 
-//parser/get_lexer/lexer_counter
-int			lexer_counter(char *s);
-
-//parser/get_lexer/lexer_maker
-char		**lexer_maker(char *s);
-
-//parser/get_lexer/utils
-char		reject_quotes(char *s, char *substr, int *i, int *j);
-void		check_quotes(char *s, int *length);
-
-//parser/get_lexer/get_lexer
-char		**get_lexer(char *input, t_global *global);
-
-//parser/expansion_variable/get_variables
+//parser/expansion_variable
 int			variable_expansion_counter(char *input);
 t_lexer		*get_variable_expansion_lexer(char *input);
-
-//parser/expansion_variable/expand_variables
 char		*expansion_variable(char *input, t_global *global);
-
-//parser/expansion_variable/replace_variables
 char		*replace_variables(char *input, t_lexer *lexer);
-
-//parser/expansion_variable/utils
 t_lexer		*create_expansion_lexer_struct(char *input, int size);
 void		handle_edge_cases(char **input, int *counter);
 void		skip_quotes(char **s, int *lock);
 int			check_edge_cases(char *s);
 t_lexer		*free_expansion_lexer(t_lexer *lexer, int flag);
-
-
-
-
-/////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////
-//parser/expansion_variable/pid_variable
-void		pid_child_process(t_global *pid_global, int n);
-char		*pid_parent_process(t_global *pid_global, int n);
 char		*get_pid_process(t_global *global);
-/////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////
 
+//parser/get_lexer
+int			lexer_counter(char *s);
+char		**lexer_maker(char *s);
+char		reject_quotes(char *s, char *substr, int *i, int *j);
+void		check_quotes(char *s, int *length);
+char		**get_lexer(char *input, t_global *global);
 
-
-
-//parser/get_struct/check_syntax
+//parser/get_struct
 int			syntax_error_check(char **lexer);
-
-//parser/get_struct/get_struct
 t_global	*init_struct(char **env);
 void		get_struct_data(t_global *global, char *input);
-
-//src/parser/get_struct/get_tokens
 int			get_tokens(char *input, t_global *global);
-
-//src/parser/get_struct/tokens_counter
 int			lexer_pipes_counter(char **lexer);
 int			*token_counter(char **lexer);
-
-//src/parser/get_struct/tokens_maker
 void		allocate_token_memory(t_token *tokens, int *size);
 void		token_filler(t_token *tokens, char **lexer);
 void		advance_lexer_tokens(char ***lexer, t_token **tokens);
-
-//parser/var_environment
-char		**copy_environment(char **env);
-int			search_env(char *var, char **env);
-char		*search_env_expand(char *var, char **envp);
-int			search_env_replace(char *var, char *val, char **envp, int flag);
-void		add_env(char ***env, char *argv);
 
 //parser/variables
 int			local_var(t_global *g, char *input);
@@ -155,13 +140,29 @@ char		**var_lexer_maker(char *s);
 int			var_lexer_counter(char *s);
 void		put_dictionary_local(char *nv, t_global *g);
 int			check_key(char *key, int flag);
+char		**copy_environment(char **env);
+int			search_env(char *var, char **env);
+char		*search_env_expand(char *var, char **envp);
+int			search_env_replace(char *var, char *val, char **envp, int flag);
+void		add_env(char ***env, char *argv);
 
-//parser/utils
+//prompt
+char		*readline_prompt(void);
+
+//signals
+void		ft_sigint_handler(int sig);
+void		ft_sig_proc(int sig);
+void		ft_sigint_heredoc(int sig);
+void		ft_sigint_open_pipe(int sig);
+int			control_d(t_global *g, char *input);
+void		exit_status_flag(t_global *global);
+
+//utils/clean_utils
 void		free_mem(void **mem);
 char		**free_matrix(void ***matrix, int size);
 void		free_global(t_global *global, int flag);
 
-//parser/utils/list_utils
+//utils/list_utils
 t_node		*init_list(void);
 t_node		*create_nodo(char *key, char *value);
 void		insert_last(t_node **list, t_node *new_nodo);
@@ -169,56 +170,6 @@ t_node		*final(t_node *list);
 void		print_stack(t_node *list);
 void		copy_environment_list(t_node **lst_env, char **env);
 void		ft_envlst_short(t_node **lst);
-
-//parser/utils/list_utils_2
 void		ft_free_lst(t_node *lst);
-
-//prompt/readline_prompt
-char		*readline_prompt(void);
-
-//signals/signals
-void		ft_sigint_handler(int sig);
-void		ft_sig_proc(int sig);
-void		ft_sigint_heredoc(int sig);
-void		ft_sigint_open_pipe(int sig);
-int			control_d(t_global *g, char *input);
-
-//signals/utils_signals
-void		exit_status_flag(t_global *global);
-
-//exec/execute_commands
-int			create_pipes_and_pid(t_global *global);
-int			execute_commands(t_global *global);
-
-//exec/files
-void		handle_files(t_global *global, int n);
-
-//exec/heredoc
-int			process_heredocs(t_global *global);
-
-//exec/get_command
-char		**get_exec_command(t_global *global, int n);
-
-//exec/utils
-char		**search_next_file(char **files, char *redir);
-void		access_error_message(char *error, char *message);
-void		exit_child_process(t_global *global, char **array, \
-			char *str, int stat);
-void		fd_closer(int **fd, int pipeline, int n);
-void		print_error(char *message, int code_error);
-
-//build_in
-
-void		ft_pwd(void);
-void		ft_env(t_global *g);
-void		ft_export(t_global *g, int n);
-void		ft_echo(t_global *g, int n);
-void		ft_cd(t_global *g, int n);
-void		action_export(t_global *g, int n, int i);
-void		ft_unset(t_global *g, int n);
-void		ft_exit(t_global *g, int n);
-int			check_edge_builtins(t_global *global);
-char		**check_builtins(t_global *g, int n);
-void		builtins(t_global *g, int n);
 
 #endif

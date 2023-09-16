@@ -1,11 +1,14 @@
 #include "../../../include/minishell.h"
 
-void	pid_child_process(t_global *pid_global, int n)
+static void		pid_child_process(t_global *pid_global, int n);
+static char		*pid_parent_process(t_global *pid_global, int n);
+
+static void	pid_child_process(t_global *pid_global, int n)
 {
-	char	**command_line;
+	char	**pid_command;
 
 	fd_closer(pid_global->fd, pid_global->pipeline, n);
-	command_line = get_exec_command(pid_global, n);
+	pid_command = get_exec_command(pid_global, n);
 	if (dup2(pid_global->fd[n][0], STDIN_FILENO) == -1
 		|| dup2(pid_global->fd[n + 1][1], STDOUT_FILENO) == -1)
 	{
@@ -14,15 +17,15 @@ void	pid_child_process(t_global *pid_global, int n)
 	}
 	close(pid_global->fd[n][0]);
 	close(pid_global->fd[n + 1][1]);
-	execve(command_line[0], command_line, pid_global->env);
-	free_matrix((void ***)&command_line, 0);
+	execve(pid_command[0], pid_command, pid_global->env);
+	free_matrix((void ***)&pid_command, 0);
 	free_global(pid_global, 1);
 	exit(-1);
 }
 
-char	*pid_parent_process(t_global *pid_global, int n)
+static char	*pid_parent_process(t_global *pid_global, int n)
 {
-	char	*buffer;
+	char	*pid;
 	int		exit_status;
 	int		i;
 
@@ -34,17 +37,13 @@ char	*pid_parent_process(t_global *pid_global, int n)
 		if (exit_status == -1)
 			return (free_global(pid_global, 1), NULL);
 	}
-	buffer = (char *)ft_calloc(sizeof(char), (5 + 1));
-	if (read(pid_global->fd[n][0], buffer, (5 + 1)) == -1)
-	{
-		free_mem((void **)&buffer);
-		free_global(pid_global, 1);
-		return (NULL);
-	}
+	pid = (char *)ft_calloc(sizeof(char), 5 + 1);
+	if (read(pid_global->fd[n][0], pid, 5) == -1)
+		return (free_mem((void **)&pid), free_global(pid_global, 1), NULL);
 	close(pid_global->fd[n][0]);
 	tcsetattr(STDIN_FILENO, TCSANOW, &pid_global->prompt);
 	free_global(pid_global, 1);
-	return (buffer);
+	return (pid);
 }
 
 char	*get_pid_process(t_global *global)

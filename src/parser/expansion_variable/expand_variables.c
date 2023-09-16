@@ -65,7 +65,11 @@ static void	get_expansion_value(int n, t_lexer *lexer, t_global *global)
 	else if (ft_strncmp(lex, "$?", ft_strlen(lex)) == 0)
 		lexer[n].expanded = ft_strdup(ft_itoa(global->exit_status));
 	else if (ft_strncmp(lex, "$$", ft_strlen(lex)) == 0)
+	{
 		lexer[n].expanded = get_pid_process(global);
+		if (lexer[n].expanded == NULL)
+			lexer[n].expanded = ft_strdup("");
+	}
 	else if (get_variable_from_env(n, lexer, global) == 1)
 		if (get_variable_from_local_var(n, lexer, global) == 1)
 			lexer[n].expanded = ft_strdup("");
