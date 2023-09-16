@@ -6,7 +6,7 @@
 /*   By: javier <javier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 16:00:34 by Jroldan-          #+#    #+#             */
-/*   Updated: 2023/09/16 21:20:22 by javier           ###   ########.fr       */
+/*   Updated: 2023/09/16 21:59:35 by javier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ static void		update_path(t_global *g, char *pwd, char *oldpwd);
 static int		special_cases(t_global *g, int n, int wall);
 static void		cd_work_with_addresses(t_global *g, int n);
 static char		*check_pwd_oldpwd(t_global *g);
-
 
 static void	update_path(t_global *g, char *pwd, char *oldpwd)
 {
@@ -103,12 +102,6 @@ static char	*check_pwd_oldpwd(t_global *g)
 			ft_strdup(buffer)));
 			free_mem((void **)&path_old);
 		}
-	}
-	if (search_env("OLDPWD", g->env) == 1)
-	{
-		insert_last(&g->lst_env, create_nodo(ft_strdup("OLDPWD"), \
-		ft_strdup("")));
-		add_env(&g->env, "OLDPWD=");
 	}
 	return (path_old = search_env_expand("PWD", g->env));
 }
