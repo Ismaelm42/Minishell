@@ -123,6 +123,7 @@ void		get_struct_data(t_global *global, char *input);
 int			get_tokens(char *input, t_global *global);
 int			lexer_pipes_counter(char **lexer);
 int			*token_counter(char **lexer);
+char		*handle_quoted_substr(char *s);
 void		allocate_token_memory(t_token *tokens, int *size);
 void		token_filler(t_token *tokens, char **lexer);
 void		advance_lexer_tokens(char ***lexer, t_token **tokens);
@@ -171,5 +172,13 @@ void		print_stack(t_node *list);
 void		copy_environment_list(t_node **lst_env, char **env);
 void		ft_envlst_short(t_node **lst);
 void		ft_free_lst(t_node *lst);
+
+//wildcard
+char		**get_wildcards(char **lexer);
+int			get_wildcards_and_lexer_size(char **dir, char **lexer);
+int			check_wildcards(char **lexer);
+char		**get_dir_content(void);
+int			check_wildcard_conditions(char *lexer);
+int			extract_wildcards(char **lexer, char **dir, int flag);
 
 #endif

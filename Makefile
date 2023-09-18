@@ -53,6 +53,9 @@ SRC =	src/builtins/ft_env.c									\
 		src/utils/list_utils/list_utils.c						\
 		src/utils/list_utils/utils_var_2.c						\
 		src/utils/list_utils/utils_var.c						\
+		src/wildcards/utils.c									\
+		src/wildcards/wildcards_counter.c						\
+		src/wildcards/wildcards.c								\
 
 
 OBJT_DIR = objt

@@ -40,6 +40,7 @@ int	get_tokens(char *input, t_global *global)
 	return_n = syntax_error_check(lexer);
 	if (return_n != 0)
 		return (free_matrix((void ***)&lexer, 0), return_n);
+	lexer = get_wildcards(lexer);
 	n = lexer_pipes_counter(lexer);
 	tokens = (t_token *)ft_calloc(sizeof(t_token), n + 1);
 	token_maker(tokens, lexer);

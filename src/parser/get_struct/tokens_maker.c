@@ -12,10 +12,9 @@
 
 #include "../../../include/minishell.h"
 
-static char		*handle_quoted_substr(char *s);
 static void		check_token_type(t_token *tokens, char ***lexer, int **i);
 
-static char	*handle_quoted_substr(char *s)
+char	*handle_quoted_substr(char *s)
 {
 	char	*substr;
 	int		c;
