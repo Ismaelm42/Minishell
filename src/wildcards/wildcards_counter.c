@@ -1,26 +1,26 @@
 #include "../../include/minishell.h"
 
-static void		search_wildcard(char *new_lexer, char *dir, int *size);
-static void		get_wildcards_size(char *new_lexer, char **dir, int *size);
+static void		search_wildcard(char *new, char *dir, int *size);
+static void		get_wildcards_size(char *new, char **dir, int *size);
 
-static void	search_wildcard(char *new_lexer, char *dir, int *size)
+static void	search_wildcard(char *new, char *dir, int *size)
 {
 	int	flag;
 
 	flag = 0;
-	while (*new_lexer != '\0')
+	while (*new != '\0')
 	{
-		if (extract_wildcards(&new_lexer, &dir, flag) == 1)
+		if (extract_wildcards(&new, &dir, flag) == 1)
 			return ;
 		flag = 1;
-		while (*new_lexer == '*')
-			new_lexer++;
+		while (*new == '*')
+			new++;
 	}
-	if (ft_strlen(dir) == 0 || new_lexer[-1] == '*')
+	if (ft_strlen(dir) == 0 || new[-1] == '*')
 		(*size) += 1;
 }
 
-static void	get_wildcards_size(char *new_lexer, char **dir, int *size)
+static void	get_wildcards_size(char *new, char **dir, int *size)
 {
 	int	n;
 	int	saved_size;
@@ -28,7 +28,7 @@ static void	get_wildcards_size(char *new_lexer, char **dir, int *size)
 	n = 0;
 	saved_size = *size;
 	while (dir[n] != NULL)
-		search_wildcard(new_lexer, dir[n++], size);
+		search_wildcard(new, dir[n++], size);
 	if (saved_size == *size)
 		*size += 1;
 }

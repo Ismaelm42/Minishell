@@ -1,10 +1,10 @@
 #include "../../include/minishell.h"
 
-static void		search_wildstrings(char ***new_lexer, char *dir, char *lex, int *i);
-static void		get_wildcards_strings(char ***new_lexer, char **dir, char *lex, int *i);
-static void		get_lexer_with_wildcards(char ***new_lexer, char **dir, char **lexer);
+static void	search_wildstrings(char ***new, char *dir, char *lex, int *i);
+static void	get_wildcards_strings(char ***new, char **dir, char *lex, int *i);
+static void	get_lexer_with_wildcards(char ***new, char **dir, char **lexer);
 
-static void	search_wildstrings(char ***new_lexer, char *dir, char *lex, int *i)
+static void	search_wildstrings(char ***new, char *dir, char *lex, int *i)
 {
 	char	*dir_ptr;
 	int		flag;
@@ -21,21 +21,21 @@ static void	search_wildstrings(char ***new_lexer, char *dir, char *lex, int *i)
 	}
 	if (ft_strlen(dir) == 0 || lex[-1] == '*')
 	{
-		(*new_lexer)[*i] = ft_strdup(dir_ptr);
+		(*new)[*i] = ft_strdup(dir_ptr);
 		*i += 1;
 	}
 }
 
-static void	get_wildcards_strings(char ***new_lexer, char **dir, char *lex, int *i)
+static void	get_wildcards_strings(char ***new, char **dir, char *lex, int *i)
 {
 	int	n;
 
 	n = 0;
 	while (dir[n] != NULL)
-		search_wildstrings(new_lexer, dir[n++], lex, i);
+		search_wildstrings(new, dir[n++], lex, i);
 }
 
-static void	get_lexer_with_wildcards(char ***new_lexer, char **dir, char **lexer)
+static void	get_lexer_with_wildcards(char ***new, char **dir, char **lexer)
 {
 	char	*lex;
 	int		checker;
@@ -49,13 +49,13 @@ static void	get_lexer_with_wildcards(char ***new_lexer, char **dir, char **lexer
 		{
 			checker = i;
 			lex = handle_quoted_substr(ft_strdup(*lexer));
-			get_wildcards_strings(new_lexer, dir, lex, &i);
+			get_wildcards_strings(new, dir, lex, &i);
 			free_mem((void **)&lex);
 			if (checker == i)
-				(*new_lexer)[i++] = ft_strdup(*lexer);
+				(*new)[i++] = ft_strdup(*lexer);
 		}
 		else
-			(*new_lexer)[i++] = ft_strdup(*lexer);
+			(*new)[i++] = ft_strdup(*lexer);
 		lexer++;
 	}
 }
