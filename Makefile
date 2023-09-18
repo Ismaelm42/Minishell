@@ -73,6 +73,7 @@ RM = rm -f
 MAKEFLAGS += --quiet
 
 all: $(LIBFT) $(NAME)
+	./minishell
 
 $(LIBFT):
 	$(MAKE) -C ./libft
