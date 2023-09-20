@@ -24,12 +24,16 @@ static void	search_wildcard(char *new, char *dir, int *size)
 	{
 		if (extract_wildcards(&new, &dir, flag) == 1)
 			return ;
-		flag = 1;
+		flag++;
 		while (*new == '*')
 			new++;
 	}
 	if (ft_strlen(dir) == 0 || new[-1] == '*')
+	{
+		if (new[-1] == '*' && flag == 1 && dir[0] == '.')
+			return ;
 		(*size) += 1;
+	}
 }
 
 static void	get_wildcards_size(char *new, char **dir, int *size)

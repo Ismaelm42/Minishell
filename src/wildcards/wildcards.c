@@ -27,12 +27,14 @@ static void	search_wildstrings(char ***new, char *dir, char *lex, int *i)
 	{
 		if (extract_wildcards(&lex, &dir, flag) == 1)
 			return ;
-		flag = 1;
+		flag++;
 		while (*lex == '*')
 			lex++;
 	}
 	if (ft_strlen(dir) == 0 || lex[-1] == '*')
 	{
+		if (lex[-1] == '*' && flag == 1 && dir[0] == '.')
+			return ;
 		(*new)[*i] = ft_strdup(dir_ptr);
 		*i += 1;
 	}
