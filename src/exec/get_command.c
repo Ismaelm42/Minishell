@@ -28,9 +28,17 @@ static char	**get_path(char **env)
 			break ;
 		env++;
 	}
-	path_substr = ft_substr(*env, 5, ft_strlen(*env) - 5, 0);
-	path = ft_split(path_substr, ':');
-	free(path_substr);
+	if (*env == NULL)
+	{
+		path = (char **) ft_calloc(sizeof(char *), 1);
+		path[0] = NULL;
+	}
+	else
+	{
+		path_substr = ft_substr(*env, 5, ft_strlen(*env) - 5, 0);
+		path = ft_split(path_substr, ':');
+		free(path_substr);
+	}
 	return (path);
 }
 
@@ -40,6 +48,11 @@ static char	*search_path(t_global *global, int n, char **path, char *cmd_path)
 	int	i;
 
 	i = 0;
+	if (path[i] == NULL)
+	{
+		access_error_message(cmd_path, ": No such file or directory\n");
+		exit_child_process(global, path, cmd_path, 127);
+	}
 	free_mem((void **)&cmd_path);
 	cmd_path = ft_strjoin(path[i], "/", 0);
 	cmd_path = ft_strjoin(cmd_path, global->tokens[n].command, 1);
@@ -60,7 +73,7 @@ static char	*search_path(t_global *global, int n, char **path, char *cmd_path)
 
 static int	check_cmd_path(char *cmd, char *cmd_path, char *path, int flag)
 {
-	if (path == NULL)
+	if (path == NULL && flag != 0)
 	{
 		access_error_message(cmd, ": command not found\n");
 		return (127);
