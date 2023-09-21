@@ -6,7 +6,7 @@
 /*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 15:52:21 by Jroldan-          #+#    #+#             */
-/*   Updated: 2023/09/14 16:14:22 by Jroldan-         ###   ########.fr       */
+/*   Updated: 2023/09/21 10:38:50 by Jroldan-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ int	check_key(char *key, int flag)
 	int	i;
 
 	i = 0;
-	if (ft_isalpha(((int)key[i])))
+	if (ft_isalpha(((int)key[i])) || key[i] == '_')
 	{	
 		i++;
-		while (key[i] != '\0' && ft_isalnum(key[i]))
+		while (key[i] != '\0' && (ft_isalnum(key[i]) || key[i] == '_'))
 			i++;
 	}
 	if (key[i] != '\0' || key[i] == ' ')
