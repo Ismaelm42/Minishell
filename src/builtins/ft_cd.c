@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_cd.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: javier <javier@student.42.fr>              +#+  +:+       +#+        */
+/*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 16:00:34 by Jroldan-          #+#    #+#             */
-/*   Updated: 2023/09/16 21:59:35 by javier           ###   ########.fr       */
-/*                                                                            */
+/*   Updated: 2023/09/21 12:53:04 by Jroldan-         ###   ########.fr       */
+/*                                                                           */
 /* ************************************************************************** */
 
 #include "../../include/minishell.h"
 
 static void		update_path(t_global *g, char *pwd, char *oldpwd);
-static int		special_cases(t_global *g, int n, int wall);
+static int		special_cases(t_global *g, int n, int flag);
 static void		cd_work_with_addresses(t_global *g, int n);
 static char		*check_pwd_oldpwd(t_global *g);
 
@@ -76,13 +76,17 @@ static void	cd_work_with_addresses(t_global *g, int n)
 		g->tokens[n].arg[0], 3);
 		if (chdir(g->tokens[n].arg[0]) < 0)
 		{
-			ft_putstr_fd("minishell: cd: No such file or directory\n", 2);
+			ft_putstr_fd("minishell: cd: ", 2);
+			ft_putstr_fd(g->tokens[n].arg[0], 2);
+			ft_putstr_fd(": No such file or directory\n", 2);
 			g->exit_status = chdir(g->tokens[n].arg[0]) * -1;
 		}
 	}
 	else if (chdir(g->tokens[n].arg[0]) < 0)
 	{
-		ft_putstr_fd("minishell: cd: No such file or directory\n", 2);
+		ft_putstr_fd("minishell: cd: ", 2);
+		ft_putstr_fd(g->tokens[n].arg[0], 2);
+		ft_putstr_fd(": No such file or directory\n", 2);
 		g->exit_status = chdir(g->tokens[n].arg[0]) * -1;
 	}
 }
@@ -111,17 +115,12 @@ void	ft_cd(t_global *g, int n)
 	char	buffer[PATH_MAX];
 	char	*path_pwd;
 	char	*path_old_pwd;
-	int		wall;
+	int		flag;
 
-	wall = 0;
+	flag = 0;
 	path_old_pwd = check_pwd_oldpwd(g);
-	if (g->tokens[n].arg[0] != NULL && g->tokens[n].arg[1] != NULL)
-	{
-		wall = 1;
-		g->exit_status = 0;
-	}	
-	wall = special_cases(g, n, wall);
-	if (wall == 0)
+	flag = special_cases(g, n, flag);
+	if (flag == 0)
 		cd_work_with_addresses(g, n);
 	path_pwd = getcwd(buffer, PATH_MAX);
 	update_path(g, path_pwd, path_old_pwd);

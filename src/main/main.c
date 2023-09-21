@@ -6,7 +6,7 @@
 /*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 15:43:56 by Jroldan-          #+#    #+#             */
-/*   Updated: 2023/09/21 12:32:56 by Jroldan-         ###   ########.fr       */
+/*   Updated: 2023/09/21 13:07:15 by Jroldan-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,11 @@
 
 int	g_flag_exit_status;
 
-void	leakcheck(void)
-{
-	system("leaks -q minishell");
-}
-
 int	main(int argc, char **argv, char **env)
 {
 	char		*input;
 	t_global	*global;
-	atexit(leakcheck);
+
 	g_flag_exit_status = 0;
 	(void)argc;
 	(void)argv;
