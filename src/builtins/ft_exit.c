@@ -6,7 +6,7 @@
 /*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 15:40:44 by Jroldan-          #+#    #+#             */
-/*   Updated: 2023/09/14 16:36:07 by Jroldan-         ###   ########.fr       */
+/*   Updated: 2023/09/21 16:55:57 by Jroldan-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,15 +32,20 @@ static int	is_param_digit(t_global *g, int n, int j)
 
 static void	ft_exit_more_params(t_global *g, int n)
 {
+	ft_putstr_fd("minishell: ", 2);
+	ft_putstr_fd(g->tokens[n].command, 2);
+	ft_putstr_fd(": ", 2);
 	if (is_param_digit(g, n, 0) == 0)
 	{
-		ft_putstr_fd("minishell: too many arguments\n", 2);
+		ft_putstr_fd("too many arguments\n", 2);
 		g->exit_status = 1;
-	}
+	}	
 	else
 	{
+		ft_putstr_fd(g->tokens[n].arg[0], 2);
+		ft_putstr_fd(": numeric argument required\n", 2);
 		free_global(g, 1);
-		exit (1);
+		exit (255);
 	}	
 }
 
