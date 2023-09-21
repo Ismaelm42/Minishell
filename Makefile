@@ -6,7 +6,7 @@
 #    By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/14 15:52:51 by Jroldan-          #+#    #+#              #
-#    Updated: 2023/09/14 16:17:18 by Jroldan-         ###   ########.fr        #
+#    Updated: 2023/09/21 11:28:23 by Jroldan-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -73,7 +73,6 @@ RM = rm -f
 MAKEFLAGS += --quiet
 
 all: $(LIBFT) $(NAME)
-	./minishell
 
 $(LIBFT):
 	$(MAKE) -C ./libft

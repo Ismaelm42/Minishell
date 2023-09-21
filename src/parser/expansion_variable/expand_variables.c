@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   expand_variables.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: javier <javier@student.42.fr>              +#+  +:+       +#+        */
+/*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 15:44:15 by Jroldan-          #+#    #+#             */
-/*   Updated: 2023/09/17 00:33:50 by javier           ###   ########.fr       */
+/*   Updated: 2023/09/21 12:32:06 by Jroldan-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ static void	get_expansion_value(int n, t_lexer *lexer, t_global *global)
 	if (ft_strlen(lex) == 1)
 		lexer[n].expanded = ft_strdup("'$'");
 	else if (ft_strncmp(lex, "$?", ft_strlen(lex)) == 0)
-		lexer[n].expanded = ft_strdup(ft_itoa(global->exit_status));
+		lexer[n].expanded = ft_itoa(global->exit_status);
 	else if (ft_strncmp(lex, "$$", ft_strlen(lex)) == 0)
 	{
 		lexer[n].expanded = get_pid_process(global);
