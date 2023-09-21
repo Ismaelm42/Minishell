@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: javier <javier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 15:37:56 by Jroldan-          #+#    #+#             */
-/*   Updated: 2023/09/14 17:24:59 by Jroldan-         ###   ########.fr       */
+/*   Updated: 2023/09/21 22:42:45 by javier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,7 @@ void		ft_unset(t_global *g, int n);
 void		ft_exit(t_global *g, int n);
 int			check_edge_builtins(t_global *global);
 char		**check_builtins(t_global *g, int n);
+char		*check_pwd_oldpwd(t_global *g);
 void		builtins(t_global *g, int n);
 
 //exec

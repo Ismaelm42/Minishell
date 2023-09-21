@@ -15,7 +15,7 @@
 static void		update_path(t_global *g, char *pwd, char *oldpwd);
 static int		special_cases(t_global *g, int n, int flag);
 static void		cd_work_with_addresses(t_global *g, int n);
-static char		*check_pwd_oldpwd(t_global *g);
+static void		previous_working_directory(t_global *g, char *expand);
 
 static void	update_path(t_global *g, char *pwd, char *oldpwd)
 {
@@ -37,77 +37,70 @@ static void	update_path(t_global *g, char *pwd, char *oldpwd)
 	}
 }
 
-static int	special_cases(t_global *g, int n, int wall)
+static void	previous_working_directory(t_global *g, char *expand)
+{
+	if (search_env("OLDPWD", g->env) == 1)
+		ft_putstr_fd("bash: cd: OLDPWD not set\n", 2);
+	else
+	{
+		expand = search_env_expand("OLDPWD", g->env);
+		ft_putstr_fd(expand, STDOUT_FILENO);
+		ft_putchar_fd('\n', STDOUT_FILENO);
+		g->exit_status = chdir(expand);
+		free_mem((void **)&expand);
+	}
+}
+
+static int	special_cases(t_global *g, int n, int flag)
 {
 	char	*expand;
 
 	if (!g->tokens[n].arg[0] || \
 			ft_strncmp(g->tokens[n].arg[0], "~", 2) == 0)
 	{
-		expand = search_env_expand("HOME", g->env);
+		if (search_env("HOME", g->env) == 1 && g->tokens[n].arg[0] == NULL)
+		{
+			ft_putstr_fd("bash: cd: HOME not set\n", 2);
+			return (flag = 1);
+		}
+		if (search_env("HOME", g->env) == 1 && g->tokens[n].arg[0][0] == '~')
+			expand = ft_strdup(getenv("HOME"));
+		else
+			expand = (search_env_expand("HOME", g->env));
 		g->exit_status = chdir(expand);
-		wall = 1;
+		flag = 1;
 		free_mem((void **)&expand);
 	}
 	else if (ft_strncmp(g->tokens[n].arg[0], "-", 2) == 0)
 	{
-		wall = 1;
-		if (search_env("OLDPWD", g->env) == 1)
-			ft_putstr_fd("bash: cd: OLDPWD not set\n", 2);
-		else
-		{
-			expand = search_env_expand("OLDPWD", g->env);
-			ft_putstr_fd(expand, STDOUT_FILENO);
-			ft_putchar_fd('\n', STDOUT_FILENO);
-			g->exit_status = chdir(expand);
-			free_mem((void **)&expand);
-		}
+		previous_working_directory(g, expand);
+		flag = 1;
 	}
-	return (wall);
+	return (flag);
 }
 
 static void	cd_work_with_addresses(t_global *g, int n)
 {
+	char	*env_home;
+
 	if (g->tokens[n].arg[0][0] == '~' && g->tokens[n].arg[0][1] != '\0')
 	{
 		g->tokens[n].arg[0] = ft_substr(g->tokens[n].arg[0], 1, \
 		ft_strlen(g->tokens[n].arg[0]), 1);
-		g->tokens[n].arg[0] = ft_strjoin(search_env_expand("HOME", g->env), \
+		if (search_env("HOME", g->env) == 1)
+			env_home = ft_strdup(getenv("HOME"));
+		else
+			env_home = (search_env_expand("HOME", g->env));
+		g->tokens[n].arg[0] = ft_strjoin(env_home, \
 		g->tokens[n].arg[0], 3);
-		if (chdir(g->tokens[n].arg[0]) < 0)
-		{
-			ft_putstr_fd("minishell: cd: ", 2);
-			ft_putstr_fd(g->tokens[n].arg[0], 2);
-			ft_putstr_fd(": No such file or directory\n", 2);
-			g->exit_status = chdir(g->tokens[n].arg[0]) * -1;
-		}
 	}
-	else if (chdir(g->tokens[n].arg[0]) < 0)
+	if (chdir(g->tokens[n].arg[0]) < 0)
 	{
 		ft_putstr_fd("minishell: cd: ", 2);
 		ft_putstr_fd(g->tokens[n].arg[0], 2);
 		ft_putstr_fd(": No such file or directory\n", 2);
 		g->exit_status = chdir(g->tokens[n].arg[0]) * -1;
 	}
-}
-
-static char	*check_pwd_oldpwd(t_global *g)
-{
-	char	buffer[PATH_MAX];
-	char	*path_old;
-
-	if (search_env("PWD", g->env) == 1)
-	{
-		if (getcwd(buffer, PATH_MAX) != NULL)
-		{
-			path_old = ft_strjoin(ft_strdup("PWD="), buffer, 1);
-			add_env(&g->env, path_old);
-			insert_last(&g->lst_env, create_nodo(ft_strdup("PWD"), \
-			ft_strdup(buffer)));
-			free_mem((void **)&path_old);
-		}
-	}
-	return (path_old = search_env_expand("PWD", g->env));
 }
 
 void	ft_cd(t_global *g, int n)

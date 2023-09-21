@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils_builtins.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Jroldan- <jroldan-@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: javier <javier@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 15:41:20 by Jroldan-          #+#    #+#             */
-/*   Updated: 2023/09/14 16:10:39 by Jroldan-         ###   ########.fr       */
+/*   Updated: 2023/09/21 22:46:18 by javier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,4 +70,23 @@ void	builtins(t_global *g, int n)
 	}
 	free_global(g, 1);
 	exit(0);
+}
+
+char	*check_pwd_oldpwd(t_global *g)
+{
+	char	buffer[PATH_MAX];
+	char	*path_old;
+
+	if (search_env("PWD", g->env) == 1)
+	{
+		if (getcwd(buffer, PATH_MAX) != NULL)
+		{
+			path_old = ft_strjoin(ft_strdup("PWD="), buffer, 1);
+			add_env(&g->env, path_old);
+			insert_last(&g->lst_env, create_nodo(ft_strdup("PWD"), \
+			ft_strdup(buffer)));
+			free_mem((void **)&path_old);
+		}
+	}
+	return (path_old = search_env_expand("PWD", g->env));
 }
