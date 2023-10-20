@@ -55,6 +55,7 @@ static int	special_cases(t_global *g, int n, int flag)
 {
 	char	*expand;
 
+	expand = NULL;
 	if (!g->tokens[n].arg[0] || \
 			ft_strncmp(g->tokens[n].arg[0], "~", 2) == 0)
 	{
