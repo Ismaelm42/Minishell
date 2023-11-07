@@ -82,13 +82,13 @@ static void	update_environment_(t_global *g)
 			add_env(&g->env, "_=");
 			insert_last(&g->lst_env, create_nodo(ft_strdup("_"), strdup("")));
 		}
-		if (g->tokens->arg[0] == NULL)
+		if (g->tokens->command != NULL && g->tokens->arg[0] == NULL)
 		{
 			search_key_and_replace(g->lst_env, "_", \
 			ft_strdup(g->tokens->command), 0);
 			search_env_replace(ft_strdup("_"), g->tokens->command, g->env, 0);
 		}
-		else
+		else if (g->tokens->command != NULL && g->tokens->arg[0] != NULL)
 		{
 			while (g->tokens->arg[i] != NULL)
 				i++;
